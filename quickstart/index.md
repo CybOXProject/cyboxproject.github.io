@@ -1,22 +1,36 @@
 ---
 layout: flat
-title: Using CybOX
+title: Using CybOX with Python
 ---
 
-# The API
-[CybOX Python Bindings](https://github.com/CybOXProject/python-cybox)
+## Install automagically
 
-`master` is stable release code, with in-development `feature` branches 
+`pip install cybox`
 
-# Making a contribution 
-Clone the [repo](https://github.com/CybOXProject/python-cybox) and install using `python setup.py`
+## OR Compile from source
 
+- [lxml](http://lxml.de/) - A Pythonic binding for the XML processing toolkits, [libxml2](http://xmlsoft.org) and [libxslt](http://xmlsoft.org).
+- [python-dateutil](http://labix.org/python-dateutil) - A library for parsing datetime information.
+- [setuptools](https://pypi.python.org/pypi/setuptools/) - Required for installation of python-cybox
 
-After proposing a favorable change to the community, please [Make a pull request](https://github.com/CybOXProject/python-cybox/pulls) 
+[Download the tarball](https://pypi.python.org/pypi/cybox/) for CybOX
 
-[Report bugs](https://github.com/CybOXProject/python-cybox/issues) 
+Run `python setup.py install`
 
-# Usage Examples
-[CybOX v1.0](/quickstart/cybox1.html)
+## Start using it 
 
-[CybOX v2.0](/quickstart/cybox2.html)
+See the [standalone code snippets](https://github.com/CybOXProject/python-cybox/tree/master/examples)
+
+Learn how to [generate and parse documents](/quickstart/cybox2.html) using Python
+
+## Contributing
+
+Get the source `git clone https://github.com/CybOXProject/python-cybox.git`
+
+Propose changes to [the community mailing list](cybox@mitre.org) (non-technical input appreciated!)
+
+[Report any bugs](https://github.com/CybOXProject/python-cybox/issues) that you find 
+
+[Make a pull request](https://github.com/CybOXProject/python-cybox/pulls) with your code contributions
+
+**Note:**  `feature` branches with single-track commits are preferred

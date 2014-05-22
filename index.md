@@ -3,25 +3,30 @@ layout: flat
 title: CybOX Development
 ---
 
+#### Also available for the [deprecated 1.0 version ](/quickstart/cybox1.html)
 
-# The Standard 
+# What is it?
+ [CybOX is a standard](http://cybox.mitre.org/language/) implemented as an [XML schema ](https://github.com/CybOXProject/schemas) that captures `Observable` content about an indicator.
 
-[Stable Release](http://cybox.mitre.org/language/)
+It enables people to [share signatures](http://cybox.mitre.org/about/faqs.html#A1) about malicious files and attacks via automated means.
 
-[Development Codebase](https://github.com/CybOXProject/schemas)
+# How do I use it?
+Check the [samples](https://github.com/CybOXProject/schemas/tree/master/samples) for common use cases
 
+See the Python-oriented [Quick Start Guide ](/quickstart)
 
-# Developer Tools
+Read up on [Best Practices](/suggestions) 
 
-[Python Bindings](https://github.com/CybOXProject/python-cybox)
+# How do I create indicators?
+Community triage tools [support CybOX output ](https://github.com/stephenbrannon/IOCextractor)
 
-# Conversions
-       
-[OpenIOC to CybOX](https://github.com/CybOXProject/openioc-to-cybox)
+Parsing your incoming [phishing and spam emails](https://github.com/CybOXProject/email-to-cybox) is easy
 
-[CybOX to OVAL XML](https://github.com/CybOXProject/cybox-to-oval)
+Conversion to [Mandiant OpenIOC format](https://github.com/CybOXProject/openioc-to-cybox) is supported
 
-[CybOX to HTML](https://github.com/CybOXProject/cybox-to-html)
+# Can I export to other formats?
+We support the [MITRE OVAL standard](https://github.com/CybOXProject/cybox-to-oval) which is natively accepted by many security products.
 
-[Email Messages to CybOX](https://github.com/CybOXProject/email-to-cybox)
+If you want [plain vanilla HTML ](https://github.com/CybOXProject/cybox-to-html) that is fine too.
+
 
