@@ -17,6 +17,6 @@ After proposing a favorable change to the community, please [Make a pull request
 [Report bugs](https://github.com/CybOXProject/python-cybox/issues) 
 
 # Usage Examples
-[CybOX v1.0](/examples/cybox1.html)
+[CybOX v1.0](/quickstart/cybox1.html)
 
-[CybOX v2.0](/examples/cybox2.html)
+[CybOX v2.0](/quickstart/cybox2.html)
