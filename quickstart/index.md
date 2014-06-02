@@ -7,9 +7,6 @@ title: Using CybOX with Python
 
 `pip install cybox`
 
-## OR Compile from source
-
-<<<<<<< HEAD
 ### Get Dependencies
 
 - [lxml](http://lxml.de/) - A Pythonic binding for the XML processing toolkits, [libxml2](http://xmlsoft.org) and [libxslt](http://xmlsoft.org).
@@ -33,7 +30,6 @@ Run `python setup.py install`
 
 ## Start using it 
 
->>>>>>> 033068bcd1bb8b99f5e411e31b4413e86184c4db
 See the [standalone code snippets](https://github.com/CybOXProject/python-cybox/tree/master/examples)
 
 Learn how to [generate and parse documents](/quickstart/cybox2.html) using Python
