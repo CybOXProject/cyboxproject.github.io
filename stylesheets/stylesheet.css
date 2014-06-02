@@ -98,8 +98,11 @@ p {
 }
 
 footer p {
-  color: #f2f2f2;
+  color:lightgray;
+  margin-left:30px;
+   
 }
+
 
 a {
   text-decoration: none;
@@ -118,13 +121,21 @@ a {
   -ms-transition: text-shadow 0.5s ease;
 }
 
-a:hover, a:focus {text-decoration: underline;}
-
 footer a {
-  color: #F2F2F2;
+  color: #00BFFF;
   text-decoration: underline;
+  margin-left:10px;
 }
 
+header a {
+  color: lightgray;
+  text-decoration: none;
+  
+  font-size: 18px;
+  border-style:dotted;
+  border-width:1px;
+    
+}
 em {
   font-style: italic;
 }
