@@ -10,7 +10,7 @@ title: CybOX Development
 It enables [sharing of sanitized data](http://cybox.mitre.org/about/faqs.html#A1) about malicious files observed by an organization
 
 # Implementation
-See the [Quick Start Guide ](/quickstart) for Python
+See the [Quick Start Guide ](/quickstart) and [developer documentation](http://cybox.readthedocs.org.)
 
 Read up on [Suggested Practices](/suggestions) 
 
