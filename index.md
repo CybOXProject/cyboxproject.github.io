@@ -3,30 +3,27 @@ layout: flat
 title: CybOX Development
 ---
 
-#### Also available for the [deprecated 1.0 version ](/quickstart/cybox1.html)
 
-# What is it?
- [CybOX is a standard](http://cybox.mitre.org/language/) implemented as an [XML schema ](https://github.com/CybOXProject/schemas) that captures `Observable` content about an indicator.
+# Impetus
+[CybOX is a standard for representing data](http://cybox.mitre.org/language/) implemented as an [XML schema ](https://github.com/CybOXProject/schemas) 
 
-It enables people to [share signatures](http://cybox.mitre.org/about/faqs.html#A1) about malicious files and attacks via automated means.
+It enables [sharing of sanitized data](http://cybox.mitre.org/about/faqs.html#A1) about malicious files observed by an organization
 
-# How do I use it?
-Check the [samples](https://github.com/CybOXProject/schemas/tree/master/samples) for common use cases
+# Implementation
+See the [Quick Start Guide ](/quickstart) for Python
 
-See the Python-oriented [Quick Start Guide ](/quickstart)
+Read up on [Suggested Practices](/suggestions) 
 
-Read up on [Best Practices](/suggestions) 
+Check out some [common use cases](https://github.com/CybOXProject/schemas/tree/master/samples) 
 
-# How do I create indicators?
-Community triage tools [support CybOX output ](https://github.com/stephenbrannon/IOCextractor)
+# How do I translate my data to CybOX?
+You can [transform incoming email messages](https://github.com/CybOXProject/email-to-cybox) 
 
-Parsing your incoming [phishing and spam emails](https://github.com/CybOXProject/email-to-cybox) is easy
-
-Conversion to [Mandiant OpenIOC format](https://github.com/CybOXProject/openioc-to-cybox) is supported
+Host-based logs can be converted from [OpenIOC format](https://github.com/CybOXProject/openioc-to-cybox) and other [open source tools ](https://github.com/stephenbrannon/IOCextractor)
 
 # Can I export to other formats?
 We support the [MITRE OVAL standard](https://github.com/CybOXProject/cybox-to-oval) which is natively accepted by many security products.
 
-If you want [plain vanilla HTML ](https://github.com/CybOXProject/cybox-to-html) that is fine too.
+[Vanilla HTML output](https://github.com/CybOXProject/cybox-to-html) is also supported
 
-
+**Note:** Content on this site does not reflect [deprecated versions](/quickstart/old.html)
