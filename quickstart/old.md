@@ -3,7 +3,7 @@ layout: flat
 title: Usage Examples
 ---
 
-# Generate a document
+# Generate a document in CybOX v 1.x
 
 ```python
     from cybox.core import Observable, Observables      

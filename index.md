@@ -17,7 +17,7 @@ Read up on [Suggested Practices](/suggestions)
 Check out some [common use cases](https://github.com/CybOXProject/schemas/tree/master/samples) 
 
 # How do I translate my data to CybOX?
-You can [transform incoming email messages](https://github.com/CybOXProject/email-to-cybox) 
+You can [transform incoming emails ](https://github.com/CybOXProject/email-to-cybox) to share phishing attempts
 
 Host-based logs can be converted from [OpenIOC format](https://github.com/CybOXProject/openioc-to-cybox) and other [open source tools ](https://github.com/stephenbrannon/IOCextractor)
 
