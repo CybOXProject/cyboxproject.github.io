@@ -1,3 +1,7 @@
-pygments: true
+name: CybOX Docs
 markdown: redcarpet
+highlighter: pygments
+
 copyright: The MITRE Corporation
+
+encoding: utf-8

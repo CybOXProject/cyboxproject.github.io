@@ -1,25 +1,29 @@
-<!DOCTYPE html>
-<html>
-  <body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }} | CybOX Project Documentation</title>
+    <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}stylesheets/stylesheet.css">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="{{site.root}}/css/bootstrap.min.css">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/CybOXProject">View on GitHub</a>
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="{{site.root}}/css/syntax.css">
 
-          <h2 id="project_title">CybOX Documentation </h2>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{site.root}}/css/main.css">
 
-    
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content=" Follow CybOX development on GitHub" />
-    <title>{{page.title}}</title>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30999757-1']);
+      _gaq.push(['_setDomainName', 'cyboxproject.github.io'])
+      _gaq.push(['_trackPageview']);
 
-    <a href="{{site.baseurl}}">Home</a>
-    <a href="{{site.baseurl}}quickstart">Install</a>
-    <a href="{{site.baseurl}}quickstart/usage">Use</a>
-    
-        </header>
-    </div>
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+</head>

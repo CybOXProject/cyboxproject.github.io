@@ -1,12 +1,14 @@
-<footer>
+<div id="footer">
+  <hr />
+  <div class="container">
+    <p class="text-muted">
+      Copyright {{ site.time | date: '%Y' }} {{ site.copyright }}. <a href="http://cybox.mitre.org/about/termsofuse.html">Terms of Use</a>
+    </p>
+  </div>
+</div>
 
-        <p>Copyright 2014 {{site.copyright}}. <a href="http://cybox.mitre.org/about/termsofuse.html">Terms of Use</a>
+<!-- jQuery JS -->
+<script src="{{site.root}}/js/jquery.min.js"></script>
 
-       <a href="http://cybox.mitre.org/community/registration.html"> Subscribe </a>
-
-       <a href="mailto:stix-taxii@hq.dhs.gov"> Contact Us</a></p>
-</footer>
-
-
-</body>
-</html>
+<!-- bootstrap JS -->
+<script src="{{site.root}}/js/bootstrap.min.js"></script>
