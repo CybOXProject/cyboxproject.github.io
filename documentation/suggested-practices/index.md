@@ -394,46 +394,24 @@ information about the file.
 
 The following practices are recommended for the use of these fields. Consider a
 file located at
-``C:\Users\ExampleUser\Documents\ProjectX\MeetingNotes_2014-08-01.txt`` or
-``/home/exampleuser/ProjectX/MeetingNotes_2014-08-01.txt``
+`C:\Users\ExampleUser\Documents\ProjectX\MeetingNotes_2014-08-01.txt` or
+`/home/exampleuser/ProjectX/MeetingNotes_2014-08-01.txt`
 
-1. The ``File_Name`` field should specify the base name of the file, including extension
-
-    ```xml
-    <cybox:Properties xsi:type="FileObj:FileObjectType">
-      <FileObj:File_Name>MeetingNotes_2014-08-01.txt</FileObj:File_Name>
-    </cybox:Properties>
-    ```
-
-2. The ``File_Path`` field should contain the path to the file.
-
-    ```xml
-    <cybox:Properties xsi:type="FileObj:FileObjectType">
-      <FileObj:File_Path>C:\Users\ExampleUser\Documents\ProjectX\MeetingNotes_2014-08-01.txt</FileObj:File_Path>
-    </cybox:Properties>
-    ```
-    ```xml
-    <cybox:Properties xsi:type="FileObj:FileObjectType">
-      <FileObj:File_Path>/home/exampleuser/ProjectX/MeetingNotes_2014-08-01.txt</FileObj:File_Path>
-    </cybox:Properties>
-    ```
-
-3. The ``File_Path`` should contain the name of the file if the ``File_Name``
-field is not provided. If the ``File_Name`` field is provided, the name in the
-``File_Path`` field must not conflict with the ``File_Name`` field. If the
-``File_Path`` field does not contain the file name, it should end with a path
-separator (slash `/` or backslash `\`, depending on the operating system).
-
-    **OK**
+1. The `File_Name` field should specify the base name of the file, including
+   extension.
 
     ```xml
     <cybox:Properties xsi:type="FileObj:FileObjectType">
       <FileObj:File_Name>MeetingNotes_2014-08-01.txt</FileObj:File_Name>
-      <FileObj:File_Path>C:\Users\ExampleUser\Documents\ProjectX\MeetingNotes_2014-08-01.txt</FileObj:File_Path>
     </cybox:Properties>
     ```
 
-    **BETTER**
+2. The `File_Path` field should contain the path of the directory containing
+   the file.  It should not contain the name of the file itself; instead, use
+   the `File_Name` field for this information. The `File_Path` field should end
+   with a path separator (slash `/` or backslash ` \ `, depending on the
+   operating system).
+
 
     ```xml
     <cybox:Properties xsi:type="FileObj:FileObjectType">
@@ -442,16 +420,24 @@ separator (slash `/` or backslash `\`, depending on the operating system).
     </cybox:Properties>
     ```
 
-4. Although the path may be either relative or fully qualified, it should be
-fully qualified unless the file which the ``File_Path`` is relative to is
-specified via a RelatedObject. If you specify a relative path (with
-`fully_qualified="false"`), you should include a related object, either
-embedded or by reference.
+    ```xml
+    <cybox:Properties xsi:type="FileObj:FileObjectType">
+      <FileObj:File_Name>MeetingNotes_2014-08-01.txt</FileObj:File_Name>
+      <FileObj:File_Path>/home/exampleuser/ProjectX/</FileObj:File_Path>
+    </cybox:Properties>
+    ```
+
+3. Although the `File_Path` may be either relative or fully qualified, it
+   should be fully qualified unless the file which the ``File_Path`` is
+   relative to is specified via a `RelatedObject`. If you specify a relative
+   path (with `fully_qualified="false"`), you should include a related object,
+   either embedded or by reference.
 
     ```xml
     <cybox:Object id="example:File-1">
       <cybox:Properties xsi:type="FileObj:FileObjectType">
-        <FileObj:File_Path fully_qualified="false">ProjectX\MeetingNotes_2014-08-01.txt</FileObj:File_Path>
+        <FileObj:File_Name>MeetingNotes_2014-08-01.txt</FileObj:File_Name>
+        <FileObj:File_Path fully_qualified="false">ProjectX</FileObj:File_Path>
       </cybox:Properties>
       <cybox:Related_Objects>
         <cybox:Related_Object id="example:File-2">
@@ -463,13 +449,31 @@ embedded or by reference.
     </cybox:Object>
     ```
 
-5. The `Device_Path` field specifies the path to the device on which the file resides. This is *not* the drive letter, which has its own property on The WindowsFileObject (though it could be `\\.\C:`). On Windows, this could be a path such as `\\.\PhysicalDrive1` or `\Device\Harddisk0\Partition0`. On Unix-like systems, this could be a path like `/dev/sda1`. In general, it is better to include a relationship to a DeviceObject which contains the file, rather than using this field.
+4. The `Device_Path` field specifies the path to the *partition* on which the
+   file resides. This is *not* the same as the drive letter (`C:`); instead,
+   use the `Drive` field on the `WindowsFileObject` for this. On Windows,
+   `Device_Path` could be a path such as `\Device\Harddisk0\Partition0`. On
+   Unix-like systems, this could be a path like `/dev/sda1`. You should not use
+   a path to a physical disk, such as `\\.\PhysicalDrive1` on Windows or
+   `/dev/sda` on Unix-like systems, since file systems are generally tied to
+   partitions rather than physical disks.
 
-6. The `Full_Path` field is used to specify a combination of `Device_Path` plus `Full_Path`. In general, it is preferable to include this information separately under the component fields rather than the `Full_Path` field, unless it is not possible or desired to separate the information apart. Furthermore, this should not be used for files on Unix-like systems, since addressing a file by combination of device path and file path is not typically valid (`/dev/sda1/home/exampleuser/ProjectX/MeetingNotes_2014-08-01.txt`).
+5. The `Full_Path` field is used to specify a combination of `Device_Path` plus
+   `File_Path`. You should not use this field unless it is not possible to
+   split the `Full_Path` into the `Device_Path` and the `File_Path` fields; it
+   is preferable to include this information separately under the component
+   fields.
 
-7. The `File_Extension` field is best used in CybOX patterns, rather than using an `EndsWith` condition on any of the other name or path fields.
+6. The `File_Extension` field should not be used for CybOX instance data;
+   instead, the file extension should be included as part of the `File_Name`
+   field.
 
-    **OK**
+   When expressing a CybOX pattern to match any file with a specific extension,
+   a file, use the `condition="Equals"` attribute on the `File_Extension`
+   field, rather than `condition="EndsWith"` or a regular expression on the
+   `File_Name` field.
+
+    **BAD**
 
     ```xml
     <cybox:Properties xsi:type="FileObj:FileObjectType">
@@ -477,7 +481,7 @@ embedded or by reference.
     </cybox:Properties>
     ```
 
-    **BETTER**
+    **GOOD**
 
     ```xml
     <cybox:Properties xsi:type="FileObj:FileObjectType">
