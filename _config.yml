@@ -4,4 +4,7 @@ highlighter: pygments
 
 copyright: The MITRE Corporation
 
+redcarpet:
+  extensions: ["autolink", "tables"]
+
 encoding: utf-8
