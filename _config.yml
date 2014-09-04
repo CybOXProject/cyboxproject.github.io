@@ -1,0 +1,10 @@
+name: CybOX Docs
+markdown: redcarpet
+highlighter: pygments
+
+copyright: The MITRE Corporation
+
+redcarpet:
+  extensions: ["autolink", "tables"]
+
+encoding: utf-8
