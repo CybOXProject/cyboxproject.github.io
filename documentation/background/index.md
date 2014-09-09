@@ -130,7 +130,7 @@ Defining an Object property as optional is accomplished via setting
 `minOccurs="0"` on the field definition.
 
 
-#### Example
+**Example**
 
 The follow example demonstrates optional Object properties via setting
 `minOccurs="0"` on the `Domain_Name` field found in the `WhoisObjectType`.
@@ -186,11 +186,7 @@ ending with `_Object.xsd`.
 
 ### CybOX Object Namespaces
 
-```
-Example:
-[ Object Authoring Identity ] # [ObjectName]-[Version]
-http://cybox.mitre.org/objects#AddressObject-2
-```
+`[Object Authoring Identity]#[ObjectName]-[Version]`
 
 Broken into three parts:
 
