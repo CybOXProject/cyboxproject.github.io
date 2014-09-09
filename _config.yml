@@ -5,6 +5,6 @@ highlighter: pygments
 copyright: The MITRE Corporation
 
 redcarpet:
-  extensions: ["autolink", "tables"]
+  extensions: ["autolink", "tables", "with_toc_data"]
 
 encoding: utf-8

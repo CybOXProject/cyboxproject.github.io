@@ -23,8 +23,8 @@ The `ObjectPropertiesType` is an abstract type defined in the [CybOX Common
 schema](https://github.com/CybOXProject/schemas/blob/master/cybox_common.xsd)
 which serves as the base type for all CybOX Objects (e.g., `AddressObjectType`,
 `FileObjectType`, etc.). Extension of `ObjectPropertiesType` can be done either
-[directly](../creating-objects#direct-extension-of-objectpropertiestype) or
-[indirectly](../creating-objects#indirect-extension-of-objectpropertiestype).
+[directly](#direct-extension-of-objectpropertiestype) or
+[indirectly](#indirect-extension-of-objectpropertiestype).
 
 By extending from `ObjectPropertiesType` a CybOX Object can be plugged into any
 field that is of type `ObjectPropertiesType`. This includes the `Properties`
@@ -59,7 +59,7 @@ but instead from another CybOX Object.
 Through this form of extension, a CybOX Object is able to inherit properties
 and fields from a parent CybOX Object without having to redefine or
 re-implement the parent Object's structure under a new [XML
-namespace](#namespaces)
+namespace](#namespaces).
 
 The following example shows how the `PDFFileObjectType` extends from
 `FileObjectType`.
@@ -629,7 +629,7 @@ types provide attributes for CybOX patterning as well as other use cases which
 may want to be leveraged when defining properties for a CybOX Object. If Object
 field data lends itself to [patterning capabilities](#cybox-patterning) then it
 should be defined using an XML element whose type is one of the [CybOX Object
-Property Types](#cybox-xml-schema-data-types).
+Property Types](#object-property-data-types:-objectpropertytype).
 
 **Note:** There is no `BooleanObjectPropertyType` so typically attributes are
 used for recording boolean data. CybOX leverages elements for almost all data

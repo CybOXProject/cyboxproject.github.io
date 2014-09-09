@@ -158,7 +158,7 @@ observable information that is not currently possible given the set of existing
 Object types. If there are no existing CybOX Objects which support capabilities
 desired by a CybOX author, the creation of an entirely new CybOX Object may be
 required. This is accomplished by defining a CybOX Object that extends the
-[ObjectPropertiesType](../background#object-base-data-type-objectpropertiestype).
+[ObjectPropertiesType](../background#object-base-data-type:-objectpropertiestype).
 
 Because this walkthrough ignores the existence of the `AddressObject`, we will
 need to create a brand new CybOX Object which extends the base
@@ -238,7 +238,7 @@ data model via the `Properties` field, which is of type `ObjectPropertiesType`.
 
 Now that the basic structure for `IPAddressObjectType` has been put in place,
 we can start adding the fields we defined in [Step
-3](#3-map-fields-to-cybox-data-types).
+3](#3.-map-fields-to-cybox-data-types).
 
 ```xml
 <xs:schema elementFormDefault="qualified"
@@ -253,7 +253,7 @@ we can start adding the fields we defined in [Step
   <xs:element name="IP_Address" type="IPAddressObj:IPAddressObjectType"/>
   
   <xs:complexType name="IPAddressObjectType">
-    <xs:complexContent >
+    <xs:complexContent>
       <xs:extension base="cyboxCommon:ObjectPropertiesType">
         <xs:sequence>
           <!-- Add IP_Address_Value StringObjectProperty type field-->
@@ -278,7 +278,7 @@ following fields: `IP_Address_Value`, `category`, `is_source`, and
 `is_address`. All of these field names and types align with the [CybOX Language
 design patterns](../background#cybox-language-design-patterns), [data
 type](../background#cybox-xml-schema-data-types) usages, and [naming
-conventions](../background#cybox-naming-convention).
+conventions](../background#cybox-naming-conventions).
 
 We can take this another step further, however. The `category` attribute is
 currently defined as being of type `xs:string`, meaning content authors can
