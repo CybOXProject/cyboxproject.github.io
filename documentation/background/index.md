@@ -8,7 +8,7 @@ language that is necessary to understanding [how to create a new CybOX
 object](../creating-objects).
 
 
-# CybOX XML Schema Data Types
+## CybOX XML Schema Data Types
 
 The [CybOX Common
 schema](https://github.com/CybOXProject/schemas/blob/master/cybox_common.xsd)
@@ -17,7 +17,7 @@ Objects (e.g., a file on disk or network packet) as a whole or individual
 Object Properties (e.g., a filename or TCP Header checksum).
 
 
-## Object Base Data Type: ObjectPropertiesType
+### Object Base Data Type: ObjectPropertiesType
 
 The `ObjectPropertiesType` is an abstract type defined in the [CybOX Common
 schema](https://github.com/CybOXProject/schemas/blob/master/cybox_common.xsd)
@@ -31,7 +31,7 @@ field that is of type `ObjectPropertiesType`. This includes the `Properties`
 field, which is a field found on the CybOX Core schema `ObjectType`.
 
 
-### Direct Extension of ObjectPropertiesType
+#### Direct Extension of ObjectPropertiesType
 
 Many CybOX Objects directly extend the `ObjectPropertiesType` which serves as
 the root base type for all CybOX Objects. The following XML snippet shows how
@@ -48,7 +48,7 @@ the `FileObjectType` directly extends from the base `ObjectPropertiesType`.
 ```
 
 
-### Indirect Extension of ObjectPropertiesType
+#### Indirect Extension of ObjectPropertiesType
 
 The CybOX Language is designed to promote [Object reuse](#cybox-object-reuse)
 so as to facilitate consistent methods for the characterization of cyber
@@ -81,7 +81,7 @@ from the `FileObjectType`. Because `FileObjectType` extends from
 `ObjectPropertiesType`.
 
 
-## Object Property Data Types: ObjectPropertyType
+### Object Property Data Types: ObjectPropertyType
 
 The CybOX Language defines data types to be used for each Object property
 (e.g., a filename or a TCP header checksum). The following data types are
@@ -123,14 +123,14 @@ the default interpretation of the value stored in the field.
 | `Base64BinaryObjectPropertyType` | `base64Binary` |
 
 
-# CybOX Object Property Requirements
+## CybOX Object Property Requirements
 
 Generally speaking, CybOX Object Properties (fields) are optional by design.
 Defining an Object property as optional is accomplished via setting
 `minOccurs="0"` on the field definition.
 
 
-### Example
+#### Example
 
 The follow example demonstrates optional Object properties via setting
 `minOccurs="0"` on the `Domain_Name` field found in the `WhoisObjectType`.
@@ -155,7 +155,7 @@ The follow example demonstrates optional Object properties via setting
 ```
 
 
-## Why Optional?
+### Why Optional?
 
 Defining fields as optional is done to better support [CybOX
 patterning](#cybox-patterning), wherein pattern authors may write patterns
@@ -165,14 +165,14 @@ Forcing the inclusion of fields may yield undesired behaviors and results from
 pattern evaluation tools.
 
 
-# CybOX Naming Conventions
+## CybOX Naming Conventions
 
 The CybOX XML Schema follows naming conventions for CybOX Object schemas, data
 types, controlled vocabularies, object names, namespace aliases, elements, and
 attributes.
 
 
-## CybOX Object Schema Names
+### CybOX Object Schema Names
 
 Underscore-separated, first letter of terms capitalized (unless an acronym is
 being used, in which case all letters of the acronym are capitalized) and
@@ -184,7 +184,7 @@ ending with `_Object.xsd`.
 * `DNS_Cache_Object.xsd` (DNS acronym capitalized)
 
 
-## CybOX Object Namespaces
+### CybOX Object Namespaces
 
 ```
 Example:
@@ -204,7 +204,7 @@ Broken into three parts:
 * `http://cybox.mitre.org/objects#PacketObject-2` : Network Packet Object v2.1 Object schema namespace
 
 
-## CybOX Object Namespace Aliases
+### CybOX Object Namespace Aliases
 
 Camel-cased and ending with `Obj`. If the Object namespace includes an acronym,
 each letter of the acronym is capitalized.
@@ -216,13 +216,13 @@ each letter of the acronym is capitalized.
 * `PDFFileObj` (PDF is capitalized)
 
 
-## CybOX Data Types
+### CybOX Data Types
 
 The CybOX Language defines naming conventions for various data types and date
 type classifications.
 
 
-### Complex Types
+#### Complex Types
 
 Camel-cased and ending with `ObjectType` if the `complexType` defines the
 root-level, `ObjectPropertiesType` implementation for the schema.
@@ -247,7 +247,7 @@ Vocabulary](#controlled-vocabularies) section for more details regarding naming
 conventions for controlled vocabularies.
 
 
-### Simple Types
+#### Simple Types
 
 Camel-cased and ending with `TypeEnum`.
 
@@ -260,7 +260,7 @@ non-controlled-vocabulary enumerations.
 * `ToolReferenceTypeEnum`
 
 
-### Controlled Vocabularies
+#### Controlled Vocabularies
 
 Controlled vocabularies sit at the intersection of `complexType` and
 `simpleType` naming conventions, with additional conventions of their own
@@ -291,7 +291,7 @@ for CybOX Object relationship types:
 * `ObjectRelationshipTypeVocab-1.1` (the `complexType` vocabulary implementation)
 
 
-### XML Elements
+#### XML Elements
 
 Underscore-separated with first letter of each term capitalized (unless the
 term is an acronym in which case each letter is capitalized).
@@ -303,7 +303,7 @@ term is an acronym in which case each letter is capitalized).
 * `PDF_File`
 
 
-### XML Attributes
+#### XML Attributes
 
 Underscore separated with each term being lowercase.
 
@@ -312,12 +312,12 @@ Underscore separated with each term being lowercase.
 * `is_case_sensitive`
 
 
-# CybOX Language Design Patterns
+## CybOX Language Design Patterns
 
 The CybOX Language follows XML Schema design patterns described below.
 
 
-## Container Elements
+### Container Elements
 
 In XML Schema, authors can define flat lists of elements by setting the
 `maxOccurs` attribute on an element definition to either `unbounded` or to a
@@ -401,7 +401,7 @@ creation of a collection data type called `BooksType`.
 ```
 
 
-## Global Data Types
+### Global Data Types
 
 XML Schema allows data types to be defined from within element definitions
 (i.e, inline). In CybOX, we define all of our data types at the global level
@@ -409,7 +409,7 @@ XML Schema allows data types to be defined from within element definitions
 types.
 
 
-### XML Schema (anonymous inline type definition)
+#### XML Schema (anonymous inline type definition)
 
 The following XML Schema example demonstrates a `library` with a `books`
 element containing an inline `complexType` definition. Notice that the inline
@@ -440,7 +440,7 @@ referenced from outside its parent `element`.
 ```
 
 
-### CybOX Schema (global type definition)
+#### CybOX Schema (global type definition)
 
 The following example takes the schematic structure above, but aligns itself
 with the CybOX XML "global type definition" pattern.
@@ -469,7 +469,7 @@ with the CybOX XML "global type definition" pattern.
 ```
 
 
-## CybOX Object Reuse
+### CybOX Object Reuse
 
 The CybOX XML Language is designed to facilitate Object reuse, so as to enforce
 consistent methods for characterizing cyber observable information. This is
@@ -477,7 +477,7 @@ enabled via the definition of [global data types](#global-data-types) and
 unique [CybOX Object namespaces](#namespaces).
 
 
-### Example
+#### Example
 
 The following example demonstrates Object reuse through the `WhoisObjectType`,
 which utilizes the `AddressObjectType` for the characterization of IP address
@@ -509,7 +509,7 @@ Language enforces consistent methods for the representation of cyber
 oberservable information.
 
 
-# CybOX Patterning
+## CybOX Patterning
 
 CybOX patterns are a generalization of CybOX content. They allow users and
 developers to characterize a set, a range, or other generalized characteristics
@@ -517,7 +517,7 @@ of a cyber observable and its properties. For instance, one could use CybOX
 patterns to describe a URL that matches one of a set of possible URL values.
 
 
-## Example
+### Example
 
 The following XML snippet expresses a pattern on a file where a regular
 expression is applied to the `File_Name` field:
@@ -531,7 +531,7 @@ expression is applied to the `File_Name` field:
 ```
 
 
-# CybOX Object Versioning
+## CybOX Object Versioning
 
 The [CybOX Language Versioning
 Policy](http://cybox.mitre.org/language/versioning_policy.html) details the
@@ -540,7 +540,7 @@ version change, minor version change, or a version update, and how version
 information is represented and conveyed in the CybOX Language.
 
 
-# XML Considerations
+## XML Considerations
 
 The CybOX Language is currently defined in XML Schema and as such, it is
 necessary to understand XML Schema when creating a CybOX Object. This is not
@@ -548,7 +548,7 @@ intended to be a tutorial on XML Schema but only an introduction of XML Schema
 design considerations that may come up when working to define a CybOX Object.
 
 
-## Complex vs. Simple Types
+### Complex vs. Simple Types
 
 When creating a data type in XML Schema, an author can define it as a
 `simpleType` or a `complexType`. 
@@ -581,7 +581,7 @@ A `complexType` structure can contain textual data (just as with a
 for attributes that support patterning or other capabilities and use cases.
 
 
-## Namespaces
+### Namespaces
 
 XML namespaces provide a method of avoiding naming conflicts for elements and
 attributes. Each CybOX XML Schema defines a separate namespace, allowing for
@@ -590,7 +590,7 @@ CybOX Object, an author will need to define their own namespace for their
 schema types and fields to exist within.
 
 
-## XSI Typing
+### XSI Typing
 
 XML Schema Instance (XSI) Typing refers to a mechanism by which XML instance
 data explicitly asserts its implementation type.
@@ -617,7 +617,7 @@ The example above uses `xsi:type="AddressObj:AddressObjectType"` to declare
 this object as being of type, `AddressObjectType`.
 
 
-## Elements vs. Attributes
+### Elements vs. Attributes
 
 The question of whether to use attributes or elements for data fields is often
 debatable and difficult to answer in a generic sense. The IBM developerWorks
