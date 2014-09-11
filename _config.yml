@@ -4,7 +4,10 @@ highlighter: pygments
 
 copyright: The MITRE Corporation
 
+stix_url: http://stixproject.github.io/data-model/1.1.1/
+
 redcarpet:
-  extensions: ["autolink", "tables", "with_toc_data"]
+    extensions: ["autolink", "no_intra_emphasis", "tables", "with_toc_data"]
 
 encoding: utf-8
+
