@@ -182,6 +182,85 @@ There are two primary variations of this:
 
 **One clear exception to this is if conformance to a specific language Profile is required and that Profile restricts the set of available objects or directly specifies a particular Object to be used.**
 
+
+###Common Object-to-Object Relationships
+
+CybOX supports a broad range of Object types and provides the capability to relate/associate Objects together along with a characterization of how they are related. 
+
+To encourage consistency in the characterization of relationships between Objects, CybOX provides a default controlled vocabulary ([ObjectRelationshipVocab-1.1](http://stixproject.github.io/data-model/1.1.1/cyboxVocabs/ObjectRelationshipVocab-1.1/)) for use with the Relationship field. This vocabulary contains a broad range of values to characterize many of the potentially relevant Object-to-Object relationships.
+
+####Suggested vocabulary values to use in some of the more common Object-to-Object relationship usage scenarios include:
+
+**Network-centric Object relationships:**
+
+
+* **When you want to talk about an association pairing between a network naming structure (e.g. Domain or Hostname) and an IP Address it resolves to**
+  * [Domain_Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) -> [Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/)   (Relationship = “**Resolved_To**”)
+  * Address Object -> Domain_Name Object   (Relationship = “**Resolved_To**”)
+  * [Hostname Object](http://stixproject.github.io/data-model/1.1.1/HostnameObj/HostnameObjectType/) -> Address Object   (Relationship = “**Resolved_To**”)
+  * Address Object -> Hostname Object   (Relationship = “**Resolved_To**”)
+* **When you want to talk about the association between an IP Address and an Autonomous System**
+      * Address Object -> [AS Object](http://stixproject.github.io/data-model/1.1.1/ASObj/ASObjectType/) (Relationship = “**Contained_By**”)
+      * AS Object -> Address Object (Relationship = “**Contains**”)
+* **When you want to talk about the association between a  network naming structure (e.g. Domain or Hostname) and a Whois response**
+      * Domain_Name Object -> [Whois Object](http://stixproject.github.io/data-model/1.1.1/WhoisObj/WhoisObjectType/)   (Relationship = “**Characterized_By**”)
+      * Whois Object -> Domain_Name Object   (Relationship = “**Characterizes**”)
+      * Hostname Object -> Whois Object   (Relationship = “**Characterized_By**”)
+      * Whois Object -> Hostname Object    (Relationship = “**Characterizes**”)
+* **When you want to talk about the association between a network naming structure (e.g. Domain or Hostname) and a DNS Query**
+      * Domain_Name Object -> [DNS_Query Object](http://stixproject.github.io/data-model/1.1.1/DNSQueryObj/DNSQueryObjectType/) Object   (Relationship = “**Properties_Queried_By**”)
+      * DNS_Query Object -> Domain_Name Object   (Relationship = “**Properties_Queried**”)
+      * Hostname Object -> DNS_Query Object   (Relationship = “**Properties_Queried_By**”)
+      * DNS_Query Object -> Hostname Object    (Relationship = “**Properties_Queried**”)
+* **When you want to talk about the association between a network naming structure (e.g. Domain or Hostname) and a DNS Record**
+      * Domain_Name Object -> [DNS_Record Object](http://stixproject.github.io/data-model/1.1.1/DNSRecordObj/DNSRecordObjectType/)   (Relationship = “**Characterized_By**”)
+      * DNS_Record Object -> Domain_Name Object   (Relationship = “**Characterizes**”)
+      * Hostname Object -> DNS_Record Object   (Relationship = “**Characterized_By**”)
+      * DNS_Record Object -> Hostname Object    (Relationship = “**Characterizes**”)
+* **When you want to talk about the association between a DNS Record and a resolving IP Address within that record**
+      * DNS_Record Object -> Address Object    (Relationship = “**Contains**”)
+      * Address Object -> DNS_Record Object    (Relationship = “**Contained_Within**”)
+* **When you want to talk about the association between a DNS Query and a DNS Record that resulted from the query**
+      * DNS_Query Object -> DNS Record Object    (Relationship = “**Searched_For**”)
+      * DNS_Record Object -> DNS_Query Object    (Relationship = “**Searched_For_By**”)
+* **When you want to talk about the association between a URL and the Domain contained within it**
+      * [URI Object](http://stixproject.github.io/data-model/1.1.1/URIObj/URIObjectType/) - > Domain_Name Object    (Relationship = “**Contains**”)
+      * Domain_Name Object - > URI Object    (Relationship = “**Extracted_From**”)
+* **When you want to talk about the association between one Domain and another Domain that is a sub-part of it**
+      * Domain_Name Object (supra) -> Domain_Name Object (sub)    (Relationship = “**Supra-domain_Of**” or “**FQDN_Of**” depending on context)
+      * Domain_Name Object (sub) -> Domain_Name Object (supra)    (Relationship = “**Sub-domain_Of**”)
+
+**Host-centric Object relationships:**
+
+
+* **When you want to talk about the association between the characteristics of a File and the actual bits of the file**
+      * [File Object](http://stixproject.github.io/data-model/1.1.1/FileObj/FileObjectType/) -> [Artifact Object](http://stixproject.github.io/data-model/1.1.1/ArtifactObj/ArtifactObjectType/) (Relationship = “**Characterizes**”)
+      * Artifact Object -> File Object (Relationship = “**Characterized_By**”)
+* **When you want to talk about the association between an Email and characteristics of a file attachment to the email**
+      * [Email_Message Object](http://stixproject.github.io/data-model/1.1.1/EmailMessageObj/EmailMessageObjectType/) -> File Object (Relationship = “**Contains**”)
+      * File Object -> Email_Message Object (Relationship = “**Contained_Within**”)
+* **When you want to talk about the association between an Email and the actual bits of a file attachment to the email**
+      * Email_Message Object -> Artifact Object (Relationship = “**Contains**”)
+      * Artifact Object -> Email_Message Object (Relationship = “**Contained_Within**”)
+* **When you want to talk about the association between an Email and a Link (URL) within the Email**
+      * Email_Message Object -> [Link](http://stixproject.github.io/data-model/1.1.1/LinkObj/LinkObjectType/) Object (Relationship = “**Contains**”)
+      * Link Object -> Email_Message Object (Relationship = “**Contained_Within**”)
+* **When you want to talk about the association between a File and another File contained within it**
+      * File Object (outer) -> FileObject (inner) (Relationship = “**Contains**”)
+      * File Object (inner) -> File Object (outer) (Relationship = “**Contained_Within**”)
+* **When you want to talk about the association between a File and another File that it places on a system**
+      * File Object (dropper) -> FileObject (dropped file) (Relationship = “**Dropped**”)
+      * File Object (dropped file) -> File Object (dropper) (Relationship = “**Dropped_By**”)
+* **When you want to talk about the association between a File and the URL, Domain or Hostname from which it was downloaded**
+      * File Object - > URI Object    (Relationship = “**Downloaded_From**”)
+      * URI Object - > File Object    (Relationship = “**Downloaded**”)
+      * File Object - > Domain_Name Object    (Relationship = “**Downloaded_From**”)
+      * Domain_Name Object - > File Object    (Relationship = “**Downloaded**”)
+      * File Object - > Hostname Object    (Relationship = “**Downloaded_From**”)
+      * Hostname Object - > File Object    (Relationship = “**Downloaded**”)
+
+
+
 ### Capturing Custom Tool Properties
 Sometimes, a tool will capture properties about a CybOX object that aren't in
 the schema for that object type. In some cases this is because the schemas need
