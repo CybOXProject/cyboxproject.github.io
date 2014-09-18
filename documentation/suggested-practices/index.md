@@ -157,19 +157,11 @@ mix and match fields with @condition set and fields without @condition set.
 
 ### CybOX Object selection
 
-CybOX Objects schemas define sets of properties for common cyber objects. 
+CybOX Object schemas define sets of properties for common cyber objects. CybOX provides an extensive set of pre-defined Objects.  This predefined set includes a broad range of object types across the cyber domain (network, host, files, memory, devices, etc.) as well as objects of varying levels of specificity/abstraction intended for differing use cases.  The set of CybOX objects is designed to be extensible, allowing the definition of new object types, if required.  CybOX objects can build on other CybOX objects using one or both of the following mechanisms:
 
-To support practical use, CybOX provides an extensive set of Object property specifications by default.
-
-This predefined set includes a broad range of object types across the cyber domain (network, host, files, memory, devices, etc.) as well as objects of varying levels of specificity/abstraction intended for differing use cases.
-
-The approach to [defining Objects](../creating-objects) (especially those across varying levels of specificity/abstraction) is intended to pursue architectural consistency and reuse by having more complex or specific variations on Objects leverage other more abstract existing Objects for sets of properties.
-
-There are two primary variations of this:
-
-* Objects that derive from other Objects of the same basic type along a spectrum of abstract to more specific.
+* Inheritance/Derivation:  Objects that derive from other Objects.
  * For example, **File -> Win File -> Win EXE File** where CybOX defines a basic [File Object] ({{site.stix_url}}/FileObj/FileObjectType) with general file properties applicable across platforms, a more specific [Win_File Object] ({{site.stix_url}}/WinFileObj/WindowsFileObjectType) that extends the general File Object and adds Windows-specific file properties, and an even more specific [Win_Executable_File Object] ({{site.stix_url}}/WinExecutableFileObj/WindowsExecutableFileObjectType) which extends the Win_File Object and adds properties for executable files under Windows.
-* Objects that leverage other Objects to define more specific properties for differing and more specialized use cases.
+* Composition: Objects that incorporate other Objects to define more specific properties for differing and more specialized use cases.
   * For example, the set of Objects specified that can contain an **IP Address**.
     * [Address Object] ({{site.stix_url}}/AddressObj/AddressObjectType) enables the specification of a particular IP Address (or other type of address) value and its type (e.g. ipv4-addr) without any other context. This can be used when you desire to characterize an IP Address but not to assert any given context for where you might find it (e.g. it may appear in any of a wide variety of logs). This Object also provides consistent specification of address properties for its use on its own or by more specific Objects that need to characterize addresses within more specific contexts.
     * [Socket_Address Object] ({{site.stix_url}}/SocketAddressObj/SocketAddressObjectType) enables the specification of a particular IP Address (or Hostname) and Port pairing. This obviously lets you characterize a more specific context for an IP Address but still leverages the AddressObjectType for its IP Address structure yielding consistency across the two Objects.
