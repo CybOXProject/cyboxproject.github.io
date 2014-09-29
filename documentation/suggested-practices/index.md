@@ -275,7 +275,17 @@ the filename and path should be split and placed in the `File_Name` and
 
 ### Pattern Examples
 
-**NOTE**: These examples can often be combined to represent more complex conditions.
+**NOTE**: Patterns on different fields be combined to represent more complex conditions.
+
+
+#### Representing a portion of the file name
+
+```xml
+<cybox:Properties xsi:type="FileObj:FileObjectType">
+  <FileObj:File_Name condition="Contains">2014</FileObj:File_Extension>
+</cybox:Properties>
+```
+
 
 #### Representing any file with a given extension
 
