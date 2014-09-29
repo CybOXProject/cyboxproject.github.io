@@ -235,14 +235,36 @@ information about the file.
 * `Full_Path`
 * `File_Extension`
 
+In general, `File_Name` and `File_Path` are sufficient for the majority of use
+cases.  If the `File_Name` field is used, then the `File_Path` field should 
+show the directory containing the file; the file name should not be 
+duplicated.  As with other fields on CybOX objects, if the file path is 
+unknown, or you do not wish to include it, it can be omitted.  
 
-### Instance Data
+The `Device_Path` field MAY be used to specify the path to the *file system
+partition* on which the file resides.  On Windows, `Device_Path` could be a
+path such as `\Device\Harddisk0\Partition0`. On Unix-like systems, this could
+be a path like `/dev/sda1`. You should not use a path to a physical disk, such
+as `\\.\PhysicalDrive1` or `/dev/sda`, since file systems are generally tied 
+to partitions rather than physical disks.
 
-For File instance observables, the `File_Name` and `File_Path` are sufficient
-for the vast majority of use cases.  Given the file
-`C:\Users\ExampleUser\Documents\ProjectX\MeetingNotes_2014-08-01.txt`, the file
-name and the path of the directory which contains the file should be separated
-and stored in these two fields. Note the trailing `\` in the `File_Path`.
+The `Full_Path` field is used to specify a combination of `Device_Path` plus
+`File_Path`. You SHOULD NOT use this field unless it is not possible to split
+the `Full_Path` into the `Device_Path` and the `File_Path` fields; instead,
+it is better to include this information separately under the component fields.
+
+The `File_Extension` field should only be used if the other fields are 
+insufficient; it should not be used to duplicate information already in the 
+`File_Name` field.  This is most common in observable patterns, where you want
+to apply one condition to the `File_Name` (e.g., `StartsWith` or `Contains`),
+but a different condition (often `Equals`) to the `File_Extension`. 
+
+
+### Instance Example
+
+Given the file `C:\Users\ExampleUser\Documents\ProjectX\MeetingNotes_2014-08-01.txt`, 
+the filename and path should be split and placed in the `File_Name` and 
+`File_Path` fields. Note the trailing `\` in the `File_Path`.
 
 ```xml
 <cybox:Properties xsi:type="FileObj:FileObjectType">
@@ -251,41 +273,21 @@ and stored in these two fields. Note the trailing `\` in the `File_Path`.
 </cybox:Properties>
 ```
 
-If the file path is unknown, or you do not wish to include it, it can be
-omitted.
+### Pattern Examples
 
-The `Device_Path` field MAY be used to specify the path to the *file system
-partition* on which the file resides.  On Windows, `Device_Path` could be a
-path such as `\Device\Harddisk0\Partition0`. On Unix-like systems, this could
-be a path like `/dev/sda1`. You should not use a path to a physical disk, such
-as `\\.\PhysicalDrive1` on Windows or `/dev/sda` on Unix-like systems, since
-file systems are generally tied to partitions rather than physical disks.
+**NOTE**: These examples can often be combined to represent more complex conditions.
 
-The `Full_Path` field is used to specify a combination of `Device_Path` plus
-`File_Path`. You SHOULD NOT use this field unless it is not possible to split
-the `Full_Path` into the `Device_Path` and the `File_Path` fields; it is
-preferable to include this information separately under the component fields.
+#### Representing any file with a given extension
 
-The `File_Extension` field SHOULD NOT be used on instance data.
-
-
-### Pattern Data
-
-Representing file name and path data as CybOX patterns is more complex, as
-there is much more variation in what is being represented. A few examples are
-shown below, but this is far from an exhaustive list. Note that some examples
-can be combined to represent more complex conditions.
-
-#### Representing a file with a given extension
-
-This is the time to use the `File_Extension` field. Do not use a
-`condition="EndsWith"` on the `File_Name` field.
+Use the `File_Extension` field. Do not use a `condition="EndsWith"` on the 
+`File_Name` field.
 
 ```xml
 <cybox:Properties xsi:type="FileObj:FileObjectType">
   <FileObj:File_Extension condition="Equals">txt</FileObj:File_Extension>
 </cybox:Properties>
 ```
+
 
 #### Representing a file in a given directory
 
@@ -313,7 +315,7 @@ directory which directly contains the file, you can use `StartsWith` or
 
 ```xml
 <cybox:Properties xsi:type="FileObj:FileObjectType">
-  <FileObj:File_Path condition="StartsWith">C:\Users\ExampleUser\Documents\</FileObj:File_Path>
+  <FileObj:File_Path condition="StartsWith">C:\Users\ExampleUser\</FileObj:File_Path>
 </cybox:Properties>
 ```
 
