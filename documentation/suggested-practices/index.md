@@ -191,73 +191,61 @@ To encourage consistency in the characterization of relationships between Object
 
 ####Suggested vocabulary values to use in some of the more common Object-to-Object relationship usage scenarios include:
 
-**Network-centric Object relationships:**
+<br/>
 
+**Desired Association (Network-centric Object relationships)**|&nbsp;&nbsp;&nbsp;**Object1**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->|&nbsp;&nbsp;&nbsp;**Object2**|&nbsp;&nbsp;&nbsp;**"Relationship" Vocabulary Value**
+---------------------- | ---------- | ---------- | -----------
+A network naming structure (e.g. Domain or Hostname) and an IP Address<br/> it resolves to | &nbsp;&nbsp;&nbsp;[Domain_Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) | &nbsp;&nbsp;&nbsp;[Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/) | &nbsp;&nbsp;&nbsp; “**Resolved_To**”
+ | &nbsp;&nbsp;&nbsp;Domain_Name Object | &nbsp;&nbsp;&nbsp;Address Object | &nbsp;&nbsp;&nbsp; “**Resolved_To**”
+ | &nbsp;&nbsp;&nbsp;[Hostname Object](http://stixproject.github.io/data-model/1.1.1/HostnameObj/HostnameObjectType/) |  &nbsp;&nbsp;&nbsp;Address Object |&nbsp;&nbsp;&nbsp; “**Resolved_To**”
+ | &nbsp;&nbsp;&nbsp;Address Object  | &nbsp;&nbsp;&nbsp;Hostname Object  | &nbsp;&nbsp;&nbsp; “**Resolved_To**”
+An IP Address and an Autonomous System | &nbsp;&nbsp;&nbsp;Address Object  | &nbsp;&nbsp;&nbsp;[AS Object](http://stixproject.github.io/data-model/1.1.1/ASObj/ASObjectType/)  | &nbsp;&nbsp;&nbsp; “**Contained_By**”
+ | &nbsp;&nbsp;&nbsp;AS Object  | &nbsp;&nbsp;&nbsp;Address Object  | &nbsp;&nbsp;&nbsp; “**Contains**”
+A network naming structure (e.g. Domain or Hostname) and a Whois response | &nbsp;&nbsp;&nbsp;Domain_Name Object  | &nbsp;&nbsp;&nbsp;[Whois Object](http://stixproject.github.io/data-model/1.1.1/WhoisObj/WhoisObjectType/)  | &nbsp;&nbsp;&nbsp; “**Characterized_By**”
+ | &nbsp;&nbsp;&nbsp;Whois Object  | &nbsp;&nbsp;&nbsp;Domain_Name Object  | &nbsp;&nbsp;&nbsp; “**Characterizes**”
+ | &nbsp;&nbsp;&nbsp;Hostname Object  | &nbsp;&nbsp;&nbsp;Whois Object  | &nbsp;&nbsp;&nbsp; “**Characterized_By**”
+ | &nbsp;&nbsp;&nbsp;Whois Object  | &nbsp;&nbsp;&nbsp;Hostname Object  | &nbsp;&nbsp;&nbsp; “**Characterizes**”
+A network naming structure (e.g. Domain or Hostname) and a DNS Query | &nbsp;&nbsp;&nbsp;Domain_Name Object  | &nbsp;&nbsp;&nbsp;[DNS_Query Object](http://stixproject.github.io/data-model/1.1.1/DNSQueryObj/DNSQueryObjectType/) Object  | &nbsp;&nbsp;&nbsp; “**Properties_Queried_By**”
+ | &nbsp;&nbsp;&nbsp;DNS_Query Object  | &nbsp;&nbsp;&nbsp;Domain_Name  | &nbsp;&nbsp;&nbsp; “**Properties_Queried**”
+ | &nbsp;&nbsp;&nbsp;Hostname Object  | &nbsp;&nbsp;&nbsp;DNS_Query Object  | &nbsp;&nbsp;&nbsp; "**Properties_Queried_By**”
+ | &nbsp;&nbsp;&nbsp;DNS_Query Object  | &nbsp;&nbsp;&nbsp;Hostname Object  | &nbsp;&nbsp;&nbsp; “**Properties_Queried**”
+A network naming structure (e.g. Domain or Hostname) and a DNS Record | &nbsp;&nbsp;&nbsp;Domain_Name Object  | &nbsp;&nbsp;&nbsp;[DNS_Record Object](http://stixproject.github.io/data-model/1.1.1/DNSRecordObj/DNSRecordObjectType/)  | &nbsp;&nbsp;&nbsp; “**Characterized_By**”
+ | &nbsp;&nbsp;&nbsp;DNS_Record Object  | &nbsp;&nbsp;&nbsp;Domain_Name Object  | &nbsp;&nbsp;&nbsp; “**Characterizes**”
+ | &nbsp;&nbsp;&nbsp;Hostname Object  | &nbsp;&nbsp;&nbsp;DNS_Record Object  | &nbsp;&nbsp;&nbsp; “**Characterized_By**”
+ | &nbsp;&nbsp;&nbsp;DNS_Record )Object | &nbsp;&nbsp;&nbsp;Hostname Object  | &nbsp;&nbsp;&nbsp; “**Characterizes**”
+A DNS Record and a resolving IP Address within that record | &nbsp;&nbsp;&nbsp;DNS_Record Object  | &nbsp;&nbsp;&nbsp;Address Object  | &nbsp;&nbsp;&nbsp; “**Contains**”
+ | &nbsp;&nbsp;&nbsp;Address Object  | &nbsp;&nbsp;&nbsp;DNS_Record Object   | &nbsp;&nbsp;&nbsp; “**Contained_Within**”
+A DNS Query and a DNS Record that resulted from the query | &nbsp;&nbsp;&nbsp;DNS_Query Object  | &nbsp;&nbsp;&nbsp;DNS Record Object  | &nbsp;&nbsp;&nbsp; “**Searched_For**”
+ | &nbsp;&nbsp;&nbsp;DNS Record Object  | &nbsp;&nbsp;&nbsp;DNS_Query Object  | &nbsp;&nbsp;&nbsp; “**Searched_For_By**”
+A URL and the Domain contained within it | &nbsp;&nbsp;&nbsp;[URI Object](http://stixproject.github.io/data-model/1.1.1/URIObj/URIObjectType/)  | &nbsp;&nbsp;&nbsp;Domain_Name Object  | &nbsp;&nbsp;&nbsp; “**Contains**”
+ | &nbsp;&nbsp;&nbsp;Domain_Name Object  | &nbsp;&nbsp;&nbsp;URI Object  | &nbsp;&nbsp;&nbsp; “**Extracted_From**”
+One Domain and another Domain that is a sub-part of it | &nbsp;&nbsp;&nbsp;Domain_Name Object (supra) | &nbsp;&nbsp;&nbsp;Domain_Name Object (sub) | &nbsp;&nbsp;&nbsp; “**Supra-domain_Of**”
+ | &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; or “**FQDN_Of**”
+ | &nbsp;&nbsp;&nbsp;Domain_Name Object (sub)  | &nbsp;&nbsp;&nbsp;Domain_Name Object (supra)  | &nbsp;&nbsp;&nbsp; “**Sub-domain_Of**”
 
-* **When you want to talk about an association pairing between a network naming structure (e.g. Domain or Hostname) and an IP Address it resolves to**
-  * [Domain_Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) -> [Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/)   (Relationship = “**Resolved_To**”)
-  * Address Object -> Domain_Name Object   (Relationship = “**Resolved_To**”)
-  * [Hostname Object](http://stixproject.github.io/data-model/1.1.1/HostnameObj/HostnameObjectType/) -> Address Object   (Relationship = “**Resolved_To**”)
-  * Address Object -> Hostname Object   (Relationship = “**Resolved_To**”)
-* **When you want to talk about the association between an IP Address and an Autonomous System**
-      * Address Object -> [AS Object](http://stixproject.github.io/data-model/1.1.1/ASObj/ASObjectType/) (Relationship = “**Contained_By**”)
-      * AS Object -> Address Object (Relationship = “**Contains**”)
-* **When you want to talk about the association between a  network naming structure (e.g. Domain or Hostname) and a Whois response**
-      * Domain_Name Object -> [Whois Object](http://stixproject.github.io/data-model/1.1.1/WhoisObj/WhoisObjectType/)   (Relationship = “**Characterized_By**”)
-      * Whois Object -> Domain_Name Object   (Relationship = “**Characterizes**”)
-      * Hostname Object -> Whois Object   (Relationship = “**Characterized_By**”)
-      * Whois Object -> Hostname Object    (Relationship = “**Characterizes**”)
-* **When you want to talk about the association between a network naming structure (e.g. Domain or Hostname) and a DNS Query**
-      * Domain_Name Object -> [DNS_Query Object](http://stixproject.github.io/data-model/1.1.1/DNSQueryObj/DNSQueryObjectType/) Object   (Relationship = “**Properties_Queried_By**”)
-      * DNS_Query Object -> Domain_Name Object   (Relationship = “**Properties_Queried**”)
-      * Hostname Object -> DNS_Query Object   (Relationship = “**Properties_Queried_By**”)
-      * DNS_Query Object -> Hostname Object    (Relationship = “**Properties_Queried**”)
-* **When you want to talk about the association between a network naming structure (e.g. Domain or Hostname) and a DNS Record**
-      * Domain_Name Object -> [DNS_Record Object](http://stixproject.github.io/data-model/1.1.1/DNSRecordObj/DNSRecordObjectType/)   (Relationship = “**Characterized_By**”)
-      * DNS_Record Object -> Domain_Name Object   (Relationship = “**Characterizes**”)
-      * Hostname Object -> DNS_Record Object   (Relationship = “**Characterized_By**”)
-      * DNS_Record Object -> Hostname Object    (Relationship = “**Characterizes**”)
-* **When you want to talk about the association between a DNS Record and a resolving IP Address within that record**
-      * DNS_Record Object -> Address Object    (Relationship = “**Contains**”)
-      * Address Object -> DNS_Record Object    (Relationship = “**Contained_Within**”)
-* **When you want to talk about the association between a DNS Query and a DNS Record that resulted from the query**
-      * DNS_Query Object -> DNS Record Object    (Relationship = “**Searched_For**”)
-      * DNS_Record Object -> DNS_Query Object    (Relationship = “**Searched_For_By**”)
-* **When you want to talk about the association between a URL and the Domain contained within it**
-      * [URI Object](http://stixproject.github.io/data-model/1.1.1/URIObj/URIObjectType/) - > Domain_Name Object    (Relationship = “**Contains**”)
-      * Domain_Name Object - > URI Object    (Relationship = “**Extracted_From**”)
-* **When you want to talk about the association between one Domain and another Domain that is a sub-part of it**
-      * Domain_Name Object (supra) -> Domain_Name Object (sub)    (Relationship = “**Supra-domain_Of**” or “**FQDN_Of**” depending on context)
-      * Domain_Name Object (sub) -> Domain_Name Object (supra)    (Relationship = “**Sub-domain_Of**”)
+<br/>
+<br/>
 
-**Host-centric Object relationships:**
-
-
-* **When you want to talk about the association between the characteristics of a File and the actual bits of the file**
-      * [File Object](http://stixproject.github.io/data-model/1.1.1/FileObj/FileObjectType/) -> [Artifact Object](http://stixproject.github.io/data-model/1.1.1/ArtifactObj/ArtifactObjectType/) (Relationship = “**Characterizes**”)
-      * Artifact Object -> File Object (Relationship = “**Characterized_By**”)
-* **When you want to talk about the association between an Email and characteristics of a file attachment to the email**
-      * [Email_Message Object](http://stixproject.github.io/data-model/1.1.1/EmailMessageObj/EmailMessageObjectType/) -> File Object (Relationship = “**Contains**”)
-      * File Object -> Email_Message Object (Relationship = “**Contained_Within**”)
-* **When you want to talk about the association between an Email and the actual bits of a file attachment to the email**
-      * Email_Message Object -> Artifact Object (Relationship = “**Contains**”)
-      * Artifact Object -> Email_Message Object (Relationship = “**Contained_Within**”)
-* **When you want to talk about the association between an Email and a Link (URL) within the Email**
-      * Email_Message Object -> [Link](http://stixproject.github.io/data-model/1.1.1/LinkObj/LinkObjectType/) Object (Relationship = “**Contains**”)
-      * Link Object -> Email_Message Object (Relationship = “**Contained_Within**”)
-* **When you want to talk about the association between a File and another File contained within it**
-      * File Object (outer) -> FileObject (inner) (Relationship = “**Contains**”)
-      * File Object (inner) -> File Object (outer) (Relationship = “**Contained_Within**”)
-* **When you want to talk about the association between a File and another File that it places on a system**
-      * File Object (dropper) -> FileObject (dropped file) (Relationship = “**Dropped**”)
-      * File Object (dropped file) -> File Object (dropper) (Relationship = “**Dropped_By**”)
-* **When you want to talk about the association between a File and the URL, Domain or Hostname from which it was downloaded**
-      * File Object - > URI Object    (Relationship = “**Downloaded_From**”)
-      * URI Object - > File Object    (Relationship = “**Downloaded**”)
-      * File Object - > Domain_Name Object    (Relationship = “**Downloaded_From**”)
-      * Domain_Name Object - > File Object    (Relationship = “**Downloaded**”)
-      * File Object - > Hostname Object    (Relationship = “**Downloaded_From**”)
-      * Hostname Object - > File Object    (Relationship = “**Downloaded**”)
+**Desired Association (Host-centric Object relationships)**|&nbsp;&nbsp;&nbsp;**Object1**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->|&nbsp;&nbsp;&nbsp;**Object2**|&nbsp;&nbsp;&nbsp;**"Relationship" Vocabulary Value**
+---------------------- | ---------- | ---------- | -----------
+The characteristics of a File and the actual bits of the file | &nbsp;&nbsp;&nbsp;[File Object](http://stixproject.github.io/data-model/1.1.1/FileObj/FileObjectType/)  | &nbsp;&nbsp;&nbsp;[Artifact Object](http://stixproject.github.io/data-model/1.1.1/ArtifactObj/ArtifactObjectType/)  | &nbsp;&nbsp;&nbsp; “**Characterizes**”
+ | &nbsp;&nbsp;&nbsp;Artifact Object  | &nbsp;&nbsp;&nbsp;File Object  | &nbsp;&nbsp;&nbsp; “**Characterized_By**”
+An Email and characteristics of a file attachment to the email | &nbsp;&nbsp;&nbsp;[Email_Message Object](http://stixproject.github.io/data-model/1.1.1/EmailMessageObj/EmailMessageObjectType/)  | &nbsp;&nbsp;&nbsp;File Object  | &nbsp;&nbsp;&nbsp; “**Contains**”
+ | &nbsp;&nbsp;&nbsp;File Object  | &nbsp;&nbsp;&nbsp;Email_Message Object  | &nbsp;&nbsp;&nbsp; “**Contained_Within**”
+An Email and the actual bits of a file attachment to the email | &nbsp;&nbsp;&nbsp;Email_Message Object  | &nbsp;&nbsp;&nbsp;Artifact Object  | &nbsp;&nbsp;&nbsp; “**Contains**”
+ | &nbsp;&nbsp;&nbsp;Artifact Object  | &nbsp;&nbsp;&nbsp;Email_Message Object  | &nbsp;&nbsp;&nbsp; “**Contained_Within**”
+An Email and a Link (URL) within the Email | &nbsp;&nbsp;&nbsp;Email_Message Object  | &nbsp;&nbsp;&nbsp;[Link](http://stixproject.github.io/data-model/1.1.1/LinkObj/LinkObjectType/)  | &nbsp;&nbsp;&nbsp; “**Contains**”
+ | &nbsp;&nbsp;&nbsp;Link Object  | &nbsp;&nbsp;&nbsp;Email_Message Object  | &nbsp;&nbsp;&nbsp; “**Contained_Within**”
+A File and another File contained within it | &nbsp;&nbsp;&nbsp;File Object (outer)  | &nbsp;&nbsp;&nbsp;FileObject (inner)  | &nbsp;&nbsp;&nbsp; “**Contains**”
+ | &nbsp;&nbsp;&nbsp;File Object (inner)  | &nbsp;&nbsp;&nbsp;File Object (outer)  | &nbsp;&nbsp;&nbsp; “**Contained_Within**”
+A File and another File that it places on a system | &nbsp;&nbsp;&nbsp;File Object (dropper)  | &nbsp;&nbsp;&nbsp;File Object (dropped file)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;&nbsp; “**Dropped**”
+ | &nbsp;&nbsp;&nbsp;File Object (dropped file)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;&nbsp;File Object (dropper)  | &nbsp;&nbsp;&nbsp; “**Dropped_By**”
+A File and the URL, Domain or Hostname from which it was downloaded &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;File Object  | &nbsp;&nbsp;&nbsp;URI Object  | &nbsp;&nbsp;&nbsp; “**Downloaded_From**”
+ | &nbsp;&nbsp;&nbsp;URI Object  | &nbsp;&nbsp;&nbsp;File Object  | &nbsp;&nbsp;&nbsp; “**Downloaded**”
+ | &nbsp;&nbsp;&nbsp;File Object  | &nbsp;&nbsp;&nbsp;Domain Name Object  | &nbsp;&nbsp;&nbsp; “**Downloaded_From**”
+ | &nbsp;&nbsp;&nbsp;Domain Name Object  | &nbsp;&nbsp;&nbsp;File Object  | &nbsp;&nbsp;&nbsp; “**Downloaded**”
+ | &nbsp;&nbsp;&nbsp;File Object  | &nbsp;&nbsp;&nbsp;Hostname Object  | &nbsp;&nbsp;&nbsp; “**Downloaded_From**”
+ | &nbsp;&nbsp;&nbsp;Hostname Object  | &nbsp;&nbsp;&nbsp;File Object  | &nbsp;&nbsp;&nbsp; “**Downloaded**”
 
 
 
