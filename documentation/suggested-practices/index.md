@@ -98,13 +98,30 @@ the parent, embedding it may be appropriate. Otherwise it's probably better to
 reference it. If you're unsure, it's generally safer to reference it.
 
 ## Creating References
-When creating references, you'll use the idref attribute:
+When creating references, you will typically use the `idref` attribute:
 
 ```xml
 <cybox:Related_Object idref="acme:mutexobj-3c1221bd-2037-45ec-8129-4ba8d791e86b" />
 ```
 
-When using this idref attribute, you should avoid putting any other attributes
+In a VERY limited set of circumstances (e.g. when specifying Attachments or Links within the Email_Message Object) you will use the `object_reference` attribute rather than `idref`. The `object_reference` field, like the `idref` field, specifies a unique ID reference to an Object defined elsewhere. Unlike the general use of `idref` which references the full Object, the `object_reference` field allows for the re-use of the defined Properties of one Object within another, without allowing the embedding of the full Object in the location from which it is being referenced. Thus, this ID reference is intended to resolve to just the Properties of the Object that it points to. Situations where `object_reference` should be used rather than `idref` are explicitly documented within the object property schemas that utilize this approach.
+
+```xml
+<cybox:Observable id="example:Observable-db066ea1-925b-43df-a341-f513ece3ae94">
+  <cybox:Object id="example:Object-e0e87eef-6315-410f-8025-086968129f41">
+    <cybox:Properties xsi:type="EmailMessageObj:EmailMessageObjectType">
+      <EmailMessageObj:Header>
+        <EmailMessageObj:Subject>Syria strategic plans leaked</EmailMessageObj:Subject>
+      </EmailMessageObj:Header>
+      <EmailMessageObj:Attachments>
+      	<EmailMessageObj:File object_reference="example:Object-107a9290-30aa-4059-aa01-b441f6aa0cc6"/>
+      <EmailMessageObj:Attachments>
+    </cybox:Properties>
+  </cybox:Object>
+</cybox:Observable>
+```
+ 
+When using either the `idref` or `object_reference` attribute, you should avoid putting any other attributes
 or elements in the reference element.
 
 ## Creating documents for human consumption
