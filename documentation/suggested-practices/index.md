@@ -223,6 +223,180 @@ something like:
 </cyboxCommon:Custom_Properties>
 ```
 
+## Domain Name and Hostname Objects
+
+The release of CybOX 2.1 included the addition of two new objects: the [`Domain
+Name` object](https://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/)
+and the [`Hostname` object](https://stixproject.github.io/data-model/1.1.1/HostnameObj/HostnameObjectType/).
+Although the terms "domain name" and "hostname" are often used interchangeably,
+the terms have precise (and distinct) meanings in some contexts, and neither
+term completely encompasses the other. This document hopes to clarify the
+intent of these two objects and provide a set of suggested practices for their
+use.
+
+
+### Background
+
+The concepts of a "domain" (in the context of DNS, *not* Windows Active
+Directory domains) and a "host" (a generic term for a computing system) are
+certainly distinct, but the names used to represent these entities are often
+indistinguishable.  Given the name `www.example.com`, does that string
+represent a domain? A host?  Both? In this case, there is most likely a host
+that responds to web requests at an IP address which a DNS query for that name
+would respond with. However, there are some valid domain names that do not
+correspond to hosts (e.g. top-level domains such as "org" or "co.uk") There are
+also host names (e.g. local names in a `hosts` file) which may not correspond
+to a name in any domain name system.
+
+### General Principle
+
+So, which type of object should you use?
+
+In general, the `Hostname` object should be used in "concrete" cases when you
+know there is a host with a given name (for instance, when there is a network
+connection between two machines). The `Domain Name` object should be used in
+more abstract scenarios when it is not clear if an actual connection is
+occurring (DNS queries) or if there is the potential for more than one IP or
+host to be involved (load balancer, etc.).
+
+### Specific Cases
+
+1. If you are looking to represent a "local hostname" (in other words, what a
+   system calls *itself*), there is a `Hostname` property of the [`System`
+   object](https://stixproject.github.io/data-model/1.1.1/SystemObj/SystemObjectType/)
+   that should be used.
+
+    ```xml
+    <SystemObj:System>
+      <SystemObj:Hostname>plato</SystemObj:Hostname>
+    </SystemObj:System>
+    ```
+
+1. There are two cases in which using the `Hostname` object is used explicitly:
+   within the [`Socket Address`
+   object](https://stixproject.github.io/data-model/1.1.1/SocketAddressObj/SocketAddressObjectType/)
+   (which is used in the [`Network Connection`
+   object](https://stixproject.github.io/data-model/1.1.1/NetworkConnectionObj/NetworkConnectionObjectType/)),
+   and within a [`URL History Entry`
+   component](https://stixproject.github.io/data-model/1.1.1/URLHistoryObj/URLHistoryEntryType/)
+   of the [`URL History`
+   object](https://stixproject.github.io/data-model/1.1.1/URLHistoryObj/URLHistoryObjectType/).
+   In each case, this represents an actual host involved in communication, so
+   this matches the general principle.
+
+    ```xml
+    <URLHistoryObj:URL_History>
+      <URLHistoryObj:URL_History_Entry>
+        <URLHistoryObj:URL type="URL">
+          <URIObj:Value>http://www.example.com/index.html</URIObj:Value>
+        </URLHistoryObj:URL>
+        <URLHistoryObj:Hostname>
+          <HostnameObj:Hostname_Value>www.example.com</HostnameObj:Hostname_Value>
+        </URLHistoryObj:Hostname>
+      </URLHistoryObj:URL_History_Entry>
+    </URLHistoryObj:URL_History>
+    ```
+
+    ```xml
+    <NetworkConnectionObj:Network_Connection>
+      <NetworkConnectionObj:Layer7_Protocol>HTTP</NetworkConnectionObj:Layer7_Protocol>
+      <NetworkConnectionObj:Source_Socket_Address>
+        <SocketAddressObj:IP_Address>
+          <AddressObj:Address_Value>192.168.1.10</AddressObj:Address_Value>
+        </SocketAddressObj:IP_Address>
+        <SocketAddressObj:Port>
+          <PortObj:Port_Value>12345</PortObj:Port_Value>
+          <PortObj:Layer4_Protocol>TCP</PortObj:Layer4_Protocol>
+        </SocketAddressObj:Port>
+      </NetworkConnectionObj:Source_Socket_Address>
+      <NetworkConnectionObj:Destination_Socket_Address>
+        <SocketAddressObj:Hostname>www.example.com</SocketAddressObj:Hostname>
+        <SocketAddressObj:Port>
+          <PortObj:Port_Value>80</PortObj:Port_Value>
+          <PortObj:Layer4_Protocol>TCP</PortObj:Layer4_Protocol>
+        </SocketAddressObj:Port>
+      </NetworkConnectionObj:Destination_Socket_Address>
+    </NetworkConnectionObj:Network_Connection>
+    ```
+
+    **NOTE**: In reality, TCP/IP network connections are not actual made based
+    on the hostname; rather, the hostname is used to look up an IP address,
+    which is then used for the connection. The `Socket_Address` object supports
+    a `Hostname` property for instances where the actual IP address is not
+    significant to what is being expressed. For example, in dynamic malware
+    sandboxes, DNS responses are frequently modified to return a different IP
+    address (often a private IP address). In these cases, the actual IP address
+    used for the connection is not important, and representing the hostname
+    that the malware uses for C2 as a direct property of the network connection
+    is desirable; it avoids the use of `Related Object`s and the need to
+    include IP addresses that aren't informative.
+
+1. In the [`DNS Record` object](https://stixproject.github.io/data-model/1.1.1/DNSRecordObj/DNSRecordObjectType/),
+   the `Domain Name` field uses the [`URI` object](https://stixproject.github.io/data-model/1.1.1/URIObj/URIObjectType/).
+   This is because the `DNS Record` object predates the `Domain Name` object.
+   This may be corrected in a future major release of CybOX, but for now, use a
+   `URI` object with `type="Domain Name"` (as this is the only schema-valid
+   type for this field).
+
+    ```xml
+    <DNSRecordObj:DNS_Record>
+      <DNSRecordObj:Domain_Name type="Domain Name">
+        <URIObj:Value>www.example.com</URIObj:Value>
+      </DNSRecordObj:Domain_Name>
+      <DNSRecordObj:IP_Address category="ipv4-addr">
+        <AddressObj:Address_Value>192.168.1.42</AddressObj:Address_Value>
+      </DNSRecordObj:IP_Address>
+      <DNSRecordObj:Entry_Type>A</DNSRecordObj:Entry_Type>
+    </DNSRecordObj:DNS_Record>
+    ```
+
+1. If you don't want to capture the entire DNS record, you can also use a
+   `Domain Name` object, along with one or more related [`Address`
+   objects](https://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/),
+   using the `Resolved_To` relationship.
+
+    ```xml
+    <cybox:Object>
+      <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+        <DomainNameObj:Value>www.google.com</DomainNameObj:Value>
+      </cybox:Properties>
+      <cybox:Related_Objects>
+        <cybox:Related_Object>
+          <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+            <AddressObj:Address_Value>74.125.196.100</AddressObj:Address_Value>
+          </cybox:Properties>
+          <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resolved_To</cybox:Relationship>
+        </cybox:Related_Object>
+        <cybox:Related_Object>
+          <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+            <AddressObj:Address_Value>74.125.196.138</AddressObj:Address_Value>
+          </cybox:Properties>
+          <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resolved_To</cybox:Relationship>
+        </cybox:Related_Object>
+        <cybox:Related_Object>
+          <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+            <AddressObj:Address_Value>74.125.196.113</AddressObj:Address_Value>
+          </cybox:Properties>
+          <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resolved_To</cybox:Relationship>
+        </cybox:Related_Object>
+        ...
+      </cybox:Related_Objects>
+    </cybox:Object>
+    ```
+
+1. The `is_domain_name` attribute on the `Hostname` object can be used when it
+   is important to indicate whether or not the provided hostname is query-able
+   via DNS. However, if you aren't sure whether a name actually corresponds to
+   a host, don't use the `Hostname` object with this attribute set to `true`.
+
+1. When capturing domain names as part of a "malicious domain watchlist" or
+   other list of domains, the `Domain Name` object should be used. 
+
+The CybOX team is investigating ways to make the use of these objects even more
+clear in a future release. Suggestions and/or proposed changes are always
+welcome!
+
+
 ## File Object
 
 The `FileObjectType` contains several fields for recording name and path
