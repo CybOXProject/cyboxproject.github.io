@@ -107,22 +107,6 @@ When creating references, you'll use the idref attribute:
 When using this idref attribute, you should avoid putting any other attributes
 or elements in the reference element.
 
-## Creating documents for human consumption
-These suggestions only apply when you're creating documents you intend to be
-human-readable. They simply make the document more readable and easy to
-validate by XML editors but are not important for automated processing.
-
-For best readability:
-
-* Only include necessary namespaces
-* Use the namespace prefixes as defined in the schemas
-* Affinity-group or alphabetize namespaces
-* Do not include attributes that have default attributes if you're simply setting the attribute to the default (i.e. @negate on indicators).
-
-To ease validation in XML editors:
-
-* Include schemaLocation attributes to the hosted versions of the CybOX schemas
-
 ## Using Vocabularies
 Many places in CybOX use controlled vocabularies to represent data. When
 possible, you should use the vocabularies included in the CybOX defaults. If
