@@ -107,22 +107,6 @@ When creating references, you'll use the idref attribute:
 When using this idref attribute, you should avoid putting any other attributes
 or elements in the reference element.
 
-## Creating documents for human consumption
-These suggestions only apply when you're creating documents you intend to be
-human-readable. They simply make the document more readable and easy to
-validate by XML editors but are not important for automated processing.
-
-For best readability:
-
-* Only include necessary namespaces
-* Use the namespace prefixes as defined in the schemas
-* Affinity-group or alphabetize namespaces
-* Do not include attributes that have default attributes if you're simply setting the attribute to the default (i.e. @negate on indicators).
-
-To ease validation in XML editors:
-
-* Include schemaLocation attributes to the hosted versions of the CybOX schemas
-
 ## Using Vocabularies
 Many places in CybOX use controlled vocabularies to represent data. When
 possible, you should use the vocabularies included in the CybOX defaults. If
@@ -290,106 +274,274 @@ something like:
 </cyboxCommon:Custom_Properties>
 ```
 
+## Domain Name and Hostname Objects
+
+The release of CybOX 2.1 included the addition of two new objects: the [`Domain
+Name` object](https://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/)
+and the [`Hostname` object](https://stixproject.github.io/data-model/1.1.1/HostnameObj/HostnameObjectType/).
+Although the terms "domain name" and "hostname" are often used interchangeably,
+the terms have precise (and distinct) meanings in some contexts, and neither
+term completely encompasses the other. This document hopes to clarify the
+intent of these two objects and provide a set of suggested practices for their
+use.
+
+
+### Background
+
+The concepts of a "domain" (in the context of DNS, *not* Windows Active
+Directory domains) and a "host" (a generic term for a computing system) are
+certainly distinct, but the names used to represent these entities are often
+indistinguishable.  Given the name `www.example.com`, does that string
+represent a domain? A host?  Both? In this case, there is most likely a host
+that responds to web requests at an IP address which a DNS query for that name
+would respond with. However, there are some valid domain names that do not
+correspond to hosts (e.g. top-level domains such as "org" or "co.uk") There are
+also host names (e.g. local names in a `hosts` file) which may not correspond
+to a name in any domain name system.
+
+### General Principle
+
+So, which type of object should you use?
+
+In general, the `Hostname` object should be used in "concrete" cases when you
+know there is a host with a given name (for instance, when there is a network
+connection between two machines). The `Domain Name` object should be used in
+more abstract scenarios when it is not clear if an actual connection is
+occurring (DNS queries) or if there is the potential for more than one IP or
+host to be involved (load balancer, etc.).
+
+### Specific Cases
+
+1. If you are looking to represent a "local hostname" (in other words, what a
+   system calls *itself*), there is a `Hostname` property of the [`System`
+   object](https://stixproject.github.io/data-model/1.1.1/SystemObj/SystemObjectType/)
+   that should be used.
+
+    ```xml
+    <SystemObj:System>
+      <SystemObj:Hostname>plato</SystemObj:Hostname>
+    </SystemObj:System>
+    ```
+
+1. There are two cases in which using the `Hostname` object is used explicitly:
+   within the [`Socket Address`
+   object](https://stixproject.github.io/data-model/1.1.1/SocketAddressObj/SocketAddressObjectType/)
+   (which is used in the [`Network Connection`
+   object](https://stixproject.github.io/data-model/1.1.1/NetworkConnectionObj/NetworkConnectionObjectType/)),
+   and within a [`URL History Entry`
+   component](https://stixproject.github.io/data-model/1.1.1/URLHistoryObj/URLHistoryEntryType/)
+   of the [`URL History`
+   object](https://stixproject.github.io/data-model/1.1.1/URLHistoryObj/URLHistoryObjectType/).
+   In each case, this represents an actual host involved in communication, so
+   this matches the general principle.
+
+    ```xml
+    <URLHistoryObj:URL_History>
+      <URLHistoryObj:URL_History_Entry>
+        <URLHistoryObj:URL type="URL">
+          <URIObj:Value>http://www.example.com/index.html</URIObj:Value>
+        </URLHistoryObj:URL>
+        <URLHistoryObj:Hostname>
+          <HostnameObj:Hostname_Value>www.example.com</HostnameObj:Hostname_Value>
+        </URLHistoryObj:Hostname>
+      </URLHistoryObj:URL_History_Entry>
+    </URLHistoryObj:URL_History>
+    ```
+
+    ```xml
+    <NetworkConnectionObj:Network_Connection>
+      <NetworkConnectionObj:Layer7_Protocol>HTTP</NetworkConnectionObj:Layer7_Protocol>
+      <NetworkConnectionObj:Source_Socket_Address>
+        <SocketAddressObj:IP_Address>
+          <AddressObj:Address_Value>192.168.1.10</AddressObj:Address_Value>
+        </SocketAddressObj:IP_Address>
+        <SocketAddressObj:Port>
+          <PortObj:Port_Value>12345</PortObj:Port_Value>
+          <PortObj:Layer4_Protocol>TCP</PortObj:Layer4_Protocol>
+        </SocketAddressObj:Port>
+      </NetworkConnectionObj:Source_Socket_Address>
+      <NetworkConnectionObj:Destination_Socket_Address>
+        <SocketAddressObj:Hostname>www.example.com</SocketAddressObj:Hostname>
+        <SocketAddressObj:Port>
+          <PortObj:Port_Value>80</PortObj:Port_Value>
+          <PortObj:Layer4_Protocol>TCP</PortObj:Layer4_Protocol>
+        </SocketAddressObj:Port>
+      </NetworkConnectionObj:Destination_Socket_Address>
+    </NetworkConnectionObj:Network_Connection>
+    ```
+
+    **NOTE**: In reality, TCP/IP network connections are not actual made based
+    on the hostname; rather, the hostname is used to look up an IP address,
+    which is then used for the connection. The `Socket_Address` object supports
+    a `Hostname` property for instances where the actual IP address is not
+    significant to what is being expressed. For example, in dynamic malware
+    sandboxes, DNS responses are frequently modified to return a different IP
+    address (often a private IP address). In these cases, the actual IP address
+    used for the connection is not important, and representing the hostname
+    that the malware uses for C2 as a direct property of the network connection
+    is desirable; it avoids the use of `Related Object`s and the need to
+    include IP addresses that aren't informative.
+
+1. In the [`DNS Record` object](https://stixproject.github.io/data-model/1.1.1/DNSRecordObj/DNSRecordObjectType/),
+   the `Domain Name` field uses the [`URI` object](https://stixproject.github.io/data-model/1.1.1/URIObj/URIObjectType/).
+   This is because the `DNS Record` object predates the `Domain Name` object.
+   This may be corrected in a future major release of CybOX, but for now, use a
+   `URI` object with `type="Domain Name"` (as this is the only schema-valid
+   type for this field).
+
+    ```xml
+    <DNSRecordObj:DNS_Record>
+      <DNSRecordObj:Domain_Name type="Domain Name">
+        <URIObj:Value>www.example.com</URIObj:Value>
+      </DNSRecordObj:Domain_Name>
+      <DNSRecordObj:IP_Address category="ipv4-addr">
+        <AddressObj:Address_Value>192.168.1.42</AddressObj:Address_Value>
+      </DNSRecordObj:IP_Address>
+      <DNSRecordObj:Entry_Type>A</DNSRecordObj:Entry_Type>
+    </DNSRecordObj:DNS_Record>
+    ```
+
+1. If you don't want to capture the entire DNS record, you can also use a
+   `Domain Name` object, along with one or more related [`Address`
+   objects](https://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/),
+   using the `Resolved_To` relationship.
+
+    ```xml
+    <cybox:Object>
+      <cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+        <DomainNameObj:Value>www.google.com</DomainNameObj:Value>
+      </cybox:Properties>
+      <cybox:Related_Objects>
+        <cybox:Related_Object>
+          <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+            <AddressObj:Address_Value>74.125.196.100</AddressObj:Address_Value>
+          </cybox:Properties>
+          <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resolved_To</cybox:Relationship>
+        </cybox:Related_Object>
+        <cybox:Related_Object>
+          <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+            <AddressObj:Address_Value>74.125.196.138</AddressObj:Address_Value>
+          </cybox:Properties>
+          <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resolved_To</cybox:Relationship>
+        </cybox:Related_Object>
+        <cybox:Related_Object>
+          <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+            <AddressObj:Address_Value>74.125.196.113</AddressObj:Address_Value>
+          </cybox:Properties>
+          <cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resolved_To</cybox:Relationship>
+        </cybox:Related_Object>
+        ...
+      </cybox:Related_Objects>
+    </cybox:Object>
+    ```
+
+1. The `is_domain_name` attribute on the `Hostname` object can be used when it
+   is important to indicate whether or not the provided hostname is query-able
+   via DNS. However, if you aren't sure whether a name actually corresponds to
+   a host, don't use the `Hostname` object with this attribute set to `true`.
+
+1. When capturing domain names as part of a "malicious domain watchlist" or
+   other list of domains, the `Domain Name` object should be used. 
+
+The CybOX team is investigating ways to make the use of these objects even more
+clear in a future release. Suggestions and/or proposed changes are always
+welcome!
+
 ## File Object
 
 The `FileObjectType` contains several fields for recording name and path
 information about the file.
 
-* File_Name
-* File_Path
-* Device_Path
-* Full_Path
-* File_Extension
+* `File_Name`
+* `File_Path`
+* `Device_Path`
+* `Full_Path`
+* `File_Extension`
 
-The following practices are recommended for the use of these fields. Consider a
-file located at
-``C:\Users\ExampleUser\Documents\ProjectX\MeetingNotes_2014-08-01.txt`` or
-``/home/exampleuser/ProjectX/MeetingNotes_2014-08-01.txt``
 
-1. The ``File_Name`` field should specify the base name of the file, including extension
+### Instance Data
 
-    ```xml
-    <cybox:Properties xsi:type="FileObj:FileObjectType">
-      <FileObj:File_Name>MeetingNotes_2014-08-01.txt</FileObj:File_Name>
-    </cybox:Properties>
-    ```
+For File instance observables, the `File_Name` and `File_Path` are sufficient
+for the vast majority of use cases.  Given the file
+`C:\Users\ExampleUser\Documents\ProjectX\MeetingNotes_2014-08-01.txt`, the file
+name and the path of the directory which contains the file should be separated
+and stored in these two fields. Note the trailing `\` in the `File_Path`.
 
-2. The ``File_Path`` field should contain the path to the file.
+```xml
+<cybox:Properties xsi:type="FileObj:FileObjectType">
+  <FileObj:File_Name>MeetingNotes_2014-08-01.txt</FileObj:File_Name>
+  <FileObj:File_Path>C:\Users\ExampleUser\Documents\ProjectX\</FileObj:File_Path>
+</cybox:Properties>
+```
 
-    ```xml
-    <cybox:Properties xsi:type="FileObj:FileObjectType">
-      <FileObj:File_Path>C:\Users\ExampleUser\Documents\ProjectX\MeetingNotes_2014-08-01.txt</FileObj:File_Path>
-    </cybox:Properties>
-    ```
-    ```xml
-    <cybox:Properties xsi:type="FileObj:FileObjectType">
-      <FileObj:File_Path>/home/exampleuser/ProjectX/MeetingNotes_2014-08-01.txt</FileObj:File_Path>
-    </cybox:Properties>
-    ```
+If the file path is unknown, or you do not wish to include it, it can be
+omitted.
 
-3. The ``File_Path`` should contain the name of the file if the ``File_Name``
-field is not provided. If the ``File_Name`` field is provided, the name in the
-``File_Path`` field must not conflict with the ``File_Name`` field. If the
-``File_Path`` field does not contain the file name, it should end with a path
-separator (slash `/` or backslash `\`, depending on the operating system).
+The `Device_Path` field MAY be used to specify the path to the *file system
+partition* on which the file resides.  On Windows, `Device_Path` could be a
+path such as `\Device\Harddisk0\Partition0`. On Unix-like systems, this could
+be a path like `/dev/sda1`. You should not use a path to a physical disk, such
+as `\\.\PhysicalDrive1` on Windows or `/dev/sda` on Unix-like systems, since
+file systems are generally tied to partitions rather than physical disks.
 
-    **OK**
+The `Full_Path` field is used to specify a combination of `Device_Path` plus
+`File_Path`. You SHOULD NOT use this field unless it is not possible to split
+the `Full_Path` into the `Device_Path` and the `File_Path` fields; it is
+preferable to include this information separately under the component fields.
 
-    ```xml
-    <cybox:Properties xsi:type="FileObj:FileObjectType">
-      <FileObj:File_Name>MeetingNotes_2014-08-01.txt</FileObj:File_Name>
-      <FileObj:File_Path>C:\Users\ExampleUser\Documents\ProjectX\MeetingNotes_2014-08-01.txt</FileObj:File_Path>
-    </cybox:Properties>
-    ```
+The `File_Extension` field SHOULD NOT be used on instance data.
 
-    **BETTER**
 
-    ```xml
-    <cybox:Properties xsi:type="FileObj:FileObjectType">
-      <FileObj:File_Name>MeetingNotes_2014-08-01.txt</FileObj:File_Name>
-      <FileObj:File_Path>C:\Users\ExampleUser\Documents\ProjectX\</FileObj:File_Path>
-    </cybox:Properties>
-    ```
+### Pattern Data
 
-4. Although the path may be either relative or fully qualified, it should be
-fully qualified unless the file which the ``File_Path`` is relative to is
-specified via a RelatedObject. If you specify a relative path (with
-`fully_qualified="false"`), you should include a related object, either
-embedded or by reference.
+Representing file name and path data as CybOX patterns is more complex, as
+there is much more variation in what is being represented. A few examples are
+shown below, but this is far from an exhaustive list. Note that some examples
+can be combined to represent more complex conditions.
 
-    ```xml
-    <cybox:Object id="example:File-1">
-      <cybox:Properties xsi:type="FileObj:FileObjectType">
-        <FileObj:File_Path fully_qualified="false">ProjectX\MeetingNotes_2014-08-01.txt</FileObj:File_Path>
-      </cybox:Properties>
-      <cybox:Related_Objects>
-        <cybox:Related_Object id="example:File-2">
-          <cybox:Properties xsi:type="FileObj:FileObjectType">
-            <FileObj:File_Path>C:\Users\ExampleUser\Documents\</FileObj:File_Path>
-          </cybox:Properties>
-        </cybox:Related_Object>
-      </cybox:Related_Objects>
-    </cybox:Object>
-    ```
+#### Representing a file with a given extension
 
-5. The `Device_Path` field specifies the path to the device on which the file resides. This is *not* the drive letter, which has its own property on The WindowsFileObject (though it could be `\\.\C:`). On Windows, this could be a path such as `\\.\PhysicalDrive1` or `\Device\Harddisk0\Partition0`. On Unix-like systems, this could be a path like `/dev/sda1`. In general, it is better to include a relationship to a DeviceObject which contains the file, rather than using this field.
+This is the time to use the `File_Extension` field. Do not use a
+`condition="EndsWith"` on the `File_Name` field.
 
-6. The `Full_Path` field is used to specify a combination of `Device_Path` plus `Full_Path`. In general, it is preferable to include this information separately under the component fields rather than the `Full_Path` field, unless it is not possible or desired to separate the information apart. Furthermore, this should not be used for files on Unix-like systems, since addressing a file by combination of device path and file path is not typically valid (`/dev/sda1/home/exampleuser/ProjectX/MeetingNotes_2014-08-01.txt`).
+```xml
+<cybox:Properties xsi:type="FileObj:FileObjectType">
+  <FileObj:File_Extension condition="Equals">txt</FileObj:File_Extension>
+</cybox:Properties>
+```
 
-7. The `File_Extension` field is best used in CybOX patterns, rather than using an `EndsWith` condition on any of the other name or path fields.
+#### Representing a file in a given directory
 
-    **OK**
+Use the `EndsWith` condition on the `File_Path` field (or `Equals` if you know
+the full path to the directory).
 
-    ```xml
-    <cybox:Properties xsi:type="FileObj:FileObjectType">
-      <FileObj:File_Name condition="EndsWith">.txt</FileObj:File_Name>
-    </cybox:Properties>
-    ```
+```xml
+<cybox:Properties xsi:type="FileObj:FileObjectType">
+  <FileObj:File_Path condition="EndsWith">ProjectX\</FileObj:File_Path>
+</cybox:Properties>
+```
 
-    **BETTER**
+```xml
+<cybox:Properties xsi:type="FileObj:FileObjectType">
+  <FileObj:File_Path condition="Equals">C:\Users\ExampleUser\Documents\ProjectX\</FileObj:File_Path>
+</cybox:Properties>
+```
 
-    ```xml
-    <cybox:Properties xsi:type="FileObj:FileObjectType">
-      <FileObj:File_Extension condition="Equals">.txt</FileObj:File_Extension>
-    </cybox:Properties>
-    ```
+
+#### Representing a file anywhere beneath a given directory
+
+If you know a directory somewhere in the file path, but not necessarily the
+directory which directly contains the file, you can use `StartsWith` or
+`Contains`.
+
+```xml
+<cybox:Properties xsi:type="FileObj:FileObjectType">
+  <FileObj:File_Path condition="StartsWith">C:\Users\ExampleUser\Documents\</FileObj:File_Path>
+</cybox:Properties>
+```
+
+```xml
+<cybox:Properties xsi:type="FileObj:FileObjectType">
+  <FileObj:File_Path condition="Contains">Documents</FileObj:File_Path>
+</cybox:Properties>
+```
