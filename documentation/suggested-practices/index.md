@@ -180,7 +180,7 @@ To encourage consistency in the characterization of relationships between Object
 **Desired Association (Network-centric Object relationships)**|**Object1**->|**Object2**|**"Relationship" Vocabulary Value**
 ---------------------- | ---------- | ---------- | -----------
 A network naming structure (e.g. Domain or Hostname) and an IP Address<br/> it resolves to | [Domain_Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) | [Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/) |  “**Resolved_To**”
- | Domain_Name Object | Address Object |  “**Resolved_To**”
+ | Address Object | Domain_Name Object |  “**Resolved_To**”
  | [Hostname Object](http://stixproject.github.io/data-model/1.1.1/HostnameObj/HostnameObjectType/) |  Address Object | “**Resolved_To**”
  | Address Object  | Hostname Object  |  “**Resolved_To**”
 An IP Address and an Autonomous System | Address Object  | [AS Object](http://stixproject.github.io/data-model/1.1.1/ASObj/ASObjectType/)  |  “**Contained_By**”
@@ -189,7 +189,7 @@ A network naming structure (e.g. Domain or Hostname) and a Whois response | Doma
  | Whois Object  | Domain_Name Object  |  “**Characterizes**”
  | Hostname Object  | Whois Object  |  “**Characterized_By**”
  | Whois Object  | Hostname Object  |  “**Characterizes**”
-A network naming structure (e.g. Domain or Hostname) and a DNS Query | Domain_Name Object  | [DNS_Query Object](http://stixproject.github.io/data-model/1.1.1/DNSQueryObj/DNSQueryObjectType/) Object  |  “**Properties_Queried_By**”
+A network naming structure (e.g. Domain or Hostname) and a DNS Query | Domain_Name Object  | [DNS_Query Object](http://stixproject.github.io/data-model/1.1.1/DNSQueryObj/DNSQueryObjectType/)  |  “**Properties_Queried_By**”
  | DNS_Query Object  | Domain_Name  |  “**Properties_Queried**”
  | Hostname Object  | DNS_Query Object  |  "**Properties_Queried_By**”
  | DNS_Query Object  | Hostname Object  |  “**Properties_Queried**”
