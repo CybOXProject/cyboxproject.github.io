@@ -14,7 +14,7 @@ and the Objects that they are most applicable to.
       <th style="text-align: center;">Definition</th>
     </tr>
     <tr>
-	  <td>"Created"</td>
+	  <td><a name="Created"></a>"Created"</td>
       <td>The <b>source Object</b> <i>Created</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
 	  context of a Process that creates other Objects.</td>
 	</tr>
@@ -68,7 +68,7 @@ and the Objects that they are most applicable to.
 	  </td>
     </tr>
 	<tr>
-	  <td>"Created_By"</td>
+	  <td><a name="Created_By"></a>"Created_By"</td>
       <td>The <b>source Object was</b> <i>Created By</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
 	  context of Objects that were created by a Process.</td>
 	</tr>
@@ -122,7 +122,7 @@ and the Objects that they are most applicable to.
 	  </td>
     </tr>
 	<tr>
-	  <td>"Deleted"</td>
+	  <td><a name="Deleted"></a>"Deleted"</td>
       <td>The <b>source Object</b> <i>Deleted</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
 	  context of a Process that deleted other Objects.</td>
 	</tr>
@@ -161,7 +161,7 @@ and the Objects that they are most applicable to.
 	  </td>
     </tr>
 	<tr>
-	  <td>"Deleted_By"</td>
+	  <td><a name="Deleted_By"></a>"Deleted_By"</td>
       <td>The <b>source Object was</b> <i>Deleted By</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
 	  context of Objects that were deleted by a Process.
 	</tr>
@@ -199,5 +199,73 @@ and the Objects that they are most applicable to.
 	   </table>
 	  </td>
     </tr>
+    <tr>
+	  <td><a name="Modified_Properties_Of"></a>"Modified_Properties_Of"</td>
+      <td>The <b>source Object</b> <i>Modified the properties of</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
+	  context of a Process that modified the properties of other Objects.</td>
+	</tr>
+	<tr>
+	  <td></td>
+	  <td>
+	  <table border="1">
+	     <tbody>
+		   <tr>
+		     <th>Source Object</th>
+			 <th>Related Object</th>
+			 <th>Description</th>
+		   </tr>
+		   <tr>
+		     <td>Process</td>
+			 <td>File</td>
+			 <td>A process modified the properties of a file during its execution.</td>
+		   </tr>
+		   <tr>
+		     <td>Process</td>
+			 <td>Win Registry Key</td>
+			 <td>A process modified the properties of a Windows registry key or registry key value during its execution.</td>
+		   </tr>
+		   <tr>
+		     <td>Process</td>
+			 <td>Win Service</td>
+			 <td>A process modified the properties of a Windows service during its execution.</td>
+		   </tr>
+		 </tbody>
+	   </table>
+	  </td>
+    </tr>
+	<tr>
+	  <td><a name="Properties_Modified_By"></a>"Properties_Modified_By"</td>
+      <td>The <b>source Object</b> had its <i>Properties modified by </i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the context of Objects whose properties were modified by a Process.
+	</tr>
+	<tr>
+	  <td></td>
+	  <td>
+	  <table border="1">
+	     <tbody>
+		   <tr>
+		     <th>Source Object</th>
+			 <th>Related Object</th>
+			 <th>Description</th>
+		   </tr>
+		   <tr>
+		     <td>File</td>
+			 <td>Process</td>
+			 <td>A file had its properties modified by a process during its execution.</td>
+		   </tr>
+		   <tr>
+		     <td>Win Registry Key</td>
+			 <td>Process</td>
+			 <td>A Windows registry key or registry key value had its properties modified by a process during its execution.</td>
+		   </tr>
+		   <tr>
+		     <td>Win Service</td>
+			 <td>Process</td>
+			 <td>A a Windows service had its properties modified by a process during its execution.</td>
+		   </tr>
+		 </tbody>
+	   </table>
+	  </td>
+    </tr>
+	<tr>
   </tbody>
 </table>
