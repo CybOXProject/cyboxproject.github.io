@@ -339,7 +339,7 @@ relationship is most applicable to, and its inverse (if existing).
 	</tr>
 	<tr>
 	   <td><b>Inverse</b></td>
-	   <td>"Uploaded_To"</td>
+	   <td>n/a</td>
 	</tr>
 	<tr>
 	   <td><b>Applicable Objects</b></td>
@@ -365,6 +365,220 @@ relationship is most applicable to, and its inverse (if existing).
 		     <td>File</td>
 			 <td>Address</td>
 			 <td>A file was downloaded from some particular IP address.</td>
+		   </tr>
+		 </tbody>
+	   </table>
+	  </td>
+	</tr>
+  </tbody>
+</table>
+
+<table class="table-bordered">
+  <tbody>
+    <tr>
+	   <td style="text-align: center;"><a name="Downloaded"></a><h4>"Downloaded"</h4></td>
+	<tr>
+	   <td><b>Definition</b></td>
+       <td>The <b>source Object</b> <i>Downloaded</i> the <b>related Object</b>. Commonly used for expressing the fact that a process downloaded a file.</td>
+	</tr>
+	<tr>
+	   <td><b>Inverse</b></td>
+	   <td>"Uploaded"</td>
+	</tr>
+	<tr>
+	   <td><b>Applicable Objects</b></td>
+	   <td>
+	   <table class="table-striped">
+	     <tbody>
+		   <tr>
+		     <th>Source Object</th>
+			 <th>Related Object</th>
+			 <th>Description</th>
+		   </tr>
+		   <tr>
+		     <td>Process</td>
+			 <td>File</td>
+			 <td>A process downloaded a particular file during its execution.</td>
+		   </tr>
+		 </tbody>
+	   </table>
+	  </td>
+	</tr>
+  </tbody>
+</table>
+
+<table class="table-bordered">
+  <tbody>
+    <tr>
+	   <td style="text-align: center;"><a name="Downloaded_To"></a><h4>"Downloaded_To"</h4></td>
+	<tr>
+	   <td><b>Definition</b></td>
+      <td>The <b>source Object</b> was <i>Downloaded to</i> the <b>related Object</b>. Commonly used for expressing the fact that a file that was downloaded as another file (e.g., "abcd.exe" downloaded as "fun.jpg") or downloaded to a particular location.</td>
+	</tr>
+	<tr>
+	   <td><b>Inverse</b></td>
+	   <td>"Uploaded_To"</td>
+	</tr>
+	<tr>
+	   <td><b>Applicable Objects</b></td>
+	   <td>
+	   <table class="table-striped">
+	     <tbody>
+		   <tr>
+		     <th>Source Object</th>
+			 <th>Related Object</th>
+			 <th>Description</th>
+		   </tr>
+		   <tr>
+		     <td>File</td>
+			 <td>File</td>
+			 <td>A file was downloaded and stored as another file or in some particular location (represented as a file).</td>
+		   </tr>
+		 </tbody>
+	   </table>
+	  </td>
+	</tr>
+  </tbody>
+</table>
+
+<table class="table-bordered">
+  <tbody>
+    <tr>
+	   <td style="text-align: center;"><a name="Downloaded_By"></a><h4>"Downloaded_By"</h4></td>
+	<tr>
+	   <td><b>Definition</b></td>
+      <td>The <b>source Object</b> was <i>Downloaded by</i> the <b>related Object</b>. Commonly used for expressing the fact that a file that was downloaded by a process.</td>
+	</tr>
+	<tr>
+	   <td><b>Inverse</b></td>
+	   <td>"Uploaded_By"</td>
+	</tr>
+	<tr>
+	   <td><b>Applicable Objects</b></td>
+	   <td>
+	   <table class="table-striped">
+	     <tbody>
+		   <tr>
+		     <th>Source Object</th>
+			 <th>Related Object</th>
+			 <th>Description</th>
+		   </tr>
+		   <tr>
+		     <td>File</td>
+			 <td>Process</td>
+			 <td>A file was downloaded by a particular process during its execution.</td>
+		   </tr>
+		 </tbody>
+	   </table>
+	  </td>
+	</tr>
+  </tbody>
+</table>
+
+<table class="table-bordered">
+  <tbody>
+    <tr>
+	   <td style="text-align: center;"><a name="Uploaded"></a><h4>"Uploaded"</h4></td>
+	<tr>
+	   <td><b>Definition</b></td>
+      <td>The <b>source Object</b> <i>Uploaded</i> the <b>related Object</b>. Commonly used for expressing the fact that a process uploaded a particular file.</td>
+	</tr>
+	<tr>
+	   <td><b>Inverse</b></td>
+	   <td>"Downloaded"</td>
+	</tr>
+	<tr>
+	   <td><b>Applicable Objects</b></td>
+	   <td>
+	   <table class="table-striped">
+	     <tbody>
+		   <tr>
+		     <th>Source Object</th>
+			 <th>Related Object</th>
+			 <th>Description</th>
+		   </tr>
+		   <tr>
+		     <td>Process</td>
+			 <td>File</td>
+			 <td>A process uploaded a particular file during its execution.</td>
+		   </tr>
+		 </tbody>
+	   </table>
+	  </td>
+	</tr>
+  </tbody>
+</table>
+
+<table class="table-bordered">
+  <tbody>
+    <tr>
+	   <td style="text-align: center;"><a name="Uploaded_By"></a><h4>"Uploaded_By"</h4></td>
+	<tr>
+	   <td><b>Definition</b></td>
+      <td>The <b>source Object</b> was <i>Uploaded by</i> the <b>related Object</b>. Commonly used for expressing the fact that a file was uploaded by a particular process.</td>
+	</tr>
+	<tr>
+	   <td><b>Inverse</b></td>
+	   <td>"Downloaded_By"</td>
+	</tr>
+	<tr>
+	   <td><b>Applicable Objects</b></td>
+	   <td>
+	   <table class="table-striped">
+	     <tbody>
+		   <tr>
+		     <th>Source Object</th>
+			 <th>Related Object</th>
+			 <th>Description</th>
+		   </tr>
+		   <tr>
+		     <td>File</td>
+			 <td>Process</td>
+			 <td>A file was uploaded by a particular process during its execution.</td>
+		   </tr>
+		 </tbody>
+	   </table>
+	  </td>
+	</tr>
+  </tbody>
+</table>
+
+<table class="table-bordered">
+  <tbody>
+    <tr>
+	   <td style="text-align: center;"><a name="Uploaded_To"></a><h4>"Uploaded_To"</h4></td>
+	<tr>
+	   <td><b>Definition</b></td>
+      <td>The <b>source Object</b> was <i>Uploaded to</i> the <b>related Object</b>. Commonly used for expressing the fact that a file was uploaded to a particular network location.</td>
+	</tr>
+	<tr>
+	   <td><b>Inverse</b></td>
+	   <td>"Downloaded_To"</td>
+	</tr>
+	<tr>
+	   <td><b>Applicable Objects</b></td>
+	   <td>
+	   <table class="table-striped">
+	     <tbody>
+		   <tr>
+		     <th>Source Object</th>
+			 <th>Related Object</th>
+			 <th>Description</th>
+		   </tr>
+		   <tr>
+		     <td>File</td>
+			 <td>URI</td>
+			 <td>A file was uploaded to a particular URL.</td>
+		   </tr>
+		   <tr>
+		     <td>File</td>
+			 <td>Domain</td>
+			 <td>A file was uploaded to a particular domain.</td>
+		   </tr>
+		   <tr>
+		     <td>File</td>
+			 <td>Address</td>
+			 <td>A file was uploaded to a particular IP address.</td>
 		   </tr>
 		 </tbody>
 	   </table>
