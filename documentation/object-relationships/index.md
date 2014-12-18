@@ -8,23 +8,25 @@ relationships, and adds some additional context for each relationship. This
 includes a richer definition, a listing and description of the Objects that the
 relationship is most applicable to, and its inverse (if existing).
 
-<table>
+
+<table class="table-bordered">
   <tbody>
     <tr>
-      <th><h4>Relationship</h4></th>
-      <th style="text-align: center;"><h4>Definition</h4></th>
-	  <th><h4>Inverse</h4></th>
+	   <td style="text-align: center;"><a name="Created"></a><h4>"Created"</h4></td>
     </tr>
-    <tr>
-	  <td><a name="Created"></a>"Created"</td>
-      <td>The <b>source Object</b> <i>Created</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
-	  context of a Process that creates other Objects.</td>
-	  <td>"Deleted"</td>
+	<tr>
+	   <td><b>Definition</b></td>
+	   <td>The <b>source Object</b> <i>Created</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
+	       context of a Process that creates other Objects.</td>
 	</tr>
 	<tr>
-	  <td></td>
-	  <td>
-	   <table border="1">
+	   <td><b>Inverse</b></td>
+	   <td>"Deleted"</td>
+	</tr>
+	<tr>
+	   <td><b>Applicable Objects</b></td>
+	   <td>
+	   <table class="table-striped">
 	     <tbody>
 		   <tr>
 		     <th>Source Object</th>
@@ -69,18 +71,27 @@ relationship is most applicable to, and its inverse (if existing).
 		 </tbody>
 	   </table>
 	  </td>
-	  <td></td>
-    </tr>
+	</tr>
+  </tbody>
+</table>
+
+<table class="table-bordered">
+  <tbody>
+    <tr>
+	   <td style="text-align: center;"><a name="Created_By"></a><h4>"Created_By"</h4></td>
 	<tr>
-	  <td><a name="Created_By"></a>"Created_By"</td>
+	   <td><b>Definition</b></td>
       <td>The <b>source Object was</b> <i>Created By</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
-	  context of Objects that were created by a Process.</td>
-	  <td>"Deleted_By"</td>
+	      context of Objects that were created by a Process.</td>
 	</tr>
 	<tr>
-	  <td></td>
-	  <td>
-	  <table border="1">
+	   <td><b>Inverse</b></td>
+	   <td>"Deleted_By"</td>
+	</tr>
+	<tr>
+	   <td><b>Applicable Objects</b></td>
+	   <td>
+	   <table class="table-striped">
 	     <tbody>
 		   <tr>
 		     <th>Source Object</th>
@@ -125,18 +136,27 @@ relationship is most applicable to, and its inverse (if existing).
 		 </tbody>
 	   </table>
 	  </td>
-	  <td></td>
-    </tr>
+	</tr>
+  </tbody>
+</table>
+
+<table class="table-bordered">
+  <tbody>
+    <tr>
+	   <td style="text-align: center;"><a name="Deleted"></a><h4>"Deleted"</h4></td>
 	<tr>
-	  <td><a name="Deleted"></a>"Deleted"</td>
-      <td>The <b>source Object</b> <i>Deleted</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
-	  context of a Process that deleted other Objects.</td>
-	  <td>"Created"</td>
+	   <td><b>Definition</b></td>
+       <td>The <b>source Object</b> <i>Deleted</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
+	       context of a Process that deleted other Objects.</td>
 	</tr>
 	<tr>
-	  <td></td>
-	  <td>
-	  <table border="1">
+	   <td><b>Inverse</b></td>
+	   <td>"Created"</td>
+	</tr>
+	<tr>
+	   <td><b>Applicable Objects</b></td>
+	   <td>
+	   <table class="table-striped">
 	     <tbody>
 		   <tr>
 		     <th>Source Object</th>
@@ -166,18 +186,27 @@ relationship is most applicable to, and its inverse (if existing).
 		 </tbody>
 	   </table>
 	  </td>
-	  <td></td>
-    </tr>
+	</tr>
+  </tbody>
+</table>
+
+<table class="table-bordered">
+  <tbody>
+    <tr>
+	   <td style="text-align: center;"><a name="Deleted_By"></a><h4>"Deleted_By"</h4></td>
 	<tr>
-	  <td><a name="Deleted_By"></a>"Deleted_By"</td>
-      <td>The <b>source Object was</b> <i>Deleted By</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
-	  context of Objects that were deleted by a Process.
-	  <td>"Created_By"</td>
+	   <td><b>Definition</b></td>
+       <td>The <b>source Object was</b> <i>Deleted By</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
+	       context of Objects that were deleted by a Process.</td>
 	</tr>
 	<tr>
-	  <td></td>
-	  <td>
-	  <table border="1">
+	   <td><b>Inverse</b></td>
+	   <td>"Created_By"</td>
+	</tr>
+	<tr>
+	   <td><b>Applicable Objects</b></td>
+	   <td>
+	   <table class="table-striped">
 	     <tbody>
 		   <tr>
 		     <th>Source Object</th>
@@ -207,18 +236,27 @@ relationship is most applicable to, and its inverse (if existing).
 		 </tbody>
 	   </table>
 	  </td>
-	  <td></td>
-    </tr>
+	</tr>
+  </tbody>
+</table>
+
+<table class="table-bordered">
+  <tbody>
     <tr>
-	  <td><a name="Modified_Properties_Of"></a>"Modified_Properties_Of"</td>
-      <td>The <b>source Object</b> <i>Modified the properties of</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
-	  context of a Process that modified the properties of other Objects.</td>
-	  <td>n/a</td>
+	   <td style="text-align: center;"><a name="Modified_Properties_Of"></a><h4>"Modified_Properties_Of"</h4></td>
+	<tr>
+	   <td><b>Definition</b></td>
+       <td>The <b>source Object</b> <i>Modified the properties of</i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the
+	       context of a Process that modified the properties of other Objects.</td>
 	</tr>
 	<tr>
-	  <td></td>
-	  <td>
-	  <table border="1">
+	   <td><b>Inverse</b></td>
+	   <td>n/a</td>
+	</tr>
+	<tr>
+	   <td><b>Applicable Objects</b></td>
+	   <td>
+	   <table class="table-striped">
 	     <tbody>
 		   <tr>
 		     <th>Source Object</th>
@@ -243,17 +281,26 @@ relationship is most applicable to, and its inverse (if existing).
 		 </tbody>
 	   </table>
 	  </td>
-	  <td></td>
-    </tr>
+	</tr>
+  </tbody>
+</table>
+	
+<table class="table-bordered">
+  <tbody>
+    <tr>
+	   <td style="text-align: center;"><a name="Properties_Modified_By"></a><h4>"Properties_Modified_By"</h4></td>
 	<tr>
-	  <td><a name="Properties_Modified_By"></a>"Properties_Modified_By"</td>
-      <td>The <b>source Object</b> had its <i>Properties modified by </i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the context of Objects whose properties were modified by a Process.
-	  <td>n/a</td>
+	   <td><b>Definition</b></td>
+       <td>The <b>source Object</b> had its <i>Properties modified by </i> the <b>related Object</b>. Applicable to a wide range of Objects, particularly in the context of Objects whose properties were modified by a Process.</td>
 	</tr>
 	<tr>
-	  <td></td>
-	  <td>
-	  <table border="1">
+	   <td><b>Inverse</b></td>
+	   <td>n/a</td>
+	</tr>
+	<tr>
+	   <td><b>Applicable Objects</b></td>
+	   <td>
+	   <table class="table-striped">
 	     <tbody>
 		   <tr>
 		     <th>Source Object</th>
@@ -278,17 +325,26 @@ relationship is most applicable to, and its inverse (if existing).
 		 </tbody>
 	   </table>
 	  </td>
-	  <td></td>
-    </tr>
+	</tr>
+  </tbody>
+</table>
+
+<table class="table-bordered">
+  <tbody>
     <tr>
-	  <td><a name="Downloaded_From"></a>"Downloaded_From"</td>
+	   <td style="text-align: center;"><a name="Downloaded_From"></a><h4>"Downloaded_From"</h4></td>
+	<tr>
+	   <td><b>Definition</b></td>
       <td>The <b>source Object</b> was <i>Downloaded from</i> the <b>related Object</b>. Commonly used for expressing the fact that a file was downloaded from some network location.</td>
-	  <td>"Uploaded_To"</td>
 	</tr>
 	<tr>
-	  <td></td>
-	  <td>
-	  <table border="1">
+	   <td><b>Inverse</b></td>
+	   <td>"Uploaded_To"</td>
+	</tr>
+	<tr>
+	   <td><b>Applicable Objects</b></td>
+	   <td>
+	   <table class="table-striped">
 	     <tbody>
 		   <tr>
 		     <th>Source Object</th>
@@ -313,7 +369,6 @@ relationship is most applicable to, and its inverse (if existing).
 		 </tbody>
 	   </table>
 	  </td>
-	  <td></td>
-    </tr>
+	</tr>
   </tbody>
 </table>
