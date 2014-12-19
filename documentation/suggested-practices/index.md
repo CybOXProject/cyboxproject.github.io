@@ -177,7 +177,7 @@ To encourage consistency in the characterization of relationships between Object
 
 <br/>
 
-**Desired Association (Network-centric Object relationships)**|**Object1**->|**Object2**|**"Relationship" Vocabulary Value**
+**Desired Association (Network-centric Object relationships)**|**Source Object**|**Related Object**|**"Relationship" Vocabulary Value**
 ---------------------- | ---------- | ---------- | -----------
 A network naming structure (e.g. Domain or Hostname) and an IP Address<br/> it resolves to | [Domain_Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) | [Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/) |  “**Resolved_To**”
  | Address Object | Domain_Name Object |  “**Resolved_To**”
@@ -210,7 +210,7 @@ One Domain and another Domain that is a sub-part of it | Domain_Name Object (sup
 <br/>
 <br/>
 
-**Desired Association (Host-centric Object relationships)**|**Object1**->|**Object2**|**"Relationship" Vocabulary Value**
+**Desired Association (Host-centric Object relationships)**|**Source Object**|**Related Object**|**"Relationship" Vocabulary Value**
 ---------------------- | ---------- | ---------- | -----------
 The characteristics of a File and the actual bits of the file | [File Object](http://stixproject.github.io/data-model/1.1.1/FileObj/FileObjectType/)  | [Artifact Object](http://stixproject.github.io/data-model/1.1.1/ArtifactObj/ArtifactObjectType/)  |  “**Characterizes**”
  | Artifact Object  | File Object  |  “**Characterized_By**”
