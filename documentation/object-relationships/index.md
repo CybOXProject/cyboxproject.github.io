@@ -4,11 +4,41 @@ title: Object Relationships
 ---
 
 This page contains a detailed listing of the available CybOX Object → Object
-relationships, and adds some additional context for each relationship. This
-includes a richer definition, a listing and description of the Objects that the
-relationship is most applicable to, its inverse (if existing), and an example
-XML snippet that demonstrates the relationship in use.
+relationships (from the [ObjectRelationshipVocab-1.1](http://stixproject.github.io/data-model/1.1.1/cyboxVocabs/ObjectRelationshipVocab-1.1/) vocabulary), and adds some additional context for each relationship. This includes a richer definition,
+a listing and description of the Objects that the relationship is most applicable
+to, its inverse (if existing), and an example XML snippet that demonstrates the
+relationship in use.
 
+# Index
+
+* [Created](#Created)
+* [Created_By](#Created_By)
+* [Deleted](#Deleted)
+* [Deleted_By](#Deleted_By)
+* [Modified_Properties_Of](#Modified_Properties_Of)
+* [Properties_Modified_By](#Properties_Modified_By)
+* [Downloaded_From](#Downloaded_From)
+* [Downloaded_To](#Downloaded_To)
+* [Downloaded](#Downloaded)
+* [Downloaded_By](#Downloaded_By)
+* [Uploaded](#Uploaded)
+* [Uploaded_By](#Uploaded_By)
+* [Uploaded_To](#Uploaded_To)
+* [Sent_To](#Sent_To)
+* [Received_From](#Received_From)
+* [Values_Enumerated](#Values_Enumerated)
+* [Values_Enumerated_By](#Values_Enumerated_By)
+* [Killed](#Killed)
+* [Killed_By](#Killed_By)
+* [Locked](#Locked)
+* [Locked_By](#Locked_By)
+* [Unlocked](#Unlocked)
+* [Unlocked_By](#Unlocked_By)
+* [Listened_On](#Listened_On)
+* [Renamed_From](#Renamed_From)
+* [Renamed_To](#Renamed_To)
+* [Renamed](#Renamed)
+* [Renamed_By](#Renamed_By)
 
 ## <a name="Created"></a> "Created"
 
