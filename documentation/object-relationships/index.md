@@ -1094,7 +1094,7 @@ relationship is most applicable to, and its inverse (if existing).
 	   <td style="text-align: center;"><a name="Renamed_To"></a><h4>"Renamed_To"</h4></td>
 	<tr>
 	   <td><b>Definition</b></td>
-      <td>The <b>source Object</b> was <i>Renamed from</i> the <b>related Object</b>. Commonly used for expressing the fact that a file was renamed to a version of the file with a different name.</td>
+      <td>The <b>source Object</b> was <i>Renamed to</i> the <b>related Object</b>. Commonly used for expressing the fact that a file was renamed to a version of the file with a different name.</td>
 	</tr>
 	<tr>
 	   <td><b>Inverse</b></td> 
