@@ -39,6 +39,10 @@ relationship in use.
 * [Renamed_To](#Renamed_To)
 * [Renamed](#Renamed)
 * [Renamed_By](#Renamed_By)
+* [Contains](#Contains)
+* [Contained_Within](#Contained_Within)
+* [Extracted_From](#Extracted_From)
+* [Connected_To](#Connected_To)
 
 ## <a name="Created"></a> "Created"
 
@@ -1504,6 +1508,343 @@ n/a
 				<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
 			</cybox:Properties>
 			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Renamed_To</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Renamed_To"></a> "Renamed_To"
+
+The **source Object** was *Renamed to* the **related Object**.  Commonly used for expressing the fact that a file was renamed to a version of the file with a different name.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+<table class="table-striped">
+ <tbody>
+   <tr>
+	 <th>Source Object</th>
+	 <th>Related Object</th>
+	 <th>Description</th>
+   </tr>
+   <tr>
+	 <td>File</td>
+	 <td>File</td>
+	 <td>A file was renamed to another version of the file with a different name.</td>
+   </tr>
+ </tbody>
+</table>
+
+### Example
+
+```xml
+<cybox:Object id="example:object-d64e3ee9-39bf-4149-ae77-9b2df9c203e3">
+	<cybox:Properties xsi:type="FileObj:FileObjectType">
+		<FileObj:File_Path>C:\temp\asdfg.bin</FileObj:File_Path>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-e970c3df-0c01-4611-8257-6b01d188983c">
+			<cybox:Properties xsi:type="FileObj:FileObjectType">
+				<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Renamed_To</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Contains"></a> "Contains"
+
+The **source Object** *Contains* the **related Object**.  Used for expressing the fact that an object contains another object inside of it. 
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+<table class="table-striped">
+ <tbody>
+   <tr>
+	 <th>Source Object</th>
+	 <th>Related Object</th>
+	 <th>Description</th>
+   </tr>
+   <tr>
+	 <td>File</td>
+	 <td>File</td>
+	 <td>A file contains another file inside of it (e.g. appended to it).</td>
+   </tr>
+   <tr>
+	 <td>Archive File</td>
+	 <td>File</td>
+	 <td>An archive file contains another file inside of it.</td>
+   </tr>
+   <tr>
+	 <td>Email Message</td>
+	 <td>File</td>
+	 <td>An email message contains a file as an attachment.</td>
+   </tr>
+   <tr>
+	 <td>Email Message</td>
+	 <td>Link</td>
+	 <td>An email message contains a link within its message body.</td>
+   </tr>
+   <tr>
+	 <td>URI</td>
+	 <td>Domain Name</td>
+	 <td>A URL contains a domain name as part of its structure.</td>
+   </tr>
+   <tr>
+	 <td>DNS Record</td>
+	 <td>Address</td>
+	 <td>A DNS record contains an IP address that resolves to the domain identified by the record.</td>
+   </tr>
+   <tr>
+	 <td>ARP Cache</td>
+	 <td>Address</td>
+	 <td>An ARP cache contains a physical (i.e. MAC) address or IP address in one of its entries.</td>
+   </tr>
+   <tr>
+	 <td>URL History</td>
+	 <td>URI</td>
+	 <td>A URL history cache contains a particular URL in one of its entries.</td>
+   </tr>
+   <tr>
+	 <td>Win Registry Key</td>
+	 <td>Win Registry Key</td>
+	 <td>A Windows registry key contains another Windows registry key, as a subkey.</td>
+   </tr>
+ </tbody>
+</table>
+
+### Example
+
+```xml
+<cybox:Object id="example:object-210ff682-5362-4391-be79-dfa60f947c07">
+	<cybox:Properties xsi:type="ArchiveFileObj:ArchiveFileObjectType">
+		<FileObj:File_Path>archive.zip</FileObj:File_Path>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-a4a74a15-e2ae-4df2-ab4e-c24cf4178fe9">
+			<cybox:Properties xsi:type="FileObj:FileObjectType">
+				<FileObj:File_Path>README.txt</FileObj:File_Path>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Contains</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Contained_Within"></a> "Contained_Within"
+
+The **source Object** is *Contained within* the **related Object**.  Used for expressing the fact that an object is contained within another object. 
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+<table class="table-striped">
+ <tbody>
+   <tr>
+	 <th>Source Object</th>
+	 <th>Related Object</th>
+	 <th>Description</th>
+   </tr>
+   <tr>
+	 <td>File</td>
+	 <td>File</td>
+	 <td>A file is contained within another file (e.g. appended to it).</td>
+   </tr>
+   <tr>
+	 <td>File</td>
+	 <td>Archive File</td>
+	 <td>A file is contained within an archive file.</td>
+   </tr>
+   <tr>
+	 <td>File</td>
+	 <td>Email Message</td>
+	 <td>A file is contained within an email message, as an attachment.</td>
+   </tr>
+   <tr>
+	 <td>Link</td>
+	 <td>Email Message</td>
+	 <td>A link is contained within the body of an email message.</td>
+   </tr>
+   <tr>
+	 <td>Domain Name</td>
+	 <td>URI</td>
+	 <td>A domain name is contained within the structure of a URL.</td>
+   </tr>
+   <tr>
+	 <td>Address</td>
+	 <td>DNS Record</td>
+	 <td>A IP address is contained within a DNS record that resolves to the domain identified by the record.</td>
+   </tr>
+   <tr>
+	 <td>Address</td>
+	 <td>ARP Cache</td>
+	 <td>A physical (i.e. MAC) address or IP address is contained within one of the entries of an ARP cache.</td>
+   </tr>
+   <tr>
+	 <td>URI</td>
+	 <td>URL History</td>
+	 <td>A URL is contained within one of the entries of a URL history cache.</td>
+   </tr>
+   <tr>
+	 <td>Win Registry Key</td>
+	 <td>Win Registry Key</td>
+	 <td>A Windows registry key is contained within another Windows registry key, as a subkey.</td>
+   </tr>
+ </tbody>
+</table>
+
+### Example
+
+```xml
+<cybox:Object id="example:object-a4a74a15-e2ae-4df2-ab4e-c24cf4178fe9">
+	<cybox:Properties xsi:type="FileObj:FileObjectType">
+		<FileObj:File_Path>README.txt</FileObj:File_Path>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-210ff682-5362-4391-be79-dfa60f947c07">
+			<cybox:Properties xsi:type="ArchiveFileObj:ArchiveFileObjectType">
+				<FileObj:File_Path>archive.zip</FileObj:File_Path>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Contained_Within</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Extracted_From"></a> "Extracted_From"
+
+The **source Object** was *Extracted from* the **related Object**.  Used for expressing the fact that an object was extracted from another object, in the sense that the extracted object was physically encapsulated in the structure of the object that it was extracted from, as in a file extracted from an archive file.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+<table class="table-striped">
+ <tbody>
+   <tr>
+	 <th>Source Object</th>
+	 <th>Related Object</th>
+	 <th>Description</th>
+   </tr>
+   <tr>
+	 <td>File</td>
+	 <td>File</td>
+	 <td>A file was extracted from inside of another file.</td>
+   </tr>
+   <tr>
+	 <td>File</td>
+	 <td>Archive File</td>
+	 <td>A file was extracted from an archive file.</td>
+   </tr>
+   <tr>
+	 <td>URI</td>
+	 <td>Email Message</td>
+	 <td>A URL was extracted from the body of an email message.</td>
+   </tr>
+   <tr>
+	 <td>Link</td>
+	 <td>Email Message</td>
+	 <td>A link was extracted from the body of an email message.</td>
+   </tr>
+ </tbody>
+</table>
+
+### Example
+
+```xml
+<cybox:Object id="example:object-210ff682-5362-4391-be79-dfa60f947c07">
+	<cybox:Properties xsi:type="FileObj:FileObjectType">
+		<FileObj:File_Path>C:\temp\README.txt</FileObj:File_Path>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-210ff682-5362-4391-be79-dfa60f947c07">
+			<cybox:Properties xsi:type="ArchiveFileObj:ArchiveFileObjectType">
+				<FileObj:File_Path>archive.zip</FileObj:File_Path>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Extracted_From</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Connected_To"></a> "Connected_To"
+
+The **source Object** *Connected to* the **related Object**.  Commonly used for expressing the fact that a process connected to some network location or resource.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+<table class="table-striped">
+ <tbody>
+   <tr>
+	 <th>Source Object</th>
+	 <th>Related Object</th>
+	 <th>Description</th>
+   </tr>
+   <tr>
+	 <td>Process</td>
+	 <td>Address</td>
+	 <td>A process connected to an IP address.</td>
+   </tr>
+   <tr>
+	 <td>Process</td>
+	 <td>Hostname</td>
+	 <td>A process connected to a hostname.</td>
+   </tr>
+   <tr>
+	 <td>Process</td>
+	 <td>Socket Address</td>
+	 <td>A process connected to a socket address.</td>
+   </tr>
+   <tr>
+	 <td>Process</td>
+	 <td>Network Socket</td>
+	 <td>A process connected to a network socket.</td>
+   </tr>
+ </tbody>
+</table>
+
+### Example
+
+```xml
+<cybox:Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-dec3774a-ee00-4fe8-9a19-924d51f7a46a">
+			<cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+				<AddressObj:Address_Value>10.1.2.5</AddressObj:Address_Value>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Connected_To</cybox:Relationship>
 		</cybox:Related_Object>
 	</cybox:Related_Objects>
 </cybox:Object>
