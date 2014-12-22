@@ -43,6 +43,10 @@ relationship in use.
 * [Moved_To](#Moved_To)
 * [Moved](#Moved)
 * [Moved_By](#Moved_By)
+* [Copied_From](#Copied_From)
+* [Copied_To](#Copied_To)
+* [Copied](#Copied)
+* [Copied_By](#Copied_By)
 * [Contains](#Contains)
 * [Contained_Within](#Contained_Within)
 * [Extracted_From](#Extracted_From)
@@ -1222,6 +1226,146 @@ n/a
 				<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
 			</cybox:Properties>
 			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Moved_To</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Copied"></a> "Copied"
+
+The **source Object** *Copied* the **related Object**. Commonly used for expressing the fact that a process copied a particular file from one location to another.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|File|A process copied a file during its execution, from one location to another.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-e970c3df-0c01-4611-8257-6b01d188983c">
+			<cybox:Properties xsi:type="FileObj:FileObjectType">
+				<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Copied</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Copied_By"></a> "Copied_By"
+
+The **source Object** was *Copied by* the **related Object**.  Commonly used for expressing the fact that a file was copied by a particular process, from one location to another.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|Process|A file was copied by a particular process during its execution, from one location to another.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-e970c3df-0c01-4611-8257-6b01d188983c">
+	<cybox:Properties xsi:type="FileObj:FileObjectType">
+		<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Copied_By</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Copied_From"></a> "Copied_From"
+
+The **source Object** was *Copied from* the **related Object**.  Commonly used for expressing the fact that a file was copied from one location to another.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|File|A file was copied from one location to another (represented as a separate file).|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-e970c3df-0c01-4611-8257-6b01d188983c">
+	<cybox:Properties xsi:type="FileObj:FileObjectType">
+		<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-d64e3ee9-39bf-4149-ae77-9b2df9c203e3">
+			<cybox:Properties xsi:type="FileObj:FileObjectType">
+				<FileObj:File_Path>C:\temp\asdfg.bin</FileObj:File_Path>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Copied_From</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Copied_To"></a> "Copied_To"
+
+The **source Object** was *Copied to* the **related Object**.  Commonly used for expressing the fact that a file was copied to one location from another.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|File|A file was copied to one location from another (represented as a separate file).|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-d64e3ee9-39bf-4149-ae77-9b2df9c203e3">
+	<cybox:Properties xsi:type="FileObj:FileObjectType">
+		<FileObj:File_Path>C:\temp\asdfg.bin</FileObj:File_Path>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-e970c3df-0c01-4611-8257-6b01d188983c">
+			<cybox:Properties xsi:type="FileObj:FileObjectType">
+				<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Copied_To</cybox:Relationship>
 		</cybox:Related_Object>
 	</cybox:Related_Objects>
 </cybox:Object>
