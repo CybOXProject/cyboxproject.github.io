@@ -54,50 +54,15 @@ The **source Object** *Created* the **related Object**. Applicable to a wide ran
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Archive File</td>
-	 <td>File</td>
-	 <td>A self-extracting archive file created a file upon extraction.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>File</td>
-	 <td>A process created a file during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Process</td>
-	 <td>A process created another process during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Win Registry Key</td>
-	 <td>A process created a Windows registry key or registry key value during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Win Service</td>
-	 <td>A process created a Windows service during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Mutex</td>
-	 <td>A process created a mutex during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Win Thread</td>
-	 <td>A process created a Windows thread during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Archive File|File|A self-extracting archive file created a file upon extraction.|
+|Process|File|A process created a file during its execution.|
+|Process|Process|A process created another process during its execution.|
+|Process|Win Registry Key|A process created a Windows registry key or registry key value during its execution.|
+|Process|Win Service|A process created a Windows service during its execution.|
+|Process|Mutex|A process created a mutex during its execution.|
+|Process|Win Thread|A process created a Windows thread during its execution.|
 
 ### Example
 
@@ -132,50 +97,15 @@ context of Objects that were created by a Process.
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Archive File</td>
-	 <td>A file was created by a self-extracting archive file as part of its extraction operation.</td>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Process</td>
-	 <td>A file was created by a process during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Process</td>
-	 <td>A process was created by another process during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Win Registry Key</td>
-	 <td>Process</td>
-	 <td>A Windows registry key or registry key value was created by a process during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Win Service</td>
-	 <td>Process</td>
-	 <td>A Windows service was created by a process during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Mutex</td>
-	 <td>Process</td>
-	 <td>A mutex was created by a process during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Win Thread</td>
-	 <td>Process</td>
-	 <td>A Windows thread was created by a process during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|Archive File|A file was created by a self-extracting archive file as part of its extraction operation.|
+|File|Process|A file was created by a process during its execution.|
+|Process|Process|A process was created by another process during its execution.|
+|Win Registry Key|Process|A Windows registry key or registry key value was created by a process during its execution.|
+|Win Service|Process|A Windows service was created by a process during its execution.|
+|Mutex|Process|A mutex was created by a process during its execution.|
+|Win Thread|Process|A Windows thread was created by a process during its execution.|
 
 ### Example
 
@@ -209,35 +139,12 @@ The **source Object** *Deleted* the **related Object**. Applicable to a wide ran
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>File</td>
-	 <td>A process deleted a file during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Win Registry Key</td>
-	 <td>A process deleted a Windows registry key or registry key value during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Win Service</td>
-	 <td>A process deleted a Windows service during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Mutex</td>
-	 <td>A process deleted a mutex during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|File|A process deleted a file during its execution.|
+|Process|Win Registry Key|A process deleted a Windows registry key or registry key value during its execution.|
+|Process|Win Service|A process deleted a Windows service during its execution.|
+|Process|Mutex|A process deleted a mutex during its execution.|
 
 ### Example
 
@@ -272,35 +179,12 @@ context of Objects that were deleted by a Process.
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Process</td>
-	 <td>A file was deleted by a process during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Win Registry Key</td>
-	 <td>Process</td>
-	 <td>A Windows registry key or registry key value was deleted by a process during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Win Service</td>
-	 <td>Process</td>
-	 <td>A Windows service was deleted by a process during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Mutex</td>
-	 <td>Process</td>
-	 <td>A mutex was deleted by a process during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|Process|A file was deleted by a process during its execution.|
+|Win Registry Key|Process|A Windows registry key or registry key value was deleted by a process during its execution.|
+|Win Service|Process|A Windows service was deleted by a process during its execution.|
+|Mutex|Process|A mutex was deleted by a process during its execution.|
 
 ### Example
 
@@ -335,30 +219,11 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>File</td>
-	 <td>A process modified the properties of a file during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Win Registry Key</td>
-	 <td>A process modified the properties of a Windows registry key or registry key value during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Win Service</td>
-	 <td>A process modified the properties of a Windows service during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|File|A process modified the properties of a file during its execution.|
+|Process|Win Registry Key|A process modified the properties of a Windows registry key or registry key value during its execution.|
+|Process|Win Service|A process modified the properties of a Windows service during its execution.|
 
 ### Example
 
@@ -392,30 +257,11 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Process</td>
-	 <td>A file had its properties modified by a process during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Win Registry Key</td>
-	 <td>Process</td>
-	 <td>A Windows registry key or registry key value had its properties modified by a process during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Win Service</td>
-	 <td>Process</td>
-	 <td>A Windows service had its properties modified by a process during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|Process|A file had its properties modified by a process during its execution.|
+|Win Registry Key|Process|A Windows registry key or registry key value had its properties modified by a process during its execution.|
+|Win Service|Process|A Windows service had its properties modified by a process during its execution.|
 
 ### Example
 
@@ -449,35 +295,12 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>URI</td>
-	 <td>A file was downloaded from some particular URL.</td>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Domain Name</td>
-	 <td>A file was downloaded from some particular domain name.</td>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Address</td>
-	 <td>A file was downloaded from some particular IP address.</td>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Hostname</td>
-	 <td>A file was downloaded from some device identified by a particular hostname.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|URI|A file was downloaded from some particular URL.|
+|File|Domain Name|A file was downloaded from some particular domain name.|
+|File|Address|A file was downloaded from some particular IP address.|
+|File|Hostname|A file was downloaded from some device identified by a particular hostname.|
 
 ### Example
 
@@ -509,20 +332,9 @@ The **source Object** *Downloaded* the **related Object**. Commonly used for exp
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>File</td>
-	 <td>A process downloaded a particular file during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|File|A process downloaded a particular file during its execution.|
 
 ### Example
 
@@ -556,25 +368,10 @@ The **source Object** was *Downloaded to* the **related Object**. Commonly used 
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>URI</td>
-	 <td>File</td>
-	 <td>A file specified by a URL was downloaded and stored as another file or at some particular location.</td>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>File</td>
-	 <td>A file was downloaded and stored as another file or at some particular location.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|URI|File|A file specified by a URL was downloaded and stored as another file or at some particular location.|
+|File|File|A file was downloaded and stored as another file or at some particular location.|
 
 ### Example
 
@@ -606,20 +403,9 @@ The **source Object** was *Downloaded by* the **related Object**. Commonly used 
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Process</td>
-	 <td>A file was downloaded by a particular process during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|Process|A file was downloaded by a particular process during its execution.|
 
 ### Example
 
@@ -653,20 +439,9 @@ The **source Object** *Uploaded* the **related Object**. Commonly used for expre
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>File</td>
-	 <td>A process uploaded a particular file during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|File|A process uploaded a particular file during its execution.|
 
 ### Example
 
@@ -700,20 +475,9 @@ The **source Object** was *Uploaded by* the **related Object**. Commonly used fo
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Process</td>
-	 <td>A file was uploaded by a particular process during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|Process|A file was uploaded by a particular process during its execution.|
 
 ### Example
 
@@ -747,35 +511,12 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>URI</td>
-	 <td>A file was uploaded to a particular URL.</td>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Domain Name</td>
-	 <td>A file was uploaded to a particular domain name.</td>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Address</td>
-	 <td>A file was uploaded to a particular IP address.</td>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Hostname</td>
-	 <td>A file was uploaded to a device identified by a particular hostname.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|URI|A file was uploaded to a particular URL.|
+|File|Domain Name|A file was uploaded to a particular domain name.|
+|File|Address|A file was uploaded to a particular IP address.|
+|File|Hostname|A file was uploaded to a device identified by a particular hostname.|
 
 ### Example
 
@@ -807,20 +548,9 @@ The **source Object** was *Sent to* the **related Object**. Commonly used for ex
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Address</td>
-	 <td>A file was sent to a particular email address.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|Address|A file was sent to a particular email address.|
 
 ### Example
 
@@ -852,20 +582,9 @@ The **source Object** was *Received from* the **related Object**. Commonly used 
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Address</td>
-	 <td>A file was received from an email sent from particular email address.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|Address|A file was received from an email sent from particular email address.|
 
 ### Example
 
@@ -897,20 +616,9 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Win Registry Key</td>
-	 <td>A process enumerated the values of a particular Windows registry key during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Win Registry Key|A process enumerated the values of a particular Windows registry key during its execution.|
 
 ### Example
 
@@ -945,20 +653,9 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Win Registry Key</td>
-	 <td>Process</td>
-	 <td>A Windows registry key had its values enumerated by a particular process during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Win Registry Key|Process|A Windows registry key had its values enumerated by a particular process during its execution.|
 
 ### Example
 
@@ -993,25 +690,10 @@ The **source Object** *Killed* the **related Object**. Commonly used for express
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Process</td>
-	 <td>A process killed (or terminated) another process during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Win Thread</td>
-	 <td>A process killed (or terminated) a thread during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Process|A process killed (or terminated) another process during its execution.|
+|Process|Win Thread|A process killed (or terminated) a thread during its execution.|
 
 ### Example
 
@@ -1047,25 +729,10 @@ The **source Object** was *Killed by* the **related Object**. Commonly used for 
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Process</td>
-	 <td>A process was killed (or terminated) by another process during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Win Thread</td>
-	 <td>Process</td>
-	 <td>A Windows thread was killed (or terminated) by a process during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Process|A process was killed (or terminated) by another process during its execution.|
+|Win Thread|Process|A Windows thread was killed (or terminated) by a process during its execution.|
 
 ### Example
 
@@ -1101,20 +768,9 @@ The **source Object** *Locked* the **related Object**. Commonly used for express
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>File</td>
-	 <td>A process locked (in terms of read, write, or delete access) a particular file during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|File|A process locked (in terms of read, write, or delete access) a particular file during its execution.|
 
 ### Example
 
@@ -1148,20 +804,9 @@ The **source Object** was *Locked by* the **related Object**. Commonly used for 
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Process</td>
-	 <td>A file was locked (in terms of read, write, or delete access) by a particular process during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|Process|A file was locked (in terms of read, write, or delete access) by a particular process during its execution.|
 
 ### Example
 
@@ -1194,21 +839,9 @@ The **source Object** *Unlocked* the **related Object**. Commonly used for expre
 "Locked"
 
 ### Applicable Objects
-
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>File</td>
-	 <td>A process unlocked (in terms of read, write, or delete access) a particular file during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|File|A process unlocked (in terms of read, write, or delete access) a particular file during its execution.|
 
 ### Example
 
@@ -1242,20 +875,9 @@ The **source Object** was *Unlocked by* the **related Object**. Commonly used fo
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Process</td>
-	 <td>A file was unlocked (in terms of read, write, or delete access) by a particular process during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|Process|A file was unlocked (in terms of read, write, or delete access) by a particular process during its execution.|
 
 ### Example
 
@@ -1289,25 +911,10 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Port</td>
-	 <td>A process listened on a particular port during its execution.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Network Socket</td>
-	 <td>A process listened on a particular network socket during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Port|A process listened on a particular port during its execution.|
+|Process|Network Socket|A process listened on a particular network socket during its execution.|
 
 ### Example
 
@@ -1341,20 +948,9 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>File</td>
-	 <td>A process renamed a file during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|File|A process renamed a file during its execution.|
 
 ### Example
 
@@ -1388,20 +984,9 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Process</td>
-	 <td>A file was renamed by a particular process during its execution.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|Process|A file was renamed by a particular process during its execution.|
 
 ### Example
 
@@ -1435,20 +1020,9 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>File</td>
-	 <td>A file was renamed from another version of the file with a different name.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|File|A file was renamed from another version of the file with a different name.|
 
 ### Example
 
@@ -1480,65 +1054,9 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>File</td>
-	 <td>A file was renamed to another version of the file with a different name.</td>
-   </tr>
- </tbody>
-</table>
-
-### Example
-
-```xml
-<cybox:Object id="example:object-d64e3ee9-39bf-4149-ae77-9b2df9c203e3">
-	<cybox:Properties xsi:type="FileObj:FileObjectType">
-		<FileObj:File_Path>C:\temp\asdfg.bin</FileObj:File_Path>
-	</cybox:Properties>
-	<cybox:Related_Objects>
-		<cybox:Related_Object id="example:object-e970c3df-0c01-4611-8257-6b01d188983c">
-			<cybox:Properties xsi:type="FileObj:FileObjectType">
-				<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
-			</cybox:Properties>
-			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Renamed_To</cybox:Relationship>
-		</cybox:Related_Object>
-	</cybox:Related_Objects>
-</cybox:Object>
-```	
-
----
-
-## <a name="Renamed_To"></a> "Renamed_To"
-
-The **source Object** was *Renamed to* the **related Object**.  Commonly used for expressing the fact that a file was renamed to a version of the file with a different name.
-
-### Inverse
-
-n/a
-
-### Applicable Objects
-
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>File</td>
-	 <td>A file was renamed to another version of the file with a different name.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|File|A file was renamed to another version of the file with a different name.|
 
 ### Example
 
@@ -1570,60 +1088,17 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>File</td>
-	 <td>A file contains another file inside of it (e.g. appended to it).</td>
-   </tr>
-   <tr>
-	 <td>Archive File</td>
-	 <td>File</td>
-	 <td>An archive file contains another file inside of it.</td>
-   </tr>
-   <tr>
-	 <td>Email Message</td>
-	 <td>File</td>
-	 <td>An email message contains a file as an attachment.</td>
-   </tr>
-   <tr>
-	 <td>Email Message</td>
-	 <td>Link</td>
-	 <td>An email message contains a link within its message body.</td>
-   </tr>
-   <tr>
-	 <td>URI</td>
-	 <td>Domain Name</td>
-	 <td>A URL contains a domain name as part of its structure.</td>
-   </tr>
-   <tr>
-	 <td>DNS Record</td>
-	 <td>Address</td>
-	 <td>A DNS record contains an IP address that resolves to the domain identified by the record.</td>
-   </tr>
-   <tr>
-	 <td>ARP Cache</td>
-	 <td>Address</td>
-	 <td>An ARP cache contains a physical (i.e. MAC) address or IP address in one of its entries.</td>
-   </tr>
-   <tr>
-	 <td>URL History</td>
-	 <td>URI</td>
-	 <td>A URL history cache contains a particular URL in one of its entries.</td>
-   </tr>
-   <tr>
-	 <td>Win Registry Key</td>
-	 <td>Win Registry Key</td>
-	 <td>A Windows registry key contains another Windows registry key, as a subkey.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|File|A file contains another file inside of it (e.g. appended to it).|
+|Archive File|File|An archive file contains another file inside of it.|
+|Email Message|File|An email message contains a file as an attachment.|
+|Email Message|Link|An email message contains a link within its message body.|
+|URI|Domain Name|A URL contains a domain name as part of its structure.|
+|DNS Record|Address|A DNS record contains an IP address that resolves to the domain identified by the record.|
+|ARP Cache|Address|An ARP cache contains a physical (i.e. MAC) address or IP address in one of its entries.|
+|URL History|URI|A URL history cache contains a particular URL in one of its entries.|
+|Win Registry Key|Win Registry Key|A Windows registry key contains another Windows registry key, as a subkey.|
 
 ### Example
 
@@ -1655,60 +1130,17 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>File</td>
-	 <td>A file is contained within another file (e.g. appended to it).</td>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Archive File</td>
-	 <td>A file is contained within an archive file.</td>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Email Message</td>
-	 <td>A file is contained within an email message, as an attachment.</td>
-   </tr>
-   <tr>
-	 <td>Link</td>
-	 <td>Email Message</td>
-	 <td>A link is contained within the body of an email message.</td>
-   </tr>
-   <tr>
-	 <td>Domain Name</td>
-	 <td>URI</td>
-	 <td>A domain name is contained within the structure of a URL.</td>
-   </tr>
-   <tr>
-	 <td>Address</td>
-	 <td>DNS Record</td>
-	 <td>A IP address is contained within a DNS record that resolves to the domain identified by the record.</td>
-   </tr>
-   <tr>
-	 <td>Address</td>
-	 <td>ARP Cache</td>
-	 <td>A physical (i.e. MAC) address or IP address is contained within one of the entries of an ARP cache.</td>
-   </tr>
-   <tr>
-	 <td>URI</td>
-	 <td>URL History</td>
-	 <td>A URL is contained within one of the entries of a URL history cache.</td>
-   </tr>
-   <tr>
-	 <td>Win Registry Key</td>
-	 <td>Win Registry Key</td>
-	 <td>A Windows registry key is contained within another Windows registry key, as a subkey.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|File|A file is contained within another file (e.g. appended to it).|
+|File|Archive File|A file is contained within an archive file.|
+|File|Email Message|A file is contained within an email message, as an attachment.|
+|Link|Email Message|A link is contained within the body of an email message.|
+|Domain Name|URI|A domain name is contained within the structure of a URL.|
+|Address|DNS Record|A IP address is contained within a DNS record that resolves to the domain identified by the record.|
+|Address|ARP Cache|A physical (i.e. MAC) address or IP address is contained within one of the entries of an ARP cache.|
+|URI|URL History|A URL is contained within one of the entries of a URL history cache.|
+|Win Registry Key|Win Registry Key|A Windows registry key is contained within another Windows registry key, as a subkey.|
 
 ### Example
 
@@ -1740,35 +1172,12 @@ n/a
 
 ### Applicable Objects
 
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>File</td>
-	 <td>A file was extracted from inside of another file.</td>
-   </tr>
-   <tr>
-	 <td>File</td>
-	 <td>Archive File</td>
-	 <td>A file was extracted from an archive file.</td>
-   </tr>
-   <tr>
-	 <td>URI</td>
-	 <td>Email Message</td>
-	 <td>A URL was extracted from the body of an email message.</td>
-   </tr>
-   <tr>
-	 <td>Link</td>
-	 <td>Email Message</td>
-	 <td>A link was extracted from the body of an email message.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|File|A file was extracted from inside of another file.|
+|File|Archive File|A file was extracted from an archive file.|
+|URI|Email Message|A URL was extracted from the body of an email message.|
+|Link|Email Message|A link was extracted from the body of an email message.|
 
 ### Example
 
@@ -1799,36 +1208,12 @@ The **source Object** *Connected to* the **related Object**.  Commonly used for 
 n/a
 
 ### Applicable Objects
-
-<table class="table-striped">
- <tbody>
-   <tr>
-	 <th>Source Object</th>
-	 <th>Related Object</th>
-	 <th>Description</th>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Address</td>
-	 <td>A process connected to an IP address.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Hostname</td>
-	 <td>A process connected to a hostname.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Socket Address</td>
-	 <td>A process connected to a socket address.</td>
-   </tr>
-   <tr>
-	 <td>Process</td>
-	 <td>Network Socket</td>
-	 <td>A process connected to a network socket.</td>
-   </tr>
- </tbody>
-</table>
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Address|A process connected to an IP address.|
+|Process|Hostname|A process connected to a hostname.|
+|Process|Socket Address|A process connected to a socket address.|
+|Process|Network Socket|A process connected to a network socket.|
 
 ### Example
 
