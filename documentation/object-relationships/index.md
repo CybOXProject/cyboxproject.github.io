@@ -39,10 +39,21 @@ relationship in use.
 * [Renamed_To](#Renamed_To)
 * [Renamed](#Renamed)
 * [Renamed_By](#Renamed_By)
+* [Moved_From](#Moved_From)
+* [Moved_To](#Moved_To)
+* [Moved](#Moved)
+* [Moved_By](#Moved_By)
 * [Contains](#Contains)
 * [Contained_Within](#Contained_Within)
 * [Extracted_From](#Extracted_From)
 * [Connected_To](#Connected_To)
+* [Parent_Of](#Parent_Of)
+* [Child_Of](#Child_Of)
+* [Redirects_To](#Redirects_To)
+* [Suspended](#Suspended)
+* [Suspended_By](#Suspended_By)
+* [Resumed](#Resumed)
+* [Resumed_By](#Resumed_By)
 
 ## <a name="Created"></a> "Created"
 
@@ -1078,6 +1089,146 @@ n/a
 
 ---
 
+## <a name="Moved"></a> "Moved"
+
+The **source Object** *Moved* the **related Object**. Commonly used for expressing the fact that a process moved a particular file from one location to another.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|File|A process moved a file during its execution, from one location to another.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-e970c3df-0c01-4611-8257-6b01d188983c">
+			<cybox:Properties xsi:type="FileObj:FileObjectType">
+				<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Moved</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Moved_By"></a> "Moved_By"
+
+The **source Object** was *Moved by* the **related Object**.  Commonly used for expressing the fact that a file was moved by a particular process, from one location to another.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|Process|A file was moved by a particular process during its execution, from one location to another.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-e970c3df-0c01-4611-8257-6b01d188983c">
+	<cybox:Properties xsi:type="FileObj:FileObjectType">
+		<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Moved_By</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Moved_From"></a> "Moved_From"
+
+The **source Object** was *Moved from* the **related Object**.  Commonly used for expressing the fact that a file was moved from one location to another.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|File|A file was moved from one location to another (represented as a separate file).|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-e970c3df-0c01-4611-8257-6b01d188983c">
+	<cybox:Properties xsi:type="FileObj:FileObjectType">
+		<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-d64e3ee9-39bf-4149-ae77-9b2df9c203e3">
+			<cybox:Properties xsi:type="FileObj:FileObjectType">
+				<FileObj:File_Path>C:\temp\asdfg.bin</FileObj:File_Path>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Moved_From</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Moved_To"></a> "Moved_To"
+
+The **source Object** was *Moved to* the **related Object**.  Commonly used for expressing the fact that a file was moved from one location to another.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|File|File|A file was moved from one location to another (represented as a separate file).|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-d64e3ee9-39bf-4149-ae77-9b2df9c203e3">
+	<cybox:Properties xsi:type="FileObj:FileObjectType">
+		<FileObj:File_Path>C:\temp\asdfg.bin</FileObj:File_Path>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-e970c3df-0c01-4611-8257-6b01d188983c">
+			<cybox:Properties xsi:type="FileObj:FileObjectType">
+				<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Moved_To</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
 ## <a name="Contains"></a> "Contains"
 
 The **source Object** *Contains* the **related Object**.  Used for expressing the fact that an object contains another object inside of it. 
@@ -1230,6 +1381,272 @@ n/a
 				<AddressObj:Address_Value>10.1.2.5</AddressObj:Address_Value>
 			</cybox:Properties>
 			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Connected_To</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Parent_Of"></a> "Parent_Of"
+
+The **source Object** is the *Parent of* the **related Object**.  Commonly used for expressing the fact that a process spawned another process or thread and is therefore its parent.
+
+### Inverse
+
+"Child_Of"
+
+### Applicable Objects
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Process|A process is the parent of another process (which it spawned).|
+|Process|Win Thread|A process is the parent of a Windows thread (which it spawned).|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-b464a2a1-876b-4e29-9b5f-705f66ca1327">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>another_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Parent_Of</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Child_Of"></a> "Child_Of"
+
+The **source Object** is a *Child of* the **related Object**.  Commonly used for expressing the fact that a process or thread was spawned by another process and is therefore its child.
+
+### Inverse
+
+"Parent_Of"
+
+### Applicable Objects
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Process|A process is the child of another process (which spawned it).|
+|Win Thread|Process|A Windows thread is the child of a process (which spawned it).|
+
+### Example
+
+```xml 
+<cybox:Object id="example:object-b464a2a1-876b-4e29-9b5f-705f66ca1327">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>another_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Child_Of</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Redirects_To"></a> "Redirects_To"
+
+The **source Object** *Redirects to* the **related Object**.  Commonly used for expressing URL or domain name redirection, where a URL redirects to another URL, or a Domain Name redirects to another Domain Name, respectively.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|URI|URI|A URL redirects to another URL.|
+|Domain Name|Domain Name|A domain name redirects to another domain name.|
+
+### Examples
+
+```xml 
+<cybox:Object id="example:object-ee973e87-6811-4bb0-aba2-59ffbd6e110d">
+	<cybox:Properties xsi:type="URIObj:URIObjectType">
+		<URIObj:Value>http://example.com/redir</URIObj:Value>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-ac8fd3b0-ad06-4c66-8cc9-39581e2c0564">
+			<cybox:Properties xsi:type="URIObj:URIObjectType">
+				<URIObj:Value>http://example.net/another_page</URIObj:Value>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Redirects_To</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Suspended"></a> "Suspended"
+
+The **source Object** *Suspended* the **related Object**. Commonly used for expressing the fact that a process suspended the execution of another process or thread.
+
+### Inverse
+
+"Resumed"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Process|A process suspended the execution of another process.|
+|Process|Win Thread|A process suspended the execution of a Windows thread.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-b464a2a1-876b-4e29-9b5f-705f66ca1327">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>another_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Suspended</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Suspended_By"></a> "Suspended_By"
+
+The **source Object** was *Suspended by* the **related Object**. Commonly used for expressing the fact that the execution of a process or thread was suspended by another process.
+
+### Inverse
+
+"Resumed_By"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Process|A process was suspended by another process.|
+|Win Thread|Process|A Windows thread was suspended by a process.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-b464a2a1-876b-4e29-9b5f-705f66ca1327">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>another_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Suspended_By</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Resumed"></a> "Resumed"
+
+The **source Object** *Resumed* the **related Object**. Commonly used for expressing the fact that a process resumed the execution of another process or thread.
+
+### Inverse
+
+"Suspended"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Process|A process resumed the execution of another process.|
+|Process|Win Thread|A process resumed the execution of a Windows thread.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-b464a2a1-876b-4e29-9b5f-705f66ca1327">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>another_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resumed</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Resumed_By"></a> "Resumed_By"
+
+The **source Object** was *Resumed by* the **related Object**. Commonly used for expressing the fact that the execution of a process or thread was resumed by another process.
+
+### Inverse
+
+"Suspended_By"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Process|A process was resumed by another process.|
+|Win Thread|Process|A Windows thread was resumed by a process.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-b464a2a1-876b-4e29-9b5f-705f66ca1327">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>another_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resumed_By</cybox:Relationship>
 		</cybox:Related_Object>
 	</cybox:Related_Objects>
 </cybox:Object>
