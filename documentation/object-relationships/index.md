@@ -58,6 +58,8 @@ relationship in use.
 * [Suspended_By](#Suspended_By)
 * [Resumed](#Resumed)
 * [Resumed_By](#Resumed_By)
+* [Wrote_To](#Wrote_To)
+* [Written_To_By](#Written_To_By)
 
 ## <a name="Created"></a> "Created"
 
@@ -1791,6 +1793,88 @@ The **source Object** was *Resumed by* the **related Object**. Commonly used for
 				</ProcessObj:Image_Info>
 			</cybox:Properties>
 			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resumed_By</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Wrote_To"></a> "Wrote_To"
+
+The **source Object** *Wrote to* the **related Object**. Commonly used for expressing the fact that a process wrote to another object during its execution.
+
+### Inverse
+
+"Read_From"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Process|A process wrote to the memory space of another process during its execution.|
+|Process|File|A process wrote to a file during its execution.|
+|Process|Pipe|A process wrote to a pipe during its execution.|
+|Process|Win Mailslot|A process wrote to a Windows mailslot during its execution.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-b464a2a1-876b-4e29-9b5f-705f66ca1327">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>another_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Wrote_To</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Written_To_By"></a> "Written_To_By"
+
+The **source Object** was *Written to by* the **related Object**. Commonly used for expressing the fact that an object was written to by a process during its execution.
+
+### Inverse
+
+"Read_From_By"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Process|The memory space of a process was written to by another process during its execution.|
+|File|Process|A file was written to by a process during its execution.|
+|Pipe|Process|A pipe was written to by a process during its execution.|
+|Win Mailslot|Process|A process was written to by a Windows mailslot during its execution.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-b464a2a1-876b-4e29-9b5f-705f66ca1327">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>another_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Written_To_By</cybox:Relationship>
 		</cybox:Related_Object>
 	</cybox:Related_Objects>
 </cybox:Object>
