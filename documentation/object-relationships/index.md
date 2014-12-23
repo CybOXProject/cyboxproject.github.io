@@ -60,6 +60,8 @@ relationship in use.
 * [Resumed_By](#Resumed_By)
 * [Wrote_To](#Wrote_To)
 * [Written_To_By](#Written_To_By)
+* [Read_From](#Read_From)
+* [Read_From_By](#Read_From_By)
 
 ## <a name="Created"></a> "Created"
 
@@ -1856,7 +1858,7 @@ The **source Object** was *Written to by* the **related Object**. Commonly used 
 |Process|Process|The memory space of a process was written to by another process during its execution.|
 |File|Process|A file was written to by a process during its execution.|
 |Pipe|Process|A pipe was written to by a process during its execution.|
-|Win Mailslot|Process|A process was written to by a Windows mailslot during its execution.|
+|Win Mailslot|Process|A Windows mailslot was written to by a process during its execution.|
 
 ### Example
 
@@ -1875,6 +1877,88 @@ The **source Object** was *Written to by* the **related Object**. Commonly used 
 				</ProcessObj:Image_Info>
 			</cybox:Properties>
 			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Written_To_By</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Read_From"></a> "Read_From"
+
+The **source Object** *Read from* the **related Object**. Commonly used for expressing the fact that a process read from another object during its execution.
+
+### Inverse
+
+"Wrote_To"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Process|A process read from the memory space of another process during its execution.|
+|Process|File|A process read from a file during its execution.|
+|Process|Pipe|A process read from a pipe during its execution.|
+|Process|Win Mailslot|A process read from a Windows mailslot during its execution.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-b464a2a1-876b-4e29-9b5f-705f66ca1327">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>another_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Read_From</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Read_From_By"></a> "Read_From_By"
+
+The **source Object** was *Read from by* the **related Object**. Commonly used for expressing the fact that an object was read from by a process during its execution.
+
+### Inverse
+
+"Written_To_By"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Process|The memory space of a process was read from by another process during its execution.|
+|File|Process|A file was read from by a process during its execution.|
+|Pipe|Process|A pipe was read from by a process during its execution.|
+|Win Mailslot|Process|A Windows mailslot was read from by a process during its execution.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-b464a2a1-876b-4e29-9b5f-705f66ca1327">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>another_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Read_From_By</cybox:Relationship>
 		</cybox:Related_Object>
 	</cybox:Related_Objects>
 </cybox:Object>
