@@ -56,6 +56,8 @@ relationship in use.
 * [Redirects_To](#Redirects_To)
 * [Suspended](#Suspended)
 * [Suspended_By](#Suspended_By)
+* [Paused](#Paused)
+* [Paused_By](#Paused_By)
 * [Resumed](#Resumed)
 * [Resumed_By](#Resumed_By)
 * [Wrote_To](#Wrote_To)
@@ -1724,9 +1726,81 @@ The **source Object** was *Suspended by* the **related Object**. Commonly used f
 
 ---
 
+## <a name="Paused"></a> "Paused"
+
+The **source Object** *Paused* the **related Object**. Commonly used for expressing the fact that a process paused the execution of a Windows service.
+
+### Inverse
+
+"Resumed"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Win Service|A process paused the execution of a Windows service.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-355010b4-33de-4627-92d7-9a634dea668d">
+			<cybox:Properties xsi:type="WinServiceObj:WindowsServiceObjectType">
+				<WinServiceObj:Display_Name>boot svc</WinServiceObj:Display_Name>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Paused</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Paused_By"></a> "Paused_By"
+
+The **source Object** was *Paused by* the **related Object**. Commonly used for expressing the fact that the execution of a Windows service was paused by a process.
+
+### Inverse
+
+"Resumed_By"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Win Service|Process|A Windows service was paused by a process.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-355010b4-33de-4627-92d7-9a634dea668d">
+	<cybox:Properties xsi:type="WinServiceObj:WindowsServiceObjectType">
+		<WinServiceObj:Display_Name>boot svc</WinServiceObj:Display_Name>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Paused_By</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
 ## <a name="Resumed"></a> "Resumed"
 
-The **source Object** *Resumed* the **related Object**. Commonly used for expressing the fact that a process resumed the execution of another process or thread.
+The **source Object** *Resumed* the **related Object**. Commonly used for expressing the fact that a process resumed the execution of another process, thread, or Windows service.
 
 ### Inverse
 
@@ -1738,6 +1812,7 @@ The **source Object** *Resumed* the **related Object**. Commonly used for expres
 |-------------|--------------|-----------|
 |Process|Process|A process resumed the execution of another process.|
 |Process|Win Thread|A process resumed the execution of a Windows thread.|
+|Process|Win Service|A process resumed the execution of a Windows service.|
 
 ### Example
 
@@ -1765,7 +1840,7 @@ The **source Object** *Resumed* the **related Object**. Commonly used for expres
 
 ## <a name="Resumed_By"></a> "Resumed_By"
 
-The **source Object** was *Resumed by* the **related Object**. Commonly used for expressing the fact that the execution of a process or thread was resumed by another process.
+The **source Object** was *Resumed by* the **related Object**. Commonly used for expressing the fact that the execution of a process, thread, or Windows service was resumed by another process.
 
 ### Inverse
 
@@ -1777,6 +1852,7 @@ The **source Object** was *Resumed by* the **related Object**. Commonly used for
 |-------------|--------------|-----------|
 |Process|Process|A process was resumed by another process.|
 |Win Thread|Process|A Windows thread was resumed by a process.|
+|Win Service|Process|A Windows service was resumed by a process.|
 
 ### Example
 
