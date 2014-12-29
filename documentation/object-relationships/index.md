@@ -64,6 +64,10 @@ relationship in use.
 * [Written_To_By](#Written_To_By)
 * [Read_From](#Read_From)
 * [Read_From_By](#Read_From_By)
+* [Allocated](#Allocated)
+* [Allocated_By](#Allocated_By)
+* [Freed](#Freed)
+* [Freed_By](#Freed_By)
 
 ## <a name="Created"></a> "Created"
 
@@ -2035,6 +2039,158 @@ The **source Object** was *Read from by* the **related Object**. Commonly used f
 				</ProcessObj:Image_Info>
 			</cybox:Properties>
 			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Read_From_By</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Allocated"></a> "Allocated"
+
+The **source Object** *Allocated* the **related Object**. Commonly used for expressing the fact that a process allocated a particular memory region.
+
+### Inverse
+
+"Freed"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Memory|A process allocated a particular memory region.|
+|Process|Win Memory Page Region|A process allocated a particular Windows memory page region.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-21dd8e8b-8608-46a6-aafc-87e3452fd836">
+			<cybox:Properties xsi:type="MemoryObj:MemoryObjectType">
+				<MemoryObj:Region_Size>192000</MemoryObj:Region_Size>
+				<MemoryObj:Region_Start_Address>2F3CD1FF</MemoryObj:Region_Start_Address>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Allocated</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Allocated_By"></a> "Allocated_By"
+
+The **source Object** was *Allocated by* the **related Object**. Commonly used for expressing the fact that a memory region was allocated by a particular process.
+
+### Inverse
+
+"Freed_By"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Memory|Process|A memory region was allocated by a particular process during its execution.|
+|Win Memory Page Region|Process|A Windows memory page region was allocated by a particular process during its execution.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-21dd8e8b-8608-46a6-aafc-87e3452fd836">
+	<cybox:Properties xsi:type="MemoryObj:MemoryObjectType">
+		<MemoryObj:Region_Size>192000</MemoryObj:Region_Size>
+		<MemoryObj:Region_Start_Address>2F3CD1FF</MemoryObj:Region_Start_Address>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Allocated_By</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Freed"></a> "Freed"
+
+The **source Object** *Freed* the **related Object**. Commonly used for expressing the fact that a process freed a particular memory region.
+
+### Inverse
+
+"Allocated"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Process|Memory|A process freed a particular memory region.|
+|Process|Win Memory Page Region|A process freed a particular Windows memory page region.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-21dd8e8b-8608-46a6-aafc-87e3452fd836">
+			<cybox:Properties xsi:type="MemoryObj:MemoryObjectType">
+				<MemoryObj:Region_Size>192000</MemoryObj:Region_Size>
+				<MemoryObj:Region_Start_Address>2F3CD1FF</MemoryObj:Region_Start_Address>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Freed</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Freed_By"></a> "Freed_By"
+
+The **source Object** was *Freed by* the **related Object**. Commonly used for expressing the fact that a memory region was freed by a particular process.
+
+### Inverse
+
+"Allocated_By"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|Memory|Process|A memory region was freed by a particular process during its execution.|
+|Win Memory Page Region|Process|A Windows memory page region was freed by a particular process during its execution.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-21dd8e8b-8608-46a6-aafc-87e3452fd836">
+	<cybox:Properties xsi:type="MemoryObj:MemoryObjectType">
+		<MemoryObj:Region_Size>192000</MemoryObj:Region_Size>
+		<MemoryObj:Region_Start_Address>2F3CD1FF</MemoryObj:Region_Start_Address>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Freed_By</cybox:Relationship>
 		</cybox:Related_Object>
 	</cybox:Related_Objects>
 </cybox:Object>
