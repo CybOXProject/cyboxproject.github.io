@@ -9,65 +9,67 @@ a listing and description of the Objects that the relationship is most applicabl
 to, its inverse (if existing), and an example XML snippet that demonstrates the
 relationship in use.
 
-# Index
+# Overview
 
-* [Created](#Created)
-* [Created_By](#Created_By)
-* [Deleted](#Deleted)
-* [Deleted_By](#Deleted_By)
-* [Modified_Properties_Of](#Modified_Properties_Of)
-* [Properties_Modified_By](#Properties_Modified_By)
-* [Downloaded_From](#Downloaded_From)
-* [Downloaded_To](#Downloaded_To)
-* [Downloaded](#Downloaded)
-* [Downloaded_By](#Downloaded_By)
-* [Uploaded](#Uploaded)
-* [Uploaded_By](#Uploaded_By)
-* [Uploaded_To](#Uploaded_To)
-* [Sent_To](#Sent_To)
-* [Received_From](#Received_From)
-* [Values_Enumerated](#Values_Enumerated)
-* [Values_Enumerated_By](#Values_Enumerated_By)
-* [Killed](#Killed)
-* [Killed_By](#Killed_By)
-* [Locked](#Locked)
-* [Locked_By](#Locked_By)
-* [Unlocked](#Unlocked)
-* [Unlocked_By](#Unlocked_By)
-* [Listened_On](#Listened_On)
-* [Renamed_From](#Renamed_From)
-* [Renamed_To](#Renamed_To)
-* [Renamed](#Renamed)
-* [Renamed_By](#Renamed_By)
-* [Moved_From](#Moved_From)
-* [Moved_To](#Moved_To)
-* [Moved](#Moved)
-* [Moved_By](#Moved_By)
-* [Copied_From](#Copied_From)
-* [Copied_To](#Copied_To)
-* [Copied](#Copied)
-* [Copied_By](#Copied_By)
-* [Contains](#Contains)
-* [Contained_Within](#Contained_Within)
-* [Extracted_From](#Extracted_From)
-* [Connected_To](#Connected_To)
-* [Parent_Of](#Parent_Of)
-* [Child_Of](#Child_Of)
-* [Redirects_To](#Redirects_To)
-* [Suspended](#Suspended)
-* [Suspended_By](#Suspended_By)
-* [Paused](#Paused)
-* [Paused_By](#Paused_By)
-* [Resumed](#Resumed)
-* [Resumed_By](#Resumed_By)
-* [Wrote_To](#Wrote_To)
-* [Written_To_By](#Written_To_By)
-* [Read_From](#Read_From)
-* [Read_From_By](#Read_From_By)
-* [Allocated](#Allocated)
-* [Allocated_By](#Allocated_By)
-* [Freed](#Freed)
-* [Freed_By](#Freed_By)
+|Name|Inverse|Applicable Objects (Source)|Applicable Objects (Related)|
+|----|-------|---------------------------|----------------------------|
+|[Created](#Created)|[Deleted](#Deleted), [Killed](#Killed)|Archive File, Process|File, Process, Mutex, Win Registry Key, Win Service, Win Thread|
+|[Created_By](#Created_By)|[Deleted_By](#Deleted_By), [Killed_By](#Killed_By)|File, Process, Mutex, Win Registry Key, Win Service, Win Thread|Archive File, Process|
+|[Deleted](#Deleted)|[Created](#Created)|Process|File, Mutex, Win Registry Key, Win Service|
+|[Deleted_By](#Deleted_By)|[Created_By](#Created_By)|File, Mutex, Win Registry Key, Win Service|Process|
+|[Modified_Properties_Of](#Modified_Properties_Of)|n/a|Process|File, Win Registry Key, Win Service|
+|[Properties_Modified_By](#Properties_Modified_By)|n/a|File, Win Registry Key, Win Service|Process|
+|[Downloaded_From](#Downloaded_From)|n/a|File|URI, Domain Name, Address, Hostname|
+|[Downloaded_To](#Downloaded_To)|[Uploaded_To](#Uploaded_To)|URI, File|File|
+|[Downloaded](#Downloaded)|[Uploaded](#Uploaded)|Process|File|
+|[Downloaded_By](#Downloaded_By)|[Uploaded_By](#Uploaded_By)|File|Process|
+|[Uploaded](#Uploaded)|[Downloaded](#Downloaded)|Process|File|
+|[Uploaded_By](#Uploaded_By)|[Downloaded_By](#Downloaded_By)|File|Process|
+|[Uploaded_To](#Uploaded_To)|[Downloaded_To](#Downloaded_To)|File|URI, Domain Name, Address, Hostname|
+|[Sent_To](#Sent_To)|[Received_From](#Received_From)|File|Address|
+|[Received_From](#Received_From)|[Sent_To](#Sent_To)|File|Address|
+|[Values_Enumerated](#Values_Enumerated)|n/a|Process|Win Registry Key|
+|[Values_Enumerated_By](#Values_Enumerated_By)|n/a|Win Registry Key|Process|
+|[Killed](#Killed)|[Created](#Created)|Process|Process, Win Thread|
+|[Killed_By](#Killed_By)|[Created_By](#Created_By)|Process, Win Thread|Process|
+|[Locked](#Locked)|[Unlocked](#Unlocked)|Process|File|
+|[Locked_By](#Locked_By)|[Unlocked_By](#Unlocked_By)|File|Process|
+|[Unlocked](#Unlocked)|[Locked](#Locked)|Process|File|
+|[Unlocked_By](#Unlocked_By)|[Locked_By](#Locked_By)|File|Process|
+|[Listened_On](#Listened_On)|n/a|Process|Port, Network Socket|
+|[Renamed_From](#Renamed_From)|n/a|File|File|
+|[Renamed_To](#Renamed_To)|n/a|File|File|
+|[Renamed](#Renamed)|n/a|Process|File|
+|[Renamed_By](#Renamed_By)|n/a|File|Process|
+|[Moved_From](#Moved_From)|n/a|File|File|
+|[Moved_To](#Moved_To)|n/a|File|File|
+|[Moved](#Moved)|n/a|Process|File|
+|[Moved_By](#Moved_By)|n/a|File|Process|
+|[Copied_From](#Copied_From)|n/a|File|File|
+|[Copied_To](#Copied_To)|n/a|File|File|
+|[Copied](#Copied)|n/a|Process|File|
+|[Copied_By](#Copied_By)|n/a|File|Process|
+|[Contains](#Contains)|n/a|File, Archive File, Email Message, URI, DNS Record, ARP Cache, URL History, Win Registry Key|File, Link, Domain Name, Address, URI, Win Registry Key|
+|[Contained_Within](#Contained_Within)|n/a|File, Link, Domain Name, Address, URI, Win Registry Key|File, Archive File, Email Message, URI, DNS Record, ARP Cache, URL History, Win Registry Key|
+|[Extracted_From](#Extracted_From)|n/a|File, URI, Link|File, Archive File, Email Message|
+|[Connected_To](#Connected_To)|n/a|Process|Address, Socket Address, Hostname, Network Socket|
+|[Parent_Of](#Parent_Of)|[Child_Of](#Child_Of)|Process|Process, Win Thread|
+|[Child_Of](#Child_Of)|[Parent_Of](#Parent_Of)|Process, Win Thread|Process|
+|[Redirects_To](#Redirects_To)|n/a|URI, Domain Name|URI, Domain Name|
+|[Suspended](#Suspended)|[Resumed](#Resumed)|Process|Process, Win Thread|
+|[Suspended_By](#Suspended_By)|[Resumed_By](#Resumed_By)|Process, Win Thread|Process|
+|[Paused](#Paused)|[Resumed](#Resumed)|Process|Win Service|
+|[Paused_By](#Paused_By)|[Resumed_By](#Resumed_By)|Win Service|Process|
+|[Resumed](#Resumed)|[Suspended](#Suspended), [Paused](#Paused)|Process|Process, Win Thread, Win Service|
+|[Resumed_By](#Resumed_By)|[Suspended_By](#Suspended_By), [Paused_By](#Paused_By)|Process, Win Thread, Win Service|Process|
+|[Wrote_To](#Wrote_To)|[Read_From](#Read_From)|Process|Process, File, Pipe, Win Mailslot|
+|[Written_To_By](#Written_To_By)|[Read_From_By](#Read_From_By)|Process, File, Pipe, Win Mailslot|Process|
+|[Read_From](#Read_From)|[Wrote_To](#Wrote_To)|Process|Process, File, Pipe, Win Mailslot|
+|[Read_From_By](#Read_From_By)|[Written_To_By](#Written_To_By)|Process, File, Pipe, Win Mailslot|Process|
+|[Allocated](#Allocated)|[Freed](#Freed)|Process|Memory, Win Memory Page Region|
+|[Allocated_By](#Allocated_By)|[Freed_By](#Freed_By)|Memory, Win Memory Page Region|Process|
+|[Freed](#Freed)|[Allocated](#Allocated)|Process|Memory, Win Memory Page Region|
+|[Freed_By](#Freed_By)|[Allocated_By](#Allocated_By)|Memory, Win Memory Page Region|Process|
 
 ## <a name="Created"></a> "Created"
 
