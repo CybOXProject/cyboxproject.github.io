@@ -74,6 +74,8 @@ relationship in use.
 |[Opened_By](#Opened_By)|[Closed_By](#Closed_By)|[File][File], [Win Filemapping][Win Filemapping], [Mutex][Mutex], [Semaphore][Semaphore], [Port][Port], [Win Event][Win Event], [Win Critical Section][Win Critical Section], [Win Handle][Win Handle], [Win Registry Key][Win Registry Key], [Win Service][Win Service]|[Process][Process]|
 |[Closed](#Closed)|[Opened](#Opened)|[Process][Process]|[File][File], [Win Filemapping][Win Filemapping], [Port][Port], [Win Handle][Win Handle], [Win Registry Key][Win Registry Key]|
 |[Closed_By](#Closed_By)|[Opened_By](#Opened_By)|[File][File], [Win Filemapping][Win Filemapping], [Port][Port], [Win Handle][Win Handle], [Win Registry Key][Win Registry Key]|[Process][Process]|
+|[Characterizes](#Characterizes)|n/a|[File][File], [DNS Record][DNS Record], [WHOIS][WHOIS]|[Artifact][Artifact], [Domain Name]|
+|[Characterized_By](#Characterized_By)|n/a|[Artifact][Artifact], [Domain Name]|[File][File], [DNS Record][DNS Record], [WHOIS][WHOIS]|
 
 ## <a name="Created"></a> "Created"
 
@@ -2374,8 +2376,83 @@ The **source Object** was *Closed_By* the **related Object**. Commonly used for 
 
 ---
 
+## <a name="Characterizes"></a> "Characterizes"
+
+The **source Object** *Characterizes* the **related Object**.  Used for expressing the fact that an object characterizes or provides information on the features of another object.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|[File][File]|[Artifact][Artifact]|A file defines the file-specific features that characterize an artifact.|
+|[DNS Record][DNS Record]|[Domain Name][Domain Name]|A DNS record defines the DNS-record-specific features that characterize a domain name.|
+|[WHOIS][WHOIS]|[Domain Name][Domain Name]|A WHOIS record defines the WHOIS-specific features that characterize a domain name.|
+
+
+### Example
+
+```xml 
+<cybox:Object id="example:object-2efb4279-86e6-4554-a8e0-8d6d2610e632">
+	<cybox:Properties xsi:type="FileObj:FileObjectType">
+		<FileObj:File_Name>asdfg.dll</FileObj:File_Name>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-dfd1d908-a799-4d9b-b367-63c556979a89">
+			<cybox:Properties xsi:type="ArtifactObj:ArtifactObjectType">
+				<ArtifactObj:Raw_Artifact>ABCDFFFF</ArtifactObj:Raw_Artifact>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Characterizes</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>							
+</cybox:Object>
+```
+
+---
+
+## <a name="Characterized_By"></a> "Characterized_By"
+
+The **source Object** is *Characterized by* the **related Object**.  Used for expressing the fact that an object is characterized by another object, which provides information on its features.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|[Artifact][Artifact]|[File][File]|An artifact is characterized by a file, which defines its file-specific features.|
+|[Domain Name][Domain Name]|[DNS Record][DNS Record]|A domain name is characterized by a DNS record, which defines its DNS-record-specific features.|
+|[Domain Name][Domain Name]|[WHOIS][WHOIS]|A domain name is characterized by a WHOIS record, which defines its WHOIS-specific features.|
+
+
+### Example
+
+```xml
+<cybox:Object id="example:object-dfd1d908-a799-4d9b-b367-63c556979a89">
+	<cybox:Properties xsi:type="ArtifactObj:ArtifactObjectType">
+		<ArtifactObj:Raw_Artifact>ABCDFFFF</ArtifactObj:Raw_Artifact>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-2efb4279-86e6-4554-a8e0-8d6d2610e632">
+			<cybox:Properties xsi:type="FileObj:FileObjectType">
+				<FileObj:File_Name>asdfg.dll</FileObj:File_Name>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Characterized_By</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>							
+</cybox:Object>
+```
+
+---
+
 [Address]: http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/
 [Archive File]: http://stixproject.github.io/data-model/1.1.1/ArchiveFileObj/ArchiveFileObjectType/
+[Artifact]: http://stixproject.github.io/data-model/1.1.1/ArtifactObj/ArtifactObjectType/
 [ARP Cache]: http://stixproject.github.io/data-model/1.1.1/ARPCacheObj/ARPCacheObjectType/
 [Domain Name]: http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/
 [DNS Record]: http://stixproject.github.io/data-model/1.1.1/DNSRecordObj/DNSRecordObjectType/
@@ -2402,3 +2479,4 @@ The **source Object** was *Closed_By* the **related Object**. Commonly used for 
 [Win Thread]: http://stixproject.github.io/data-model/1.1.1/WinThreadObj/WindowsThreadObjectType/
 [Win Mailslot]: http://stixproject.github.io/data-model/1.1.1/WinMailslotObj/WindowsMailslotObjectType/
 [Win Memory Page Region]: http://stixproject.github.io/data-model/1.1.1/WinMemoryPageRegionObj/WindowsMemoryPageRegionObjectType/
+[WHOIS]: http://stixproject.github.io/data-model/1.1.1/WhoisObj/WhoisObjectType/
