@@ -70,6 +70,10 @@ relationship in use.
 |[Allocated_By](#Allocated_By)|[Freed_By](#Freed_By)|[Memory][Memory], [Win Memory Page Region][Win Memory Page Region]|[Process][Process]|
 |[Freed](#Freed)|[Allocated](#Allocated)|[Process][Process]|[Memory][Memory], [Win Memory Page Region][Win Memory Page Region]|
 |[Freed_By](#Freed_By)|[Allocated_By](#Allocated_By)|[Memory][Memory], [Win Memory Page Region][Win Memory Page Region]|[Process][Process]|
+|[Opened](#Opened)|[Closed](#Closed)|[Process][Process]|[File][File], [Win Filemapping][Win Filemapping], [Mutex][Mutex], [Semaphore][Semaphore], [Port][Port], [Win Event][Win Event], [Win Critical Section][Win Critical Section], [Win Handle][Win Handle], [Win Registry Key][Win Registry Key], [Win Service][Win Service]|
+|[Opened_By](#Opened_By)|[Closed_By](#Closed_By)|[File][File], [Win Filemapping][Win Filemapping], [Mutex][Mutex], [Semaphore][Semaphore], [Port][Port], [Win Event][Win Event], [Win Critical Section][Win Critical Section], [Win Handle][Win Handle], [Win Registry Key][Win Registry Key], [Win Service][Win Service]|[Process][Process]|
+|[Closed](#Closed)|[Opened](#Opened)|[Process][Process]|[File][File], [Win Filemapping][Win Filemapping], [Port][Port], [Win Handle][Win Handle], [Win Registry Key][Win Registry Key]|
+|[Closed_By](#Closed_By)|[Opened_By](#Opened_By)|[File][File], [Win Filemapping][Win Filemapping], [Port][Port], [Win Handle][Win Handle], [Win Registry Key][Win Registry Key]|[Process][Process]|
 
 ## <a name="Created"></a> "Created"
 
@@ -2200,6 +2204,176 @@ The **source Object** was *Freed by* the **related Object**. Commonly used for e
 
 ---
 
+## <a name="Opened"></a> "Opened"
+
+The **source Object** *Opened* the **related Object**. Commonly used for expressing the fact that a process opened an object for access, use, or modification.
+
+### Inverse
+
+"Closed"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|[Process][Process]|[File][File]|A process opened an existing file during its execution.|
+|[Process][Process]|[Win Filemapping][Win Filemapping]|A process opened an existing Windows filemapping during its execution.|
+|[Process][Process]|[Mutex][Mutex]|A process opened an existing mutex during its execution.|
+|[Process][Process]|[Semaphore][Semaphore]|A process opened an existing semaphore during its execution.|
+|[Process][Process]|[Port][Port]|A process opened a port during its execution.|
+|[Process][Process]|[Win Event][Win Event]|A process opened an existing Windows event during its execution.|
+|[Process][Process]|[Win Critical Section][Win Critical Section]|A process opened an existing Windows critical section during its execution.|
+|[Process][Process]|[Win Handle][Win Handle]|A process opened an existing Windows handle during its execution.|
+|[Process][Process]|[Win Registry Key][Win Registry Key]|A process opened an existing Windows registry key during its execution.|
+|[Process][Process]|[Win Service][Win Service]|A process opened an existing Windows service during its execution.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-a127818e-eb90-4290-ae7b-2fd1bf0801b0">
+			<cybox:Properties xsi:type="MutexObj:MutexObjectType">
+				<MutexObj:Name>some.mutex!</MutexObj:Name>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Opened_By"></a> "Opened_By"
+
+The **source Object** was *Opened_By* the **related Object**. Commonly used for expressing the fact that an object was opened by a process for access or modification.
+
+### Inverse
+
+"Closed_By"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|[File][File]|[Process][Process]|An existing file was opened by a particular process during its execution.|
+|[Win Filemapping][Win Filemapping]|[Process][Process]|An existing Windows filemapping was opened by a particular process during its execution.|
+|[Mutex][Mutex]|[Process][Process]|An existing mutex was opened by a particular process during its execution.|
+|[Port][Port]|[Process][Process]|A port was opened by a particular process during its execution.|
+|[Semaphore][Semaphore]|[Process][Process]|An existing semaphore was opened by a particular process during its execution.|
+|[Win Event][Win Event]|[Process][Process]|An existing Windows event was opened by a particular process during its execution.|
+|[Win Critical Section][Win Critical Section]|[Process][Process]|An existing Windows critical section was opened by a particular process during its execution.|
+|[Win Handle][Win Handle]|[Process][Process]|An existing Windows handle was opened by a particular process during its execution.|
+|[Win Registry Key][Win Registry Key]|[Process][Process]|An existing Windows registry key was opened by a particular process during its execution.|
+|[Win Service][Win Service]|[Process][Process]|An existing Windows service was opened by a particular process during its execution.|
+
+### Example
+
+```xml 
+<cybox:Object id="example:object-a127818e-eb90-4290-ae7b-2fd1bf0801b0">
+	<cybox:Properties xsi:type="MutexObj:MutexObjectType">
+		<MutexObj:Name>some.mutex!</MutexObj:Name>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Opened_By</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Closed"></a> "Closed"
+
+The **source Object** *Closed* the **related Object**. Commonly used for expressing the fact that a process closed an object that was previously opened for access, use, or modification.
+
+### Inverse
+
+"Opened"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|[Process][Process]|[File][File]|A process closed an existing file during its execution.|
+|[Process][Process]|[Win Filemapping][Win Filemapping]|A process closed an existing Windows filemapping during its execution.|
+|[Process][Process]|[Port][Port]|A process closed a port during its execution.|
+|[Process][Process]|[Win Handle][Win Handle]|A process closed an existing Windows handle during its execution.|
+|[Process][Process]|[Win Registry Key][Win Registry Key]|A process closed an existing Windows service during its execution.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+	<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+		<ProcessObj:Image_Info>
+			<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+		</ProcessObj:Image_Info>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-265b2078-1b32-4c1e-aa49-d8a5162ee9f9">
+			<cybox:Properties xsi:type="PortObj:PortObjectType">
+				<PortObj:Port_Value>222</PortObj:Port_Value>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Closed</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Closed_By"></a> "Closed_By"
+
+The **source Object** was *Closed_By* the **related Object**. Commonly used for expressing the fact that an object previously opened for access or modification was closed by a process.
+
+### Inverse
+
+"Opened_By"
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|[File][File]|[Process][Process]|An existing file was closed by a particular process during its execution.|
+|[Win Filemapping][Win Filemapping]|[Process][Process]|An existing Windows filemapping was closed by a particular process during its execution.|
+|[Port][Port]|[Process][Process]|A port was closed by a particular process during its execution.|
+|[Win Handle][Win Handle]|[Process][Process]|An existing Windows handle was closed by a particular process during its execution.|
+|[Win Registry Key][Win Registry Key]|[Process][Process]|An existing Windows registry key was closed by a particular process during its execution.|
+
+### Example
+
+```xml 
+<cybox:Object id="example:object-265b2078-1b32-4c1e-aa49-d8a5162ee9f9">
+	<cybox:Properties xsi:type="PortObj:PortObjectType">
+		<PortObj:Port_Value>222</PortObj:Port_Value>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-c822a70d-7b41-4553-983b-a07fd8c553a0">
+			<cybox:Properties xsi:type="ProcessObj:ProcessObjectType">
+				<ProcessObj:Image_Info>
+					<ProcessObj:File_Name>some_process.exe</ProcessObj:File_Name>
+				</ProcessObj:Image_Info>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Closed_By</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```
+
+---
+
 [Address]: http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/
 [Archive File]: http://stixproject.github.io/data-model/1.1.1/ArchiveFileObj/ArchiveFileObjectType/
 [ARP Cache]: http://stixproject.github.io/data-model/1.1.1/ARPCacheObj/ARPCacheObjectType/
@@ -2215,9 +2389,14 @@ The **source Object** was *Freed by* the **related Object**. Commonly used for e
 [Pipe]: http://stixproject.github.io/data-model/1.1.1/PipeObj/PipeObjectType/
 [Port]: http://stixproject.github.io/data-model/1.1.1/PortObj/PortObjectType/
 [Process]: http://stixproject.github.io/data-model/1.1.1/ProcessObj/ProcessObjectType/
+[Semaphore]: http://stixproject.github.io/data-model/1.1.1/SemaphoreObj/SemaphoreObjectType/
 [Socket Address]: http://stixproject.github.io/data-model/1.1.1/SocketAddressObj/SocketAddressObjectType/
 [URI]: http://stixproject.github.io/data-model/1.1.1/URIObj/URIObjectType/
 [URL History]: http://stixproject.github.io/data-model/1.1.1/URLHistoryObj/URLHistoryObjectType/
+[Win Critical Section]: http://stixproject.github.io/data-model/1.1.1/WinCriticalSectionObj/WindowsCriticalSectionObjectType/
+[Win Event]: http://stixproject.github.io/data-model/1.1.1/WinEventObj/WindowsEventObjectType/
+[Win Filemapping]: http://stixproject.github.io/data-model/1.1.1/WinFilemappingObj/WindowsFilemappingObjectType/
+[Win Handle]: http://stixproject.github.io/data-model/1.1.1/WinHandleObj/WindowsHandleObjectType/
 [Win Registry Key]: http://stixproject.github.io/data-model/1.1.1/WinRegistryKeyObj/WindowsRegistryKeyObjectType/
 [Win Service]: http://stixproject.github.io/data-model/1.1.1/WinServiceObj/WindowsServiceObjectType/
 [Win Thread]: http://stixproject.github.io/data-model/1.1.1/WinThreadObj/WindowsThreadObjectType/
