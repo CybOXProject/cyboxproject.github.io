@@ -80,6 +80,8 @@ relationship in use.
 |[Sub-domain_Of](#Sub-domain_Of)|[Supra-domain_Of](#Supra-domain_Of)|[Domain Name]|[Domain Name]|
 |[Supra-domain_Of](#Supra-domain_Of)|[Sub-domain_Of](#Sub-domain_Of)|[Domain Name]|[Domain Name]|
 |[FQDN_Of](#FQDN_Of)|n/a|[Domain Name]|[Domain Name], [Hostname]|
+|[Dropped](#Dropped)|n/a|[File]|[File]|
+|[Dropped_By](#Dropped_By)|n/a|[File]|[File]|
 
 ## <a name="Created"></a> "Created"
 
@@ -2591,6 +2593,74 @@ n/a
 	</cybox:Related_Objects>							
 </cybox:Object>
 ```
+
+---
+
+## <a name="Dropped"></a> "Dropped"
+
+The **source Object** *Dropped* the **related Object**.  Commonly used for expressing the fact that a file dropped another file, in the sense that the file, after being injected into or spawned as a process, created the other file.
+ 
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|[File]|[File]|A file dropped another file.|
+
+### Example
+
+```xml
+<cybox:Object id="example:object-e970c3df-0c01-4611-8257-6b01d188983c">
+	<cybox:Properties xsi:type="FileObj:FileObjectType">
+		<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-2c6a7384-e9bd-457c-84ed-44a4e9d9048c">
+			<cybox:Properties xsi:type="FileObj:FileObjectType">
+				<FileObj:File_Path>C:\asdfg.bin</FileObj:File_Path>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Dropped</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
+
+---
+
+## <a name="Dropped_By"></a> "Dropped_By"
+
+The **source Object** was *Dropped by* the **related Object**.  Commonly used for expressing the fact that a file was dropped by another file, in the sense that it was created by the other file after it was injected or spawned as a process.
+ 
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|[File]|[File]|A file was dropped by another file.|
+
+### Example
+
+```xml 
+<cybox:Object id="example:object-2c6a7384-e9bd-457c-84ed-44a4e9d9048c">
+	<cybox:Properties xsi:type="FileObj:FileObjectType">
+		<FileObj:File_Path>C:\asdfg.bin</FileObj:File_Path>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-e970c3df-0c01-4611-8257-6b01d188983c">
+			<cybox:Properties xsi:type="FileObj:FileObjectType">
+				<FileObj:File_Path>C:\temp\qwerty.dll</FileObj:File_Path>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Dropped_By</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>
+</cybox:Object>
+```	
 
 ---
 
