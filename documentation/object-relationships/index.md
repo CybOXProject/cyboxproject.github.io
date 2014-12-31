@@ -77,6 +77,9 @@ relationship in use.
 |[Characterizes](#Characterizes)|n/a|[File], [DNS Record], [WHOIS]|[Artifact], [Domain Name]|
 |[Characterized_By](#Characterized_By)|n/a|[Artifact], [Domain Name]|[File], [DNS Record], [WHOIS]|
 |[Resolved_To](#Resolved_To)|n/a|[Domain Name], [Hostname], [Address]|[Domain Name], [Hostname], [Address]|
+|[Sub-domain_Of](#Sub-domain_Of)|[Supra-domain_Of](#Supra-domain_Of)|[Domain Name]|[Domain Name]|
+|[Supra-domain_Of](#Supra-domain_Of)|[Sub-domain_Of](#Sub-domain_Of)|[Domain Name]|[Domain Name]|
+|[FQDN_Of](#FQDN_Of)|n/a|[Domain Name]|[Domain Name], [Hostname]|
 
 ## <a name="Created"></a> "Created"
 
@@ -2481,6 +2484,109 @@ n/a
 				<AddressObj:Address_Value>1.2.3.4</AddressObj:Address_Value>
 			</cybox:Properties>
 			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resolved_To</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>							
+</cybox:Object>
+```
+
+---
+
+## <a name="Sub-domain_Of"></a> "Sub-domain_Of"
+
+The **source Object** is a *Sub-domain* of the **related Object**.  Used for expressing the fact that a domain is a sub-domain of another domain.
+
+### Inverse
+
+[Supra-domain_Of](#Supra-domain_Of)
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|[Domain Name]|[Domain Name]|A domain name is a sub-domain of another domain name.|
+
+### Example
+
+```xml 
+<cybox:Object id="example:object-5d0268ae-3ddb-4eb4-b279-5f4b9f3800b6">
+	<cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+		<DomainNameObj:Value>test.example.com</DomainNameObj:Value>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-711f7c33-e7b7-4843-aec7-2b0cdb7d132d">
+			<cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+				<DomainNameObj:Value>example.com</DomainNameObj:Value>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Sub-domain_Of</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>							
+</cybox:Object>
+```
+
+---
+
+## <a name="Supra-domain_Of"></a> "Supra-domain_Of"
+
+The **source Object** is a *Supra-domain* of the **related Object**.  Used for expressing the fact that a domain is a supra-domain of another domain.
+
+### Inverse
+
+[Sub-domain_Of](#Sub-domain_Of)
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|[Domain Name]|[Domain Name]|A domain name is a supra-domain of another domain name.|
+
+### Example
+
+```xml 
+<cybox:Object id="example:object-711f7c33-e7b7-4843-aec7-2b0cdb7d132d">
+	<cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+		<DomainNameObj:Value>example.com</DomainNameObj:Value>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-5d0268ae-3ddb-4eb4-b279-5f4b9f3800b6">
+			<cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+				<DomainNameObj:Value>test.example.com</DomainNameObj:Value>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Supra-domain_Of</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>							
+</cybox:Object>
+```
+
+---
+
+## <a name="FQDN_Of"></a> "FQDN_Of"
+
+The **source Object** is the *Fully-qualified domain name* of the **related Object**.  Used for expressing the fact that a domain name represents a fully-qualified domain name for a domain or hostname.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|[Domain Name]|[Domain Name]|A domain name is a fully-qualified domain name for another domain name.|
+|[Domain Name]|[Hostname]|A domain name is a fully-qualified domain name for a hostname.|
+
+### Example
+
+```xml 
+<cybox:Object id="example:object-375ee123-277e-4f2d-ac7a-5d0ab823d1d1">
+	<cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+		<DomainNameObj:Value>www.example.com</DomainNameObj:Value>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-711f7c33-e7b7-4843-aec7-2b0cdb7d132d">
+			<cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+				<DomainNameObj:Value>example.com</DomainNameObj:Value>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">FQDN_Of</cybox:Relationship>
 		</cybox:Related_Object>
 	</cybox:Related_Objects>							
 </cybox:Object>
