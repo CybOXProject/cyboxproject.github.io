@@ -13,73 +13,74 @@ relationship in use.
 
 |Name|Inverse|Applicable Objects (Source)|Applicable Objects (Related)|
 |----|-------|---------------------------|----------------------------|
-|[Created](#Created)|[Deleted](#Deleted), [Killed](#Killed)|[Archive File][Archive File], [Process][Process]|[File][File], [Process][Process], [Mutex][Mutex], [Win Registry Key][Win Registry Key], [Win Service][Win Service], [Win Thread]|
-|[Created_By](#Created_By)|[Deleted_By](#Deleted_By), [Killed_By](#Killed_By)|[File][File], [Process][Process], [Mutex][Mutex], [Win Registry Key][Win Registry Key], [Win Service][Win Service], [Win Thread]|[Archive File][Archive File], [Process][Process]|
-|[Deleted](#Deleted)|[Created](#Created)|[Process][Process]|[File][File], [Mutex][Mutex], [Win Registry Key][Win Registry Key], [Win Service][Win Service]|
-|[Deleted_By](#Deleted_By)|[Created_By](#Created_By)|[File][File], [Mutex][Mutex], [Win Registry Key][Win Registry Key], [Win Service][Win Service]|[Process][Process]|
-|[Modified_Properties_Of](#Modified_Properties_Of)|n/a|[Process][Process]|[File][File], [Win Registry Key][Win Registry Key], [Win Service][Win Service]|
-|[Properties_Modified_By](#Properties_Modified_By)|n/a|[File][File], [Win Registry Key][Win Registry Key], [Win Service][Win Service]|[Process][Process]|
-|[Downloaded_From](#Downloaded_From)|n/a|[File][File]|[URI][URI], [Domain Name][Domain Name], [Address][Address], [Hostname][Hostname]|
-|[Downloaded_To](#Downloaded_To)|[Uploaded_To](#Uploaded_To)|[URI][URI], [File][File]|[File][File]|
-|[Downloaded](#Downloaded)|[Uploaded](#Uploaded)|[Process][Process]|[File][File]|
-|[Downloaded_By](#Downloaded_By)|[Uploaded_By](#Uploaded_By)|[File][File]|[Process][Process]|
-|[Uploaded](#Uploaded)|[Downloaded](#Downloaded)|[Process][Process]|[File][File]|
-|[Uploaded_By](#Uploaded_By)|[Downloaded_By](#Downloaded_By)|[File][File]|[Process][Process]|
-|[Uploaded_To](#Uploaded_To)|[Downloaded_To](#Downloaded_To)|[File][File]|[URI][URI], [Domain Name][Domain Name], [Address][Address], [Hostname][Hostname]|
-|[Sent_To](#Sent_To)|[Received_From](#Received_From)|[File][File]|[Address][Address]|
-|[Received_From](#Received_From)|[Sent_To](#Sent_To)|[File][File]|[Address][Address]|
-|[Values_Enumerated](#Values_Enumerated)|n/a|[Process][Process]|[Win Registry Key][Win Registry Key]|
-|[Values_Enumerated_By](#Values_Enumerated_By)|n/a|[Win Registry Key][Win Registry Key]|[Process][Process]|
-|[Killed](#Killed)|[Created](#Created)|[Process][Process]|[Process][Process], [Win Thread]|
-|[Killed_By](#Killed_By)|[Created_By](#Created_By)|[Process][Process], [Win Thread]|[Process][Process]|
-|[Locked](#Locked)|[Unlocked](#Unlocked)|[Process][Process]|[File][File]|
-|[Locked_By](#Locked_By)|[Unlocked_By](#Unlocked_By)|[File][File]|[Process][Process]|
-|[Unlocked](#Unlocked)|[Locked](#Locked)|[Process][Process]|[File][File]|
-|[Unlocked_By](#Unlocked_By)|[Locked_By](#Locked_By)|[File][File]|[Process][Process]|
-|[Listened_On](#Listened_On)|n/a|[Process][Process]|[Port][Port], [Network Socket][Network Socket]|
-|[Renamed_From](#Renamed_From)|n/a|[File][File]|[File][File]|
-|[Renamed_To](#Renamed_To)|n/a|[File][File]|[File][File]|
-|[Renamed](#Renamed)|n/a|[Process][Process]|[File][File]|
-|[Renamed_By](#Renamed_By)|n/a|[File][File]|[Process][Process]|
-|[Moved_From](#Moved_From)|n/a|[File][File]|[File][File]|
-|[Moved_To](#Moved_To)|n/a|[File][File]|[File][File]|
-|[Moved](#Moved)|n/a|[Process][Process]|[File][File]|
-|[Moved_By](#Moved_By)|n/a|[File][File]|[Process][Process]|
-|[Copied_From](#Copied_From)|n/a|[File][File]|[File][File]|
-|[Copied_To](#Copied_To)|n/a|[File][File]|[File][File]|
-|[Copied](#Copied)|n/a|[Process][Process]|[File][File]|
-|[Copied_By](#Copied_By)|n/a|[File][File]|[Process][Process]|
-|[Contains](#Contains)|n/a|[File][File], [Archive File][Archive File], [Email Message][Email Message], [URI][URI], [DNS Record][DNS Record], [ARP Cache][ARP Cache], [URL History][URL History], [Win Registry Key][Win Registry Key]|[File][File], [Link][Link], [Domain Name][Domain Name], [Address][Address], [URI][URI], [Win Registry Key][Win Registry Key]|
-|[Contained_Within](#Contained_Within)|n/a|[File][File], [Link][Link], [Domain Name][Domain Name], [Address][Address], [URI][URI], [Win Registry Key][Win Registry Key]|[File][File], [Archive File][Archive File], [Email Message][Email Message], [URI][URI], [DNS Record][DNS Record], [ARP Cache][ARP Cache], [URL History][URL History], [Win Registry Key][Win Registry Key]|
-|[Extracted_From](#Extracted_From)|n/a|[File][File], [URI][URI], [Link][Link]|[File][File], [Archive File][Archive File], [Email Message][Email Message]|
-|[Connected_To](#Connected_To)|n/a|[Process][Process]|[Address][Address], [Socket Address][Socket Address], [Hostname][Hostname], [Network Socket][Network Socket]|
-|[Parent_Of](#Parent_Of)|[Child_Of](#Child_Of)|[Process][Process]|[Process][Process], [Win Thread]|
-|[Child_Of](#Child_Of)|[Parent_Of](#Parent_Of)|[Process][Process], [Win Thread]|[Process][Process]|
-|[Redirects_To](#Redirects_To)|n/a|[URI][URI], [Domain Name][Domain Name]|[URI][URI], [Domain Name][Domain Name]|
-|[Suspended](#Suspended)|[Resumed](#Resumed)|[Process][Process]|[Process][Process], [Win Thread]|
-|[Suspended_By](#Suspended_By)|[Resumed_By](#Resumed_By)|[Process][Process], [Win Thread]|[Process][Process]|
-|[Paused](#Paused)|[Resumed](#Resumed)|[Process][Process]|[Win Service][Win Service]|
-|[Paused_By](#Paused_By)|[Resumed_By](#Resumed_By)|[Win Service][Win Service]|[Process][Process]|
-|[Resumed](#Resumed)|[Suspended](#Suspended), [Paused](#Paused)|[Process][Process]|[Process][Process], [Win Thread], [Win Service][Win Service]|
-|[Resumed_By](#Resumed_By)|[Suspended_By](#Suspended_By), [Paused_By](#Paused_By)|[Process][Process], [Win Thread], [Win Service][Win Service]|[Process][Process]|
-|[Wrote_To](#Wrote_To)|[Read_From](#Read_From)|[Process][Process]|[Process][Process], [File][File], [Pipe][Pipe], [Win Mailslot][Win Mailslot]|
-|[Written_To_By](#Written_To_By)|[Read_From_By](#Read_From_By)|[Process][Process], [File][File], [Pipe][Pipe], [Win Mailslot][Win Mailslot]|[Process][Process]|
-|[Read_From](#Read_From)|[Wrote_To](#Wrote_To)|[Process][Process]|[Process][Process], [File][File], [Pipe][Pipe], [Win Mailslot][Win Mailslot]|
-|[Read_From_By](#Read_From_By)|[Written_To_By](#Written_To_By)|[Process][Process], [File][File], [Pipe][Pipe], [Win Mailslot][Win Mailslot]|[Process][Process]|
-|[Allocated](#Allocated)|[Freed](#Freed)|[Process][Process]|[Memory][Memory], [Win Memory Page Region][Win Memory Page Region]|
-|[Allocated_By](#Allocated_By)|[Freed_By](#Freed_By)|[Memory][Memory], [Win Memory Page Region][Win Memory Page Region]|[Process][Process]|
-|[Freed](#Freed)|[Allocated](#Allocated)|[Process][Process]|[Memory][Memory], [Win Memory Page Region][Win Memory Page Region]|
-|[Freed_By](#Freed_By)|[Allocated_By](#Allocated_By)|[Memory][Memory], [Win Memory Page Region][Win Memory Page Region]|[Process][Process]|
-|[Opened](#Opened)|[Closed](#Closed)|[Process][Process]|[File][File], [Win Filemapping][Win Filemapping], [Mutex][Mutex], [Semaphore][Semaphore], [Port][Port], [Win Event][Win Event], [Win Critical Section][Win Critical Section], [Win Handle][Win Handle], [Win Registry Key][Win Registry Key], [Win Service][Win Service]|
-|[Opened_By](#Opened_By)|[Closed_By](#Closed_By)|[File][File], [Win Filemapping][Win Filemapping], [Mutex][Mutex], [Semaphore][Semaphore], [Port][Port], [Win Event][Win Event], [Win Critical Section][Win Critical Section], [Win Handle][Win Handle], [Win Registry Key][Win Registry Key], [Win Service][Win Service]|[Process][Process]|
-|[Closed](#Closed)|[Opened](#Opened)|[Process][Process]|[File][File], [Win Filemapping][Win Filemapping], [Port][Port], [Win Handle][Win Handle], [Win Registry Key][Win Registry Key]|
-|[Closed_By](#Closed_By)|[Opened_By](#Opened_By)|[File][File], [Win Filemapping][Win Filemapping], [Port][Port], [Win Handle][Win Handle], [Win Registry Key][Win Registry Key]|[Process][Process]|
-|[Characterizes](#Characterizes)|n/a|[File][File], [DNS Record][DNS Record], [WHOIS][WHOIS]|[Artifact][Artifact], [Domain Name]|
-|[Characterized_By](#Characterized_By)|n/a|[Artifact][Artifact], [Domain Name]|[File][File], [DNS Record][DNS Record], [WHOIS][WHOIS]|
+|[Created](#Created)|[Deleted](#Deleted), [Killed](#Killed)|[Archive File], [Process]|[File], [Process], [Mutex], [Win Registry Key], [Win Service], [Win Thread]|
+|[Created_By](#Created_By)|[Deleted_By](#Deleted_By), [Killed_By](#Killed_By)|[File], [Process], [Mutex], [Win Registry Key], [Win Service], [Win Thread]|[Archive File], [Process]|
+|[Deleted](#Deleted)|[Created](#Created)|[Process]|[File], [Mutex], [Win Registry Key], [Win Service]|
+|[Deleted_By](#Deleted_By)|[Created_By](#Created_By)|[File], [Mutex], [Win Registry Key], [Win Service]|[Process]|
+|[Modified_Properties_Of](#Modified_Properties_Of)|n/a|[Process]|[File], [Win Registry Key], [Win Service]|
+|[Properties_Modified_By](#Properties_Modified_By)|n/a|[File], [Win Registry Key], [Win Service]|[Process]|
+|[Downloaded_From](#Downloaded_From)|n/a|[File]|[URI], [Domain Name], [Address], [Hostname]|
+|[Downloaded_To](#Downloaded_To)|[Uploaded_To](#Uploaded_To)|[URI], [File]|[File]|
+|[Downloaded](#Downloaded)|[Uploaded](#Uploaded)|[Process]|[File]|
+|[Downloaded_By](#Downloaded_By)|[Uploaded_By](#Uploaded_By)|[File]|[Process]|
+|[Uploaded](#Uploaded)|[Downloaded](#Downloaded)|[Process]|[File]|
+|[Uploaded_By](#Uploaded_By)|[Downloaded_By](#Downloaded_By)|[File]|[Process]|
+|[Uploaded_To](#Uploaded_To)|[Downloaded_To](#Downloaded_To)|[File]|[URI], [Domain Name], [Address], [Hostname]|
+|[Sent_To](#Sent_To)|[Received_From](#Received_From)|[File]|[Address]|
+|[Received_From](#Received_From)|[Sent_To](#Sent_To)|[File]|[Address]|
+|[Values_Enumerated](#Values_Enumerated)|n/a|[Process]|[Win Registry Key]|
+|[Values_Enumerated_By](#Values_Enumerated_By)|n/a|[Win Registry Key]|[Process]|
+|[Killed](#Killed)|[Created](#Created)|[Process]|[Process], [Win Thread]|
+|[Killed_By](#Killed_By)|[Created_By](#Created_By)|[Process], [Win Thread]|[Process]|
+|[Locked](#Locked)|[Unlocked](#Unlocked)|[Process]|[File]|
+|[Locked_By](#Locked_By)|[Unlocked_By](#Unlocked_By)|[File]|[Process]|
+|[Unlocked](#Unlocked)|[Locked](#Locked)|[Process]|[File]|
+|[Unlocked_By](#Unlocked_By)|[Locked_By](#Locked_By)|[File]|[Process]|
+|[Listened_On](#Listened_On)|n/a|[Process]|[Port], [Network Socket]|
+|[Renamed_From](#Renamed_From)|n/a|[File]|[File]|
+|[Renamed_To](#Renamed_To)|n/a|[File]|[File]|
+|[Renamed](#Renamed)|n/a|[Process]|[File]|
+|[Renamed_By](#Renamed_By)|n/a|[File]|[Process]|
+|[Moved_From](#Moved_From)|n/a|[File]|[File]|
+|[Moved_To](#Moved_To)|n/a|[File]|[File]|
+|[Moved](#Moved)|n/a|[Process]|[File]|
+|[Moved_By](#Moved_By)|n/a|[File]|[Process]|
+|[Copied_From](#Copied_From)|n/a|[File]|[File]|
+|[Copied_To](#Copied_To)|n/a|[File]|[File]|
+|[Copied](#Copied)|n/a|[Process]|[File]|
+|[Copied_By](#Copied_By)|n/a|[File]|[Process]|
+|[Contains](#Contains)|n/a|[File], [Archive File], [Email Message], [URI], [DNS Record], [ARP Cache], [URL History], [Win Registry Key]|[File], [Link], [Domain Name], [Address], [URI], [Win Registry Key]|
+|[Contained_Within](#Contained_Within)|n/a|[File], [Link], [Domain Name], [Address], [URI], [Win Registry Key]|[File], [Archive File], [Email Message], [URI], [DNS Record], [ARP Cache], [URL History], [Win Registry Key]|
+|[Extracted_From](#Extracted_From)|n/a|[File], [URI], [Link]|[File], [Archive File], [Email Message]|
+|[Connected_To](#Connected_To)|n/a|[Process]|[Address], [Socket Address], [Hostname], [Network Socket]|
+|[Parent_Of](#Parent_Of)|[Child_Of](#Child_Of)|[Process]|[Process], [Win Thread]|
+|[Child_Of](#Child_Of)|[Parent_Of](#Parent_Of)|[Process], [Win Thread]|[Process]|
+|[Redirects_To](#Redirects_To)|n/a|[URI], [Domain Name]|[URI], [Domain Name]|
+|[Suspended](#Suspended)|[Resumed](#Resumed)|[Process]|[Process], [Win Thread]|
+|[Suspended_By](#Suspended_By)|[Resumed_By](#Resumed_By)|[Process], [Win Thread]|[Process]|
+|[Paused](#Paused)|[Resumed](#Resumed)|[Process]|[Win Service]|
+|[Paused_By](#Paused_By)|[Resumed_By](#Resumed_By)|[Win Service]|[Process]|
+|[Resumed](#Resumed)|[Suspended](#Suspended), [Paused](#Paused)|[Process]|[Process], [Win Thread], [Win Service]|
+|[Resumed_By](#Resumed_By)|[Suspended_By](#Suspended_By), [Paused_By](#Paused_By)|[Process], [Win Thread], [Win Service]|[Process]|
+|[Wrote_To](#Wrote_To)|[Read_From](#Read_From)|[Process]|[Process], [File], [Pipe], [Win Mailslot]|
+|[Written_To_By](#Written_To_By)|[Read_From_By](#Read_From_By)|[Process], [File], [Pipe], [Win Mailslot]|[Process]|
+|[Read_From](#Read_From)|[Wrote_To](#Wrote_To)|[Process]|[Process], [File], [Pipe], [Win Mailslot]|
+|[Read_From_By](#Read_From_By)|[Written_To_By](#Written_To_By)|[Process], [File], [Pipe], [Win Mailslot]|[Process]|
+|[Allocated](#Allocated)|[Freed](#Freed)|[Process]|[Memory], [Win Memory Page Region]|
+|[Allocated_By](#Allocated_By)|[Freed_By](#Freed_By)|[Memory], [Win Memory Page Region]|[Process]|
+|[Freed](#Freed)|[Allocated](#Allocated)|[Process]|[Memory], [Win Memory Page Region]|
+|[Freed_By](#Freed_By)|[Allocated_By](#Allocated_By)|[Memory], [Win Memory Page Region]|[Process]|
+|[Opened](#Opened)|[Closed](#Closed)|[Process]|[File], [Win Filemapping], [Mutex], [Semaphore], [Port], [Win Event], [Win Critical Section], [Win Handle], [Win Registry Key], [Win Service]|
+|[Opened_By](#Opened_By)|[Closed_By](#Closed_By)|[File], [Win Filemapping], [Mutex], [Semaphore], [Port], [Win Event], [Win Critical Section], [Win Handle], [Win Registry Key], [Win Service]|[Process]|
+|[Closed](#Closed)|[Opened](#Opened)|[Process]|[File], [Win Filemapping], [Port], [Win Handle], [Win Registry Key]|
+|[Closed_By](#Closed_By)|[Opened_By](#Opened_By)|[File], [Win Filemapping], [Port], [Win Handle], [Win Registry Key]|[Process]|
+|[Characterizes](#Characterizes)|n/a|[File], [DNS Record], [WHOIS]|[Artifact], [Domain Name]|
+|[Characterized_By](#Characterized_By)|n/a|[Artifact], [Domain Name]|[File], [DNS Record], [WHOIS]|
+|[Resolved_To](#Resolved_To)|n/a|[Domain Name], [Hostname], [Address]|[Domain Name], [Hostname], [Address]|
 
 ## <a name="Created"></a> "Created"
 
-The **source Object** *Created* the **related Object**. Applicable to a wide range of Objects, particularly in the context of a [Process][Process] that creates other Objects.
+The **source Object** *Created* the **related Object**. Applicable to a wide range of Objects, particularly in the context of a [Process] that creates other Objects.
 
 ### Inverse
 
@@ -89,13 +90,13 @@ The **source Object** *Created* the **related Object**. Applicable to a wide ran
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Archive File][Archive File]|[File][File]|A self-extracting archive file created a file upon extraction.|
-|[Process][Process]|[File][File]|A process created a file during its execution.|
-|[Process][Process]|[Process][Process]|A process created another process during its execution.|
-|[Process][Process]|[Win Registry Key][Win Registry Key]|A process created a Windows registry key or registry key value during its execution.|
-|[Process][Process]|[Win Service][Win Service]|A process created a Windows service during its execution.|
-|[Process][Process]|[Mutex][Mutex]|A process created a mutex during its execution.|
-|[Process][Process]|[Win Thread]|A process created a Windows thread during its execution.|
+|[Archive File]|[File]|A self-extracting archive file created a file upon extraction.|
+|[Process]|[File]|A process created a file during its execution.|
+|[Process]|[Process]|A process created another process during its execution.|
+|[Process]|[Win Registry Key]|A process created a Windows registry key or registry key value during its execution.|
+|[Process]|[Win Service]|A process created a Windows service during its execution.|
+|[Process]|[Mutex]|A process created a mutex during its execution.|
+|[Process]|[Win Thread]|A process created a Windows thread during its execution.|
 
 ### Example
 
@@ -122,7 +123,7 @@ The **source Object** *Created* the **related Object**. Applicable to a wide ran
 ## <a name="Created_By"></a> "Created_By"
 
 The **source Object** was *Created by* the **related Object**. Applicable to a wide range of Objects, particularly in the
-context of Objects that were created by a [Process][Process].
+context of Objects that were created by a [Process].
 
 ### Inverse
 
@@ -132,13 +133,13 @@ context of Objects that were created by a [Process][Process].
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Archive File][Archive File]|A file was created by a self-extracting archive file as part of its extraction operation.|
-|[File][File]|[Process][Process]|A file was created by a process during its execution.|
-|[Process][Process]|[Process][Process]|A process was created by another process during its execution.|
-|[Win Registry Key][Win Registry Key]|[Process][Process]|A Windows registry key or registry key value was created by a process during its execution.|
-|[Win Service][Win Service]|[Process][Process]|A Windows service was created by a process during its execution.|
-|[Mutex][Mutex]|[Process][Process]|A mutex was created by a process during its execution.|
-|[Win Thread]|[Process][Process]|A Windows thread was created by a process during its execution.|
+|[File]|[Archive File]|A file was created by a self-extracting archive file as part of its extraction operation.|
+|[File]|[Process]|A file was created by a process during its execution.|
+|[Process]|[Process]|A process was created by another process during its execution.|
+|[Win Registry Key]|[Process]|A Windows registry key or registry key value was created by a process during its execution.|
+|[Win Service]|[Process]|A Windows service was created by a process during its execution.|
+|[Mutex]|[Process]|A mutex was created by a process during its execution.|
+|[Win Thread]|[Process]|A Windows thread was created by a process during its execution.|
 
 ### Example
 
@@ -164,7 +165,7 @@ context of Objects that were created by a [Process][Process].
 
 ## <a name="Deleted"></a> "Deleted"
 
-The **source Object** *Deleted* the **related Object**. Applicable to a wide range of Objects, particularly in the context of a [Process][Process] that deleted other Objects.
+The **source Object** *Deleted* the **related Object**. Applicable to a wide range of Objects, particularly in the context of a [Process] that deleted other Objects.
 
 ### Inverse
 
@@ -174,10 +175,10 @@ The **source Object** *Deleted* the **related Object**. Applicable to a wide ran
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[File][File]|A process deleted a file during its execution.|
-|[Process][Process]|[Win Registry Key][Win Registry Key]|A process deleted a Windows registry key or registry key value during its execution.|
-|[Process][Process]|[Win Service][Win Service]|A process deleted a Windows service during its execution.|
-|[Process][Process]|[Mutex][Mutex]|A process deleted a mutex during its execution.|
+|[Process]|[File]|A process deleted a file during its execution.|
+|[Process]|[Win Registry Key]|A process deleted a Windows registry key or registry key value during its execution.|
+|[Process]|[Win Service]|A process deleted a Windows service during its execution.|
+|[Process]|[Mutex]|A process deleted a mutex during its execution.|
 
 ### Example
 
@@ -204,7 +205,7 @@ The **source Object** *Deleted* the **related Object**. Applicable to a wide ran
 ## <a name="Deleted_By"></a> "Deleted_By"
 
 The **source Object** was *Deleted by* the **related Object**. Applicable to a wide range of Objects, particularly in the
-context of Objects that were deleted by a [Process][Process].
+context of Objects that were deleted by a [Process].
 
 ### Inverse
 
@@ -214,10 +215,10 @@ context of Objects that were deleted by a [Process][Process].
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Process][Process]|A file was deleted by a process during its execution.|
-|[Win Registry Key][Win Registry Key]|[Process][Process]|A Windows registry key or registry key value was deleted by a process during its execution.|
-|[Win Service][Win Service]|[Process][Process]|A Windows service was deleted by a process during its execution.|
-|[Mutex][Mutex]|[Process][Process]|A mutex was deleted by a process during its execution.|
+|[File]|[Process]|A file was deleted by a process during its execution.|
+|[Win Registry Key]|[Process]|A Windows registry key or registry key value was deleted by a process during its execution.|
+|[Win Service]|[Process]|A Windows service was deleted by a process during its execution.|
+|[Mutex]|[Process]|A mutex was deleted by a process during its execution.|
 
 ### Example
 
@@ -244,7 +245,7 @@ context of Objects that were deleted by a [Process][Process].
 ## <a name="Modified_Properties_Of"></a> "Modified_Properties_Of"
 
 The **source Object** *Modifed the properties of* the **related Object**. Applicable to a wide range of Objects, particularly in the
-context of a [Process][Process] that modified the properties of other Objects.
+context of a [Process] that modified the properties of other Objects.
 
 ### Inverse
 
@@ -254,9 +255,9 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[File][File]|A process modified the properties of a file during its execution.|
-|[Process][Process]|[Win Registry Key][Win Registry Key]|A process modified the properties of a Windows registry key or registry key value during its execution.|
-|[Process][Process]|[Win Service][Win Service]|A process modified the properties of a Windows service during its execution.|
+|[Process]|[File]|A process modified the properties of a file during its execution.|
+|[Process]|[Win Registry Key]|A process modified the properties of a Windows registry key or registry key value during its execution.|
+|[Process]|[Win Service]|A process modified the properties of a Windows service during its execution.|
 
 ### Example
 
@@ -282,7 +283,7 @@ n/a
 
 ## <a name="Properties_Modified_By"></a> "Properties_Modified_By"
 
-The **source Object** had its *Properties modified* by the **related Object**. Applicable to a wide range of Objects, particularly in the context of Objects whose properties were modified by a [Process][Process].
+The **source Object** had its *Properties modified* by the **related Object**. Applicable to a wide range of Objects, particularly in the context of Objects whose properties were modified by a [Process].
 
 ### Inverse
 
@@ -292,9 +293,9 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Process][Process]|A file had its properties modified by a process during its execution.|
-|[Win Registry Key][Win Registry Key]|[Process][Process]|A Windows registry key or registry key value had its properties modified by a process during its execution.|
-|[Win Service][Win Service]|[Process][Process]|A Windows service had its properties modified by a process during its execution.|
+|[File]|[Process]|A file had its properties modified by a process during its execution.|
+|[Win Registry Key]|[Process]|A Windows registry key or registry key value had its properties modified by a process during its execution.|
+|[Win Service]|[Process]|A Windows service had its properties modified by a process during its execution.|
 
 ### Example
 
@@ -330,10 +331,10 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[URI][URI]|A file was downloaded from some particular URL.|
-|[File][File]|[Domain Name][Domain Name]|A file was downloaded from some particular domain name.|
-|[File][File]|[Address][Address]|A file was downloaded from some particular IP address.|
-|[File][File]|[Hostname][Hostname]|A file was downloaded from some device identified by a particular hostname.|
+|[File]|[URI]|A file was downloaded from some particular URL.|
+|[File]|[Domain Name]|A file was downloaded from some particular domain name.|
+|[File]|[Address]|A file was downloaded from some particular IP address.|
+|[File]|[Hostname]|A file was downloaded from some device identified by a particular hostname.|
 
 ### Example
 
@@ -367,7 +368,7 @@ The **source Object** *Downloaded* the **related Object**. Commonly used for exp
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[File][File]|A process downloaded a particular file during its execution.|
+|[Process]|[File]|A process downloaded a particular file during its execution.|
 
 ### Example
 
@@ -403,8 +404,8 @@ The **source Object** was *Downloaded to* the **related Object**. Commonly used 
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[URI][URI]|[File][File]|A file specified by a URL was downloaded and stored as another file or at some particular location.|
-|[File][File]|[File][File]|A file was downloaded and stored as another file or at some particular location.|
+|[URI]|[File]|A file specified by a URL was downloaded and stored as another file or at some particular location.|
+|[File]|[File]|A file was downloaded and stored as another file or at some particular location.|
 
 ### Example
 
@@ -438,7 +439,7 @@ The **source Object** was *Downloaded by* the **related Object**. Commonly used 
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Process][Process]|A file was downloaded by a particular process during its execution.|
+|[File]|[Process]|A file was downloaded by a particular process during its execution.|
 
 ### Example
 
@@ -474,7 +475,7 @@ The **source Object** *Uploaded* the **related Object**. Commonly used for expre
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[File][File]|A process uploaded a particular file during its execution.|
+|[Process]|[File]|A process uploaded a particular file during its execution.|
 
 ### Example
 
@@ -510,7 +511,7 @@ The **source Object** was *Uploaded by* the **related Object**. Commonly used fo
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Process][Process]|A file was uploaded by a particular process during its execution.|
+|[File]|[Process]|A file was uploaded by a particular process during its execution.|
 
 ### Example
 
@@ -546,10 +547,10 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[URI][URI]|A file was uploaded to a particular URL.|
-|[File][File]|[Domain Name][Domain Name]|A file was uploaded to a particular domain name.|
-|[File][File]|[Address][Address]|A file was uploaded to a particular IP address.|
-|[File][File]|[Hostname][Hostname]|A file was uploaded to a device identified by a particular hostname.|
+|[File]|[URI]|A file was uploaded to a particular URL.|
+|[File]|[Domain Name]|A file was uploaded to a particular domain name.|
+|[File]|[Address]|A file was uploaded to a particular IP address.|
+|[File]|[Hostname]|A file was uploaded to a device identified by a particular hostname.|
 
 ### Example
 
@@ -583,7 +584,7 @@ The **source Object** was *Sent to* the **related Object**. Commonly used for ex
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Address][Address]|A file was sent to a particular email address.|
+|[File]|[Address]|A file was sent to a particular email address.|
 
 ### Example
 
@@ -617,7 +618,7 @@ The **source Object** was *Received from* the **related Object**. Commonly used 
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Address][Address]|A file was received from an email sent from particular email address.|
+|[File]|[Address]|A file was received from an email sent from particular email address.|
 
 ### Example
 
@@ -651,7 +652,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Win Registry Key][Win Registry Key]|A process enumerated the values of a particular Windows registry key during its execution.|
+|[Process]|[Win Registry Key]|A process enumerated the values of a particular Windows registry key during its execution.|
 
 ### Example
 
@@ -688,7 +689,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Win Registry Key][Win Registry Key]|[Process][Process]|A Windows registry key had its values enumerated by a particular process during its execution.|
+|[Win Registry Key]|[Process]|A Windows registry key had its values enumerated by a particular process during its execution.|
 
 ### Example
 
@@ -725,8 +726,8 @@ The **source Object** *Killed* the **related Object**. Commonly used for express
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Process][Process]|A process killed (or terminated) another process during its execution.|
-|[Process][Process]|[Win Thread]|A process killed (or terminated) a thread during its execution.|
+|[Process]|[Process]|A process killed (or terminated) another process during its execution.|
+|[Process]|[Win Thread]|A process killed (or terminated) a thread during its execution.|
 
 ### Example
 
@@ -764,8 +765,8 @@ The **source Object** was *Killed by* the **related Object**. Commonly used for 
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Process][Process]|A process was killed (or terminated) by another process during its execution.|
-|[Win Thread]|[Process][Process]|A Windows thread was killed (or terminated) by a process during its execution.|
+|[Process]|[Process]|A process was killed (or terminated) by another process during its execution.|
+|[Win Thread]|[Process]|A Windows thread was killed (or terminated) by a process during its execution.|
 
 ### Example
 
@@ -803,7 +804,7 @@ The **source Object** *Locked* the **related Object**. Commonly used for express
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[File][File]|A process locked (in terms of read, write, or delete access) a particular file during its execution.|
+|[Process]|[File]|A process locked (in terms of read, write, or delete access) a particular file during its execution.|
 
 ### Example
 
@@ -839,7 +840,7 @@ The **source Object** was *Locked by* the **related Object**. Commonly used for 
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Process][Process]|A file was locked (in terms of read, write, or delete access) by a particular process during its execution.|
+|[File]|[Process]|A file was locked (in terms of read, write, or delete access) by a particular process during its execution.|
 
 ### Example
 
@@ -874,7 +875,7 @@ The **source Object** *Unlocked* the **related Object**. Commonly used for expre
 ### Applicable Objects
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[File][File]|A process unlocked (in terms of read, write, or delete access) a particular file during its execution.|
+|[Process]|[File]|A process unlocked (in terms of read, write, or delete access) a particular file during its execution.|
 
 ### Example
 
@@ -910,7 +911,7 @@ The **source Object** was *Unlocked by* the **related Object**. Commonly used fo
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Process][Process]|A file was unlocked (in terms of read, write, or delete access) by a particular process during its execution.|
+|[File]|[Process]|A file was unlocked (in terms of read, write, or delete access) by a particular process during its execution.|
 
 ### Example
 
@@ -946,8 +947,8 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Port][Port]|A process listened on a particular port during its execution.|
-|[Process][Process]|[Network Socket][Network Socket]|A process listened on a particular network socket during its execution.|
+|[Process]|[Port]|A process listened on a particular port during its execution.|
+|[Process]|[Network Socket]|A process listened on a particular network socket during its execution.|
 
 ### Example
 
@@ -983,7 +984,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[File][File]|A process renamed a file during its execution.|
+|[Process]|[File]|A process renamed a file during its execution.|
 
 ### Example
 
@@ -1019,7 +1020,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Process][Process]|A file was renamed by a particular process during its execution.|
+|[File]|[Process]|A file was renamed by a particular process during its execution.|
 
 ### Example
 
@@ -1055,7 +1056,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[File][File]|A file was renamed from another version of the file with a different name.|
+|[File]|[File]|A file was renamed from another version of the file with a different name.|
 
 ### Example
 
@@ -1089,7 +1090,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[File][File]|A file was renamed to another version of the file with a different name.|
+|[File]|[File]|A file was renamed to another version of the file with a different name.|
 
 ### Example
 
@@ -1123,7 +1124,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[File][File]|A process moved a file during its execution, from one location to another.|
+|[Process]|[File]|A process moved a file during its execution, from one location to another.|
 
 ### Example
 
@@ -1159,7 +1160,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Process][Process]|A file was moved by a particular process during its execution, from one location to another.|
+|[File]|[Process]|A file was moved by a particular process during its execution, from one location to another.|
 
 ### Example
 
@@ -1195,7 +1196,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[File][File]|A file was moved from one location to another (represented as a separate file).|
+|[File]|[File]|A file was moved from one location to another (represented as a separate file).|
 
 ### Example
 
@@ -1229,7 +1230,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[File][File]|A file was moved from one location to another (represented as a separate file).|
+|[File]|[File]|A file was moved from one location to another (represented as a separate file).|
 
 ### Example
 
@@ -1263,7 +1264,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[File][File]|A process copied a file during its execution, from one location to another.|
+|[Process]|[File]|A process copied a file during its execution, from one location to another.|
 
 ### Example
 
@@ -1299,7 +1300,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Process][Process]|A file was copied by a particular process during its execution, from one location to another.|
+|[File]|[Process]|A file was copied by a particular process during its execution, from one location to another.|
 
 ### Example
 
@@ -1335,7 +1336,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[File][File]|A file was copied from one location to another (represented as a separate file).|
+|[File]|[File]|A file was copied from one location to another (represented as a separate file).|
 
 ### Example
 
@@ -1369,7 +1370,7 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[File][File]|A file was copied to one location from another (represented as a separate file).|
+|[File]|[File]|A file was copied to one location from another (represented as a separate file).|
 
 ### Example
 
@@ -1403,15 +1404,15 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[File][File]|A file contains another file inside of it (e.g. appended to it).|
-|[Archive File][Archive File]|[File][File]|An archive file contains another file inside of it.|
-|[Email Message][Email Message]|[File][File]|An email message contains a file as an attachment.|
-|[Email Message][Email Message]|[Link][Link]|An email message contains a link within its message body.|
-|[URI][URI]|[Domain Name][Domain Name]|A URL contains a domain name as part of its structure.|
-|[DNS Record][DNS Record]|[Address][Address]|A DNS record contains an IP address that resolves to the domain identified by the record.|
-|[ARP Cache][ARP Cache]|[Address][Address]|An ARP cache contains a physical (i.e. MAC) address or IP address in one of its entries.|
-|[URL History][URL History]|[URI][URI]|A URL history cache contains a particular URL in one of its entries.|
-|[Win Registry Key][Win Registry Key]|[Win Registry Key][Win Registry Key]|A Windows registry key contains another Windows registry key, as a subkey.|
+|[File]|[File]|A file contains another file inside of it (e.g. appended to it).|
+|[Archive File]|[File]|An archive file contains another file inside of it.|
+|[Email Message]|[File]|An email message contains a file as an attachment.|
+|[Email Message]|[Link]|An email message contains a link within its message body.|
+|[URI]|[Domain Name]|A URL contains a domain name as part of its structure.|
+|[DNS Record]|[Address]|A DNS record contains an IP address that resolves to the domain identified by the record.|
+|[ARP Cache]|[Address]|An ARP cache contains a physical (i.e. MAC) address or IP address in one of its entries.|
+|[URL History]|[URI]|A URL history cache contains a particular URL in one of its entries.|
+|[Win Registry Key]|[Win Registry Key]|A Windows registry key contains another Windows registry key, as a subkey.|
 
 ### Example
 
@@ -1445,15 +1446,15 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[File][File]|A file is contained within another file (e.g. appended to it).|
-|[File][File]|[Archive File][Archive File]|A file is contained within an archive file.|
-|[File][File]|[Email Message][Email Message]|A file is contained within an email message, as an attachment.|
-|[Link][Link]|[Email Message][Email Message]|A link is contained within the body of an email message.|
-|[Domain Name][Domain Name]|[URI][URI]|A domain name is contained within the structure of a URL.|
-|[Address][Address]|[DNS Record][DNS Record]|A IP address is contained within a DNS record that resolves to the domain identified by the record.|
-|[Address][Address]|[ARP Cache][ARP Cache]|A physical (i.e. MAC) address or IP address is contained within one of the entries of an ARP cache.|
-|[URI][URI]|[URL History][URL History]|A URL is contained within one of the entries of a URL history cache.|
-|[Win Registry Key][Win Registry Key]|[Win Registry Key][Win Registry Key]|A Windows registry key is contained within another Windows registry key, as a subkey.|
+|[File]|[File]|A file is contained within another file (e.g. appended to it).|
+|[File]|[Archive File]|A file is contained within an archive file.|
+|[File]|[Email Message]|A file is contained within an email message, as an attachment.|
+|[Link]|[Email Message]|A link is contained within the body of an email message.|
+|[Domain Name]|[URI]|A domain name is contained within the structure of a URL.|
+|[Address]|[DNS Record]|A IP address is contained within a DNS record that resolves to the domain identified by the record.|
+|[Address]|[ARP Cache]|A physical (i.e. MAC) address or IP address is contained within one of the entries of an ARP cache.|
+|[URI]|[URL History]|A URL is contained within one of the entries of a URL history cache.|
+|[Win Registry Key]|[Win Registry Key]|A Windows registry key is contained within another Windows registry key, as a subkey.|
 
 ### Example
 
@@ -1487,10 +1488,10 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[File][File]|A file was extracted from inside of another file.|
-|[File][File]|[Archive File][Archive File]|A file was extracted from an archive file.|
-|[URI][URI]|[Email Message][Email Message]|A URL was extracted from the body of an email message.|
-|[Link][Link]|[Email Message][Email Message]|A link was extracted from the body of an email message.|
+|[File]|[File]|A file was extracted from inside of another file.|
+|[File]|[Archive File]|A file was extracted from an archive file.|
+|[URI]|[Email Message]|A URL was extracted from the body of an email message.|
+|[Link]|[Email Message]|A link was extracted from the body of an email message.|
 
 ### Example
 
@@ -1523,10 +1524,10 @@ n/a
 ### Applicable Objects
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Address][Address]|A process connected to an IP address.|
-|[Process][Process]|[Hostname][Hostname]|A process connected to a hostname.|
-|[Process][Process]|[Socket Address][Socket Address]|A process connected to a socket address.|
-|[Process][Process]|[Network Socket][Network Socket]|A process connected to a network socket.|
+|[Process]|[Address]|A process connected to an IP address.|
+|[Process]|[Hostname]|A process connected to a hostname.|
+|[Process]|[Socket Address]|A process connected to a socket address.|
+|[Process]|[Network Socket]|A process connected to a network socket.|
 
 ### Example
 
@@ -1561,8 +1562,8 @@ The **source Object** is the *Parent of* the **related Object**.  Commonly used 
 ### Applicable Objects
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Process][Process]|A process is the parent of another process (which it spawned).|
-|[Process][Process]|[Win Thread]|A process is the parent of a Windows thread (which it spawned).|
+|[Process]|[Process]|A process is the parent of another process (which it spawned).|
+|[Process]|[Win Thread]|A process is the parent of a Windows thread (which it spawned).|
 
 ### Example
 
@@ -1599,8 +1600,8 @@ The **source Object** is a *Child of* the **related Object**.  Commonly used for
 ### Applicable Objects
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Process][Process]|A process is the child of another process (which spawned it).|
-|[Win Thread]|[Process][Process]|A Windows thread is the child of a process (which spawned it).|
+|[Process]|[Process]|A process is the child of another process (which spawned it).|
+|[Win Thread]|[Process]|A Windows thread is the child of a process (which spawned it).|
 
 ### Example
 
@@ -1628,7 +1629,7 @@ The **source Object** is a *Child of* the **related Object**.  Commonly used for
 
 ## <a name="Redirects_To"></a> "Redirects_To"
 
-The **source Object** *Redirects to* the **related Object**.  Commonly used for expressing URL or domain name redirection, where a URL redirects to another URL, or a [Domain Name][Domain Name] redirects to another [Domain Name][Domain Name], respectively.
+The **source Object** *Redirects to* the **related Object**.  Commonly used for expressing URL or domain name redirection, where a URL redirects to another URL, or a [Domain Name] redirects to another [Domain Name], respectively.
 
 ### Inverse
 
@@ -1637,8 +1638,8 @@ n/a
 ### Applicable Objects
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[URI][URI]|[URI][URI]|A URL redirects to another URL.|
-|[Domain Name][Domain Name]|[Domain Name][Domain Name]|A domain name redirects to another domain name.|
+|[URI]|[URI]|A URL redirects to another URL.|
+|[Domain Name]|[Domain Name]|A domain name redirects to another domain name.|
 
 ### Examples
 
@@ -1672,8 +1673,8 @@ The **source Object** *Suspended* the **related Object**. Commonly used for expr
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Process][Process]|A process suspended the execution of another process.|
-|[Process][Process]|[Win Thread]|A process suspended the execution of a Windows thread.|
+|[Process]|[Process]|A process suspended the execution of another process.|
+|[Process]|[Win Thread]|A process suspended the execution of a Windows thread.|
 
 ### Example
 
@@ -1711,8 +1712,8 @@ The **source Object** was *Suspended by* the **related Object**. Commonly used f
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Process][Process]|A process was suspended by another process.|
-|[Win Thread]|[Process][Process]|A Windows thread was suspended by a process.|
+|[Process]|[Process]|A process was suspended by another process.|
+|[Win Thread]|[Process]|A Windows thread was suspended by a process.|
 
 ### Example
 
@@ -1750,7 +1751,7 @@ The **source Object** *Paused* the **related Object**. Commonly used for express
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Win Service][Win Service]|A process paused the execution of a Windows service.|
+|[Process]|[Win Service]|A process paused the execution of a Windows service.|
 
 ### Example
 
@@ -1786,7 +1787,7 @@ The **source Object** was *Paused by* the **related Object**. Commonly used for 
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Win Service][Win Service]|[Process][Process]|A Windows service was paused by a process.|
+|[Win Service]|[Process]|A Windows service was paused by a process.|
 
 ### Example
 
@@ -1822,9 +1823,9 @@ The **source Object** *Resumed* the **related Object**. Commonly used for expres
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Process][Process]|A process resumed the execution of another process.|
-|[Process][Process]|[Win Thread]|A process resumed the execution of a Windows thread.|
-|[Process][Process]|[Win Service][Win Service]|A process resumed the execution of a Windows service.|
+|[Process]|[Process]|A process resumed the execution of another process.|
+|[Process]|[Win Thread]|A process resumed the execution of a Windows thread.|
+|[Process]|[Win Service]|A process resumed the execution of a Windows service.|
 
 ### Example
 
@@ -1862,9 +1863,9 @@ The **source Object** was *Resumed by* the **related Object**. Commonly used for
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Process][Process]|A process was resumed by another process.|
-|[Win Thread]|[Process][Process]|A Windows thread was resumed by a process.|
-|[Win Service][Win Service]|[Process][Process]|A Windows service was resumed by a process.|
+|[Process]|[Process]|A process was resumed by another process.|
+|[Win Thread]|[Process]|A Windows thread was resumed by a process.|
+|[Win Service]|[Process]|A Windows service was resumed by a process.|
 
 ### Example
 
@@ -1902,10 +1903,10 @@ The **source Object** *Wrote to* the **related Object**. Commonly used for expre
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Process][Process]|A process wrote to the memory space of another process during its execution.|
-|[Process][Process]|[File][File]|A process wrote to a file during its execution.|
-|[Process][Process]|[Pipe][Pipe]|A process wrote to a pipe during its execution.|
-|[Process][Process]|[Win Mailslot][Win Mailslot]|A process wrote to a Windows mailslot during its execution.|
+|[Process]|[Process]|A process wrote to the memory space of another process during its execution.|
+|[Process]|[File]|A process wrote to a file during its execution.|
+|[Process]|[Pipe]|A process wrote to a pipe during its execution.|
+|[Process]|[Win Mailslot]|A process wrote to a Windows mailslot during its execution.|
 
 ### Example
 
@@ -1943,10 +1944,10 @@ The **source Object** was *Written to by* the **related Object**. Commonly used 
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Process][Process]|The memory space of a process was written to by another process during its execution.|
-|[File][File]|[Process][Process]|A file was written to by a process during its execution.|
-|[Pipe][Pipe]|[Process][Process]|A pipe was written to by a process during its execution.|
-|[Win Mailslot][Win Mailslot]|[Process][Process]|A Windows mailslot was written to by a process during its execution.|
+|[Process]|[Process]|The memory space of a process was written to by another process during its execution.|
+|[File]|[Process]|A file was written to by a process during its execution.|
+|[Pipe]|[Process]|A pipe was written to by a process during its execution.|
+|[Win Mailslot]|[Process]|A Windows mailslot was written to by a process during its execution.|
 
 ### Example
 
@@ -1984,10 +1985,10 @@ The **source Object** *Read from* the **related Object**. Commonly used for expr
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Process][Process]|A process read from the memory space of another process during its execution.|
-|[Process][Process]|[File][File]|A process read from a file during its execution.|
-|[Process][Process]|[Pipe][Pipe]|A process read from a pipe during its execution.|
-|[Process][Process]|[Win Mailslot][Win Mailslot]|A process read from a Windows mailslot during its execution.|
+|[Process]|[Process]|A process read from the memory space of another process during its execution.|
+|[Process]|[File]|A process read from a file during its execution.|
+|[Process]|[Pipe]|A process read from a pipe during its execution.|
+|[Process]|[Win Mailslot]|A process read from a Windows mailslot during its execution.|
 
 ### Example
 
@@ -2025,10 +2026,10 @@ The **source Object** was *Read from by* the **related Object**. Commonly used f
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Process][Process]|The memory space of a process was read from by another process during its execution.|
-|[File][File]|[Process][Process]|A file was read from by a process during its execution.|
-|[Pipe][Pipe]|[Process][Process]|A pipe was read from by a process during its execution.|
-|[Win Mailslot][Win Mailslot]|[Process][Process]|A Windows mailslot was read from by a process during its execution.|
+|[Process]|[Process]|The memory space of a process was read from by another process during its execution.|
+|[File]|[Process]|A file was read from by a process during its execution.|
+|[Pipe]|[Process]|A pipe was read from by a process during its execution.|
+|[Win Mailslot]|[Process]|A Windows mailslot was read from by a process during its execution.|
 
 ### Example
 
@@ -2066,8 +2067,8 @@ The **source Object** *Allocated* the **related Object**. Commonly used for expr
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Memory][Memory]|A process allocated a particular memory region.|
-|[Process][Process]|[Win Memory Page Region][Win Memory Page Region]|A process allocated a particular Windows memory page region.|
+|[Process]|[Memory]|A process allocated a particular memory region.|
+|[Process]|[Win Memory Page Region]|A process allocated a particular Windows memory page region.|
 
 ### Example
 
@@ -2104,8 +2105,8 @@ The **source Object** was *Allocated by* the **related Object**. Commonly used f
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Memory][Memory]|[Process][Process]|A memory region was allocated by a particular process during its execution.|
-|[Win Memory Page Region][Win Memory Page Region]|[Process][Process]|A Windows memory page region was allocated by a particular process during its execution.|
+|[Memory]|[Process]|A memory region was allocated by a particular process during its execution.|
+|[Win Memory Page Region]|[Process]|A Windows memory page region was allocated by a particular process during its execution.|
 
 ### Example
 
@@ -2142,8 +2143,8 @@ The **source Object** *Freed* the **related Object**. Commonly used for expressi
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[Memory][Memory]|A process freed a particular memory region.|
-|[Process][Process]|[Win Memory Page Region][Win Memory Page Region]|A process freed a particular Windows memory page region.|
+|[Process]|[Memory]|A process freed a particular memory region.|
+|[Process]|[Win Memory Page Region]|A process freed a particular Windows memory page region.|
 
 ### Example
 
@@ -2180,8 +2181,8 @@ The **source Object** was *Freed by* the **related Object**. Commonly used for e
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Memory][Memory]|[Process][Process]|A memory region was freed by a particular process during its execution.|
-|[Win Memory Page Region][Win Memory Page Region]|[Process][Process]|A Windows memory page region was freed by a particular process during its execution.|
+|[Memory]|[Process]|A memory region was freed by a particular process during its execution.|
+|[Win Memory Page Region]|[Process]|A Windows memory page region was freed by a particular process during its execution.|
 
 ### Example
 
@@ -2218,16 +2219,16 @@ The **source Object** *Opened* the **related Object**. Commonly used for express
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[File][File]|A process opened an existing file during its execution.|
-|[Process][Process]|[Win Filemapping][Win Filemapping]|A process opened an existing Windows filemapping during its execution.|
-|[Process][Process]|[Mutex][Mutex]|A process opened an existing mutex during its execution.|
-|[Process][Process]|[Semaphore][Semaphore]|A process opened an existing semaphore during its execution.|
-|[Process][Process]|[Port][Port]|A process opened a port during its execution.|
-|[Process][Process]|[Win Event][Win Event]|A process opened an existing Windows event during its execution.|
-|[Process][Process]|[Win Critical Section][Win Critical Section]|A process opened an existing Windows critical section during its execution.|
-|[Process][Process]|[Win Handle][Win Handle]|A process opened an existing Windows handle during its execution.|
-|[Process][Process]|[Win Registry Key][Win Registry Key]|A process opened an existing Windows registry key during its execution.|
-|[Process][Process]|[Win Service][Win Service]|A process opened an existing Windows service during its execution.|
+|[Process]|[File]|A process opened an existing file during its execution.|
+|[Process]|[Win Filemapping]|A process opened an existing Windows filemapping during its execution.|
+|[Process]|[Mutex]|A process opened an existing mutex during its execution.|
+|[Process]|[Semaphore]|A process opened an existing semaphore during its execution.|
+|[Process]|[Port]|A process opened a port during its execution.|
+|[Process]|[Win Event]|A process opened an existing Windows event during its execution.|
+|[Process]|[Win Critical Section]|A process opened an existing Windows critical section during its execution.|
+|[Process]|[Win Handle]|A process opened an existing Windows handle during its execution.|
+|[Process]|[Win Registry Key]|A process opened an existing Windows registry key during its execution.|
+|[Process]|[Win Service]|A process opened an existing Windows service during its execution.|
 
 ### Example
 
@@ -2263,16 +2264,16 @@ The **source Object** was *Opened_By* the **related Object**. Commonly used for 
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Process][Process]|An existing file was opened by a particular process during its execution.|
-|[Win Filemapping][Win Filemapping]|[Process][Process]|An existing Windows filemapping was opened by a particular process during its execution.|
-|[Mutex][Mutex]|[Process][Process]|An existing mutex was opened by a particular process during its execution.|
-|[Port][Port]|[Process][Process]|A port was opened by a particular process during its execution.|
-|[Semaphore][Semaphore]|[Process][Process]|An existing semaphore was opened by a particular process during its execution.|
-|[Win Event][Win Event]|[Process][Process]|An existing Windows event was opened by a particular process during its execution.|
-|[Win Critical Section][Win Critical Section]|[Process][Process]|An existing Windows critical section was opened by a particular process during its execution.|
-|[Win Handle][Win Handle]|[Process][Process]|An existing Windows handle was opened by a particular process during its execution.|
-|[Win Registry Key][Win Registry Key]|[Process][Process]|An existing Windows registry key was opened by a particular process during its execution.|
-|[Win Service][Win Service]|[Process][Process]|An existing Windows service was opened by a particular process during its execution.|
+|[File]|[Process]|An existing file was opened by a particular process during its execution.|
+|[Win Filemapping]|[Process]|An existing Windows filemapping was opened by a particular process during its execution.|
+|[Mutex]|[Process]|An existing mutex was opened by a particular process during its execution.|
+|[Port]|[Process]|A port was opened by a particular process during its execution.|
+|[Semaphore]|[Process]|An existing semaphore was opened by a particular process during its execution.|
+|[Win Event]|[Process]|An existing Windows event was opened by a particular process during its execution.|
+|[Win Critical Section]|[Process]|An existing Windows critical section was opened by a particular process during its execution.|
+|[Win Handle]|[Process]|An existing Windows handle was opened by a particular process during its execution.|
+|[Win Registry Key]|[Process]|An existing Windows registry key was opened by a particular process during its execution.|
+|[Win Service]|[Process]|An existing Windows service was opened by a particular process during its execution.|
 
 ### Example
 
@@ -2308,11 +2309,11 @@ The **source Object** *Closed* the **related Object**. Commonly used for express
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Process][Process]|[File][File]|A process closed an existing file during its execution.|
-|[Process][Process]|[Win Filemapping][Win Filemapping]|A process closed an existing Windows filemapping during its execution.|
-|[Process][Process]|[Port][Port]|A process closed a port during its execution.|
-|[Process][Process]|[Win Handle][Win Handle]|A process closed an existing Windows handle during its execution.|
-|[Process][Process]|[Win Registry Key][Win Registry Key]|A process closed an existing Windows service during its execution.|
+|[Process]|[File]|A process closed an existing file during its execution.|
+|[Process]|[Win Filemapping]|A process closed an existing Windows filemapping during its execution.|
+|[Process]|[Port]|A process closed a port during its execution.|
+|[Process]|[Win Handle]|A process closed an existing Windows handle during its execution.|
+|[Process]|[Win Registry Key]|A process closed an existing Windows service during its execution.|
 
 ### Example
 
@@ -2348,11 +2349,11 @@ The **source Object** was *Closed_By* the **related Object**. Commonly used for 
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Process][Process]|An existing file was closed by a particular process during its execution.|
-|[Win Filemapping][Win Filemapping]|[Process][Process]|An existing Windows filemapping was closed by a particular process during its execution.|
-|[Port][Port]|[Process][Process]|A port was closed by a particular process during its execution.|
-|[Win Handle][Win Handle]|[Process][Process]|An existing Windows handle was closed by a particular process during its execution.|
-|[Win Registry Key][Win Registry Key]|[Process][Process]|An existing Windows registry key was closed by a particular process during its execution.|
+|[File]|[Process]|An existing file was closed by a particular process during its execution.|
+|[Win Filemapping]|[Process]|An existing Windows filemapping was closed by a particular process during its execution.|
+|[Port]|[Process]|A port was closed by a particular process during its execution.|
+|[Win Handle]|[Process]|An existing Windows handle was closed by a particular process during its execution.|
+|[Win Registry Key]|[Process]|An existing Windows registry key was closed by a particular process during its execution.|
 
 ### Example
 
@@ -2388,9 +2389,9 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File][File]|[Artifact][Artifact]|A file defines the file-specific features that characterize an artifact.|
-|[DNS Record][DNS Record]|[Domain Name][Domain Name]|A DNS record defines the DNS-record-specific features that characterize a domain name.|
-|[WHOIS][WHOIS]|[Domain Name][Domain Name]|A WHOIS record defines the WHOIS-specific features that characterize a domain name.|
+|[File]|[Artifact]|A file defines the file-specific features that characterize an artifact.|
+|[DNS Record]|[Domain Name]|A DNS record defines the DNS-record-specific features that characterize a domain name.|
+|[WHOIS]|[Domain Name]|A WHOIS record defines the WHOIS-specific features that characterize a domain name.|
 
 
 ### Example
@@ -2425,9 +2426,9 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Artifact][Artifact]|[File][File]|An artifact is characterized by a file, which defines its file-specific features.|
-|[Domain Name][Domain Name]|[DNS Record][DNS Record]|A domain name is characterized by a DNS record, which defines its DNS-record-specific features.|
-|[Domain Name][Domain Name]|[WHOIS][WHOIS]|A domain name is characterized by a WHOIS record, which defines its WHOIS-specific features.|
+|[Artifact]|[File]|An artifact is characterized by a file, which defines its file-specific features.|
+|[Domain Name]|[DNS Record]|A domain name is characterized by a DNS record, which defines its DNS-record-specific features.|
+|[Domain Name]|[WHOIS]|A domain name is characterized by a WHOIS record, which defines its WHOIS-specific features.|
 
 
 ### Example
@@ -2443,6 +2444,43 @@ n/a
 				<FileObj:File_Name>asdfg.dll</FileObj:File_Name>
 			</cybox:Properties>
 			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Characterized_By</cybox:Relationship>
+		</cybox:Related_Object>
+	</cybox:Related_Objects>							
+</cybox:Object>
+```
+
+---
+
+## <a name="Resolved_To"></a> "Resolved_To"
+
+The **source Object** *Resolved to* the **related Object**.  Used for expressing resolution between network naming structures (e.g. domain names) and IP addresses, in either direction.
+
+### Inverse
+
+n/a
+
+### Applicable Objects
+
+|Source Object|Related Object|Description|
+|-------------|--------------|-----------|
+|[Domain Name]|[Address]|A domain name resolved to a particular IP address.|
+|[Hostname]|[Address]|A hostname resolved to a particular IP address.|
+|[Address]|[Domain Name]|An IP address resolved to a particular domain name.|
+|[Address]|[Hostname]|An IP address resolved to a particular hostname.|
+
+### Example
+
+```xml 
+<cybox:Object id="example:object-711f7c33-e7b7-4843-aec7-2b0cdb7d132d">
+	<cybox:Properties xsi:type="DomainNameObj:DomainNameObjectType">
+		<DomainNameObj:Value>example.com</DomainNameObj:Value>
+	</cybox:Properties>
+	<cybox:Related_Objects>
+		<cybox:Related_Object id="example:object-10953c1c-c077-4db5-a35e-38094ac004c2">
+			<cybox:Properties xsi:type="AddressObj:AddressObjectType">
+				<AddressObj:Address_Value>1.2.3.4</AddressObj:Address_Value>
+			</cybox:Properties>
+			<cybox:Relationship xsi:type="cyboxVocabs:ObjectRelationshipVocab-1.1">Resolved_To</cybox:Relationship>
 		</cybox:Related_Object>
 	</cybox:Related_Objects>							
 </cybox:Object>
