@@ -6,7 +6,8 @@ title: Object Relationships
 This page contains a detailed listing of the available CybOX Object → Object
 relationships (from the [ObjectRelationshipVocab-1.1](http://stixproject.github.io/data-model/1.1.1/cyboxVocabs/ObjectRelationshipVocab-1.1/) vocabulary), and adds some additional context for each relationship. This includes a richer definition,
 a listing and description of the Objects that the relationship is most applicable
-to, its inverse (if existing), and an example XML snippet that demonstrates the
+to (note that it may be applicable to others not covered here), its inverse 
+(if existing), and an example XML snippet that demonstrates the
 relationship in use.
 
 # Overview
