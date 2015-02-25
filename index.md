@@ -21,6 +21,7 @@ no_in_page_title: true
       <li><a href="/documentation/background">Background</a> - Information about the XML Schemalanguage and conventions used in CybOX.</li>
       <li><a href="/documentation/creating-objects">Creating Objects</a> - How to extend CybOX to include new object types.</li>
       <li><a href="/documentation/objects">Current Objects</a> - The list of currently-defined CybOX objects.</li>
+	  <li><a href="/documentation/object-relationships">Object Relationships</a> - A detailed listing of some of the available relationships between CybOX Objects.</li>
       <li><a href="/documentation/suggested-practices">Suggested Practices</a> - Best practices to use when producing and consuming CybOX content.</li>
       <li><a href="/documentation/tools">Tools</a> - User and developer tools that can be used to handle CybOX content.</li>
     </ul>
