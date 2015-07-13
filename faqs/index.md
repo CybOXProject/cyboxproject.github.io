@@ -31,7 +31,7 @@ CybOX provides a common language for describing observable events or objects tha
 
 ### A7. How is CybOX licensed?
 
-See the Terms of Use.
+See the [Terms of Use](http://cybox.mitre.org/about/termsofuse.html).
 
 ## CybOX Language
 
@@ -160,7 +160,7 @@ A wide variety of file hash values can be represented in CybOX. While typically 
 
 ### B8. How do Identifiers (IDs) work?
 
-IDs allow unique referencing of a distinct portion of CybOX content from other places within a CybOX document or elsewhere. For instance, Observables, Actions, and Objects can all have IDs specified for them. IDs in CybOX come in the form of two attributesâ€”@id and @idrefâ€”on any construct that is ID-referenceable. The two attributes are mutually exclusive, meaning that only one should be used on any given construct. The @id attribute defines a unique identifier on a content construct at its point of characterization. Conversely, the @idref attribute is used to reference a content construct that is defined elsewhere; @idref inclusion means the referenced content construct is considered as fully present as its point of reference (macro-style). This use of @id and @idref enables unique referencing and reuse of content.
+IDs allow unique referencing of a distinct portion of CybOX content from other places within a CybOX document or elsewhere. For instance, Observables, Actions, and Objects can all have IDs specified for them. IDs in CybOX come in the form of two attributes, @id and @idref, on any construct that is ID-referenceable. The two attributes are mutually exclusive, meaning that only one should be used on any given construct. The @id attribute defines a unique identifier on a content construct at its point of characterization. Conversely, the @idref attribute is used to reference a content construct that is defined elsewhere; @idref inclusion means the referenced content construct is considered as fully present as its point of reference (macro-style). This use of @id and @idref enables unique referencing and reuse of content.
 
 ### B9. How are Identifiers (IDs) formatted?
 
@@ -284,7 +284,7 @@ The Incident Object Description Format (IODEF) is an Internet Engineering Task F
 
 For programmatic development and use of CybOX, Python bindings, as well as Python APIs (higher-level helper functions), are provided.
 
-Currently available tools/utilities are hosted in the CybOXProject GitHub Tools Repository on GitHub.com.
+Currently available tools/utilities are hosted in the [CybOXProject GitHub Repositories](https://github.com/CybOXProject).
 
 ### D2. What is included in a CybOX release?
 
