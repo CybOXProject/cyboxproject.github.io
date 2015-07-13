@@ -14,6 +14,25 @@ no_in_page_title: true
   <p><a class="btn btn-primary btn-lg" role="button" href="/getting-started">Get Started »</a></p>
 </div>
 
+
+<div class="row">
+  <div class="col-md-4 text-center">
+    <h2>Current Release</h2>
+    <p>Click for downloads and more.</p>
+    <p><a class="btn btn-primary btn-lg" role="button" href="https://cybox.mitre.org/language/version{{site.current_version}}/">CybOX Version {{site.current_version}} »</a></p>
+  </div>
+  <div class="col-md-4 text-center">
+    <h2>Follow the CybOX Blog</h2>
+    <p>The latest CybOX, STIX, TAXII, & MAEC news, straight from the source.</p>
+    <p><a class="btn btn-primary btn-lg" role="button" href="http://stixproject.tumblr.com/">Follow »</a></p>
+  </div>
+  <div class="col-md-4 text-center">
+    <h2>OASIS</h2>
+    <p>CybOX, STIX, and TAXII are being transitioned to the Organization for the Advancement of Structured Information Standards (OASIS)</p>
+    <p><a class="btn btn-primary btn-lg" role="button" href="https://stixproject.github.io/stix-at-oasis.pdf">Announcement »</a></p>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-md-6">
     <h2>Documentation</h2>
@@ -35,10 +54,9 @@ no_in_page_title: true
   </div>
 </div>
 
-
 <hr />
 <p class="lead text-center">
-  Have questions, comments, or feedback? Want to set up a teleconference or in-person meeting?
+  Have questions, comments, or feedback?
   <br/>
   <strong>Reach out to us at <a href="mailto:cybox@mitre.org.">cybox@mitre.org</a>!</strong>
 </p>
