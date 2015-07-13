@@ -28,10 +28,12 @@ no_in_page_title: true
   </div>
   <div class="col-md-4 text-center">
     <h2>OASIS</h2>
-    <p>CybOX, STIX, and TAXII are being transitioned to the Organization for the Advancement of Structured Information Standards (OASIS)</p>
+    <p>CybOX, STIX, and TAXII are being transitioned to the Organization for the Advancement of Structured Information Standards (OASIS).</p>
     <p><a class="btn btn-primary btn-lg" role="button" href="https://stixproject.github.io/stix-at-oasis.pdf">Announcement »</a></p>
   </div>
 </div>
+
+<hr />
 
 <div class="row">
   <div class="col-md-6">
