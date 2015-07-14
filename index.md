@@ -1,11 +1,11 @@
 ---
 layout: flat
-title: CybOX Project Documentation
-tagline: User and developer documentation for CybOX
+title: CybOX - Cyber Observable 
+tagline: A structured language for cyber observables
 no_in_page_title: true
 ---
 
-<h1 class="site-title">Cyber Observable eXpression (CybOX™)</h1>
+<h2 class="site-title"><strong>Cyber Observable eXpression (CybOX™)</strong></h2>
 
 <div class="alert alert-warning" role="alert">
   <a href="https://www.oasis-open.org/committees/tc_cat.php?cat=security" class="alert-link">
