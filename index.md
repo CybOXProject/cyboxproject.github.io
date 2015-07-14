@@ -45,21 +45,9 @@ no_in_page_title: true
   <div class="col-md-4 text-center">
     <h2>Documentation</h2>
     <p>Now that you have an idea of what CybOX is and how it can be used,
-    learn about tools that support CybOX, how to create new objects, and other in-depth
+    learn about tools that support CybOX, creating new objects, and other in-depth
     documentation.</p>
     <p><a class="btn btn-primary btn-lg" role="button" href="/documentation">Documentation »</a></p>
-  </div>
-</div>
-
-<hr />
-
-<div class="row">
-  <div class="col-md-6">
-    <h2>Get Involved</h2>
-    <ul>
-      <li>Join the <a href="http://cybox.mitre.org/community/registration.html">mailing lists</a>.</li>
-      <li>Submit a <a href="https://github.com/CybOXProject/schemas/issues">GitHub issue</a>.</li>
-    </ul>
   </div>
 </div>
 
