@@ -59,11 +59,11 @@ title: Documentation
       <a class="btn btn-primary" href="/documentation/tools">Go »</a>
     </div>
     <div class="well">
-      <h4><a href="faqs">FAQs</a></h4>
+      <h4><a href="/faqs">FAQs</a></h4>
 
       <p>Frequently asked questions (FAQs) relating to CybOX.</p>
 
-      <a class="btn btn-primary" href="/documentation/faqs">Go »</a>
+      <a class="btn btn-primary" href="/faqs">Go »</a>
     </div>
   </div>
 </div>
