@@ -13,7 +13,10 @@ title: CybOX Community
 * [Key Resources & Contacts](https://stixproject.github.io/oasis-cti-info.html)
 
 ##Discussion List & Archive
-OASIS will host a new STIX Discussion List and Archives once the transition is completed in July 2015. The pre-transition Discussion List Archives will also be retained. Once the OASIS list is operational, information about it will be posted here. Information on joining the existing list (soon to be defunct) can be found [here](http://cybox.mitre.org/community/registration.html).
+OASIS will host a new STIX Discussion List and Archives once the transition is completed in July 2015. The pre-transition Discussion List Archives will also be retained. Once the OASIS list is operational, information about it will be posted here. 
+
+* Information on joining the existing list (soon to be defunct) can be found [here](http://cybox.mitre.org/community/registration.html).
+* The pre-transition Discussion List Archives can be found [here](http://making-security-measurable.1364806.n2.nabble.com/CybOX-Discussion-List-Archive-f7579263.html).
 
 ##Contact Us
 * [cybox@mitre.org](mailto:cybox@mitre.org)
