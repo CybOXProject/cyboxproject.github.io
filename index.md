@@ -1,6 +1,6 @@
 ---
 layout: flat
-title: CybOX - Cyber Observable 
+title: CybOX - Cyber Observable
 tagline: A structured language for cyber observables
 no_in_page_title: true
 ---
@@ -8,7 +8,7 @@ no_in_page_title: true
 <h2><strong>Cyber Observable eXpression (CybOX™)</strong></h2>
 
 <div class="alert alert-warning" role="alert">
-  <a href="https://www.oasis-open.org/committees/tc_cat.php?cat=security" class="alert-link">
+  <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti" class="alert-link">
   CybOX is being transitioned to OASIS </a>
   - an open standards organization.
   <a href="https://stixproject.github.io/oasis-faq.pdf" class="alert-link">
@@ -62,4 +62,3 @@ no_in_page_title: true
   <br/>
   <strong>Reach out to us at <a href="mailto:cybox@mitre.org.">cybox@mitre.org</a>!</strong>
 </p>
-
