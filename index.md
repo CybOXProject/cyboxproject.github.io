@@ -7,6 +7,14 @@ no_in_page_title: true
 
 <h1 class="site-title">Cyber Observable eXpression (CybOX™)</h1>
 
+<div class="alert alert-warning" role="alert">
+  <a href="https://www.oasis-open.org/committees/tc_cat.php?cat=security" class="alert-link">
+  CybOX is being transitioned to OASIS </a>
+  - an open standards organization.
+  <a href="https://stixproject.github.io/oasis-faq.pdf" class="alert-link">
+  Read the FAQ to learn more.</a>
+</div>
+
 <div class="jumbotron">
   <h2><strong>Getting Started with CybOX</strong></h2>
   <p>Start here if you're new to CybOX. We have everything you need to become
