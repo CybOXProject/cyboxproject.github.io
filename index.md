@@ -30,6 +30,11 @@ no_in_page_title: true
     <p><a class="btn btn-primary btn-lg" role="button" href="https://cybox.mitre.org/language/version{{site.current_version}}/">CybOX Version {{site.current_version}} »</a></p>
   </div>
   <div class="col-md-4 text-center">
+    <h2>Community</h2>
+    <p>Join us to help build this growing, open-source industry effort.</p>
+    <p><a class="btn btn-primary btn-lg" role="button" href="/community">Participate »</a></p>
+  </div>
+  <div class="col-md-4 text-center">
     <h2>Follow the CybOX Blog</h2>
     <p>The latest CybOX, STIX, TAXII, & MAEC news, straight from the source.</p>
     <p><a class="btn btn-primary btn-lg" role="button" href="http://stixproject.tumblr.com/">Follow »</a></p>
