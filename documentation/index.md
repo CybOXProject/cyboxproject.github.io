@@ -6,6 +6,13 @@ title: Documentation
 <div class="row">
   <div class="col-md-6">
     <div class="well">
+      <h4><a href="use-cases">Use Cases</a></h4>
+
+      <p>A listing of use cases and the language(s) that supports them.</p>
+
+      <a class="btn btn-primary" href="/documentation/use-cases">Go »</a>
+    </div>
+    <div class="well">
       <h4><a href="background">Background</a></h4>
 
       <p>Information about the XML Schema language and conventions used in CybOX.</p>
@@ -50,6 +57,13 @@ title: Documentation
       <p>User and developer tools that can be used to handle CybOX content.</p>
 
       <a class="btn btn-primary" href="/documentation/tools">Go »</a>
+    </div>
+    <div class="well">
+      <h4><a href="faqs">FAQs</a></h4>
+
+      <p>Frequently asked questions (FAQs) relating to CybOX.</p>
+
+      <a class="btn btn-primary" href="/documentation/faqs">Go »</a>
     </div>
   </div>
 </div>
