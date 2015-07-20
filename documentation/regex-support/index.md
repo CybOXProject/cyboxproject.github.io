@@ -1,6 +1,6 @@
 ---
 layout: flat
-title: RegEx Support
+title: Regular Expression Support
 ---
 The CybOX Language supports the definition of observable patterns that leverage regular expressions
 for criteria to be evaluated against instance data. To support interoperability, the CybOX Language
@@ -25,47 +25,47 @@ to be incompatible or have different meanings between commonly used regular expr
 #### Metacharacters
 
 ```
-\ Quote the next metacharacter
-^ Match the beginning of the line
-. Match any character (except newline)
-$ Match the end of the line (or before newline at the end)
-| Alternation
-() Grouping
-[] Character class
+\   Quote the next metacharacter
+^   Match the beginning of the line
+.   Match any character (except newline)
+$   Match the end of the line (or before newline at the end)
+|   Alternation
+()  Grouping
+[]  Character class
 ```
 
 #### Greedy Quantifiers
 
 ```
-* Match 0 or more times
-+ Match 1 or more times
-? Match 1 or 0 times
-{n} Match exactly n times
-{n,} Match at least n times
+*     Match 0 or more times
++     Match 1 or more times
+?     Match 1 or 0 times
+{n}   Match exactly n times
+{n,}  Match at least n times
 {n,m} Match at least n but not more than m times
 ```
 
 #### Reluctant Quantifiers
 
 ```
-*? Match 0 or more times
-+? Match 1 or more times
-?? Match 0 or 1 time
-{n}? Match exactly n times
-{n,}? Match at least n times
+*?     Match 0 or more times
++?     Match 1 or more times
+??     Match 0 or 1 time
+{n}?   Match exactly n times
+{n,}?  Match at least n times
 {n,m}? Match at least n but not more than m times
 ```
 
 #### Escape Sequences
 
 ```
-\t tab (HT, TAB)
-\n newline (LF, NL)
-\r return (CR)
-\f form feed (FF)
+\t   tab (HT, TAB)
+\n   newline (LF, NL)
+\r   return (CR)
+\f   form feed (FF)
 \033 octal char (think of a PDP-11)
 \x1B hex char
-\c[ control char
+\c[  control char
 ```
 
 #### Character Classes
@@ -96,11 +96,11 @@ $ Match the end of the line (or before newline at the end)
 #### Other
 
 ```
-[chars] - Match any of the specified characters
+[chars]  - Match any of the specified characters
 [^chars] - Match anything that is not one of the specified characters
-[a-b] - Match any character in the range between "a" and "b", inclusive
-a|b - Alternation; match either the left side of the "|" or the right side
-\n - When 'n' is a single digit: the nth capturing group matched.
+[a-b]    - Match any character in the range between "a" and "b", inclusive
+a|b      - Alternation; match either the left side of the "|" or the right side
+\n       - When 'n' is a single digit: the nth capturing group matched.
 ```
 
 ### The @regex_syntax Attribute
