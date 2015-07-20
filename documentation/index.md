@@ -33,6 +33,13 @@ title: Documentation
 
       <a class="btn btn-primary" href="/documentation/objects">Go »</a>
     </div>
+    <div class="well">
+      <h4><a href="regex-support">Regular Expression Support</a></h4>
+
+      <p>Details about the regular expression syntax supported in CybOX.</p>
+
+      <a class="btn btn-primary" href="/documentation/regex-support">Go »</a>
+    </div>
 </div>
 
 <div class="row">
