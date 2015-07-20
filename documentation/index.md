@@ -65,5 +65,12 @@ title: Documentation
 
       <a class="btn btn-primary" href="/faqs">Go »</a>
     </div>
+    <div class="well">
+      <h4><a href="versioning-policy">Versioning Policy</a></h4>
+
+      <p>Details about the CybOX language versioning policy.</p>
+
+      <a class="btn btn-primary" href="/documentation/versioning-policy">Go »</a>
+    </div>
   </div>
 </div>
