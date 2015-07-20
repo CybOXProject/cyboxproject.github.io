@@ -5,10 +5,11 @@ title: Versioning Policy
 This document details the current methodology for determining whether a new revision will require a major version change, minor version change, or a version update, and how version information is represented and conveyed in the CybOX Language.
 
 Versioning for the four broad categories of the CybOX Language schemas:
-* "CybOX Core," which consists of the cybox_core.xsd and cybox_common.xsd schemas.
-* "CybOX Objects," which consists of all the Object schema files located within the "objects" directory.
-* "CybOX Vocabularies," which consists of the cybox_default_vocabularies.xsd schema.
-* "CybOX Extensions," which consists of all the schema files located within the "extensions" directory — is also included.
+
+* "CybOX Core," which consists of the cybox_core.xsd and cybox_common.xsd schemas. 
+* "CybOX Objects," which consists of all the Object schema files located within the "objects" directory. 
+* "CybOX Vocabularies," which consists of the cybox_default_vocabularies.xsd schema. 
+* "CybOX Extensions," which consists of all the schema files located within the "extensions" directory — is also included. 
 
 ### CybOX Language Versioning
 The version number is formatted as: ‘Major.Minor.Update’. The Update value may be omitted if it is 0.
