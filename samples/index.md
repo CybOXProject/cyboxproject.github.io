@@ -3,6 +3,9 @@ layout: flat
 title: CybOX Samples
 ---
 
+Note: all samples are stored in the [CybOX Schemas](https://github.com/CybOXProject/schemas) GitHub repository, and will redirect there.
+
+
 |Sample|Description|
 |------|-----------|
 |[Artifact Instance](https://github.com/CybOXProject/schemas/blob/master/samples/CybOX_Artifact_Instance.xml)|A basic example of the Artifact Object that shows how it may be used in an instance to capture network traffic.|
