@@ -35,10 +35,9 @@ column.
 
 ## Look through the Samples
 If you're like many people, there's no substitute for good sample data when
-working with a new language or tool. With each release of CybOX, the CybOX
-project provides a [samples download
-bundle](http://cybox.mitre.org/language/version2.1/#samples) for just that
-reason, containing short, use-case driven samples.
+working with a new language or tool. The CybOX
+project provides a [set of samples](/samples) for just that
+reason, containing short, use-case driven examples.
 
 ## Next Steps
 Once you understand the core concepts of how CybOX works and have either the
