@@ -3,7 +3,7 @@ layout: flat
 title: CybOX Samples
 ---
 
-Note: all samples are stored in the [CybOX Schemas](https://github.com/CybOXProject/schemas) GitHub repository, and will redirect there.
+**Note**: all samples are stored in the [CybOX Schemas](https://github.com/CybOXProject/schemas) GitHub repository, and will redirect there.
 
 
 |Sample|Description|
