@@ -25,7 +25,7 @@ Through utilization of the standardized CybOX language, relevant observable even
 
 ## Frequently Asked Questions
 
-Captured here are some common questions and answers relating to CybOX. Please see the [FAQs](/documentation/faqs) page for other questions/answers.
+Captured here are some common questions and answers relating to CybOX. Please see the [FAQs](/faqs) page for other questions/answers.
 
 ###  What are "cyber observables"?
 
