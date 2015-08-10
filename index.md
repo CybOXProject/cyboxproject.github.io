@@ -27,7 +27,7 @@ no_in_page_title: true
   <div class="col-md-4 text-center">
     <h2>Current Release</h2>
     <p>Click for downloads and more.</p>
-    <p><a class="btn btn-primary btn-lg" role="button" href="https://cybox.mitre.org/language/version{{site.current_version}}/">CybOX Version {{site.current_version}} »</a></p>
+    <p><a class="btn btn-primary btn-lg" role="button" href="/releases/{{site.current_version}}/">CybOX Version {{site.current_version}} »</a></p>
   </div>
   <div class="col-md-4 text-center">
     <h2>Community</h2>
