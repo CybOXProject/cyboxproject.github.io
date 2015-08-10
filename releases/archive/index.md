@@ -5,7 +5,7 @@ title: CybOX Release Archive
 
 **Note:** all releases linked to below are hosted on the [CybOX Legacy Site](https://cybox.mitre.org), and will redirect there.
 
-|Version|Release Date|
+|Release|Release Date|
 |-------|------------|
 |[CybOX 2.0.1](http://cybox.mitre.org/language/version2.0.1/)|September 20, 2013|
 |[CybOX 2.0](http://cybox.mitre.org/language/version2.0/)|April 8, 2013|
