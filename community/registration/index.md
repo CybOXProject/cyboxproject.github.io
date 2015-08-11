@@ -10,13 +10,13 @@ With the transition of STIX, TAXII and CybOX to OASIS, the evolution of those sp
 * [CTI-TAXII Subcommittee List Archive](https://lists.oasis-open.org/archives/cti-taxii/)
 * [CTI-CybOX Subcommittee List Archive](https://lists.oasis-open.org/archives/cti-cybox/)
 
-## Public Comment List
+### Public Comment List
 
 Organizations and individuals who are not OASIS CTI TC members can provide comments to the CTI TC via the CTI TC Public Comment List:
 
 * [Subscribe](http://www.oasis-open.org/committees/comments/form.php?wg_abbrev=cti)
 * [Archive](https://lists.oasis-open.org/archives/cti-comment/)
 
-## Pre-transition Archives
+### Pre-transition Archives
 
 The pre-transition CybOX Discussion List Archives can be found [here](http://making-security-measurable.1364806.n2.nabble.com/CybOX-Discussion-List-Archive-f7579263.html).
