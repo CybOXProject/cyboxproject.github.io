@@ -5,15 +5,20 @@ title: CybOX Community
 
 
 ##OASIS Transition
-[DHS](http://www.dhs.gov/office-cybersecurity-and-communications/) has transitioned CybOX, [STIX](https://github.com/STIXProject/), and [TAXII](https://github.com/TAXIIProject/) to [Organization for the Advancement of Structured Information Standards (OASIS)](https://www.oasis-open.org/), a non-profit consortium that drives the development, convergence, and adoption of open standards for the global information society. Learn more:
+[DHS](http://www.dhs.gov/office-cybersecurity-and-communications/) has transitioned CybOX, [STIX](https://github.com/STIXProject/), and [TAXII](https://github.com/TAXIIProject/) to [Organization for the Advancement of Structured Information Standards (OASIS)](https://www.oasis-open.org/), a non-profit consortium that drives the development, convergence, and adoption of open standards for the global information society. The [Cyber Threat Intelligence (CTI) Technical Committee (TC)] (https://www.oasis-open.org/committees/cti) now leads the ongoing development of these standards. Organizations and individuals that wish to play a regular and active role in the shaping of these standards should consider joining OASIS and the CTI TC.
 
-* [Cyber Threat Intelligence Technical Committee] (https://www.oasis-open.org/committees/cti)
-
-### Transition Information
+###Transition Information
+The following resources provide addition information about the transition of these standards to OASIS:
 * [Transition Announcement](http://stixproject.tumblr.com/post/117006597637/dhs-leads-effort-to-transition-automated)
 * [Transition FAQ](https://stixproject.github.io/oasis-faq.pdf)
 * [OASIS Overview](https://stixproject.github.io/stix-at-oasis.pdf)
 * [Key Resources & Contacts](https://stixproject.github.io/oasis-cti-info.html)
+
+##Discussion Lists & Archives
+Everything that the CTI TC does is public and the discussions around the evolution of the specifications are no exception. Therefore, all archived discussions on the public mailing lists for the CTI TC overall as well as for the individual subcommittees are available for access by anyone at the following links:
+
+
+* The pre-transition Discussion List Archives can be found [here](http://making-security-measurable.1364806.n2.nabble.com/CybOX-Discussion-List-Archive-f7579263.html).
 
 
 ##Contact Us
