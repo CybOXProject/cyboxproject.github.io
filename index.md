@@ -9,7 +9,7 @@ no_in_page_title: true
 
 <div class="alert alert-warning" role="alert">
   <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti" class="alert-link">
-  CybOX is being transitioned to OASIS </a>
+  CybOX has been transitioned to OASIS </a>
   - an open standards organization.
   <a href="https://stixproject.github.io/oasis-faq.pdf" class="alert-link">
   Read the FAQ to learn more.</a>
@@ -44,7 +44,7 @@ no_in_page_title: true
 <div class="row">
   <div class="col-md-4 text-center">
     <h2>OASIS</h2>
-    <p>CybOX, STIX, and TAXII are being transitioned to the Organization for the Advancement of Structured Information Standards (OASIS).</p>
+    <p>CybOX, STIX, and TAXII have been transitioned to the Organization for the Advancement of Structured Information Standards (OASIS).</p>
     <p><a class="btn btn-primary btn-lg" role="button" href="https://stixproject.github.io/stix-at-oasis.pdf">Announcement »</a></p>
   </div>
   <div class="col-md-4 text-center">
