@@ -10,7 +10,7 @@ title: CybOX Community
 ###Transition Information
 The following resources provide addition information about the transition of these standards to OASIS:
 
-* [Cyber Threat Intelligence (CTI) Technical Committee (TC)] (https://www.oasis-open.org/committees/cti)
+* [Cyber Threat Intelligence (CTI) Technical Committee (TC)](https://www.oasis-open.org/committees/cti)
 * [Transition Announcement](http://stixproject.tumblr.com/post/117006597637/dhs-leads-effort-to-transition-automated)
 * [Transition FAQ](https://stixproject.github.io/oasis-faq.pdf)
 * [OASIS Overview](https://stixproject.github.io/stix-at-oasis.pdf)
