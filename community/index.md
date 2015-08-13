@@ -24,6 +24,12 @@ Everything that the CTI TC does is public and the discussions around the evoluti
 * [CTI-TAXII Subcommittee List Archive](https://lists.oasis-open.org/archives/cti-taxii/)
 * [CTI-CybOX Subcommittee List Archive](https://lists.oasis-open.org/archives/cti-cybox/)
 
+###CTI Users List
+A new mailing list, cti-users@lists.oasis-open.org, has been created that is intended for discussing topics related to the effective use of STIX/TAXII/CybOX and the development of solutions that use these standards.  Unlike the other CTI TC lists, this list will be open to anyone to join and post to.
+ 
+If you are interested in joining the cti-users list you will need to explicitly subscribe.  You may do that by sending a blank email message to [cti-users-subscribe@lists.oasis-open.org](mailto:cti-users-subscribe@lists.oasis-open.org) and then replying to the list server's email response requesting confirmation.
+
+
 ###Public Comment List
 Organizations and individuals who are not OASIS CTI TC members can provide comments to the CTI TC via the CTI TC Public Comment List:
 
