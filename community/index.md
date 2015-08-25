@@ -18,6 +18,11 @@ Everything that the CTI TC does is public and the discussions around the evoluti
 
 * [CTI TC Discussion List Archive](https://lists.oasis-open.org/archives/cti/)
 * [CTI-CybOX Subcommittee List Archive](https://lists.oasis-open.org/archives/cti-cybox/)
+* [CybOX-Discussion-List Archive](http://making-security-measurable.1364806.n2.nabble.com/CybOX-Discussion-List-Archive-f7579263.html) (List is no longer used) 
+
+Non-OASIS members can sign up for the public cti-users mailing list
+
+* [CTI Users Info](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti#feedback)
 
 ###CTI Users List
 A new mailing list, cti-users@lists.oasis-open.org, has been created that is intended for discussing topics related to the effective use of STIX/TAXII/CybOX and the development of solutions that use these standards.  Unlike the other CTI TC lists, this list will be open to anyone to join and post to.
@@ -29,6 +34,3 @@ Organizations and individuals who are not OASIS CTI TC members may provide comme
 
 * [Subscribe to submit a comment](http://www.oasis-open.org/committees/comments/form.php?wg_abbrev=cti)
 * [Archive](https://lists.oasis-open.org/archives/cti-comment/)
-
-###Pre-transition Archive
-The pre-transition CybOX Discussion List Archives can be found [here](http://making-security-measurable.1364806.n2.nabble.com/CybOX-Discussion-List-Archive-f7579263.html).
