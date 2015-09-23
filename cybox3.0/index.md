@@ -17,7 +17,9 @@ Fixing all of the issues with the existing CybOX Objects is a large undertaking,
 
 The diagram below illustrates the Objects that we're currently considering for the "core" set. This selection was informed by the recent CybOX Object survey, as well as some of our own judgment. In this diagram, red lines denote new Objects (or significant refactoring of existing ones), and dashed lines denote Objects that would be subjects of potential refactoring.
 
-<img src="cybox_object_categories_3.0_core.png" alt="Core CybOX Objects" style="width: 100%;"/>
+<a href="cybox_object_categories_3.0_core.png" target="_blank">
+<img src="cybox_object_categories_3.0_core.png" style="border:1px solid black;max-width:100%;" alt="Core CybOX Objects">
+</a>
 
 
 
