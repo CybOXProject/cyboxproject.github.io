@@ -13,7 +13,7 @@ title: CybOX 3.0
 ##Ideas
 
 ### "Core" CybOX Objects
-Fixing all of the issues with the existing CybOX Objects is a large undertaking, and so it might make sense to focus on the Objects that meet the 80% solution (or thereabouts) for CybOX 3.0. This entails fixing and refactoring the most commonly used Objects (for various use cases), as well as those that may provide a large amount of value. Future minor releases of CybOX (e.g., CybOX 3.1) could then be devoted to refactoring and adding Objects specific to a particular subset or domain, such as network-centric Objects.
+Refacoring the existing CybOX Objects (as needed) for semantic accuracy and consistency is a large undertaking, and so it might make sense to focus on the Objects that meet the 80% solution (or thereabouts) for CybOX 3.0. This entails refactoring the most commonly used Objects (for various use cases), as well as those that may provide a large amount of value. Future minor releases of CybOX (e.g., CybOX 3.1) could then be devoted to refactoring and also adding Objects specific to a particular subset or domain, such as network-centric Objects.
 
 The diagram below illustrates the Objects that we're currently considering for the "core" set. This selection was informed by the recent CybOX Object survey, as well as some of our own judgment. In this diagram, red lines denote new Objects (or significant refactoring of existing ones), and dashed lines denote Objects that would be subjects of potential refactoring.
 
