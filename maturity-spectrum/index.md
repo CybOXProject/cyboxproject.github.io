@@ -24,13 +24,15 @@ To help the broader community and ourselves assess the current state of CybOX, w
 
 ### Spectrum
 
+The table below captures the current maturity spectrum as of CybOX v2.1. Note that is a subjective rating as assigned by the CybOX SC co-chairs and development team, and is open to personal interpretation.
+
 <table>
 <thead>
 <tr>
   <th></th>
-  <th colspan="2">Low (semantic consensus|existing use)</th>
-  <th colspan="2">Medium (semantic consensus|existing use)</th>
-  <th colspan="2">High (semantic consensus|existing use)</th>
+  <th colspan="2">Low \n(semantic consensus|existing use)</th>
+  <th colspan="2">Medium \n(semantic consensus|existing use)</th>
+  <th colspan="2">High \n(semantic consensus|existing use)</th>
 </tr>
 </thead>
 <tbody>
