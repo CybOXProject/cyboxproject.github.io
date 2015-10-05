@@ -73,4 +73,32 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td style="border: 1px solid grey; background-color: gold;"></td>
   <td colspan="2"></td>
 </tr>
+<tr>
+  <th scope="row"><b>Account Object</b></th>
+  <td colspan="2"></td>
+  <td style="border: 1px solid grey; background-color: gold;"></td>
+  <td style="border: 1px solid grey; background-color: gold;"></td>
+  <td colspan="2"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Address Object</b></th>
+  <td colspan="2"></td>
+  <td colspan="2"></td>
+  <td style="border: 1px solid grey; background-color: gold;"></td>
+  <td style="border: 1px solid grey; background-color: lightgreen;"></td>
+</tr>
+<tr>
+  <th scope="row"><b>API Object</b></th>
+  <td style="border: 1px solid grey; background-color: gold;"></td>
+  <td style="border: 1px solid grey; background-color: tomato;"></td>
+  <td colspan="2"></td>
+  <td colspan="2"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Archive File Object</b></th>
+  <td style="border: 1px solid grey; background-color: gold;"></td>
+  <td style="border: 1px solid grey; background-color: tomato;"></td>
+  <td colspan="2"></td>
+  <td colspan="2"></td>
+</tr>
 </table>
