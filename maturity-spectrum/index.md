@@ -27,12 +27,9 @@ To help the broader community and ourselves assess the current state of CybOX, w
 <table>
 <thead>
 <tr>
-  <th>1</th>
-  <th></th>
-  <th>2</th>
-  <th></th>
-  <th>3</th>
-  <th></th>
+  <th colspan="2">Low</th>
+  <th colspan="2">Medium</th>
+  <th colspan="2">High</th>
 </tr>
 </thead>
 <tbody>
