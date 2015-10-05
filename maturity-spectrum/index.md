@@ -127,7 +127,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
 <tr>
   <th scope="row"><b>Artifact Object</b></th>
   <td colspan="3"></td>
-  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td colspan="3"></td>
