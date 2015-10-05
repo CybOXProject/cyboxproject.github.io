@@ -12,17 +12,17 @@ To help the broader community and ourselves assess the current state of CybOX, w
 ### Metric
 
 #### High (green)
-* **Semantic consensus**: Little to no known semantic issues. Virtually no disagreement about the data model in the community.
+* **Semantic consensus**: Little to no known semantic issues and/or virtually no disagreement about the data model in the community.
 * **Semantic completeness**: No known missing fields/capabilities and/or a sense of certainty that the model is "complete". Capable of being used effectively in ALL applicable domains.
 * **Existing use**: Widely used in existing implementations.
 
 #### Medium (yellow)
-* **Semantic consensus**: Several minor known semantic issues, or one or two larger issues. Some level of disagreement about the data model in the community.
+* **Semantic consensus**: Several minor known semantic issues, or one or two larger issues and/or some level of disagreement about the data model in the community.
 * **Semantic completeness**: One or two known minor missing fields and/or some uncertainty around complete coverage of the entity. Capable of being used effectively in most applicable domains.
 * **Existing use**: Some known use in existing implementations.
 
 #### Low (red)
-* **Semantic consensus**: One or more major known semantic issues. Significant disagreement about the data model in the community.
+* **Semantic consensus**: One or more major known semantic issues and/or significant disagreement about the data model in the community.
 * **Semantic completeness**: One or two known major missing fields/capabilities and/or major uncertainty about coverage of the entity. Generally not useful for all or most applicable domains.
 * **Existing use**: Little to no known use in existing implementations.
 
