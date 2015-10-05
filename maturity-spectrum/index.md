@@ -36,21 +36,21 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
 <colgroup span="3"></colgroup>
 <colgroup span="3"></colgroup>
 <tr>
-  <td rowspan="3"></td>
+  <td rowspan="2" style="white-space: nowrap"></td>
   <th colspan="3" scope="colgroup" style="text-align:center; font-size:24px">Low</th>
   <th colspan="3" scope="colgroup" style="text-align:center; font-size:24px">Medium</th>
   <th colspan="3" scope="colgroup" style="text-align:center; font-size:24px">High</th>
 </tr>
 <tr>
-  <th scope="col">Sem. Consensus</th>
-  <th scope="col">Sem. Completeness</th>
-  <th scope="col">Existing Use</th>
-  <th scope="col">Sem. Consensus</th>
-  <th scope="col">Sem. Completeness</th>
-  <th scope="col">Existing Use</th>
-  <th scope="col">Sem. Consensus</th>
-  <th scope="col">Sem. Completeness</th>
-  <th scope="col">Existing Use</th>
+  <th scope="col" style="text-align:center; font-size:12px">Sem. Consensus</th>
+  <th scope="col" style="text-align:center; font-size:12px">Sem. Completeness</th>
+  <th scope="col" style="text-align:center; font-size:12px">Existing Use</th>
+  <th scope="col" style="text-align:center; font-size:12px">Sem. Consensus</th>
+  <th scope="col" style="text-align:center; font-size:12px">Sem. Completeness</th>
+  <th scope="col" style="text-align:center; font-size:12px">Existing Use</th>
+  <th scope="col" style="text-align:center; font-size:12px">Sem. Consensus</th>
+  <th scope="col" style="text-align:center; font-size:12px">Sem. Completeness</th>
+  <th scope="col" style="text-align:center; font-size:12px">Existing Use</th>
 </tr>
 <tr>
   <th scope="row"><b>Observable (instance)</b></th>
