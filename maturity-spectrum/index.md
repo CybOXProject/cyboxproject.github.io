@@ -36,7 +36,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
 <colgroup span="3"></colgroup>
 <colgroup span="3"></colgroup>
 <tr>
-  <td rowspan="2" style="white-space: nowrap"></td>
+  <td rowspan="2" style="font-size:12px; white-space: nowrap"></td>
   <th colspan="3" scope="colgroup" style="text-align:center; font-size:24px">Low</th>
   <th colspan="3" scope="colgroup" style="text-align:center; font-size:24px">Medium</th>
   <th colspan="3" scope="colgroup" style="text-align:center; font-size:24px">High</th>
