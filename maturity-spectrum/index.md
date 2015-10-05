@@ -49,19 +49,19 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <th scope="row"><b>Observable (instance)</b></th>
   <td colspan="2"></td>
   <td colspan="2"></td>
-  <td style="border: 1px solid grey; background-color: green;"></td>
-  <td style="border: 1px solid grey; background-color: green;"></td>
+  <td style="border: 1px solid grey; background-color: lightgreen;"></td>
+  <td style="border: 1px solid grey; background-color: lightgreen;"></td>
 </tr>
 <tr>
   <th scope="row"><b>Observable (pattern)</b></th>
   <td colspan="2"></td>
-  <td style="border: 1px solid grey; background-color: yellow;"></td>
-  <td style="border: 1px solid grey; background-color: green;"></td>
+  <td style="border: 1px solid grey; background-color: gold;"></td>
+  <td style="border: 1px solid grey; background-color: lightgreen;"></td>
   <td colspan="2"></td>
 </tr>
 <tr>
   <th scope="row"><b>Events</b></th>
-  <td style="border: 1px solid grey; background-color: yellow;"></td>
+  <td style="border: 1px solid grey; background-color: gold;"></td>
   <td style="border: 1px solid grey; background-color: tomato;"></td>
   <td colspan="2"></td>
   <td colspan="2"></td>
@@ -69,8 +69,8 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
 <tr>
   <th scope="row"><b>Actions</b></th>
   <td colspan="2"></td>
-  <td style="border: 1px solid grey; background-color: yellow;"></td>
-  <td style="border: 1px solid grey; background-color: yellow;"></td>
+  <td style="border: 1px solid grey; background-color: gold;"></td>
+  <td style="border: 1px solid grey; background-color: gold;"></td>
   <td colspan="2"></td>
 </tr>
 </table>
