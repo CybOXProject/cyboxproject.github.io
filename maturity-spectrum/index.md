@@ -50,19 +50,19 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="2"></td>
   <td colspan="2"></td>
   <td style="border-right: 1px solid black; background-color: green;"></td>
-  <td style="border-right: 1px solid black; background-color: green;"></td>
+  <td style="background-color: green;"></td>
 </tr>
 <tr>
   <th scope="row"><b>Observable (pattern)</b></th>
   <td colspan="2"></td>
   <td style="border-right: 1px solid black; background-color: yellow;"></td>
-  <td style="border-right: 1px solid black; background-color: green;"></td>
+  <td style="background-color: green;"></td>
   <td colspan="2"></td>
 </tr>
 <tr>
   <th scope="row"><b>Events</b></th>
   <td style="border-right: 1px solid black; background-color: yellow;"></td>
-  <td style="border-right: 1px solid black; background-color: tomato;"></td>
+  <td style="background-color: tomato;"></td>
   <td colspan="2"></td>
   <td colspan="2"></td>
 </tr>
