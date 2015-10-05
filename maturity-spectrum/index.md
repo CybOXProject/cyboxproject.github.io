@@ -3,23 +3,27 @@ layout: flat
 title: CybOX Maturity Spectrum
 ---
 
-To help the broader community and ourselves assess the current state of CybOX, we've developed a three-tiered “maturity spectrum” for categorizing the major entities and their corresponding models. This is based on two factors:
+To help the broader community and ourselves assess the current state of CybOX, we've developed a three-tiered “maturity spectrum” for categorizing the major entities and their corresponding models. This is based on three factors:
 
-* The semantic completeness/accuracy of the model around the entity, as well as the sense of community agreement/disagreement with regards to the data model.
-* The use of the model (through serialization) in existing implementations.
+* The relative sense of community agreement/disagreement with regards to the data model.
+* The relative semantic completeness and accuracy of the model around the entity.
+* The relative use of the model (through serialization) in existing implementations.
 
 ### Metric
 
 #### High (green)
 * **Semantic consensus**: Little to no known semantic issues. Virtually no disagreement about the data model in the community.
+* **Semantic completeness**: No known missing fields/capabilities (i.e. a sense of certainty that the model is "complete"). Generally capable of being used for all applicable domains.
 * **Existing use**: Widely used in existing implementations.
 
 #### Medium (yellow)
 * **Semantic consensus**: Several minor known semantic issues, or one or two larger issues. Some level of disagreement about the data model in the community.
+* **Semantic completeness**: One or two known minor missing fields/capabilities. Capable of being used for most applicable domains.
 * **Existing use**: Some known use in existing implementations.
 
 #### Low (red)
 * **Semantic consensus**: One or more major known semantic issues. Significant disagreement about the data model in the community.
+* **Semantic completeness**: One or two known major missing fields/capabilities. Generally not useful for all or most applicable domains.
 * **Existing use**: Little to no known use in existing implementations.
 
 ### Spectrum
@@ -28,210 +32,239 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
 
 <table>
 <col>
-<colgroup span="2"></colgroup>
-<colgroup span="2"></colgroup>
-<colgroup span="2"></colgroup>
+<colgroup span="3"></colgroup>
+<colgroup span="3"></colgroup>
+<colgroup span="3"></colgroup>
 <tr>
-  <td rowspan="2"></td>
-  <th colspan="2" scope="colgroup" style="text-align:center; font-size:24px">Low</th>
-  <th colspan="2" scope="colgroup" style="text-align:center; font-size:24px">Medium</th>
-  <th colspan="2" scope="colgroup" style="text-align:center; font-size:24px">High</th>
+  <td rowspan="3"></td>
+  <th colspan="3" scope="colgroup" style="text-align:center; font-size:24px">Low</th>
+  <th colspan="3" scope="colgroup" style="text-align:center; font-size:24px">Medium</th>
+  <th colspan="3" scope="colgroup" style="text-align:center; font-size:24px">High</th>
 </tr>
 <tr>
   <th scope="col">Sem. Consensus</th>
+  <th scope="col">Sem. Completeness</th>
   <th scope="col">Existing Use</th>
   <th scope="col">Sem. Consensus</th>
+  <th scope="col">Sem. Completeness</th>
   <th scope="col">Existing Use</th>
   <th scope="col">Sem. Consensus</th>
+  <th scope="col">Sem. Completeness</th>
   <th scope="col">Existing Use</th>
 </tr>
 <tr>
   <th scope="row"><b>Observable (instance)</b></th>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
 </tr>
 <tr>
   <th scope="row"><b>Observable (pattern)</b></th>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>Events</b></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>Actions</b></th>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td colspan="2"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>Account Object</b></th>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>Address Object</b></th>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>API Object</b></th>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>Archive File Object</b></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>ARP Cache Object</b></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>Artifact Object</b></th>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td colspan="2"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>AS Object</b></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>Code Object</b></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>Custom Object</b></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>Device Object</b></th>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td colspan="2"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>Disk Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>Disk Partition Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>DNS Cache Object</b></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>DNS Query Object</b></th>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td colspan="2"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>DNS Record Object</b></th>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
 </tr>
 <tr>
   <th scope="row"><b>Domain Name Object</b></th>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
 </tr>
 <tr>
   <th scope="row"><b>Email Message Object</b></th>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>File Object</b></th>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>GUI Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>GUI Dialogbox Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>GUI Window Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><b>Hostname Object</b></th>
-  <td colspan="2"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
 </tr>
 <tr>
   <th scope="row"><b>HTTP Session Object</b></th>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
-  <td colspan="2"></td>
+  <td colspan="3"></td>
 </tr>
 </table>
