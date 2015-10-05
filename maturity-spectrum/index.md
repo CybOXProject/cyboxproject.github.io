@@ -35,10 +35,17 @@ To help the broader community and ourselves assess the current state of CybOX, w
 </thead>
 <tbody>
 <tr>
-  <td>Observable (instance)</td>
+  <td><b>Observable (instance)</b></td>
   <td colspan="2"></td>
-  <td style="background-color: yellow;">5</td>
-  <td style="background-color: green;">5</td>
+  <td colspan="2"></td>
+  <td style="background-color: green;"></td>
+  <td style="background-color: green;"></td>
+</tr>
+<tr>
+  <td><b>Observable (pattern)</b></td>
+  <td colspan="2"></td>
+  <td style="background-color: yellow;"></td>
+  <td style="background-color: green;"></td>
   <td colspan="2"></td>
 </tr>
 </tbody>
