@@ -5,15 +5,15 @@ title: CybOX Maturity Spectrum
 
 To help the broader community and ourselves assess the current state of CybOX, we've developed a three-tiered “maturity spectrum” for categorizing the major entities and their corresponding models. This is based on three factors:
 
-* The relative sense of community agreement/disagreement with regards to the data model and what it's attempting to model (i.e., does it make sense?).
-* The relative semantic completeness and accuracy of the model around the entity (i.e., does it completely capture the properties of the entity?).
+* The relative sense of community agreement/disagreement with regards to the data model and what it's attempting to model (i.e., does it make sense? is it accurate?).
+* The relative semantic completeness of the model around the entity (i.e., does it, without any doubt, completely capture the properties of the entity?).
 * The relative use of the model (through serialization) in existing implementations.
 
 ### Metric
 
 #### High (green)
 * **Semantic consensus**: Little to no known semantic issues. Virtually no disagreement about the data model in the community.
-* **Semantic completeness**: No known missing fields/capabilities (i.e. a sense of certainty that the model is "complete"). Generally capable of being used for all applicable domains.
+* **Semantic completeness**: No known missing fields/capabilities - i.e., a sense of certainty that the model is "complete". Generally capable of being used for all applicable domains.
 * **Existing use**: Widely used in existing implementations.
 
 #### Medium (yellow)
@@ -158,7 +158,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
 </tr>
 <tr>
   <th scope="row"><b>Device Object</b></th>
-  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="3"></td>
@@ -222,9 +222,10 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
 </tr>
 <tr>
   <th scope="row"><b>File Object</b></th>
-  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td colspan="3"></td>
   <td colspan="3"></td>
 </tr>
 <tr>
@@ -269,7 +270,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
 </tr>
 <tr>
   <th scope="row"><b>Image File Object</b></th>
-  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="3"></td>
@@ -373,7 +374,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
 </tr>
 <tr>
   <th scope="row"><b>PDF File Object</b></th>
-  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="3"></td>
@@ -401,6 +402,374 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Product Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Semaphore Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>SMS Message Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Socket Address Object</b></th>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>System Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Unix File Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Unix Network Route Entry Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Unix Pipe Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Unix Process Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Unix User Account Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Unix Volume Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>URI Object</b></th>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>URL History Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>User Account Object</b></th>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>User Session Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Volume Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>WHOIS Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Computer Account Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Critical Section Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Driver Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Event Log Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Event Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Executable File Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. File Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Filemapping Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Handle Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Hook Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Kernel Hook Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Mailslot Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Memory Page Region Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Mutex Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Network Route Entry Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Network Share Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Pipe Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Prefetch Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Process Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Registry Key Object</b></th>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Semaphore Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Service Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. System Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. System Restore Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Task Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. User Account Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Volume Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Win. Waitable Timer Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>X509 Certificate Object</b></th>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td colspan="3"></td>
 </tr>
 </table>
