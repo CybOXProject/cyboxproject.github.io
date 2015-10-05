@@ -27,28 +27,36 @@ To help the broader community and ourselves assess the current state of CybOX, w
 The table below captures the current maturity spectrum as of CybOX v2.1. Note that is a subjective rating as assigned by the CybOX SC co-chairs and development team, and is open to personal interpretation.
 
 <table>
-<thead>
+<col>
+<colgroup span="2"></colgroup>
+<colgroup span="2"></colgroup>
+<colgroup span="2"></colgroup>
 <tr>
-  <th></th>
-  <th colspan="2">Low \n(semantic consensus|existing use)</th>
-  <th colspan="2">Medium \n(semantic consensus|existing use)</th>
-  <th colspan="2">High \n(semantic consensus|existing use)</th>
+  <td rowspan="2"></td>
+  <th colspan="2" scope="colgroup">Low</th>
+  <th colspan="2" scope="colgroup">Medium</th>
+  <th colspan="2" scope="colgroup">High</th>
 </tr>
-</thead>
-<tbody>
 <tr>
-  <td><b>Observable (instance)</b></td>
+  <th scope="col">Semanic Consensus</th>
+  <th scope="col">Existing Use</th>
+  <th scope="col">Semanic Consensus</th>
+  <th scope="col">Existing Use</th>
+  <th scope="col">Semanic Consensus</th>
+  <th scope="col">Existing Use</th>
+</tr>
+<tr>
+  <th scope="row"><b>Observable (instance)</b></th>
   <td colspan="2"></td>
   <td colspan="2"></td>
   <td style="background-color: green;"></td>
   <td style="background-color: green;"></td>
 </tr>
 <tr>
-  <td><b>Observable (pattern)</b></td>
+  <th scope="row"><b>Observable (pattern)</b></th>
   <td colspan="2"></td>
   <td style="background-color: yellow;"></td>
   <td style="background-color: green;"></td>
   <td colspan="2"></td>
 </tr>
-</tbody>
 </table>
