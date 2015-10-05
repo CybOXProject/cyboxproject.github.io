@@ -37,9 +37,9 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
 <colgroup span="3"></colgroup>
 <tr>
   <td rowspan="2" style="font-size:12px; white-space: nowrap"></td>
-  <th colspan="3" scope="colgroup" style="width:20%; text-align:center; font-size:24px">Low</th>
-  <th colspan="3" scope="colgroup" style="width:20%; text-align:center; font-size:24px">Medium</th>
-  <th colspan="3" scope="colgroup" style="width:20%; text-align:center; font-size:24px">High</th>
+  <th colspan="3" scope="colgroup" style="width:23%; text-align:center; font-size:24px">Low</th>
+  <th colspan="3" scope="colgroup" style="width:23%; text-align:center; font-size:24px">Medium</th>
+  <th colspan="3" scope="colgroup" style="width:23%; text-align:center; font-size:24px">High</th>
 </tr>
 <tr>
   <th scope="col" style="text-align:center; font-size:12px">Sem. Consensus</th>
@@ -313,6 +313,22 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Network Connection Object</b></th>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Network Flow Object</b></th>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td colspan="3"></td>
 </tr>
 </table>
