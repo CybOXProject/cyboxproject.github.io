@@ -110,7 +110,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
 </tr>
 <tr>
   <th scope="row"><b>Archive File Object</b></th>
-  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="3"></td>
