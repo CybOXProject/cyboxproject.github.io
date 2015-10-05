@@ -28,20 +28,21 @@ To help the broader community and ourselves assess the current state of CybOX, w
 <thead>
 <tr>
   <th>1</th>
+  <th></th>
   <th>2</th>
+  <th></th>
   <th>3</th>
+  <th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
   <td style="background-color: tomato;">4</td>
-  <td>5</td>
-  <td>6</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td>8</td>
-  <td>9</td>
+  <td style="background-color: green;">4</td>
+  <td style="background-color: yellow;">5</td>
+  <td style="background-color: green;">5</td>
+  <td style="background-color: green;">5</td>
+  <td style="background-color: green;">5</td>
 </tr>
 </tbody>
 </table>
