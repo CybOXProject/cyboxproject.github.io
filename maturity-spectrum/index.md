@@ -53,7 +53,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <th scope="col" style="text-align:center; font-size:12px">Existing Use</th>
 </tr>
 <tr>
-  <th scope="row"><b>Observable (instance)</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Observable-Instance"><b>Observable (instance)</b></a></th>
   <td colspan="3"></td>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
@@ -61,7 +61,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Observable (pattern)</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Observable-Pattern"><b>Observable (pattern)</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
@@ -69,7 +69,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Events</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Events"><b>Events</b></a></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -77,7 +77,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Actions</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Actions"><b>Actions</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
