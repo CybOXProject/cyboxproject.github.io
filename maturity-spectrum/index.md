@@ -24,7 +24,7 @@ To help the broader community and ourselves assess the current state of CybOX, w
 
 ### Spectrum
 
-The table below captures the current maturity spectrum as of CybOX v2.1. Note that is a subjective rating as assigned by the CybOX SC co-chairs and development team, and is open to personal interpretation.
+The table below captures the current maturity spectrum as of CybOX v2.1. **Note**: this is a subjective rating as assigned by the CybOX SC co-chairs and development team, and is open to personal interpretation.
 
 <table>
 <col>
@@ -49,20 +49,20 @@ The table below captures the current maturity spectrum as of CybOX v2.1. Note th
   <th scope="row"><b>Observable (instance)</b></th>
   <td colspan="2"></td>
   <td colspan="2"></td>
-  <td style="border: 1px solid black; background-color: green;"></td>
-  <td style="border: 1px solid black; background-color: green;"></td>
+  <td style="border-right: 1px solid black; background-color: green;"></td>
+  <td style="border-right: 1px solid black; background-color: green;"></td>
 </tr>
 <tr>
   <th scope="row"><b>Observable (pattern)</b></th>
   <td colspan="2"></td>
-  <td style="border: 1px solid black; background-color: yellow;"></td>
-  <td style="border: 1px solid black; background-color: green;"></td>
+  <td style="border-right: 1px solid black; background-color: yellow;"></td>
+  <td style="border-right: 1px solid black; background-color: green;"></td>
   <td colspan="2"></td>
 </tr>
 <tr>
   <th scope="row"><b>Events</b></th>
-  <td style="border: 1px solid black; background-color: yellow;"></td>
-  <td style="border: 1px solid black; background-color: tomato;"></td>
+  <td style="border-right: 1px solid black; background-color: yellow;"></td>
+  <td style="border-right: 1px solid black; background-color: tomato;"></td>
   <td colspan="2"></td>
   <td colspan="2"></td>
 </tr>
