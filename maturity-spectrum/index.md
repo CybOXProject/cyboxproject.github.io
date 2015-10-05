@@ -27,19 +27,19 @@ To help the broader community and ourselves assess the current state of CybOX, w
 <table>
 <thead>
 <tr>
-  <th colspan="2">Low</th>
-  <th colspan="2">Medium</th>
-  <th colspan="2">High</th>
+  <th></th>
+  <th colspan="2">Low (semantic consensus|existing use)</th>
+  <th colspan="2">Medium (semantic consensus|existing use)</th>
+  <th colspan="2">High (semantic consensus|existing use)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-  <td style="background-color: tomato;">4</td>
-  <td style="background-color: green;">4</td>
+  <td>Observable (instance)</td>
+  <td colspan="2"></td>
   <td style="background-color: yellow;">5</td>
   <td style="background-color: green;">5</td>
-  <td style="background-color: green;">5</td>
-  <td style="background-color: green;">5</td>
+  <td colspan="2"></td>
 </tr>
 </tbody>
 </table>
