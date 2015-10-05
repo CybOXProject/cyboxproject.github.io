@@ -5,8 +5,8 @@ title: CybOX Maturity Spectrum
 
 To help the broader community and ourselves assess the current state of CybOX, we've developed a three-tiered “maturity spectrum” for categorizing the major entities and their corresponding models. This is based on three factors:
 
-* The relative sense of community agreement/disagreement with regards to the data model.
-* The relative semantic completeness and accuracy of the model around the entity.
+* The relative sense of community agreement/disagreement with regards to the data model and what it's attempting to model (i.e., does it make sense?).
+* The relative semantic completeness and accuracy of the model around the entity (i.e., does it completely capture the properties of the entity?).
 * The relative use of the model (through serialization) in existing implementations.
 
 ### Metric
