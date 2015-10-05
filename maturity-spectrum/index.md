@@ -38,12 +38,12 @@ The table below captures the current maturity spectrum as of CybOX v2.1. Note th
   <th colspan="2" scope="colgroup" style="text-align:center; font-size:24px">High</th>
 </tr>
 <tr>
-  <th scope="col">Semantic Consensus</th>
-  <th scope="col">Existing Use&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-  <th scope="col">Semantic Consensus</th>
-  <th scope="col">Existing Use&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-  <th scope="col">Semantic Consensus</th>
-  <th scope="col">Existing Use&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <th scope="col">Sem. Consensus</th>
+  <th scope="col">Existing Use</th>
+  <th scope="col">Sem. Consensus</th>
+  <th scope="col">Existing Use</th>
+  <th scope="col">Sem. Consensus</th>
+  <th scope="col">Existing Use</th>
 </tr>
 <tr>
   <th scope="row"><b>Observable (instance)</b></th>
