@@ -53,7 +53,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <th scope="col" style="text-align:center; font-size:12px">Existing Use</th>
 </tr>
 <tr>
-  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Observable-Instance"><b>Observable (instance)</b></a></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Observable-(instance)"><b>Observable (instance)</b></a></th>
   <td colspan="3"></td>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
@@ -61,7 +61,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
 </tr>
 <tr>
-  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Observable-Pattern"><b>Observable (pattern)</b></a></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Observable-(pattern)"><b>Observable (pattern)</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
