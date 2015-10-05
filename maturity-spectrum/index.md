@@ -89,9 +89,9 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
 </tr>
 <tr>
   <th scope="row"><b>API Object</b></th>
-  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
-  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="2"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td colspan="2"></td>
 </tr>
 <tr>
@@ -141,6 +141,83 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="2"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="2"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Disk Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="2"></td>
+  <td colspan="2"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Disk Partition Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="2"></td>
+  <td colspan="2"></td>
+</tr>
+<tr>
+  <th scope="row"><b>DNS Cache Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="2"></td>
+  <td colspan="2"></td>
+</tr>
+<tr>
+  <th scope="row"><b>DNS Query Object</b></th>
+  <td colspan="2"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="2"></td>
+</tr>
+<tr>
+  <th scope="row"><b>DNS Record Object</b></th>
+  <td colspan="2"></td>
+  <td colspan="2"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Domain Name Object</b></th>
+  <td colspan="2"></td>
+  <td colspan="2"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Email Message Object</b></th>
+  <td colspan="2"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td colspan="2"></td>
+</tr>
+<tr>
+  <th scope="row"><b>File Object</b></th>
+  <td colspan="2"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td colspan="2"></td>
+</tr>
+<tr>
+  <th scope="row"><b>GUI Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="2"></td>
+  <td colspan="2"></td>
+</tr>
+<tr>
+  <th scope="row"><b>GUI Dialogbox Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="2"></td>
+  <td colspan="2"></td>
+</tr>
+<tr>
+  <th scope="row"><b>GUI Window Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="2"></td>
   <td colspan="2"></td>
 </tr>
 </table>
