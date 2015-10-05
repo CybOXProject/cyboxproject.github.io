@@ -267,4 +267,52 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td colspan="3"></td>
 </tr>
+<tr>
+  <th scope="row"><b>Image File Object</b></th>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Library Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Link Object</b></th>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Linux Package Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Memory Object</b></th>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td colspan="3"></td>
+  <td colspan="3"></td>
+</tr>
+<tr>
+  <th scope="row"><b>Mutex Object</b></th>
+  <td colspan="3"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td colspan="3"></td>
+</tr>
 </table>
