@@ -28,7 +28,7 @@ To help the broader community and ourselves assess the current state of CybOX, w
 
 ### Spectrum
 
-The table below captures the current maturity spectrum as of CybOX v2.1. **Note**: this is a subjective rating as assigned by the CybOX SC co-chairs and development team, and is open to personal interpretation. Each entity is assigned an individual maturity score for both semantic consensus and existing use, as well as an "overall" maturity score based on the lowest of its two individual scores.
+The table below captures the current maturity spectrum as of CybOX v2.1. **Note**: this is a subjective rating as assigned by the CybOX SC co-chairs and development team, and is open to personal interpretation. Each entity is assigned an individual maturity score for semantic consensus, semantic completeness, and existing use, as well as an "overall" maturity score based on the lowest of its two individual scores. Also, each entity links to a CybOX wiki page that describes the rationale behind the scores and discussion of the maturity score around each entity, including applications where it is being used.
 
 <table>
 <col>
