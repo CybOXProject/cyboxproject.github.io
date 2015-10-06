@@ -85,7 +85,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Account Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Account-Object"><b>Account Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
@@ -93,7 +93,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Address Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Address-Object"><b>Address Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
@@ -101,7 +101,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>API Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-API-Object"><b>API Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
@@ -109,7 +109,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Archive File Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Archive-File-Object"><b>Archive File Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -117,7 +117,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>ARP Cache Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-ARP-Cache-Object"><b>ARP Cache Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -125,7 +125,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Artifact Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Artifact-Object"><b>Artifact Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
@@ -133,7 +133,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>AS Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-AS-Object"><b>AS Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -141,7 +141,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Code Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Code-Object"><b>Code Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -149,7 +149,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Custom Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Custom-Object"><b>Custom Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -157,7 +157,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Device Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Device-Object"><b>Device Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -165,7 +165,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Disk Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Disk-Object"><b>Disk Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -173,7 +173,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Disk Partition Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Disk-Partition-Object"><b>Disk Partition Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -181,7 +181,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>DNS Cache Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-DNS-Cache-Object"><b>DNS Cache Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -189,7 +189,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>DNS Query Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-DNS-Query-Object"><b>DNS Query Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
@@ -197,7 +197,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>DNS Record Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-DNS-Record-Object"><b>DNS Record Object</b></a></th>
   <td colspan="3"></td>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
@@ -205,7 +205,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Domain Name Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Domain-Name-Object"><b>Domain Name Object</b></a></th>
   <td colspan="3"></td>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
@@ -213,7 +213,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Email Message Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Email-Message-Object"><b>Email Message Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
@@ -221,7 +221,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>File Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-File-Object"><b>File Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
@@ -229,7 +229,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>GUI Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-GUI-Object"><b>GUI Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -237,7 +237,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>GUI Dialogbox Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-GUI-Dialogbox-Object"><b>GUI Dialogbox Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -245,7 +245,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>GUI Window Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-GUI-Window-Object"><b>GUI Window Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -253,7 +253,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Hostname Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Hostname-Object"><b>Hostname Object</b></a></th>
   <td colspan="3"></td>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
@@ -261,7 +261,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
 </tr>
 <tr>
-  <th scope="row"><b>HTTP Session Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-HTTP-Session-Object"><b>HTTP Session Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
@@ -269,7 +269,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Image File Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Image-File-Object"><b>Image File Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -277,7 +277,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Library Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Library-Object"><b>Library Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -285,7 +285,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Link Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Link-Object"><b>Link Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
@@ -293,7 +293,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Linux Package Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Linux-Package-Object"><b>Linux Package Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -301,7 +301,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Memory Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Memory-Object"><b>Memory Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -309,7 +309,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Mutex Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Mutex-Object"><b>Mutex Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
@@ -317,7 +317,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Network Connection Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Network-Connection-Object"><b>Network Connection Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
@@ -325,7 +325,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Network Flow Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Network-Flow-Object"><b>Network Flow Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -333,7 +333,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Network Packet Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Network-Packet-Object"><b>Network Packet Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -341,7 +341,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Network Route Entry Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Network-Route-Entry-Object"><b>Network Route Entry Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -349,7 +349,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Network Route Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Network-Route-Object"><b>Network Route Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -357,7 +357,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Network Socket Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Network-Socket-Object"><b>Network Socket Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -365,7 +365,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Network Subnet Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Network-Subnet-Object"><b>Network Subnet Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -373,7 +373,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>PDF File Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-PDF-File-Object"><b>PDF File Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -381,7 +381,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Pipe Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Pipe-Object"><b>Pipe Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -389,7 +389,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Port Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Port-Object"><b>Port Object</b></a></th>
   <td colspan="3"></td>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
@@ -397,7 +397,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Process Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Process-Object"><b>Process Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
@@ -405,7 +405,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Product Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Product-Object"><b>Product Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -413,7 +413,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Semaphore Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Semaphore-Object"><b>Semaphore Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -421,7 +421,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>SMS Message Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-SMS-Message-Object"><b>SMS Message Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -429,7 +429,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Socket Address Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Socket-Address-Object"><b>Socket Address Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
@@ -437,7 +437,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>System Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-System-Object"><b>System Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
@@ -445,7 +445,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Unix File Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Unix-File-Object"><b>Unix File Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -453,7 +453,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Unix Network Route Entry Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Unix-Network-Route-Entry-Object"><b>Unix Network Route Entry Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -461,7 +461,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Unix Pipe Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Unix-Pipe-Object"><b>Unix Pipe Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -469,7 +469,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Unix Process Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Unix-Process-Object"><b>Unix Process Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -477,7 +477,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Unix User Account Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Unix-User-Account-Object"><b>Unix User Account Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -485,7 +485,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Unix Volume Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Unix-Volume-Object"><b>Unix Volume Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -493,7 +493,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>URI Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-URI-Object"><b>URI Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
@@ -501,7 +501,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>URL History Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-URL-History-Object"><b>URL History Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -509,7 +509,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>User Account Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-User-Account-Object"><b>User Account Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
@@ -517,7 +517,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>User Session Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-User-Session-Object"><b>User Session Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -525,7 +525,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Volume Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Volume-Object"><b>Volume Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -533,7 +533,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>WHOIS Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-WHOIS-Object"><b>WHOIS Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -541,7 +541,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Computer Account Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Computer-Account-Object"><b>Win. Computer Account Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -549,7 +549,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Critical Section Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Critical-Section-Object"><b>Win. Critical Section Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -557,7 +557,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Driver Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Driver-Object"><b>Win. Driver Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -565,7 +565,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Event Log Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Event-Log-Object"><b>Win. Event Log Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -573,7 +573,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Event Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Event-Object"><b>Win. Event Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -581,7 +581,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Executable File Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Executable-File-Object"><b>Win. Executable File Object</b></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
@@ -589,7 +589,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. File Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-File-Object"><b>Win. File Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
@@ -597,7 +597,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Filemapping Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Filemapping-Object"><b>Win. Filemapping Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -605,7 +605,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Handle Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Handle-Object"><b>Win. Handle Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -613,7 +613,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Hook Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Hook-Object"><b>Win. Hook Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -621,7 +621,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Kernel Hook Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Kernel-Hook-Object"><b>Win. Kernel Hook Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -629,7 +629,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Mailslot Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Mailslot-Object"><b>Win. Mailslot Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -637,7 +637,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Memory Page Region Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Memory-Page-Region-Object"><b>Win. Memory Page Region Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -645,7 +645,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Mutex Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Mutex-Object"><b>Win. Mutex Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -653,7 +653,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Network Route Entry Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Network-Route-Entry-Object"><b>Win. Network Route Entry Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -661,7 +661,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Network Share Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Network-Share-Object"><b>Win. Network Share Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -669,7 +669,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Pipe Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Pipe-Object"><b>Win. Pipe Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -677,7 +677,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Prefetch Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Prefetch-Object"><b>Win. Prefetch Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -685,7 +685,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Process Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Process-Object"><b>Win. Process Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -693,7 +693,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Registry Key Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Registry-Key-Object"><b>Win. Registry Key Object</b></a></th>
   <td colspan="3"></td>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
@@ -701,7 +701,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Semaphore Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Semaphore-Object"><b>Win. Semaphore Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -709,7 +709,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Service Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Service-Object"><b>Win. Service Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -717,7 +717,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. System Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-System-Object"><b>Win. System Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -725,7 +725,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. System Restore Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-System-Restore-Object"><b>Win. System Restore Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -733,7 +733,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Task Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Task-Object"><b>Win. Task Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -741,7 +741,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. User Account Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-User-Account-Object"><b>Win. User Account Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -749,7 +749,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Volume Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Volume-Object"><b>Win. Volume Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -757,7 +757,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>Win. Waitable Timer Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-Waitable-Timer-Object"><b>Win. Waitable Timer Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
@@ -765,7 +765,7 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
   <td colspan="3"></td>
 </tr>
 <tr>
-  <th scope="row"><b>X509 Certificate Object</b></th>
+  <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-X509-Certificate-Object"><b>X509 Certificate Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
