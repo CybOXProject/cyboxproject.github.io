@@ -86,10 +86,10 @@ The table below captures the current maturity spectrum as of CybOX v2.1. **Note*
 </tr>
 <tr>
   <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Account-Object"><b>Account Object</b></a></th>
+  <td style="border: 1px solid #ddd; background-color: goldenrod;"></td>
+  <td style="border: 1px solid #ddd; background-color: goldenrod;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="3"></td>
-  <td style="border: 1px solid #ddd; background-color: goldenrod;"></td>
-  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
-  <td style="border: 1px solid #ddd; background-color: goldenrod;"></td>
   <td colspan="3"></td>
 </tr>
 <tr>
