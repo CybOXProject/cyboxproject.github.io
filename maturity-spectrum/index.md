@@ -3,7 +3,7 @@ layout: flat
 title: CybOX Maturity Spectrum
 ---
 
-To help the broader community and ourselves assess the current state of CybOX, we've developed a three-tiered “maturity spectrum” for categorizing the major entities and their corresponding models. This is based on three factors:
+To help the broader community and ourselves assess the current state of CybOX, we've developed a three-tiered “maturity spectrum” for categorizing the major entities and their corresponding models. This is based on the following factors:
 
 * The relative sense of community agreement/disagreement with regards to the data model and what it's attempting to model (i.e., does it make sense? is it accurate?).
 * The relative semantic completeness of the model around the entity (i.e., does it, without any doubt, completely capture the properties of the entity?).
@@ -28,7 +28,9 @@ To help the broader community and ourselves assess the current state of CybOX, w
 
 ### Spectrum
 
-The table below captures the current maturity spectrum as of CybOX v2.1. **Note**: this is a subjective rating as assigned by the CybOX SC co-chairs and development team, and is open to personal interpretation. Each entity is assigned an individual maturity score for semantic consensus, semantic completeness, and existing use, as well as an "overall" maturity score based on the lowest of its three scores. Also, each entity links to a CybOX wiki page that describes the rationale behind the scores and discussion of the maturity score around each entity, including applications where it is being used.
+The table below captures the current maturity spectrum as of CybOX v2.1. **Note**: this is a subjective rating as assigned by the CybOX SC co-chairs and development team, and is open to personal interpretation. 
+
+Each entity is assigned an individual maturity score for semantic consensus, semantic completeness, and existing use, as well as an "overall" maturity score based on the lowest of its three scores. Also, each entity links to a CybOX wiki page that describes the rationale behind the scores and discussion of the maturity score around each entity, including applications where it is being used.
 
 <table>
 <col>
