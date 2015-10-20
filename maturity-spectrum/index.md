@@ -160,8 +160,8 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
 </tr>
 <tr>
   <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Device-Object"><b>Device Object</b></a></th>
-  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="3"></td>
   <td colspan="3"></td>
