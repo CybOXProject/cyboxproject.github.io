@@ -72,6 +72,17 @@ There are currently some open questions around such a patterning language, inclu
 * Where would this structure live?
 * What capabilities should this syntax have?
 
+#### First-class Relationships
+
+The current relationship structure in STIX and CybOX is difficult to use, owing to its entity-derived implementation. Having a first-class relationship structure (one that is shared between STIX and CybOX) will vastly simplify the creation and consumption of relationships. In CybOX, this would replace the existing relationship structures around:
+
+* Objects
+    * i.e., ObjectType/Related_Objects
+* Actions
+    * i.e., ActionType/Relationships
+
+More discussion around this topic can be found in the [STIX Tracker](https://github.com/STIXProject/schemas/issues/291).
+
 
 
 
