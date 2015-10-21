@@ -1,0 +1,120 @@
+digraph CybOX {
+    layout=dot;
+    ratio=0.35;
+
+    CybOX [shape=box, fontcolor=blue4, style=filled, fillcolor=grey98, fontsize=32];
+    Network [shape=box, style=filled, fillcolor=dodgerblue2, fontcolor=grey100, fontsize=28];
+    Network_Metadata [label="Network Metadata", shape=box, style=filled, fillcolor=dodgerblue2, fontcolor=grey100, fontsize=24];
+    Endpoint [shape=box, style=filled, fillcolor=cadetblue4, fontcolor=grey100, fontsize=28];
+    PKI [shape=box, style=filled, fillcolor=sienna3, fontcolor=grey100, fontsize=28];
+    Misc [label="Misc.", shape=box, style=filled, fillcolor=olivedrab, fontcolor=grey100, fontsize=28];
+    Generic_System [label="System (Software)", shape=box, style=filled, fillcolor=tomato2, fontcolor=grey90, fontsize=28];
+    Network_Messaging [shape=box, style=filled, fillcolor=dodgerblue2, fontcolor=grey100, fontsize=24];
+
+    Windows [shape=box, style=filled, fillcolor=green4, fontcolor=grey100, fontsize=24];
+    Windows_Disk_Artifact [label="Windows Disk Artifact", shape=box, style=filled, fillcolor=green4, fontcolor=grey100, fontsize=20];
+    Generic_Endpoint [label="Generic Endpoint", shape=box, style=filled, fillcolor=cadetblue4, fontcolor=grey100, fontsize=24];
+    Generic_Disk_Artifact [label="Generic Disk Artifact", shape=box, style=filled, fillcolor=cadetblue4, fontcolor=grey100, fontsize=20];
+    Generic_IPC_Artifact [label="Generic IPC Artifact", shape=box, style=filled, fillcolor=cadetblue4, fontcolor=grey100, fontsize=20];
+   
+    Atomic [shape=box, style=filled, fillcolor=palegoldenrod, fontcolor=grey33, fontsize=28];
+    DNS [shape=box, style=filled, fillcolor=dodgerblue2, fontcolor=grey100, fontsize=20];
+    HTTP [shape=box, style=filled, fillcolor=dodgerblue2, fontcolor=grey100, fontsize=20];
+
+    ## Windows Objects
+    Win_File [shape=box, color=green4, fontsize=16];
+    Win_Executable_File [shape=box, color=green4, fontsize=16];
+    Win_Registry_Key [shape=box, color=green4, fontsize=16];
+
+    ## Network Objects
+    Network_Connection [shape=box, color=dodgerblue2, fontsize=16];
+    Network_Socket [shape=box, color=dodgerblue2, fontsize=16];
+    Network_Subnet [shape=box, color=dodgerblue2, fontsize=16];
+    DNS_Record [shape=box, color=dodgerblue2, fontsize=16];
+    HTTP_Request [shape=box, color=dodgerblue2, fontsize=16];
+    HTTP_Response [shape=box, color=dodgerblue2, fontsize=16];
+    Email_Message [shape=box, color=dodgerblue2, fontsize=16];
+    Socket_Address [shape=box, color=dodgerblue2, fontsize=16];    
+
+    ## Generic Endpoint Objects
+    Process [shape=box, color=cadetblue4, fontsize=16];
+    Mutex [shape=box, color=cadetblue4, fontsize=16];     
+    User_Account [shape=box, color=cadetblue4, fontsize=16]; 
+
+    ## Atomic Objects
+    Port [shape=box, color=palegoldenrod, fontsize=16];
+    URL [shape=box, color=palegoldenrod, fontsize=16];    
+    Link [shape=box, color=palegoldenrod, fontsize=16];
+    IPv4_Address [shape=box, color=palegoldenrod, fontsize=16]; 
+    IPv6_Address [shape=box, color=palegoldenrod, fontsize=16]; 
+    MAC_Address [shape=box, color=palegoldenrod, fontsize=16];
+    Email_Address [shape=box, color=palegoldenrod, fontsize=16];
+    Hash [shape=box, color=palegoldenrod, fontsize=16];
+    Hostname [shape=box, color=palegoldenrod, fontsize=16];
+    Domain_Name [shape=box, color=palegoldenrod, fontsize=16];
+
+    ## PKI Objects
+    X509_Certificate [shape=box, color=sienna3, fontsize=16];
+
+    ## Misc Objects
+    Artifact [shape=box, color=olivedrab, fontsize=16];
+
+    ## System Objects
+    Software_Product [shape=box, color=tomato2, fontsize=16];
+    Operating_System[shape=box, color=tomato2, fontsize=16];
+
+    ## File-related Objects
+    File [shape=box, color=cadetblue4, fontsize=16];
+
+    ## Connections  
+    CybOX -> Network;
+    CybOX -> PKI;
+    CybOX -> Endpoint;
+    CybOX -> Atomic;
+    CybOX -> Misc;
+    CybOX -> Generic_System;
+    Misc -> Artifact [color=firebrick, style="dashed"];
+    PKI -> X509_Certificate [color=firebrick, style="dashed"];
+    Windows -> Windows_Disk_Artifact;
+    Windows_Disk_Artifact -> Win_File [color=firebrick, style="dashed"];
+    Windows_Disk_Artifact -> Win_Executable_File [color=firebrick, style="dashed"];
+    Windows -> Win_Registry_Key [color=firebrick, style="dashed"];
+    Network -> Network_Metadata;
+    Network -> Network_Messaging;
+    Network_Metadata -> DNS;
+    Network_Metadata -> HTTP;
+    Network_Metadata -> Network_Connection [color=firebrick, style="dashed"];
+    Network_Metadata -> Network_Socket [color=firebrick, style="dashed"];
+    Network_Metadata -> Network_Subnet [color=firebrick, style="dashed"];
+    Network_Metadata -> Socket_Address [color=firebrick, style="dashed"];
+    DNS -> DNS_Record [color=firebrick, style="dashed"];
+    HTTP -> HTTP_Request [color=firebrick];
+    HTTP -> HTTP_Response [color=firebrick];
+    Network_Messaging -> Email_Message [color=firebrick, style="dashed"];
+    Endpoint -> Windows;
+    Endpoint -> Generic_Endpoint;
+    Generic_Endpoint -> Process [color=firebrick, style="dashed"];
+    Generic_Endpoint -> User_Account [color=firebrick, style="dashed"];
+    Generic_Endpoint -> Generic_Disk_Artifact;
+    Generic_Endpoint -> Generic_IPC_Artifact;
+    Generic_Disk_Artifact -> File [color=firebrick, style="dashed"];
+    Generic_IPC_Artifact -> Mutex [color=firebrick, style="dashed"];
+
+    ## Atomic
+    Atomic -> Port [color=firebrick, style="dashed"];
+    Atomic -> Link [color=firebrick, style="dashed"];
+    Atomic -> Hash [color=firebrick];
+    Atomic -> URL [color=firebrick];
+    Atomic -> IPv4_Address [color=firebrick];
+    Atomic -> IPv6_Address [color=firebrick];
+    Atomic -> Email_Address [color=firebrick];
+    Atomic -> MAC_Address [color=firebrick];
+    Atomic -> Hostname [color=firebrick, style="dashed"];
+    Atomic -> Domain_Name [color=firebrick, style="dashed"];
+
+    ## System
+    Generic_System -> Software_Product [color=firebrick];
+    Software_Product -> Operating_System [color=firebrick];
+
+
+}
