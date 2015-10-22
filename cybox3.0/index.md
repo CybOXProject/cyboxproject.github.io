@@ -36,14 +36,14 @@ There are currently several Objects, such as the Address Object, that are abstra
 
 Breaking up the Address Object into its components listed below will enable greater semantic accuracy and reduce ambiguity. See the proposal [here](https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-Address-Object-Refactoring) for more information.
 
-* IPv4 Address [1]
-* IPv6 Address [1]
-* MAC Address [1]
-* Email Address [1]
+* IPv4 Address
+* IPv6 Address
+* MAC Address 
+* Email Address 
 
 ##### Other Objects
 
-* URL [1]
+* URL
 * Hash
 
 [2] In conjunction with modification and potential deprecation of the existing URI Object.
