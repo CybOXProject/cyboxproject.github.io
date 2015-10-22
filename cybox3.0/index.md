@@ -32,17 +32,20 @@ The diagram below ([graphviz source](cybox_object_categories_3.0_core.dot)) illu
 #### Expansion of "Atomic" Objects
 There are currently several Objects, such as the Address Object, that are abstract in nature and attempt to encompass several more atomic Objects. It would be beneficial to break up these abstract Objects into their atomic components, which allow us to much more effectively constrain and therefore validate the data that is captured in the Object. It will also eliminate any potential for ambiguity in Object expression that exists today, such as an email address with an "address_type" value of "ipv4". 
 
-Some possibilities for new Atomic Objects (i.e. not including those that already exist, such as the Domain Name and Port):
+##### Address Object Refactoring
+
+Breaking up the Address Object into its components listed below will enable greater semantic accuracy and reduce ambiguity. See the proposal [here](https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-Address-Object-Refactoring) for more information.
 
 * IPv4 Address [1]
 * IPv6 Address [1]
 * MAC Address [1]
 * Email Address [1]
-* ATM Address [1]
-* URL [2]
+
+##### Other Objects
+
+* URL [1]
 * Hash
 
-[1] In conjunction with the deprecation of the existing Address Object.
 [2] In conjunction with modification and potential deprecation of the existing URI Object.
 
 
