@@ -59,7 +59,7 @@ There are several issues around the current structure for capturing cryptographi
 ### Proposed Object-related Changes
 
 #### Object Refactoring for Semantic Accuracy
-As documented in the [maturity spectrum](http://cyboxproject.github.io/maturity-spectrum/), there currently exist several Objects with documented issues around semantic accuracy. Our goal is to refactor and fix these issues, for the Objects that fall into the set of "Core" CybOX Objects (defined below):
+There currently exist several Objects with documented issues around semantic accuracy. Our goal is to refactor and fix these issues, for the Objects that fall into the set of "Core" CybOX Objects (defined below):
 
 * File Object (and its derivatives)
 * System Object
