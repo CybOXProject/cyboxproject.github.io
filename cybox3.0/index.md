@@ -16,13 +16,7 @@ title: CybOX 3.0
 These changes are likely to have the **greatest** impact, because they touch upon core CybOX structures.
 
 #### Separation of Patterns and Instances
-Currently, a CybOX Observable, in combination with an Object, can define either an observed instance of some data (e.g., a file), or a pattern for *detecting* some data. While this duality has its uses and benefits, particularly in terms of reducing schema complexity (i.e. essentially the same schema structures can be used for capturing both instances and patterns), it has a number of drawbacks, including:
-
-* Because all CybOX Object fields MUST support patterning, including against list membership (or lack thereof), this means that their inherent datatype is an unrestricted string. This has the following side-effects:
-    * No type (is it a valid integer?) or semantic validation (is it a valid IP address?) against these fields can be performed
-    * Lists are inherently more complex and cumbersome (see #380)
-* Because patterns are specified at the CybOX Object level, instead of an abstract pattern level, this makes it inherently more difficult to incorporate non-Object specific pattern elements. For example, things like temporal patterning or pre/post-conditions
-* As evidenced by community feedback and reactions, this duality and its implications (e.g., that an Object with a "condition" attribute represents a pattern) are not immediately obvious and can be difficult to understand
+Currently, a CybOX Observable, in combination with an Object, can define either an observed instance of some data (e.g., a file), or a pattern for *detecting* some data. While this duality has its uses and benefits, particularly in terms of reducing schema complexity (i.e. essentially the same schema structures can be used for capturing both instances and patterns), it has a number of drawbacks, discussed [here](https://github.com/CybOXProject/schemas/issues/381).
 
 We propose the separation of instances and patterns in CybOX Observables and Objects. This will have a number of benefits, including:
 
