@@ -12,45 +12,45 @@ title: cti-stats summary
 <th style="text-align:center;">Counts</th>
 <th style="text-align:right;">Percentages</th>
 </tr>
-<tr style="background-color: gold;">
-<td style="text-align:left;">Campaign</td>
-<td style="text-align:center;">101</td>
-<td style="text-align:right;">0.02%</td>
+<tr>
+<td style="background-color: gold; text-align:left;">Campaign</td>
+<td style="background-color: gold; text-align:center;">101</td>
+<td style="background-color: gold; text-align:right;">0.02%</td>
 </tr>
-<tr style="background-color: gold;">
-<td style="text-align:left;">Course of Action</td>
-<td style="text-align:center;">10</td>
-<td style="text-align:right;">0.00%</td>
+<tr>
+<td style="background-color: gold; text-align:left;">Course of Action</td>
+<td style="background-color: gold; text-align:center;">10</td>
+<td style="background-color: gold; text-align:right;">0.00%</td>
 </tr>
-<tr style="background-color: gold;">
-<td style="text-align:left;">Exploit Target</td>
-<td style="text-align:center;">18</td>
-<td style="text-align:right;">0.00%</td>
+<tr>
+<td style="background-color: gold; text-align:left;">Exploit Target</td>
+<td style="background-color: gold; text-align:center;">18</td>
+<td style="background-color: gold; text-align:right;">0.00%</td>
 </tr>
-<tr style="background-color: gold;">
-<td style="text-align:left;">Incident</td>
-<td style="text-align:center;">3</td>
-<td style="text-align:right;">0.00%</td>
+<tr>
+<td style="background-color: gold; text-align:left;">Incident</td>
+<td style="background-color: gold; text-align:center;">3</td>
+<td style="background-color: gold; text-align:right;">0.00%</td>
 </tr>
-<tr style="background-color: forestgreen;">
-<td style="text-align:left;">Indicator</td>
-<td style="text-align:center;">497944</td>
-<td style="text-align:right;">98.99%</td>
+<tr>
+<td style="background-color: forestgreen; text-align:left;">Indicator</td>
+<td style="background-color: forestgreen; text-align:center;">497944</td>
+<td style="background-color: forestgreen; text-align:right;">98.99%</td>
 </tr>
-<tr style="background-color: tomato;">
-<td style="text-align:left;">Report</td>
-<td style="text-align:center;">0</td>
-<td style="text-align:right;">0.00%</td>
+<tr>
+<td style="background-color: tomato; text-align:left;">Report</td>
+<td style="background-color: tomato; text-align:center;">0</td>
+<td style="background-color: tomato; text-align:right;">0.00%</td>
 </tr>
-<tr style="background-color: forestgreen;">
-<td style="text-align:left;">TTP</td>
-<td style="text-align:center;">4736</td>
-<td style="text-align:right;">0.94%</td>
+<tr>
+<td style="background-color: forestgreen; text-align:left;">TTP</td>
+<td style="background-color: forestgreen; text-align:center;">4736</td>
+<td style="background-color: forestgreen; text-align:right;">0.94%</td>
 </tr>
-<tr style="background-color: gold;">
-<td style="text-align:left;">Threat Actor</td>
-<td style="text-align:center;">228</td>
-<td style="text-align:right;">0.05%</td>
+<tr>
+<td style="background-color: gold; text-align:left;">Threat Actor</td>
+<td style="background-color: gold; text-align:center;">228</td>
+<td style="background-color: gold; text-align:right;">0.05%</td>
 </tr>
 <tr>
 <td style="text-align:left;">Total</td>
