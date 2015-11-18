@@ -2,8 +2,8 @@
 layout: flat
 title: cti-stats summary
 ---
-* *Number of organizations reporting:* 5
-* *Last update:* 18 November 2015
+* **Number of organizations reporting:** 5
+* **Last update:** 18 November 2015
 
 
 <table>
@@ -508,8 +508,8 @@ title: cti-stats summary
 <td style="background-color: tomato; text-align:right;">0.00%</td>
 </tr>
 <tr>
-<td style="background-color: tomato; text-align:left;">Total</td>
-<td style="background-color: tomato; text-align:center;">642779</td>
-<td style="background-color: tomato; text-align:right;">100.00%</td>
+<td style="text-align:left;">Total</td>
+<td style="text-align:center;">642779</td>
+<td style="text-align:right;">100.00%</td>
 </tr>
 </table>
