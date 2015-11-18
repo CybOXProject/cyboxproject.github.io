@@ -2,8 +2,8 @@
 layout: flat
 title: cti-stats summary
 ---
-* Number of organizations reporting: 5
-* Last update: 18 November 2015
+* *Number of organizations reporting:* 5
+* *Last update:* 18 November 2015
 
 
 <table>
@@ -207,7 +207,7 @@ title: cti-stats summary
 <td style="background-color: gold; text-align:center;">40</td>
 <td style="background-color: gold; text-align:right;">0.01%</td>
 </tr>
-<tr
+<tr>
 <td style="background-color: forestgreen; text-align:left;">Mutex</td>
 <td style="background-color: forestgreen; text-align:center;">1332</td>
 <td style="background-color: forestgreen; text-align:right;">0.21%</td>
