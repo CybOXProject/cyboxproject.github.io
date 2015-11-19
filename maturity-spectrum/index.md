@@ -7,7 +7,11 @@ To help the broader community and ourselves assess the current state of CybOX, w
 
 * The relative sense of community agreement/disagreement with regards to the data model and what it's attempting to model (i.e., does it make sense? is it accurate?).
 * The relative semantic completeness of the model around the entity (i.e., does it, without any doubt, completely capture the properties of the entity?).
-* The relative use of the model (through serialization) in existing implementations.
+* The relative use of the model (through serialization) in existing
+implementations.
+* The 'Existing Use' data reflects the
+  [latest available cti-stats dataset](http://cyboxproject.github.io/cti-stats/)
+  as of 19 November 2015.
 
 ### Metric
 
@@ -195,7 +199,7 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="3"></td>
 </tr>
 <tr>
@@ -204,7 +208,7 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
-  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
 </tr>
 <tr>
   <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Domain-Name-Object"><b>Domain Name Object</b></a></th>
@@ -260,14 +264,14 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
-  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
 </tr>
 <tr>
   <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-HTTP-Session-Object"><b>HTTP Session Object</b></a></th>
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td colspan="3"></td>
 </tr>
 <tr>
@@ -306,7 +310,7 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
   <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Memory-Object"><b>Memory Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td colspan="3"></td>
   <td colspan="3"></td>
 </tr>
@@ -315,7 +319,7 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
-  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td colspan="3"></td>
 </tr>
 <tr>
@@ -323,7 +327,7 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td colspan="3"></td>
 </tr>
 <tr>
@@ -378,7 +382,7 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
   <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-PDF-File-Object"><b>PDF File Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td colspan="3"></td>
   <td colspan="3"></td>
 </tr>
@@ -403,7 +407,7 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="3"></td>
 </tr>
 <tr>
@@ -435,14 +439,14 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="3"></td>
 </tr>
 <tr>
   <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-System-Object"><b>System Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="3"></td>
   <td colspan="3"></td>
 </tr>
@@ -515,7 +519,7 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="3"></td>
 </tr>
 <tr>
@@ -538,7 +542,7 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
   <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-WHOIS-Object"><b>WHOIS Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
+  <td style="border: 1px solid #ddd; background-color: gold;"></td>
   <td colspan="3"></td>
   <td colspan="3"></td>
 </tr>
@@ -594,7 +598,7 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
   <th scope="row"><a href="https://github.com/CybOXProject/specifications/wiki/Maturity:-Win.-File-Object"><b>Win. File Object</b></a></th>
   <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="3"></td>
   <td colspan="3"></td>
 </tr>
@@ -771,7 +775,7 @@ Each entity is assigned an individual maturity score for semantic consensus, sem
   <td colspan="3"></td>
   <td style="border: 1px solid #ddd; background-color: forestgreen;"></td>
   <td style="border: 1px solid #ddd; background-color: gold;"></td>
-  <td style="border: 1px solid #ddd; background-color: gold;"></td>
+  <td style="border: 1px solid #ddd; background-color: tomato;"></td>
   <td colspan="3"></td>
 </tr>
 </table>
