@@ -101,7 +101,6 @@
                                                       {"name":"Windows Task", "size":1200},
                                                       {"name":"Windows Kernel", "size":1200},
                                                       {"name":"Windows Driver", "size":1800},
-                                                      {"name":"Windows Service", "size":1800},
                                                       {"name":"Windows Registry Key", "size":1500},
                                                       {"name":"Windows Prefetch", "size":1200},
                                                       {"name":"Windows System Restore", "size":1200},
@@ -154,7 +153,9 @@
                                          {"name":"Windows Process", "size":1200, "likely_update":true,
                                           "url":"https://github.com/CybOXProject/schemas/issues/375"},
                                          {"name":"Windows Thread", "size":900, "likely_update":true,
-                                          "url":"https://github.com/CybOXProject/schemas/issues/403"}
+                                          "url":"https://github.com/CybOXProject/schemas/issues/403"},
+                                         {"name":"Windows Service", "size":1800, "likely_update":true,
+                                          "url":"https://github.com/CybOXProject/schemas/issues/404"}
                              ]}]},
                              {"name":"Misc. Objects", "size":5000,
                              "children":[{"name":"Code", "size":1200},
