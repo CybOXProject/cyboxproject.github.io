@@ -153,7 +153,8 @@
                                           "url":"https://github.com/CybOXProject/schemas/issues/375"},
                                          {"name":"Windows Process", "size":1200, "likely_update":true,
                                           "url":"https://github.com/CybOXProject/schemas/issues/375"},
-                                         {"name":"Windows Thread", "size":900}
+                                         {"name":"Windows Thread", "size":900, "likely_update":true,
+                                          "url":"https://github.com/CybOXProject/schemas/issues/403"}
                              ]}]},
                              {"name":"Misc. Objects", "size":5000,
                              "children":[{"name":"Code", "size":1200},
