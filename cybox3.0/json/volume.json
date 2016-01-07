@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+        "Object": {
+            "type": "object",
+            "properties": {"id": {"type": "string"}},
+            "required": ["id"]
+        },
+        "Volume": {
+            "type": "object",
+            "properties": {
+                "is_mounted": {"type": "boolean"},
+                "name": {"type": "string"},
+                "device-path": {"type": "string"},
+                "file-system-type": {"type": "string"},
+                "total-allocation-units": {"type": "number"},
+                "sectors-per-allocation-unit": {"type": "number"},
+                "bytes-per-sector": {"type": "number"},
+                "actual-available-allocation-units": {"type": "number"},
+                "creation-time": {"type": "string"},
+                "serial-number": {"type": "string"},
+                "extensions": {
+                    "type": "array",
+                    "items": {"oneOf": [
+                        {"$ref": "#/definitions/UnixVolumeExtension"},
+                        {"$ref": "#/definitions/WindowsVolumeExtension"}
+                    ]},
+                    "maxItems": 1
+                }
+            },
+            "allOf": [{"$ref": "#/definitions/Object"}]
+        },
+        "UnixVolumeExtension": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "pattern": "^UnixVolumeExtension$"
+                },
+                "mount-point": {"type": "string"},
+                "options": {"type": "string"}
+            },
+            "required": ["type"],
+            "additionalProperties": false
+        },
+        "WindowsVolumeExtension": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "pattern": "^WindowsVolumeExtension$"
+                },
+                "drive-letter": {"type": "string"},
+                "drive-type": {"type": "string"}
+            },
+            "required": ["type"],
+            "additionalProperties": false
+        }
+    },
+    "type": "object",
+    "properties": {"Volume": {"$ref": "#/definitions/Volume"}},
+    "additionalProperties": false
+}
