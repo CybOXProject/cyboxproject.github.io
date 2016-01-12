@@ -138,6 +138,7 @@
                              "children":[{"name":"Mutex", "size":900},
                                          {"name":"Windows Mutex", "size":900},
                                          {"name":"Sempahore", "size":900},
+                                         {"name":"Windows Sempahore", "size":900},
                                          {"name":"Windows Waitable Timer", "size":1200},
                                          {"name":"Windows Hook", "size":1200},
                                          {"name":"Windows Kernel Hook", "size":1200},
