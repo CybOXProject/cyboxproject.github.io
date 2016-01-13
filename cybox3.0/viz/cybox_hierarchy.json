@@ -164,8 +164,9 @@
                                           "url":"https://github.com/CybOXProject/schemas/issues/404"}
                              ]}]},
                              {"name":"Misc. Objects", "size":5000,
-                             "children":[{"name":"Code", "size":1200, "not_included":true},
-                                         {"name":"API", "size":1200, "not_included":true},
+                             "children":[{"name":"Code-related", "size":2500,
+                                          "children":[{"name":"Code", "size":1200, "not_included":true},
+                                                      {"name":"API", "size":1200, "not_included":true}]},
                                          {"name":"Artifact", "size":1200},
                                          {"name":"Custom", "size":900},
                                          {"name":"Link", "size":900},
