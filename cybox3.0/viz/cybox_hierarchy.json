@@ -48,7 +48,7 @@
                                         {"name":"DNS Record", "size":1500}]},
                             {"name":"Email Message", "size":1500},
                             {"name":"Domain Name", "size":1200},
-                            {"name":"Net Route", "size":1500},
+                            {"name":"Network Route", "size":1500},
                             {"name":"Network Connection", "size":1800, "likely_update":true,
                              "url":"https://github.com/CybOXProject/schemas/issues/402"},
                             {"name":"Network Flow", "size":2400, "not_included":true},
@@ -165,7 +165,7 @@
                                          {"name":"Artifact", "size":1200},
                                          {"name":"Custom", "size":900},
                                          {"name":"Link", "size":900},
-                                         {"name":"User Session", "size":900},
+                                         {"name":"User Session", "size":900, "not_included":true},
                                          {"name":"X509 Certificate", "size":1200},
                                          {"name":"Product", "size":1200, "likely_update":true,
                                           "url":"https://github.com/CybOXProject/schemas/issues/400"}]}]
