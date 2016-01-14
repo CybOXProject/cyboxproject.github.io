@@ -79,11 +79,13 @@ d3.json("cybox_hierarchy.json", function(error, root) {
                                       return "orange";
 				   } else if (d.likely_update) {
                                       return "palegoldenrod";
+				   } else if (d.likely_deprecate) {
+                                      return "firebrick";
 				   } else {
 				      return null;
 				}})
             .on("click", function (d) {
-               if (d.is_new || d.likely_update) {
+               if (d.is_new || d.likely_update || d.likely_deprecate) {
                    var win = window.open(d.url, '_blank');
                }
             if (focus !== d) zoom(d), d3.event.stopPropagation();
@@ -106,7 +108,7 @@ d3.json("cybox_hierarchy.json", function(error, root) {
   zoomTo([root.x, root.y, root.r * 2 + margin]);
 
   function zoom(d) {
-    if (!(d.is_new || d.likely_update)) {
+    if (!(d.is_new || d.likely_update || d.likely_deprecate)) {
     var focus0 = focus; focus = d;
 
     var transition = d3.transition()
