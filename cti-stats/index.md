@@ -28,14 +28,14 @@ title: cti-stats summary
 <td style="background-color: dodgerblue; text-align:right;">0.00%</td>
 </tr>
 <tr>
-<td style="background-color: midnightblue; text-align:left;">Incident</td>
-<td style="background-color: midnightblue; text-align:center;">21457</td>
-<td style="background-color: midnightblue; text-align:right;">2.41%</td>
+<td style="background-color: midnightblue; text-align:left;"><font color="snow">Incident</font></td>
+<td style="background-color: midnightblue; text-align:center;"><font color="snow">21457</font></td>
+<td style="background-color: midnightblue; text-align:right;">2.<font color="snow">41%</font></td>
 </tr>
 <tr>
-<td style="background-color: midnightblue; text-align:left;">Indicator</td>
-<td style="background-color: midnightblue; text-align:center;">859209</td>
-<td style="background-color: midnightblue; text-align:right;">96.47%</td>
+<td style="background-color: midnightblue; text-align:left;"><font color="snow">Indicator</font></td>
+<td style="background-color: midnightblue; text-align:center;"><font color="snow">859209</font></td>
+<td style="background-color: midnightblue; text-align:right;">96.<font color="snow">47%</font></td>
 </tr>
 <tr>
 <td style="background-color: powderblue; text-align:left;">Report</td>
@@ -43,9 +43,9 @@ title: cti-stats summary
 <td style="background-color: powderblue; text-align:right;">0.00%</td>
 </tr>
 <tr>
-<td style="background-color: midnightblue; text-align:left;">TTP</td>
-<td style="background-color: midnightblue; text-align:center;">9623</td>
-<td style="background-color: midnightblue; text-align:right;">1.08%</td>
+<td style="background-color: midnightblue; text-align:left;"><font color="snow">TTP</font></td>
+<td style="background-color: midnightblue; text-align:center;"><font color="snow">9623</font></td>
+<td style="background-color: midnightblue; text-align:right;">1.<font color="snow">08%</font></td>
 </tr>
 <tr>
 <td style="background-color: dodgerblue; text-align:left;">Threat Actor</td>
@@ -73,9 +73,9 @@ title: cti-stats summary
 <td style="background-color: powderblue; text-align:right;">0.00%</td>
 </tr>
 <tr>
-<td style="background-color: midnightblue; text-align:left;">Address</td>
-<td style="background-color: midnightblue; text-align:center;">299154</td>
-<td style="background-color: midnightblue; text-align:right;">27.22%</td>
+<td style="background-color: midnightblue; text-align:left;"><font color="snow">Address</font></td>
+<td style="background-color: midnightblue; text-align:center;"><font color="snow">299154</font></td>
+<td style="background-color: midnightblue; text-align:right;">27.<font color="snow">22%</font></td>
 </tr>
 <tr>
 <td style="background-color: powderblue; text-align:left;">API</td>
@@ -143,19 +143,19 @@ title: cti-stats summary
 <td style="background-color: powderblue; text-align:right;">0.00%</td>
 </tr>
 <tr>
-<td style="background-color: midnightblue; text-align:left;">DomainName</td>
-<td style="background-color: midnightblue; text-align:center;">287105</td>
-<td style="background-color: midnightblue; text-align:right;">26.12%</td>
+<td style="background-color: midnightblue; text-align:left;"><font color="snow">DomainName</font></td>
+<td style="background-color: midnightblue; text-align:center;"><font color="snow">287105</font></td>
+<td style="background-color: midnightblue; text-align:right;">26.<font color="snow">12%</font></td>
 </tr>
 <tr>
-<td style="background-color: midnightblue; text-align:left;">EmailMessage</td>
-<td style="background-color: midnightblue; text-align:center;">2931</td>
-<td style="background-color: midnightblue; text-align:right;">0.27%</td>
+<td style="background-color: midnightblue; text-align:left;"><font color="snow">EmailMessage</font></td>
+<td style="background-color: midnightblue; text-align:center;"><font color="snow">2931</font></td>
+<td style="background-color: midnightblue; text-align:right;">0.<font color="snow">27%</font></td>
 </tr>
 <tr>
-<td style="background-color: midnightblue; text-align:left;">File</td>
-<td style="background-color: midnightblue; text-align:center;">30642</td>
-<td style="background-color: midnightblue; text-align:right;">2.79%</td>
+<td style="background-color: midnightblue; text-align:left;"><font color="snow">File</font></td>
+<td style="background-color: midnightblue; text-align:center;"><font color="snow">30642</font></td>
+<td style="background-color: midnightblue; text-align:right;">2.<font color="snow">79%</font></td>
 </tr>
 <tr>
 <td style="background-color: powderblue; text-align:left;">GUIDialogbox</td>
@@ -208,9 +208,9 @@ title: cti-stats summary
 <td style="background-color: dodgerblue; text-align:right;">0.01%</td>
 </tr>
 <tr>
-<td style="background-color: midnightblue; text-align:left;">Mutex</td>
-<td style="background-color: midnightblue; text-align:center;">2668</td>
-<td style="background-color: midnightblue; text-align:right;">0.24%</td>
+<td style="background-color: midnightblue; text-align:left;"><font color="snow">Mutex</font></td>
+<td style="background-color: midnightblue; text-align:center;"><font color="snow">2668</font></td>
+<td style="background-color: midnightblue; text-align:right;">0.<font color="snow">24%</font></td>
 </tr>
 <tr>
 <td style="background-color: dodgerblue; text-align:left;">NetworkConnection</td>
@@ -258,9 +258,9 @@ title: cti-stats summary
 <td style="background-color: powderblue; text-align:right;">0.00%</td>
 </tr>
 <tr>
-<td style="background-color: midnightblue; text-align:left;">Port</td>
-<td style="background-color: midnightblue; text-align:center;">6331</td>
-<td style="background-color: midnightblue; text-align:right;">0.58%</td>
+<td style="background-color: midnightblue; text-align:left;"><font color="snow">Port</font></td>
+<td style="background-color: midnightblue; text-align:center;"><font color="snow">6331</font></td>
+<td style="background-color: midnightblue; text-align:right;">0.<font color="snow">58%</font></td>
 </tr>
 <tr>
 <td style="background-color: powderblue; text-align:left;">Process</td>
@@ -323,9 +323,9 @@ title: cti-stats summary
 <td style="background-color: powderblue; text-align:right;">0.00%</td>
 </tr>
 <tr>
-<td style="background-color: midnightblue; text-align:left;">URI</td>
-<td style="background-color: midnightblue; text-align:center;">457998</td>
-<td style="background-color: midnightblue; text-align:right;">41.67%</td>
+<td style="background-color: midnightblue; text-align:left;"><font color="snow">URI</font></td>
+<td style="background-color: midnightblue; text-align:center;"><font color="snow">457998</font></td>
+<td style="background-color: midnightblue; text-align:right;">41.<font color="snow">67%</font></td>
 </tr>
 <tr>
 <td style="background-color: powderblue; text-align:left;">URLHistory</td>
@@ -453,9 +453,9 @@ title: cti-stats summary
 <td style="background-color: powderblue; text-align:right;">0.00%</td>
 </tr>
 <tr>
-<td style="background-color: midnightblue; text-align:left;">WinRegistryKey</td>
-<td style="background-color: midnightblue; text-align:center;">8738</td>
-<td style="background-color: midnightblue; text-align:right;">0.79%</td>
+<td style="background-color: midnightblue; text-align:left;"><font color="snow">WinRegistryKey</font></td>
+<td style="background-color: midnightblue; text-align:center;"><font color="snow">8738</font></td>
+<td style="background-color: midnightblue; text-align:right;">0.<font color="snow">79%</font></td>
 </tr>
 <tr>
 <td style="background-color: powderblue; text-align:left;">WinSemaphore</td>
