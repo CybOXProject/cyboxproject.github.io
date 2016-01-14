@@ -62,7 +62,7 @@ d3.json("cybox_hierarchy.json", function(error, root) {
   var circle = svg.selectAll("circle")
       .data(nodes)
     .enter().append("circle")
-      .attr("class", function(d) {  if (d.is_new || d.likely_update) {
+      .attr("class", function(d) {  if (d.is_new || d.likely_update || d.likely_deprecate) {
                                        return "node";
                                     } else if (d.name == "CybOX 3.0") {
                                        return "node node--root";
@@ -80,7 +80,7 @@ d3.json("cybox_hierarchy.json", function(error, root) {
 				   } else if (d.likely_update) {
                                       return "palegoldenrod";
 				   } else if (d.likely_deprecate) {
-                                      return "firebrick";
+                                      return "tomato";
 				   } else {
 				      return null;
 				}})
