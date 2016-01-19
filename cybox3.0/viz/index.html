@@ -74,9 +74,9 @@ d3.json("cybox_hierarchy.json", function(error, root) {
       .style("fill", function(d) { if(d.children) {
 				      return color(d.depth);
 				   } else if (d.is_new) {
-                                      return "lightsalmon";
+                                      return "limegreen";
 				   } else if (d.not_included) {
-                                      return "orange";
+                                      return "mediumpurple";
 				   } else if (d.likely_update) {
                                       return "palegoldenrod";
 				   } else if (d.likely_deprecate) {
