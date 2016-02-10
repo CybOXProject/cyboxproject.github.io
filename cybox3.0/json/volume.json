@@ -19,13 +19,18 @@
                 "actual-available-allocation-units": {"type": "number"},
                 "creation-time": {"type": "string"},
                 "serial-number": {"type": "string"},
-                "extensions": {
-                    "type": "array",
-                    "items": {"oneOf": [
-                        {"$ref": "#/definitions/UnixVolumeExtension"},
-                        {"$ref": "#/definitions/WindowsVolumeExtension"}
-                    ]},
-                    "maxItems": 1
+                "extended-properties": {
+                    "type": "object",
+                    "anyOf": [
+                        {
+                            "properties": {"UnixVolumeExtension": {"$ref": "#/definitions/UnixVolumeExtension"}},
+                            "additionalProperties": false
+                        },
+                        {
+                            "properties": {"WindowsVolumeExtension": {"$ref": "#/definitions/WindowsVolumeExtension"}},
+                            "additionalProperties": false
+                        }
+                    ]
                 }
             },
             "allOf": [{"$ref": "#/definitions/Object"}]
@@ -33,27 +38,17 @@
         "UnixVolumeExtension": {
             "type": "object",
             "properties": {
-                "type": {
-                    "type": "string",
-                    "pattern": "^UnixVolumeExtension$"
-                },
                 "mount-point": {"type": "string"},
                 "options": {"type": "string"}
             },
-            "required": ["type"],
             "additionalProperties": false
         },
         "WindowsVolumeExtension": {
             "type": "object",
             "properties": {
-                "type": {
-                    "type": "string",
-                    "pattern": "^WindowsVolumeExtension$"
-                },
                 "drive-letter": {"type": "string"},
                 "drive-type": {"type": "string"}
             },
-            "required": ["type"],
             "additionalProperties": false
         }
     },

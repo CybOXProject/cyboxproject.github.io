@@ -1,10 +1,10 @@
-{
-   "Volume": {"id":"object-1",
-              "is_mounted":false,
-              "device-name":"disk1",
-              "serial-number":"12345FFA",
-              "extensions":[{"type":"WindowsVolumeExtension",
-                             "drive-letter":"c"},
-                             {"type":"UnixVolumeExtension",
-                             "mount-point":"/ext/tst"}]}
-}
+{"Volume": {
+    "id": "object-1",
+    "is_mounted": false,
+    "device-name": "disk1",
+    "serial-number": "12345FFA",
+    "extended-properties": {
+        "WindowsVolumeExtension": {"drive-letter": "c"},
+        "UnixVolumeExtension": {"mount-point": "/ext/tst"}
+    }
+}}
