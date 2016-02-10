@@ -41,8 +41,6 @@
                                           "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-Address-Object-Refactoring#refactoring---new-objects"},
                                          {"name":"IPv6 Address", "size":200, "is_new":true,
                                          "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-Address-Object-Refactoring#refactoring---new-objects"},
-                                         {"name":"IP Address", "size":200, "is_new":true,
-                                         "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-Address-Object-Refactoring#refactoring---new-objects"},
                                          {"name":"MAC Address", "size":200, "is_new":true,
                                          "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-Address-Object-Refactoring#refactoring---new-objects"},
                                          {"name":"Email Address", "size":200, "is_new":true,
