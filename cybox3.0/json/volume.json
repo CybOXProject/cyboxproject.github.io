@@ -11,22 +11,22 @@
             "properties": {
                 "is_mounted": {"type": "boolean"},
                 "name": {"type": "string"},
-                "device-path": {"type": "string"},
-                "file-system-type": {"type": "string"},
-                "total-allocation-units": {"type": "number"},
-                "sectors-per-allocation-unit": {"type": "number"},
-                "bytes-per-sector": {"type": "number"},
-                "actual-available-allocation-units": {"type": "number"},
-                "creation-time": {"type": "string"},
-                "serial-number": {"type": "string"},
-                "extended-properties": {"type": "object"}
+                "device_path": {"type": "string"},
+                "file_system_type": {"type": "string"},
+                "total_allocation_units": {"type": "number"},
+                "sectors_per_allocation_unit": {"type": "number"},
+                "bytes_per_sector": {"type": "number"},
+                "actual_available_allocation_units": {"type": "number"},
+                "creation_time": {"type": "string"},
+                "serial_number": {"type": "string"},
+                "extended_properties": {"type": "object"}
             },
             "allOf": [{"$ref": "#/definitions/Object"}]
         },
         "UnixVolumeExtension": {
             "type": "object",
             "properties": {
-                "mount-point": {"type": "string"},
+                "mount_point": {"type": "string"},
                 "options": {"type": "string"}
             },
             "additionalProperties": false
@@ -34,8 +34,8 @@
         "WindowsVolumeExtension": {
             "type": "object",
             "properties": {
-                "drive-letter": {"type": "string"},
-                "drive-type": {"type": "string"}
+                "drive_letter": {"type": "string"},
+                "drive_type": {"type": "string"}
             },
             "additionalProperties": false
         }
