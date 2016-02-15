@@ -5,6 +5,7 @@
     "serial-number": "12345FFA",
     "extended-properties": {
         "WindowsVolumeExtension": {"drive-letter": "c"},
-        "UnixVolumeExtension": {"mount-point": "/ext/tst"}
+        "UnixVolumeExtension": {"mount-point": "/ext/tst"},
+        "CustomExtension":{"foo":"bar"}
     }
 }}

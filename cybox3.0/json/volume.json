@@ -19,14 +19,7 @@
                 "actual-available-allocation-units": {"type": "number"},
                 "creation-time": {"type": "string"},
                 "serial-number": {"type": "string"},
-                "extended-properties": {
-                    "type": "object",
-                    "properties": {
-                        "UnixVolumeExtension": {"$ref": "#/definitions/UnixVolumeExtension"},
-                        "WindowsVolumeExtension": {"$ref": "#/definitions/WindowsVolumeExtension"}
-                    },
-                    "additionalProperties": false
-                }
+                "extended-properties": {"type": "object"}
             },
             "allOf": [{"$ref": "#/definitions/Object"}]
         },
@@ -47,5 +40,5 @@
             "additionalProperties": false
         }
     },
-    "properties":{"Volume":{"$ref": "#/definitions/Volume"}}
+    "properties": {"Volume": {"$ref": "#/definitions/Volume"}}
 }
