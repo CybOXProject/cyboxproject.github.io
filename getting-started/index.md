@@ -9,7 +9,7 @@ understand why it was developed, what problems it is designed to solve, and how
 you can use it to solve those problems. The [About CybOX](/about/)
 page is a great start to understanding this.
 
-## Familiarize yourself with the Data Model and Schemas
+## Familiarize Yourself with the Data Model and Schemas
 In CybOX 2.1, the data model is represented as an XML Schema. The CybOX schemas
 define the canonical CybOX data model and the only official way to share CybOX
 information is through XML instance documents that conform to these schemas.
