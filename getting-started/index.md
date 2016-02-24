@@ -47,4 +47,4 @@ are a couple options of where to look next:
 * If you want to get started creating content, you want the
   [Suggested Practices](/documentation/suggested-practices).
 * Have a question? It may already have an answer in our
-  [FAQs](/faqs).
+  [CybOX Language FAQs](/faqs).
