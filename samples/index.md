@@ -3,7 +3,7 @@ layout: flat
 title: CybOX Samples
 ---
 
-**Note**: all samples are stored in the [CybOX Schemas](https://github.com/CybOXProject/schemas) GitHub repository, and will redirect there.
+**Note**: All samples are stored in the [CybOX Schemas](https://github.com/CybOXProject/schemas) GitHub repository, and will redirect there.
 
 
 |Sample|Description|
@@ -17,7 +17,7 @@ title: CybOX Samples
 |[Email Pattern](https://github.com/CybOXProject/schemas/blob/master/samples/CybOX_Simple_Email_Pattern.xml)|A basic example of the Email Object that shows how it may be used in a pattern to search for an email with particular properties.|
 |[File Instance](https://github.com/CybOXProject/schemas/blob/master/samples/CybOX_Simple_File_Instance.xml)|A basic example of the File Object that shows how it may be used in an instance to capture the properties of a particular email.|
 |[File Pattern](https://github.com/CybOXProject/schemas/blob/master/samples/CybOX_Simple_File_Pattern.xml)|A basic example of the File Object that shows how it may be used in a pattern to search for a file with particular properties.|
-|[File Pattern Regex](https://github.com/CybOXProject/schemas/blob/master/samples/CybOX_Simple_File_Pattern_Regex.xml)|A basic example of the File Object that shows how it may be used in a pattern to search for a file with particular properties using a reguler expression.|
+|[File Pattern Regex](https://github.com/CybOXProject/schemas/blob/master/samples/CybOX_Simple_File_Pattern_Regex.xml)|A basic example of the File Object that shows how it may be used in a pattern to search for a file with particular properties using a regular expression.|
 |[IPv4 Address Instance](https://github.com/CybOXProject/schemas/blob/master/samples/CybOX_IPv4Address_Instance.xml)|A basic example of the Address Object that shows how it may be used in an instance to capture an IPv4 address.|
 |[IPv4 Address Pattern](https://github.com/CybOXProject/schemas/blob/master/samples/CybOX_IPv4Address_Pattern.xml)|A basic example of the Address Object that shows how it may be used in a pattern to search for a particular IPv4 address using a regular expression.|
 |[IPv6 Address Instance](https://github.com/CybOXProject/schemas/blob/master/samples/CybOX_IPv6Address_Instance.xml)|A basic example of the Address Object that shows how it may be used in an instance to capture an IPv6 address.|
