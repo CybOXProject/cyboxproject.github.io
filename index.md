@@ -5,7 +5,6 @@ tagline: A structured language for cyber observables
 no_in_page_title: true
 ---
 
-<h2><strong>Cyber Observable eXpression (CybOX™)</strong></h2>
 
 <div class="alert alert-warning" role="alert">
   <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti" class="alert-link">
