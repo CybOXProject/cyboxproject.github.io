@@ -64,7 +64,7 @@ CybOX provides a common language for describing observable events or objects tha
 
 ### How is CybOX licensed?
 
-See the [Terms of Use](http://cyboxproject.github.io/faqs/tou.html).
+See the [Terms of Use](https://cyboxproject.github.io/tou.html).
 
 ## Relationships to Other Efforts
 
