@@ -66,16 +66,16 @@ title: Documentation
       <a class="btn btn-primary" href="/documentation/tools">Go »</a>
     </div>
     <div class="well">
-      <h4><a href="/faqs">FAQs</a></h4>
+      <h4><a href="/faqs">CybOX Language FAQs</a></h4>
 
-      <p>Frequently asked questions (FAQs) relating to CybOX.</p>
+      <p>Frequently asked questions (FAQs) relating to the CybOX Language.</p>
 
       <a class="btn btn-primary" href="/faqs">Go »</a>
     </div>
     <div class="well">
       <h4><a href="versioning-policy">Versioning Policy</a></h4>
 
-      <p>Details about the CybOX language versioning policy.</p>
+      <p>Details about the CybOX Language versioning policy.</p>
 
       <a class="btn btn-primary" href="/documentation/versioning-policy">Go »</a>
     </div>
