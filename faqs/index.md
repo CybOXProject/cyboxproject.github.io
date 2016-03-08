@@ -124,7 +124,7 @@ See the [CybOX Language Versioning Policy](http://cyboxproject.github.io/documen
 
 ### Are there plans to support other forms of data interchange for CybOX (e.g., JSON, YAML, etc.)?
 
-Yes. An updated formal CybOX implementation-independent specification will be produced, to include guidance for developing technology-specific implementations such as JavaScript Object Notation (JSON), Resource Description Framework (RDF)/Web Ontology Language (OWL), YAML Ain’t Markup Language (YAML), or other implementations. XML was used in the initial release to enable rapid development and support implementation.
+Yes. The next major release of CybOX is under development within OASIS and will include an implementation-independent specification for the language that will enable the specification of multiple serialization bindings if the community desires. The default serialization for the upcoming release will be JSON as specified in a Mandatory To Implement (MIT) serialization binding specification.
 
 ## Using CybOX
 
