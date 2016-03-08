@@ -1,9 +1,9 @@
 ---
 layout: flat
-title: Frequently Asked Questions (FAQs)
+title: CybOX Language Frequently Asked Questions (FAQs)
 ---
 
-## CybOX Language
+Answers to commonly asked questions about the CybOX Language are included below. See the [About CybOX](http://cyboxproject.github.io/about/) page for answers to [general questions](http://cyboxproject.github.io/about/#frequently-asked-questions) about CybOX. 
 
 ### What is an observable by itself (in the simplest case)?
 
@@ -33,17 +33,7 @@ Whereas other CybOX objects characterize the properties of an observable object,
 
 CybOX patterns are a generalization of CybOX content. They allow users and developers to characterize a set, a range, or other generalized characteristics of a cyber observable. For instance, one could use CybOX patterns to describe a URL that matches one of a set of possible URL values. The following XML code exemplifies how this would be implemented in CybOX.
 
-Regular expression (regex) patterns are also possible. For example, the following expresses a pattern on a file where a regular expression is applied to the File_Name field:
-
-```xml
-<cybox:Object id="example:Object-dae8802e-b0df-4989-9ac3-d816b153842b">
-    <cybox:Properties xsi:type="FileObj:FileObjectType">
-        <FileObj:File_Name pattern_type="Regex">bad_file[0-9]{2,5}\.exe</FileObj:File_Name>
-    </cybox:Properties>
-</cybox:Object>
-```
-
-Also see the CybOX Regular Expression Support Version 1.0 document.
+Regular expression (regex) patterns are also possible. See [CybOX Regular Expression Support](http://cyboxproject.github.io/documentation/regex-support/) for details.
 
 ### What type of file hashes does CybOX support?
 
@@ -55,9 +45,9 @@ IDs allow unique referencing of a distinct portion of CybOX content from other p
 
 ### How are Identifiers (IDs) formatted?
 
-IDs within CybOX are XML Qualified names (QNames). A QName consists of a global prefix name (usually in the form of a namespace) followed by a colon followed by local postfix name (e.g. following a namespace declaration of xmlns:foo="http://foo.com", foo:bar would be a Qname).
+IDs within CybOX are XML Qualified names (QNames). A QName consists of a global prefix name (usually in the form of a namespace) followed by a colon followed by local postfix name (e.g., following a namespace declaration of xmlns:foo="http://foo.com", foo:bar would be a Qname).
 
-For CybOX, suggested practice is for the ID prefix to be a globally unique namespace controlled by the producer of the content being identified (this could be an organization, sub-organization, individual, etc.) and for the postfix to be some form of identifier that is unique within the prefix namespace. This combination guarantees that CybOX IDs are globally unique. ID specifiers are free to use whatever format they desire for the postfix (to enable flexibility among differing use cases) but suggested practice is to use the format ‘[hint] - guid’ where [hint] is a simple appellation labeling the type of construct being identified (e.g. ‘MITRE:Object - 869cf174-9dfb-42ef-b816-4356ce2bce83’ where the MITRE namespace alias has been previously declared).
+For CybOX, suggested practice is for the ID prefix to be a globally unique namespace controlled by the producer of the content being identified (this could be an organization, sub-organization, individual, etc.) and for the postfix to be some form of identifier that is unique within the prefix namespace. This combination guarantees that CybOX IDs are globally unique. ID specifiers are free to use whatever format they desire for the postfix (to enable flexibility among differing use cases) but suggested practice is to use the format ‘[hint] - guid’ where [hint] is a simple appellation labeling the type of construct being identified (e.g., ‘MITRE:Object - 869cf174-9dfb-42ef-b816-4356ce2bce83’ where the MITRE namespace alias has been previously declared).
 
 ### When should I define Identifiers (IDs) for content?
 
@@ -87,7 +77,7 @@ For example, in the xml excerpt below, the xsi:type has been set to FileObj:File
 
 ### How can a new Object Schema be added to CybOX?
 
-In order to add a new Object Schema to CybOX, one must first create a schema file. Next, create a type that extends the ObjectPropertiesType or another defined Object type (e.g., FileObjectType) within the schema file. Third, populate the child type with the information you are trying to capture about some observable, and, finally, it will work natively with CybOX. The simplest way to do this may to use an existing CybOX Object as a template. If you want to share it with the larger CybOX Community, send it to the CybOX Community Email Discussion List for review and vetting, and then it can become part of the core CybOX distribution, or it can remain a private object.
+In order to add a new Object Schema to CybOX, one must first create a schema file. Next, create a type that extends the ObjectPropertiesType or another defined Object type (e.g., FileObjectType) within the schema file. Third, populate the child type with the information you are trying to capture about some observable, and, finally, it will work natively with CybOX. The simplest way to do this may to use an existing CybOX Object as a template. If you want to share it with the larger CybOX Community, send it to the [Cyber Threat Intelligence (CTI) Technical Committee (TC) Public Comment List](http://www.oasis-open.org/committees/comments/form.php?wg_abbrev=cti) for review and vetting, and then it can become part of the core CybOX distribution, or it can remain a private object.
 
 ### What is the "condition" attribute applied to object properties?
 
@@ -114,7 +104,7 @@ The Object structure in CybOX has a Related Objects substructure or child. Withi
 
 ### How do objects work inside of an action in CybOX?
 
-An action in the operational cyber domain usually acts on or uses an object (e.g., create file); the CybOX Language supports this usage by offering an Associated_Object construct within the Action type. The Associated_Objects construct enables the specification of cyber Objects relevant to (e.g. initiating or affected by) this Action. Any number of Associated_Objects may be specified.
+An action in the operational cyber domain usually acts on or uses an object (e.g., create file); the CybOX Language supports this usage by offering an Associated_Object construct within the Action type. The Associated_Objects construct enables the specification of cyber Objects relevant to (e.g., initiating or affected by) this Action. Any number of Associated_Objects may be specified.
 
 The following is an example of an Action with an Associated_Object.
 
@@ -130,18 +120,7 @@ CDATA is character data, and it is used to tell the XML parser to interpret info
 
 ### How is CybOX versioned?
 
-The CybOX Language schemas fall into four broad categories:
-
-* CybOX Core — This consists of the cybox_core.xsd and cybox_common.xsd schemas
-* CybOX Objects — This consists of all the Object schema files located within the "objects" directory
-* CybOX Vocabularies — This consists of the cybox_default_vocabularies.xsd schema
-* CybOX Extensions — This consists of all the schema files located within the "extensions" directory
-
-The version number for each is formatted as: ‘Major.Minor.Update’.
-
-The CybOX Core is always versioned in lock-step with the CybOX Language, whereas CybOX Objects are versioned independently of each other and independently of the CybOX Language. Each version of the CybOX Language identifies the list of supported Object schemas and the version for each of these Object schemas. Versioning of CybOX vocabularies, in turn, are not tied to CybOX Language versioning in any way. However, the CybOX Language will cite current CybOX vocabulary versions with each new CybOX release. As CybOX extensions are structured representations of data using externally defined schemas, they are also versioned independent from the CybOX Language. A given release of the CybOX Language contains recommendations as to the CybOX Extension schemas to use for certain purposes.
-
-Also see the CybOX Language Versioning Policy.
+See the [CybOX Language Versioning Policy](http://cyboxproject.github.io/documentation/versioning-policy/).
 
 ### Are there plans to support other forms of data interchange for CybOX (e.g., JSON, YAML, etc.)?
 
@@ -159,11 +138,11 @@ Currently available tools/utilities are hosted in the [CybOXProject GitHub Repos
 
 A CybOX release includes the new version of the CybOX Core schemas, the latest versions of the independently-versioned CybOX Object schemas, the latest versions of the independently-versioned CybOX vocabulary schemas, and references to the relevant version CybOX extension schemas.
 
-Visit the CybOX Language section for additional information and the latest release.
+See [Releases](http://cyboxproject.github.io/releases/2.1/) for additional information and the latest release.
 
 ### Where can I find examples of CybOX data? Are there any CybOX repositories?
 
-Some examples of CybOX data are included in the current release of CybOX in the CybOX Language section. Additional examples will be produced and posted on the website, included in the language specification, and included in the code repository. At present, there are no repositories of CybOX data, nor are there any CybOX community plans to establish one. Community members interested in hosting a CybOX data repository are strongly encouraged to do so.
+Some examples of CybOX data are included in the [current release](http://cyboxproject.github.io/releases/2.1/) of CybOX. Additional examples will be produced and posted on this website, included in the language specification, and included in the code repository. At present, there are no repositories of CybOX data, nor are there any CybOX Community plans to establish one. Community members interested in hosting a CybOX data repository are strongly encouraged to do so.
 
 ### How do I represent an IP Address in CybOX? What about different kinds of IP addresses (IPv4, IPv6, CIDR, etc.)?
 
@@ -233,7 +212,7 @@ In CybOX, the FileObject object is used to characterize a file. FileHash is one 
 
 ### How do I represent an Email?
 
-CybOX uses the EmailMessageObj object to represent an email, as shown in the following example.
+CybOX uses the EmailMessageObj object to represent an email, as shown [here](http://cybox.mitre.org/language/version2.1/xsddocs/objects/Email_Message_Object.html).
 
 ### If I only want to represent a File (or an Email, or a Process, or a device, etc.), do I need to use all of CybOX?
 
