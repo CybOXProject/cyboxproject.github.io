@@ -31,7 +31,7 @@ Whereas other CybOX objects characterize the properties of an observable object,
 
 ### How do CybOX patterns work? Can I define regex patterns on various content?
 
-CybOX patterns are a generalization of CybOX content. They allow users and developers to characterize a set, a range, or other generalized characteristics of a cyber observable. For instance, one could use CybOX patterns to describe a URL that matches one of a set of possible URL values. The following XML code exemplifies how this would be implemented in CybOX.
+CybOX patterns are a generalization of CybOX content. They allow users and developers to characterize a set, a range, or other generalized characteristics of a cyber observable. For instance, one could use CybOX patterns to describe a URL that matches one of a set of possible URL values.
 
 Regular expression (regex) patterns are also possible. See [CybOX Regular Expression Support](http://cyboxproject.github.io/documentation/regex-support/) for details.
 
