@@ -3,7 +3,7 @@ layout: flat
 title: CybOX Language Frequently Asked Questions (FAQs)
 ---
 
-Answers to commonly asked questions about the CybOX Language are included below. See the [About CybOX](http://cyboxproject.github.io/about/) page for answers to [general questions](http://cyboxproject.github.io/about/#frequently-asked-questions) about CybOX. 
+Answers to commonly asked questions about the [CybOX Language](http://cyboxproject.github.io/releases/2.1/) are included below. See the [About CybOX](http://cyboxproject.github.io/about/) page for answers to [general questions](http://cyboxproject.github.io/about/#frequently-asked-questions) about CybOX. 
 
 ### What is an observable by itself (in the simplest case)?
 
