@@ -61,7 +61,7 @@ the following fields:
 
 ### 3. Map Fields to CybOX Data Types
 
-The following represents a notional mapping of fields to CybOX data types
+The following represents a notional mapping of fields to CybOX data types:
 
 * **Address value:** `StringObjectPropertyType`
   * An IPv4 address is typically represented in a dotted-decimal format which
@@ -496,13 +496,12 @@ The full XML instance document is detailed below.
 ## Publishing
 
 Have you written a CybOX Object and want to have it included in the CybOX
-Language? Email cybox@mitre.org and let us know about
-it!
+Language? Simply subscribe to the open [CTI Users List](http://cyboxproject.github.io/community/#cti-users-list) or the [CTI TC Public Comment List](http://cyboxproject.github.io/community/#public-comment-list), and make your submission.
 
 
 ## Further Reading
 
-* [CybOX Language Website](http://cybox.mitre.org)
+* [CybOX Language Current Release](http://cyboxproject.github.io/releases/2.1)
 * [Getting Started With CybOX](https://github.com/CybOXProject/schemas/wiki/Getting-Started)
 * [CybOX Authoring Suggested Practices](https://github.com/CybOXProject/schemas/wiki/Suggested-Practices)
 * [STIX Documentation Website](http://stixproject.github.io)
@@ -515,5 +514,4 @@ it!
 Let us know if there are ways we can improve this documentation! If there is
 anything we didn't explain well (or completely left out on accident) tell us by
 submitting an issue to the [CybOX schema issue
-tracker](https://github.com/CybOXProject/schemas/issues) or send us an email at
-cybox@mitre.org.
+tracker](https://github.com/CybOXProject/schemas/issues), or by subscribing and submitting comments to the [CTI Users List](http://cyboxproject.github.io/community/#cti-users-list) or the [CTI TC Public Comment List](http://cyboxproject.github.io/community/#public-comment-list).
