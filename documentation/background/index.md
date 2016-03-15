@@ -4,7 +4,7 @@ title: CybOX Background
 ---
 
 This page describes some basic information about XML Schema and the CybOX
-language that is necessary to understanding [how to create a new CybOX
+Language that is necessary to understanding [how to create a new CybOX
 object](../creating-objects).
 
 
@@ -530,7 +530,7 @@ expression is applied to the `File_Name` field:
 ## CybOX Object Versioning
 
 The [CybOX Language Versioning
-Policy](http://cybox.mitre.org/language/versioning_policy.html) details the
+Policy](http://cyboxproject.github.io/documentation/versioning-policy/) details the
 current methodology for determining whether a new revision will require a major
 version change, minor version change, or a version update, and how version
 information is represented and conveyed in the CybOX Language.
