@@ -142,7 +142,9 @@ See [Releases](http://cyboxproject.github.io/releases/2.1/) for additional infor
 
 ### Where can I find examples of CybOX data? Are there any CybOX repositories?
 
-Some examples of CybOX data are included in the [current release](http://cyboxproject.github.io/releases/2.1/) of CybOX. Additional examples will be produced and posted on this website, included in the language specification, and included in the code repository. At present, there are no repositories of CybOX data, nor are there any CybOX Community plans to establish one. Community members interested in hosting a CybOX data repository are strongly encouraged to do so.
+See [CybOX Samples](http://cyboxproject.github.io/samples/).
+
+At present, there are no repositories of CybOX data, nor are there any CybOX Community plans to establish one. Community members interested in hosting a CybOX data repository are strongly encouraged to do so.
 
 ### How do I represent an IP Address in CybOX? What about different kinds of IP addresses (IPv4, IPv6, CIDR, etc.)?
 
