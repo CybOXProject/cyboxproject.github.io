@@ -11,7 +11,7 @@ CybOX adheres to the following principles for scoping of informational content:
 
 Flexible extension mechanisms are incorporated into CybOX to support this sort of use by use case domain-specific standards and solutions.
 
-The following table lists a sampling of some of the current use cases targeted by CybOX and some of the primary CybOX-leveraging use case domain-specific standards and solutions available for each use case.
+The following table lists a sampling of some of the current use cases targeted by CybOX, and some of the primary CybOX-leveraging use case domain-specific standards and solutions available for each use case.
 
 |Supported Use Case|Relevant Process|Domain Specific Standard|
 |------------------|----------------|------------------------|
@@ -24,7 +24,7 @@ The following table lists a sampling of some of the current use cases targeted b
 |Prioritize existing attack patterns based on tactical reality|Security Testing and Secure Development|CAPEC, STIX|
 |Characterize malware behavior|Malware Analysis|MAEC|
 |Guide malware analysis utilizing attack patterns|Malware Analysis|MAEC, CAPEC|
-|Detect malware effects|AttackDetection and Incident Response/Management|[Open Vulnerability and Assessment Language (OVAL®)](http://oval.mitre.org/), MAEC, STIX|
+|Detect malware effects|AttackDetection and Incident Response/Management|[Open Vulnerability and Assessment Language (OVAL®)](https://oval.cisecurity.org/), MAEC, STIX|
 |Enable collaborative attack indicator sharing|Information Sharing||
 |Empower and guide incident management utilizing attack patterns and malware characterizations|Incident Response/Management|STIX, CAPEC, MAEC, CybOX|
 |Enable consistent, useful and automation-capable incident alerts|Incident Response/Management|STIX, MAEC, CAPEC|
