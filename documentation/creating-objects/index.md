@@ -17,7 +17,7 @@ Language and XML Schema authoring resources.
 
 ***
 
-**Use the following steps to create and use a new CybOX Object.**
+**Use the following steps to create and use a new CybOX Object:**
 
 1. Decide what it is you want to represent in CybOX.
 2. Determine what fields/attributes can be used to characterize that CybOX
@@ -78,7 +78,7 @@ The following represents a notional mapping of fields to CybOX data types:
     patterning](../background#cybox-patterning) capabilities as authors would
     likely not define regular expressions for category types, ranges of
     categories, boundaries on categories (e.g., `GreaterThan`) or lists of
-    categories. As such, we will record this data within an XML attribute
+    categories. As such, we will record this data within an XML attribute.
 * **Source and Destination flags:** `xs:boolean XML attributes`
   * Like the `Address category` field mentioned above, this field does not lend
     itself to CybOX Patterning, as the flags will only contain `boolean` data. 
@@ -419,7 +419,7 @@ CybOX Objects, types, and fields. The following XML Schema shows the
 ***
 
 
-### 8. Use the new object!
+### 8. Use the New Object!
 
 Inserting a custom object into an instance XML document is done through the
 same process as one would follow when inserting a core CybOX Object. The
