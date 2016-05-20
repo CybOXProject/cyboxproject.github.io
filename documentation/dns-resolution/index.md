@@ -3,7 +3,7 @@ layout: flat
 title: Capturing DNS Resolution
 ---
 
-CybOX supports a number of Objects and associated methods related to the capture of domain name system (DNS) resolution information. This write-up is intended to provide guidance on the appropriate use case for when each Object and/or method should be used.
+CybOX supports a number of Objects and associated methods related to the capture of domain name system (DNS) resolution information. This page is intended to provide guidance on the appropriate use case for when each Object and/or method should be used.
 
 ## Capturing DNS Resource Records
 
@@ -60,8 +60,8 @@ This XML example demonstrates how an observed instance of a DNS Query message fo
 ### Capturing DNS Query Activity
 
 The activity around a DNS Query involves sending a request to a DNS server to retrieve a DNS record regarding a particular domain name, and thus can be thought of as a dynamic entity with two discrete components: 
-* The query message component that contains the domain name and type of DNS record requested (e.g., A, MX, etc.)
-* The response component that contains the requested DNS record information
+* The query message component that contains the domain name and type of DNS record requested (e.g., A, MX, etc.).
+* The response component that contains the requested DNS record information.
 
 Therefore, as a dynamic entity, the activity around a DNS query can best be represented in CybOX through the use of an [Action](http://stixproject.github.io/data-model/1.1.1/cybox/ActionType/). In order to describe the nature of the action in a standard fashion, the [Action](http://stixproject.github.io/data-model/1.1.1/cybox/ActionType/) instance should set its `Name` field to a value of `Send DNS Query`, from the corresponding [Action Name Vocabulary](http://stixproject.github.io/data-model/1.1.1/cyboxVocabs/ActionNameVocab-1.1/). 
 
@@ -114,11 +114,11 @@ This XML example demonstrates how an observed instance of the activity around a 
 
 Basic DNS resolution can be thought of as a simple abstraction of the DNS record information that may result from a DNS query, but without necessarily knowing the specifics of the query itself or when it was performed. As such, it typically involves:
 
-* The domain name being resolved
-* The IP address(-es) to which the domain name resolves, as obtained from a DNS record
-* The date/time that the resolution was recorded (but not necessarily when the corresponding DNS query was performed)
+* The domain name being resolved.
+* The IP address(es) to which the domain name resolves, as obtained from a DNS record.
+* The date/time that the resolution was recorded (but not necessarily when the corresponding DNS query was performed).
 
-Therefore, the use of the [DNS Query Object](http://stixproject.github.io/data-model/1.1.1/DNSQueryObj/DNSQueryObjectType/) and [DNS Record Object](http://stixproject.github.io/data-model/1.1.1/DNSRecordObj/DNSRecordObjectType/) would be unnecessarily verbose for this case, since we do not need to capture any metadata about the record(s) returned. Instead, the capture of such basic DNS resolution can be accomplished through the use of the [Domain Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) and [Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/), along with a simple relationship - specifically, the "Resolved_To" relationship from the [Object Relationship Vocabulary](http://stixproject.github.io/data-model/1.1.1/cyboxVocabs/ObjectRelationshipVocab-1.1/).
+Therefore, the use of the [DNS Query Object](http://stixproject.github.io/data-model/1.1.1/DNSQueryObj/DNSQueryObjectType/) and [DNS Record Object](http://stixproject.github.io/data-model/1.1.1/DNSRecordObj/DNSRecordObjectType/) would be unnecessarily verbose for this case, since we do not need to capture any metadata about the record(s) returned. Instead, the capture of such basic DNS resolution can be accomplished through the use of the [Domain Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) and [Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/), along with a simple relationship -- specifically, the "Resolved_To" relationship from the [Object Relationship Vocabulary](http://stixproject.github.io/data-model/1.1.1/cyboxVocabs/ObjectRelationshipVocab-1.1/).
 
 ### Example
 This XML example demonstrates how an observed instance of basic DNS resolution for `mitre.org` would be captured and represented with the [Domain Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) and [Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/), in conjunction with a simple relationship. Note that the time that this resolution was recorded is captured with the `Observable_Source/Time/Start_Time` field.
@@ -184,7 +184,7 @@ There are a number of patterns related to DNS queries and records that one may w
 
 ### Attempted Domain Resolution
 
-One of the most common patterns around DNS revolves around the attempted resolution of a particular domain via DNS query, which could be used to test for malware beaconing to a command and control (C2) domain, for instance. In such cases, one typically does not care about whether the resolution was successful or what address(-es) it resolved to; instead, the fact that the resolution was attempted at all is enough to trigger the pattern. 
+One of the most common patterns around DNS revolves around the attempted resolution of a particular domain via DNS query, which could be used to test for malware beaconing to a command and control (C2) domain, for instance. In such cases, one typically does not care about whether the resolution was successful or what address(es) it resolved to; instead, the fact that the resolution was attempted at all is enough to trigger the pattern. 
 
 Since this pattern revolves around an explicit DNS query and implicitly associated network traffic, it makes the most sense to use the [DNS Query Object](http://stixproject.github.io/data-model/1.1.1/DNSQueryObj/DNSQueryObjectType/), as it is designed to represent discrete queries in this fashion. As with the Full DNS Query use case, we'll want to capture the QName value that corresponds to the domain name being resolved; the difference in this case is that we'll want to set the "condition" attribute on the `URIObj:Value` field to denote that we're specifying a pattern. Unlike the DNS Query use case, we shouldn't populate any other fields, since we care only about the attempted resolution itself and not the associated record data.
 
@@ -206,20 +206,20 @@ This XML example demonstrates how a pattern for attempted DNS resolution for `so
 </cybox:Observable>
 ```
 
-### Domain Resolution to Specific Address(-es)
+### Domain Resolution to Specific Address(es)
 
 Another common pattern relating to DNS resolution involves DNS records that may indicate a particular domain name resolving to a specific address or set of addresses, which could be used to test whether a particular DNS cache has been poisoned, for instance. In such cases, one typically does not care about the particular DNS query that produced the domain/address mapping, but rather the existence of the DNS record and/or domain->IP address mapping itself.
 
 Since domain name resolution to a specific address or set of addresses can be considered in a number of contexts, we'll refer to two different scenarios here:
 
-* Generic domain name resolution to a specific address or set of addresses
-* DNS records that indicate a domain resolving to a specific address or set of addresses as part of a DNS cache
+* Generic domain name resolution to a specific address or set of addresses.
+* DNS records that indicate a domain resolving to a specific address or set of addresses as part of a DNS cache.
 
 Patterns for the first scenario, that of generic domain name resolution to a specific address or set of addresses, can be expressed through the use of the [Domain Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) and [Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/), along with a simple relationship. This is almost identical to the Capturing Basic DNS Resolution use case, with the sole exception that we'll need to set the `condition` fields on the Domain and Address Objects in order to denote that we're specifying a pattern and not an instance.
 
 Patterns for the second scenario, that of DNS records that indicate domain name resolution to a specific address or set of addresses in a DNS cache, can be expressed through the use of the [DNS Cache Object](http://stixproject.github.io/data-model/1.1.1/DNSCacheObj/DNSCacheObjectType/). This is very similar to the Capturing DNS Cache Information use case, with the exception that we'll need to set the `condition` fields on the `URIObj:Value` field and `AddressObj:Address_Value` field in order to denote that we're specifying a pattern and not an instance. Populating the other fields, such as `TTL`, is optional depending on the particular use case and accordingly whether we care about detecting on these values as well as the domain name --> address resolution.
 
-#### Example - Generic Domain Name Resolution --> Address(-es)
+#### Example - Generic Domain Name Resolution --> Address(es)
 
 This XML example demonstrates how a pattern for generic DNS resolution for `baddomain.net` to `192.168.1.26` would be captured and represented with the [Domain Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) and [Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/), in conjunction with a simple relationship. Note how the `condition` field is set on each of the allowable fields.
 
@@ -241,7 +241,7 @@ This XML example demonstrates how a pattern for generic DNS resolution for `badd
 </cybox:Observable>
 ```
 
-#### Example - DNS Cache Domain Name Resolution --> Address(-es)
+#### Example - DNS Cache Domain Name Resolution --> Address(es)
 
 This XML example demonstrates how a pattern for a DNS cache entry for `someotherdomain.com` that resolves to `192.168.0.2` would be captured and represented with the [DNS Cache Object](http://stixproject.github.io/data-model/1.1.1/DNSCacheObj/DNSCacheObjectType/). Note how the `condition` field is set on each of the allowable fields.
 
