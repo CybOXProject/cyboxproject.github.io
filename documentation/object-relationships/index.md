@@ -1410,13 +1410,13 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File]|[File]|A file contains another file inside of it (e.g. appended to it).|
+|[File]|[File]|A file contains another file inside of it (e.g., appended to it).|
 |[Archive File]|[File]|An archive file contains another file inside of it.|
 |[Email Message]|[File]|An email message contains a file as an attachment.|
 |[Email Message]|[Link]|An email message contains a link within its message body.|
 |[URI]|[Domain Name]|A URL contains a domain name as part of its structure.|
 |[DNS Record]|[Address]|A DNS record contains an IP address that resolves to the domain identified by the record.|
-|[ARP Cache]|[Address]|An ARP cache contains a physical (i.e. MAC) address or IP address in one of its entries.|
+|[ARP Cache]|[Address]|An ARP cache contains a physical (i.e., MAC) address or IP address in one of its entries.|
 |[URL History]|[URI]|A URL history cache contains a particular URL in one of its entries.|
 |[Win Registry Key]|[Win Registry Key]|A Windows registry key contains another Windows registry key, as a subkey.|
 
@@ -1452,13 +1452,13 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[File]|[File]|A file is contained within another file (e.g. appended to it).|
+|[File]|[File]|A file is contained within another file (e.g., appended to it).|
 |[File]|[Archive File]|A file is contained within an archive file.|
 |[File]|[Email Message]|A file is contained within an email message, as an attachment.|
 |[Link]|[Email Message]|A link is contained within the body of an email message.|
 |[Domain Name]|[URI]|A domain name is contained within the structure of a URL.|
 |[Address]|[DNS Record]|A IP address is contained within a DNS record that resolves to the domain identified by the record.|
-|[Address]|[ARP Cache]|A physical (i.e. MAC) address or IP address is contained within one of the entries of an ARP cache.|
+|[Address]|[ARP Cache]|A physical (i.e., MAC) address or IP address is contained within one of the entries of an ARP cache.|
 |[URI]|[URL History]|A URL is contained within one of the entries of a URL history cache.|
 |[Win Registry Key]|[Win Registry Key]|A Windows registry key is contained within another Windows registry key, as a subkey.|
 
@@ -2459,7 +2459,7 @@ n/a
 
 ## <a name="Resolved_To"></a> "Resolved_To"
 
-The **source Object** *Resolved to* the **related Object**.  Used for expressing resolution between network naming structures (e.g. domain names) and IP addresses, in either direction.
+The **source Object** *Resolved to* the **related Object**.  Used for expressing resolution between network naming structures (e.g., domain names) and IP addresses, in either direction.
 
 ### Inverse
 
@@ -2574,8 +2574,8 @@ n/a
 
 |Source Object|Related Object|Description|
 |-------------|--------------|-----------|
-|[Domain Name]|[Domain Name]|A domain name is a fully-qualified domain name for another domain name.|
-|[Domain Name]|[Hostname]|A domain name is a fully-qualified domain name for a hostname.|
+|[Domain Name]|[Domain Name]|A domain name is a fully qualified domain name for another domain name.|
+|[Domain Name]|[Hostname]|A domain name is a fully qualified domain name for a hostname.|
 
 ### Example
 
