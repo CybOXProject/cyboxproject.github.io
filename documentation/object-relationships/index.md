@@ -2564,7 +2564,7 @@ The **source Object** is a *Supra-domain* of the **related Object**.  Used for e
 
 ## <a name="FQDN_Of"></a> "FQDN_Of"
 
-The **source Object** is the *Fully-qualified domain name* of the **related Object**.  Used for expressing the fact that a domain name represents a fully-qualified domain name for a domain or hostname.
+The **source Object** is the *Fully-qualified domain name* of the **related Object**.  Used for expressing the fact that a domain name represents a fully qualified domain name for a domain or hostname.
 
 ### Inverse
 
