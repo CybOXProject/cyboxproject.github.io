@@ -25,7 +25,7 @@ The following table lists a sampling of some of the current use cases targeted b
 |Characterize malware behavior|Malware Analysis|MAEC|
 |Guide malware analysis utilizing attack patterns|Malware Analysis|MAEC, CAPEC|
 |Detect malware effects|AttackDetection and Incident Response/Management|[Open Vulnerability and Assessment Language (OVAL®)](https://oval.cisecurity.org/), MAEC, STIX|
-|Enable collaborative attack indicator sharing|Information Sharing||
+|Enable collaborative attack indicator sharing|Information Sharing|STIX|
 |Empower and guide incident management utilizing attack patterns and malware characterizations|Incident Response/Management|STIX, CAPEC, MAEC, CybOX|
 |Enable consistent, useful and automation-capable incident alerts|Incident Response/Management|STIX, MAEC, CAPEC|
 |Enable automatic application of mitigations specified in attack patterns|Incident Response/Management|STIX|
