@@ -110,4 +110,4 @@ the set defined above, the `@regex_syntax` attribute can be leveraged to identif
 syntax, library, or software required to properly evaluate it (e.g., “PCRE v8.32” or “Java 1.6”). By setting
 the `@regex_syntax` attribute, the author accepts any adverse effects caused by the deviation with
 respect to interoperability and compatibility. Omitting this attribute or setting it with an empty value
-declares alignment with CybOX Language Specification.
+declares alignment with the [CybOX Language Specification](http://cyboxproject.github.io/releases/2.1/).
