@@ -61,7 +61,7 @@ certificates into CybOX Observable documents.
 ### CybOX-to-OVAL
 The CybOX-to-OVAL utility is written in Python and translates CybOX Observable
 documents, containing CybOX Objects to the 
-[Open Vulnerability and Assessment Language](http://oval.mitre.org) (OVAL).
+[Open Vulnerability and Assessment Language (OVAL™)](https://oval.cisecurity.org/).
 
 * [Source Code](https://github.com/CybOXProject/cybox-to-oval)
 
@@ -69,7 +69,7 @@ documents, containing CybOX Objects to the
 
 ### Python
 
-The CybOX project currently provides bindings and higher-level APIs to the CybOX language through the python-cybox project.
+The CybOX project currently provides bindings and higher-level APIs to the CybOX Language through the python-cybox project.
 
 * [Download](https://pypi.python.org/pypi/cybox)
 * [Source Code](https://github.com/CybOXProject/python-cybox)
@@ -79,11 +79,11 @@ The CybOX project currently provides bindings and higher-level APIs to the CybOX
 The tools and libraries listed below are developed by CybOX community members
 and offer the ability to parse, create, edit, or otherwise make use of CybOX
 documents. We would love to have more entries in this section, so if you'd like
-to see yours included, please let us know by emailing use at cybox@mitre.org!
+to see yours included, please let us know by by subscribing and submitting comments to the [CTI Users List](http://cyboxproject.github.io/community/#cti-users-list) or the [CTI TC Public Comment List](http://cyboxproject.github.io/community/#public-comment-list)!
 
 ## IOCextractor
 The IOCextractor is a Python utility developed by Stephen Brannon which
-includes support for exporting CybOX Observables. It's documentation states the
+includes support for exporting CybOX Observables. Its documentation states the
 following:
 
 > IOC (Indicator of Compromise) Extractor: a program to help extract IOCs from
