@@ -4,7 +4,7 @@ title: Suggested Practices
 ---
 
 This page contains suggested practices for developing and consuming CybOX
-content. There's a [similar page](https://stixproject.github.io/documentation/suggested-practices/) for STIX.
+content. There's a [similar page](https://stixproject.github.io/documentation/suggested-practices/) for Structured Threat Information eXpression (STIX™).
 
 Note that these are simply suggested practices. In many cases, operational or
 technical concerns may prohibit you from implementing them or they may just not
@@ -104,7 +104,7 @@ When creating references, you will typically use the `idref` attribute:
 <cybox:Related_Object idref="acme:mutexobj-3c1221bd-2037-45ec-8129-4ba8d791e86b" />
 ```
 
-In a VERY limited set of circumstances (e.g. when specifying Attachments or Links within the Email_Message Object) you will use the `object_reference` attribute rather than `idref`. The `object_reference` field, like the `idref` field, specifies a unique ID reference to an Object defined elsewhere. Unlike the general use of `idref` which references the full Object, the `object_reference` field allows for the re-use of the defined Properties of one Object within another, without allowing the embedding of the full Object in the location from which it is being referenced. Thus, this ID reference is intended to resolve to just the Properties of the Object that it points to. Situations where `object_reference` should be used rather than `idref` are explicitly documented within the object property schemas that utilize this approach.
+In a VERY limited set of circumstances (e.g., when specifying Attachments or Links within the Email_Message Object), you will use the `object_reference` attribute rather than `idref`. The `object_reference` field, like the `idref` field, specifies a unique ID reference to an Object defined elsewhere. Unlike the general use of `idref` which references the full Object, the `object_reference` field allows for the re-use of the defined Properties of one Object within another, without allowing the embedding of the full Object in the location from which it is being referenced. Thus, this ID reference is intended to resolve to just the Properties of the Object that it points to. Situations where `object_reference` should be used rather than `idref` are explicitly documented within the object property schemas that utilize this approach.
 
 ```xml
 <cybox:Observable id="example:Observable-db066ea1-925b-43df-a341-f513ece3ae94">
@@ -127,11 +127,11 @@ or elements in the reference element.
 ## Using Vocabularies
 Many places in CybOX use controlled vocabularies to represent data. When
 possible, you should use the vocabularies included in the CybOX defaults. If
-necessary you can use your own vocabulary or even use strings outside of any
+necessary, you can use your own vocabulary or even use strings outside of any
 vocabularies.
 
 If you do this to add values that you think might be useful for other CybOX
-users, you should let us know so we can consider adding it to the default
+users, you should let us know by subscribing and submitting comments to the [CTI Users List](http://cyboxproject.github.io/community/#cti-users-list) or the [CTI TC Public Comment List](http://cyboxproject.github.io/community/#public-comment-list) so we can consider adding it to the default
 vocabulary.
 
 ## Creating Timestamps
@@ -162,7 +162,7 @@ CybOX Objects schemas define sets of properties for common cyber objects.
 
 To support practical use, CybOX provides an extensive set of Object property specifications by default.
 
-This predefined set includes a broad range of object types across the cyber domain (network, host, files, memory, devices, etc.) as well as objects of varying levels of specificity/abstraction intended for differing use cases.
+This predefined set includes a broad range of object types across the cyber domain (network, host, files, memory, devices, etc.), as well as objects of varying levels of specificity/abstraction intended for differing use cases.
 
 The approach to [defining Objects](../creating-objects) (especially those across varying levels of specificity/abstraction) is intended to pursue architectural consistency and reuse by having more complex or specific variations on Objects leverage other more abstract existing Objects for sets of properties.
 
@@ -172,14 +172,14 @@ There are two primary variations of this:
  * For example, **File -> Win File -> Win EXE File** where CybOX defines a basic [File Object] ({{site.stix_url}}/FileObj/FileObjectType) with general file properties applicable across platforms, a more specific [Win_File Object] ({{site.stix_url}}/WinFileObj/WindowsFileObjectType) that extends the general File Object and adds Windows-specific file properties, and an even more specific [Win_Executable_File Object] ({{site.stix_url}}/WinExecutableFileObj/WindowsExecutableFileObjectType) which extends the Win_File Object and adds properties for executable files under Windows.
 * Objects that leverage other Objects to define more specific properties for differing and more specialized use cases.
   * For example, the set of Objects specified that can contain an **IP Address**.
-    * [Address Object] ({{site.stix_url}}/AddressObj/AddressObjectType) enables the specification of a particular IP Address (or other type of address) value and its type (e.g. ipv4-addr) without any other context. This can be used when you desire to characterize an IP Address but not to assert any given context for where you might find it (e.g. it may appear in any of a wide variety of logs). This Object also provides consistent specification of address properties for its use on its own or by more specific Objects that need to characterize addresses within more specific contexts.
+    * [Address Object] ({{site.stix_url}}/AddressObj/AddressObjectType) enables the specification of a particular IP Address (or other type of address) value and its type (e.g., ipv4-addr) without any other context. This can be used when you desire to characterize an IP Address but not to assert any given context for where you might find it (e.g., it may appear in any of a wide variety of logs). This Object also provides consistent specification of address properties for its use on its own, or by more specific Objects that need to characterize addresses within more specific contexts.
     * [Socket_Address Object] ({{site.stix_url}}/SocketAddressObj/SocketAddressObjectType) enables the specification of a particular IP Address (or Hostname) and Port pairing. This obviously lets you characterize a more specific context for an IP Address but still leverages the AddressObjectType for its IP Address structure yielding consistency across the two Objects.
     * [Network_Connection Object] ({{site.stix_url}}/NetworkConnectionObj/NetworkConnectionObjectType) enables the specification of properties related to a network connection including Layer3, Layer4 and Layer7 details as well as details of the source socket and destination socket of the connection. This object leverages the SocketAddressType for its source and destination socket structures. This enables the characterization of very specific contextual details around an IP Address.
  
 
 **It is suggested practice to always utilize the most specific CybOX Object possible for the context you are looking to convey and based on the properties you need to represent.**
 
-* For example, if you know you are looking to describe a situation of network traffic to a particular IP Address, use the Network_Connection Object but if all you know is that an IP Address was seen or might be seen but you have no further context, use the Address Object. This also applies to the use of platform-agnostic Objects (e.g. File) and their derived platform-specifc Objects (e.g. Win_File). If you need to characterize properties from a more specific variation of an Object (e.g. the SID of a file), utilize that Object (e.g. Win_File) otherwise use the simplest version available that supports the properties you need to characterize.
+* For example, if you know you are looking to describe a situation of network traffic to a particular IP Address, use the Network_Connection Object but if all you know is that an IP Address was seen or might be seen but you have no further context, use the Address Object. This also applies to the use of platform-agnostic Objects (e.g., File) and their derived platform-specifc Objects (e.g., Win_File). If you need to characterize properties from a more specific variation of an Object (e.g., the SID of a file), utilize that Object (e.g., Win_File) otherwise use the simplest version available that supports the properties you need to characterize.
 
 **One clear exception to this is if conformance to a specific language Profile is required and that Profile restricts the set of available objects or directly specifies a particular Object to be used.**
 
@@ -196,21 +196,21 @@ To encourage consistency in the characterization of relationships between Object
 
 **Desired Association (Network-centric Object relationships)**|**Source Object**|**Related Object**|**"Relationship" Vocabulary Value**
 ---------------------- | ---------- | ---------- | -----------
-A network naming structure (e.g. Domain or Hostname) and an IP Address<br/> it resolves to | [Domain_Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) | [Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/) |  “**Resolved_To**”
+A network naming structure (e.g., Domain or Hostname) and an IP Address<br/> it resolves to | [Domain_Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) | [Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/) |  “**Resolved_To**”
  | Address Object | Domain_Name Object |  “**Resolved_To**”
  | [Hostname Object](http://stixproject.github.io/data-model/1.1.1/HostnameObj/HostnameObjectType/) |  Address Object | “**Resolved_To**”
  | Address Object  | Hostname Object  |  “**Resolved_To**”
 An IP Address and an Autonomous System | Address Object  | [AS Object](http://stixproject.github.io/data-model/1.1.1/ASObj/ASObjectType/)  |  “**Contained_By**”
  | AS Object  | Address Object  |  “**Contains**”
-A network naming structure (e.g. Domain or Hostname) and a Whois response | Domain_Name Object  | [Whois Object](http://stixproject.github.io/data-model/1.1.1/WhoisObj/WhoisObjectType/)  |  “**Characterized_By**”
+A network naming structure (e.g., Domain or Hostname) and a Whois response | Domain_Name Object  | [Whois Object](http://stixproject.github.io/data-model/1.1.1/WhoisObj/WhoisObjectType/)  |  “**Characterized_By**”
  | Whois Object  | Domain_Name Object  |  “**Characterizes**”
  | Hostname Object  | Whois Object  |  “**Characterized_By**”
  | Whois Object  | Hostname Object  |  “**Characterizes**”
-A network naming structure (e.g. Domain or Hostname) and a DNS Query | Domain_Name Object  | [DNS_Query Object](http://stixproject.github.io/data-model/1.1.1/DNSQueryObj/DNSQueryObjectType/)  |  “**Properties_Queried_By**”
+A network naming structure (e.g., Domain or Hostname) and a DNS Query | Domain_Name Object  | [DNS_Query Object](http://stixproject.github.io/data-model/1.1.1/DNSQueryObj/DNSQueryObjectType/)  |  “**Properties_Queried_By**”
  | DNS_Query Object  | Domain_Name  |  “**Properties_Queried**”
  | Hostname Object  | DNS_Query Object  |  "**Properties_Queried_By**”
  | DNS_Query Object  | Hostname Object  |  “**Properties_Queried**”
-A network naming structure (e.g. Domain or Hostname) and a DNS Record | Domain_Name Object  | [DNS_Record Object](http://stixproject.github.io/data-model/1.1.1/DNSRecordObj/DNSRecordObjectType/)  |  “**Characterized_By**”
+A network naming structure (e.g., Domain or Hostname) and a DNS Record | Domain_Name Object  | [DNS_Record Object](http://stixproject.github.io/data-model/1.1.1/DNSRecordObj/DNSRecordObjectType/)  |  “**Characterized_By**”
  | DNS_Record Object  | Domain_Name Object  |  “**Characterizes**”
  | Hostname Object  | DNS_Record Object  |  “**Characterized_By**”
  | DNS_Record )Object | Hostname Object  |  “**Characterizes**”
@@ -235,13 +235,13 @@ An Email and characteristics of a file attachment to the email | [Email_Message 
  | File Object  | Email_Message Object  |  “**Contained_Within**”
 An Email and the actual bits of a file attachment to the email | Email_Message Object  | Artifact Object  |  “**Contains**”
  | Artifact Object  | Email_Message Object  |  “**Contained_Within**”
-An Email and a Link (URL) within the Email | Email_Message Object  | [Link](http://stixproject.github.io/data-model/1.1.1/LinkObj/LinkObjectType/)  |  “**Contains**”
+An Email and a Link (URL) within the email | Email_Message Object  | [Link](http://stixproject.github.io/data-model/1.1.1/LinkObj/LinkObjectType/)  |  “**Contains**”
  | Link Object  | Email_Message Object  |  “**Contained_Within**”
 A File and another File contained within it | File Object (outer)  | FileObject (inner)  |  “**Contains**”
  | File Object (inner)  | File Object (outer)  |  “**Contained_Within**”
 A File and another File that it places on a system | File Object (dropper)  | File Object (dropped file)  |  “**Dropped**”
  | File Object (dropped file)  | File Object (dropper)  |  “**Dropped_By**”
-A File and the URL, Domain or Hostname from which it was downloaded  | File Object  | URI Object  |  “**Downloaded_From**”
+A File and the URL, Domain, or Hostname from which it was downloaded  | File Object  | URI Object  |  “**Downloaded_From**”
  | URI Object  | File Object  |  “**Downloaded**”
  | File Object  | Domain Name Object  |  “**Downloaded_From**”
  | Domain Name Object  | File Object  |  “**Downloaded**”
@@ -252,7 +252,7 @@ A File and the URL, Domain or Hostname from which it was downloaded  | File Obje
 
 ### Capturing Custom Tool Properties
 Sometimes, a tool will capture properties about a CybOX object that aren't in
-the schema for that object type. In some cases this is because the schemas need
+the schema for that object type. In some cases, this is because the schemas need
 to be expanded to cover that property, but in other cases this is because the
 tool is collecting derived information or other properties that are not
 generally represented for that object type.
@@ -312,8 +312,8 @@ indistinguishable.  Given the name `www.example.com`, does that string
 represent a domain? A host?  Both? In this case, there is most likely a host
 that responds to web requests at an IP address which a DNS query for that name
 would respond with. However, there are some valid domain names that do not
-correspond to hosts (e.g. top-level domains such as "org" or "co.uk") There are
-also host names (e.g. local names in a `hosts` file) which may not correspond
+correspond to hosts (e.g., top-level domains such as "org" or "co.uk"). There are
+also host names (e.g., local names in a `hosts` file) which may not correspond
 to a name in any domain name system.
 
 ### General Principle
@@ -462,7 +462,7 @@ host to be involved (load balancer, etc.).
 
 The CybOX team is investigating ways to make the use of these objects even more
 clear in a future release. Suggestions and/or proposed changes are always
-welcome!
+welcome by subscribing and submitting comments to the [CTI Users List](http://cyboxproject.github.io/community/#cti-users-list) or the [CTI TC Public Comment List](http://cyboxproject.github.io/community/#public-comment-list)!
 
 ## File Object
 
