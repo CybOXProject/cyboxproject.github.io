@@ -196,7 +196,7 @@ To encourage consistency in the characterization of relationships between Object
 
 **Desired Association (Network-centric Object relationships)**|**Source Object**|**Related Object**|**"Relationship" Vocabulary Value**
 ---------------------- | ---------- | ---------- | -----------
-A network naming structure (e.g., Domain or Hostname) and an IP Address it resolves to | [Domain_Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) | [Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/) |  “**Resolved_To**”
+A network naming structure (e.g., Domain or Hostname) and an IP Address</br> it resolves to | [Domain_Name Object](http://stixproject.github.io/data-model/1.1.1/DomainNameObj/DomainNameObjectType/) | [Address Object](http://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/) |  “**Resolved_To**”
  | Address Object | Domain_Name Object |  “**Resolved_To**”
  | [Hostname Object](http://stixproject.github.io/data-model/1.1.1/HostnameObj/HostnameObjectType/) |  Address Object | “**Resolved_To**”
  | Address Object  | Hostname Object  |  “**Resolved_To**”
