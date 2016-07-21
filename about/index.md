@@ -7,7 +7,7 @@ title: About CybOX
 The concept of observable events or properties in the operational cyber realm is a central underlying element of many of the different activities involved in cybersecurity. Before CybOX, there was no uniform standard mechanism for specifying, capturing, characterizing, or communicating these cyber observables. Each activity area, each use case, and often each supporting tool vendor would use its own unique approach. This inhibited consistency, efficiency, interoperability, and overall situational awareness. CybOX solves these problems.
 
 ## What Is CybOX?
-[Cyber Observable eXpression (CybOX™)](http://cyboxproject.github.io/releases/2.1/) is a standardized language for encoding and communicating high-fidelity information about cyber observables. 
+[Cyber Observable eXpression (CybOX™)](/releases/2.1/) is a standardized language for encoding and communicating high-fidelity information about cyber observables. 
 
 CybOX is not targeted at a single cyber security use case, but rather is intended to be flexible enough to offer a common solution for all cybersecurity use cases requiring the ability to deal with cyber observables. It is also intended to be flexible enough to allow both the high-fidelity description of instances of cyber observables that have been measured in an operational context, as well as more abstract patterns for potential observables that may be targets for observation and analysis apriori. 
 
@@ -28,19 +28,19 @@ Through utilization of the standardized CybOX Language, relevant observable even
 >  CybOX allows organizations to share indicators and detections for incoming computer network attacks in a standard format.
 
 ## CybOX Community
-CybOX has been transitioned to [OASIS](https://www.oasis-open.org/committees/cti). See the [Community](http://cyboxproject.github.io/community/) page for details. 
+CybOX has been transitioned to [OASIS](https://www.oasis-open.org/committees/cti). See the [Community](/community/) page for details. 
 
 Some shortcuts:  
 
 [OASIS Cyber Threat Intelligence (CTI) Technical Committee (TC)](https://www.oasis-open.org/committees/cti) - CybOX is developed by the CybOX subcommittee of the CTI TC. 
 
-[Mailing Lists](http://cyboxproject.github.io/community/#discussion-lists-amp-archives) - Stay up-to-date on development and usage. 
+[Mailing Lists](/community/#discussion-lists-amp-archives) - Stay up-to-date on development and usage. 
 
-[Developer Resources](https://cyboxproject.github.io/documentation/tools/) - The central location for development of the specifications, tools, and documentation (including this site). 
+[Developer Resources](/documentation/tools/) - The central location for development of the specifications, tools, and documentation (including this site). 
 
 ## Frequently Asked Questions
 
-Answers to general questions about CybOX are included below. Please see the [CybOX Language FAQs](http://cyboxproject.github.io/faqs/) for answers to commonly asked questions about the CybOX Language.
+Answers to general questions about CybOX are included below. Please see the [CybOX Language FAQs](/faqs/) for answers to commonly asked questions about the CybOX Language.
 
 ###  What are "cyber observables"?
 
@@ -64,7 +64,7 @@ CybOX provides a common language for describing observable events or objects tha
 
 ### How is CybOX licensed?
 
-See the [Terms of Use](https://cyboxproject.github.io/tou.html).
+See the [Terms of Use](/tou.html).
 
 ## Relationships to Other Efforts
 

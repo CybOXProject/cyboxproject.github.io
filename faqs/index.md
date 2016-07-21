@@ -3,7 +3,7 @@ layout: flat
 title: CybOX Language Frequently Asked Questions (FAQs)
 ---
 
-Answers to commonly asked questions about the [CybOX Language](http://cyboxproject.github.io/releases/2.1/) are included below. See the [About CybOX](http://cyboxproject.github.io/about/) page for answers to [general questions](http://cyboxproject.github.io/about/#frequently-asked-questions) about CybOX. 
+Answers to commonly asked questions about the [CybOX Language](/releases/2.1/) are included below. See the [About CybOX](/about/) page for answers to [general questions](/about/#frequently-asked-questions) about CybOX. 
 
 ### What is an observable by itself (in the simplest case)?
 
@@ -33,7 +33,7 @@ Whereas other CybOX objects characterize the properties of an observable object,
 
 CybOX patterns are a generalization of CybOX content. They allow users and developers to characterize a set, a range, or other generalized characteristics of a cyber observable. For instance, one could use CybOX patterns to describe a URL that matches one of a set of possible URL values.
 
-Regular expression (regex) patterns are also possible. See [CybOX Regular Expression Support](http://cyboxproject.github.io/documentation/regex-support/) for details.
+Regular expression (regex) patterns are also possible. See [CybOX Regular Expression Support](/documentation/regex-support/) for details.
 
 ### What type of file hashes does CybOX support?
 
@@ -120,7 +120,7 @@ CDATA is character data, and it is used to tell the XML parser to interpret info
 
 ### How is CybOX versioned?
 
-See the [CybOX Language Versioning Policy](http://cyboxproject.github.io/documentation/versioning-policy/).
+See the [CybOX Language Versioning Policy](/documentation/versioning-policy/).
 
 ### Are there plans to support other forms of data interchange for CybOX (e.g., JSON, YAML, etc.)?
 
@@ -138,11 +138,11 @@ Currently available tools/utilities are hosted in the [CybOXProject GitHub Repos
 
 A CybOX release includes the new version of the CybOX Core schemas, the latest versions of the independently-versioned CybOX Object schemas, the latest versions of the independently-versioned CybOX vocabulary schemas, and references to the relevant version CybOX extension schemas.
 
-See [Releases](http://cyboxproject.github.io/releases/2.1/) for additional information and the latest release.
+See [Releases](/releases/2.1/) for additional information and the latest release.
 
 ### Where can I find examples of CybOX data? Are there any CybOX repositories?
 
-See [CybOX Samples](http://cyboxproject.github.io/samples/).
+See [CybOX Samples](/samples/).
 
 At present, there are no repositories of CybOX data, nor are there any CybOX Community plans to establish one. Community members interested in hosting a CybOX data repository are strongly encouraged to do so.
 

@@ -20,7 +20,7 @@ no_in_page_title: true
   <div class="row">
     <div class="col-md-6 text-center">
       <a class="btn btn-primary btn-lg" role="button" href="http://cybox.mitre.org/language/version{{site.current_version}}/cybox_v{{site.current_version}}_offline.zip">Download Current Release <span class="glyphicon glyphicon-download-alt"></span></a>
-      <p class="small"><a href="/releases/2.1">Other Downloads</p></p>
+      <p class="small"><a href="/releases/2.1">Other Downloads</a></p>
     </div>
     <div class="col-md-6 text-center">
       <a class="btn btn-primary btn-lg" role="button" href="/samples/">See CybOX Examples »</a>
@@ -31,11 +31,11 @@ no_in_page_title: true
 <div class="row">
   <div class="col-md-4 text-center">
     <h2>Get Involved</h2>
-    <p><a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti">Join the OASIS TC</a> to help build this growing, open-source industry effort. 
+    <p><a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti">Join the OASIS TC</a> to help build this growing, open-source industry effort.</p>
   </div>
   <div class="col-md-4 text-center">
     <h2>Learn More</h2>
-    <p>Dig a little deeper and learn about <a href="/documentation/tools/">developer tools and utilities<a>, <a href="/documentation/suggested-practices">suggested practices</a>, and <a href="/documentation">other documentation</a>.</p>
+    <p>Dig a little deeper and learn about <a href="/documentation/tools/">developer tools and utilities</a>, <a href="/documentation/suggested-practices">suggested practices</a>, and <a href="/documentation">other documentation</a>.</p>
   </div>
   <div class="col-md-4 text-center">
     <h2>Follow Us</h2>

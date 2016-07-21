@@ -17,8 +17,8 @@ The following table lists a sampling of some of the current use cases targeted b
 |------------------|----------------|------------------------|
 |Analyze event data from diverse set of sensors of different types and different vendors|Event Management|CybOX|
 |Detect malicious activity utilizing attack patterns|Attack Detection|[Common Attack Pattern Enumerationand Classification (CAPEC™)](http://capec.mitre.org)|
-|Detect malicious activity utilizing malware behavior characterizations|Attack Detection|[Malware Attribute Enumeration and Characterization (MAEC™)](http://maec.mitre.org)|
-|Enable automated attack detection signature rule generation|Attack Detection|CybOX, MAEC, CAPEC, [Structured Threat Information eXpression (STIX™)](http://stix.mitre.org)|
+|Detect malicious activity utilizing malware behavior characterizations|Attack Detection|[Malware Attribute Enumeration and Characterization (MAEC™)](http://maecproject.github.io)|
+|Enable automated attack detection signature rule generation|Attack Detection|CybOX, MAEC, CAPEC, [Structured Threat Information eXpression (STIX™)](http://stixproject.github.io)|
 |Characterize malicious activity utilizing attack patterns|Incident Response/Management|CAPEC, STIX|
 |Identify new attack patterns|Threat Characterization|CAPEC|
 |Prioritize existing attack patterns based on tactical reality|Security Testing and Secure Development|CAPEC, STIX|
@@ -34,7 +34,7 @@ The following table lists a sampling of some of the current use cases targeted b
 |Capture digital forensics analysis results|Digital Forensics|DFXML|
 |Capture digital forensics provenance information|Digital Forensics|DFXML|
 |Enable collaborative sharing of digital forensics information|Digital Forensics|DFXML|
-|Enable explicit and implicit sharing controls for cyber observable information|Information Sharing|STIX, CybOX, [Trusted Automated eXchange of Indicator Information (TAXII™)](http://taxii.mitre.org/)|
+|Enable explicit and implicit sharing controls for cyber observable information|Information Sharing|STIX, CybOX, [Trusted Automated eXchange of Indicator Information (TAXII™)](http://taxiiproject.github.io)|
 |Enable new levels of meta-analysis onoperational cyber observables|Cyber Situational Awareness|CybOX, STIX|
 
 

@@ -79,7 +79,7 @@ The CybOX project currently provides bindings and higher-level APIs to the CybOX
 The tools and libraries listed below are developed by CybOX community members
 and offer the ability to parse, create, edit, or otherwise make use of CybOX
 documents. We would love to have more entries in this section, so if you'd like
-to see yours included, please let us know by by subscribing and submitting comments to the [CTI Users List](http://cyboxproject.github.io/community/#cti-users-list) or the [CTI TC Public Comment List](http://cyboxproject.github.io/community/#public-comment-list)!
+to see yours included, please let us know by by subscribing and submitting comments to the [CTI Users List](/community/#cti-users-list) or the [CTI TC Public Comment List](/community/#public-comment-list)!
 
 ## IOCextractor
 The IOCextractor is a Python utility developed by Stephen Brannon which

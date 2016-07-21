@@ -131,7 +131,7 @@ necessary, you can use your own vocabulary or even use strings outside of any
 vocabularies.
 
 If you do this to add values that you think might be useful for other CybOX
-users, you should let us know by subscribing and submitting comments to the [CTI Users List](http://cyboxproject.github.io/community/#cti-users-list) or the [CTI TC Public Comment List](http://cyboxproject.github.io/community/#public-comment-list) so we can consider adding it to the default
+users, you should let us know by subscribing and submitting comments to the [CTI Users List](/community/#cti-users-list) or the [CTI TC Public Comment List](/community/#public-comment-list) so we can consider adding it to the default
 vocabulary.
 
 ## Creating Timestamps
@@ -169,12 +169,12 @@ The approach to [defining Objects](../creating-objects) (especially those across
 There are two primary variations of this:
 
 * Objects that derive from other Objects of the same basic type along a spectrum of abstract to more specific.
- * For example, **File -> Win File -> Win EXE File** where CybOX defines a basic [File Object] ({{site.stix_url}}/FileObj/FileObjectType) with general file properties applicable across platforms, a more specific [Win_File Object] ({{site.stix_url}}/WinFileObj/WindowsFileObjectType) that extends the general File Object and adds Windows-specific file properties, and an even more specific [Win_Executable_File Object] ({{site.stix_url}}/WinExecutableFileObj/WindowsExecutableFileObjectType) which extends the Win_File Object and adds properties for executable files under Windows.
+ * For example, **File -> Win File -> Win EXE File** where CybOX defines a basic [File Object]({{site.stix_url}}/FileObj/FileObjectType) with general file properties applicable across platforms, a more specific [Win_File Object]({{site.stix_url}}/WinFileObj/WindowsFileObjectType) that extends the general File Object and adds Windows-specific file properties, and an even more specific [Win_Executable_File Object]({{site.stix_url}}/WinExecutableFileObj/WindowsExecutableFileObjectType) which extends the Win_File Object and adds properties for executable files under Windows.
 * Objects that leverage other Objects to define more specific properties for differing and more specialized use cases.
   * For example, the set of Objects specified that can contain an **IP Address**.
-    * [Address Object] ({{site.stix_url}}/AddressObj/AddressObjectType) enables the specification of a particular IP Address (or other type of address) value and its type (e.g., ipv4-addr) without any other context. This can be used when you desire to characterize an IP Address but not to assert any given context for where you might find it (e.g., it may appear in any of a wide variety of logs). This Object also provides consistent specification of address properties for its use on its own, or by more specific Objects that need to characterize addresses within more specific contexts.
-    * [Socket_Address Object] ({{site.stix_url}}/SocketAddressObj/SocketAddressObjectType) enables the specification of a particular IP Address (or Hostname) and Port pairing. This obviously lets you characterize a more specific context for an IP Address but still leverages the AddressObjectType for its IP Address structure yielding consistency across the two Objects.
-    * [Network_Connection Object] ({{site.stix_url}}/NetworkConnectionObj/NetworkConnectionObjectType) enables the specification of properties related to a network connection including Layer3, Layer4 and Layer7 details as well as details of the source socket and destination socket of the connection. This object leverages the SocketAddressType for its source and destination socket structures. This enables the characterization of very specific contextual details around an IP Address.
+    * [Address Object]({{site.stix_url}}/AddressObj/AddressObjectType) enables the specification of a particular IP Address (or other type of address) value and its type (e.g., ipv4-addr) without any other context. This can be used when you desire to characterize an IP Address but not to assert any given context for where you might find it (e.g., it may appear in any of a wide variety of logs). This Object also provides consistent specification of address properties for its use on its own, or by more specific Objects that need to characterize addresses within more specific contexts.
+    * [Socket_Address Object]({{site.stix_url}}/SocketAddressObj/SocketAddressObjectType) enables the specification of a particular IP Address (or Hostname) and Port pairing. This obviously lets you characterize a more specific context for an IP Address but still leverages the AddressObjectType for its IP Address structure yielding consistency across the two Objects.
+    * [Network_Connection Object]({{site.stix_url}}/NetworkConnectionObj/NetworkConnectionObjectType) enables the specification of properties related to a network connection including Layer3, Layer4 and Layer7 details as well as details of the source socket and destination socket of the connection. This object leverages the SocketAddressType for its source and destination socket structures. This enables the characterization of very specific contextual details around an IP Address.
  
 
 **It is suggested practice to always utilize the most specific CybOX Object possible for the context you are looking to convey and based on the properties you need to represent.**
@@ -184,13 +184,13 @@ There are two primary variations of this:
 **One clear exception to this is if conformance to a specific language Profile is required and that Profile restricts the set of available objects or directly specifies a particular Object to be used.**
 
 
-###Common Object-to-Object Relationships
+### Common Object-to-Object Relationships
 
 CybOX supports a broad range of Object types and provides the capability to relate/associate Objects together along with a characterization of how they are related. 
 
 To encourage consistency in the characterization of relationships between Objects, CybOX provides a default controlled vocabulary ([ObjectRelationshipVocab-1.1](http://stixproject.github.io/data-model/1.1.1/cyboxVocabs/ObjectRelationshipVocab-1.1/)) for use with the Relationship field. This vocabulary contains a broad range of values to characterize many of the potentially relevant Object-to-Object relationships.
 
-####Suggested vocabulary values to use in some of the more common Object-to-Object relationship usage scenarios include:
+#### Suggested vocabulary values to use in some of the more common Object-to-Object relationship usage scenarios include:
 
 <br/>
 
@@ -329,10 +329,10 @@ host to be involved (load balancer, etc.).
 
 ### Specific Cases
 
-1. If you are looking to represent a "local hostname" (in other words, what a
-   system calls *itself*), there is a `Hostname` property of the [`System`
-   object](https://stixproject.github.io/data-model/1.1.1/SystemObj/SystemObjectType/)
-   that should be used.
+ 1. If you are looking to represent a "local hostname" (in other words, what a
+    system calls *itself*), there is a `Hostname` property of the [`System`
+    object](https://stixproject.github.io/data-model/1.1.1/SystemObj/SystemObjectType/)
+    that should be used.
 
     ```xml
     <SystemObj:System>
@@ -340,17 +340,17 @@ host to be involved (load balancer, etc.).
     </SystemObj:System>
     ```
 
-1. There are two cases in which using the `Hostname` object is used explicitly:
-   within the [`Socket Address`
-   object](https://stixproject.github.io/data-model/1.1.1/SocketAddressObj/SocketAddressObjectType/)
-   (which is used in the [`Network Connection`
-   object](https://stixproject.github.io/data-model/1.1.1/NetworkConnectionObj/NetworkConnectionObjectType/)),
-   and within a [`URL History Entry`
-   component](https://stixproject.github.io/data-model/1.1.1/URLHistoryObj/URLHistoryEntryType/)
-   of the [`URL History`
-   object](https://stixproject.github.io/data-model/1.1.1/URLHistoryObj/URLHistoryObjectType/).
-   In each case, this represents an actual host involved in communication, so
-   this matches the general principle.
+ 1. There are two cases in which using the `Hostname` object is used explicitly:
+    within the [`Socket Address`
+    object](https://stixproject.github.io/data-model/1.1.1/SocketAddressObj/SocketAddressObjectType/)
+    (which is used in the [`Network Connection`
+    object](https://stixproject.github.io/data-model/1.1.1/NetworkConnectionObj/NetworkConnectionObjectType/)),
+    and within a [`URL History Entry`
+    component](https://stixproject.github.io/data-model/1.1.1/URLHistoryObj/URLHistoryEntryType/)
+    of the [`URL History`
+    object](https://stixproject.github.io/data-model/1.1.1/URLHistoryObj/URLHistoryObjectType/).
+    In each case, this represents an actual host involved in communication, so
+    this matches the general principle.
 
     ```xml
     <URLHistoryObj:URL_History>
@@ -387,24 +387,24 @@ host to be involved (load balancer, etc.).
     </NetworkConnectionObj:Network_Connection>
     ```
 
-    **NOTE**: In reality, TCP/IP network connections are not actual made based
-    on the hostname; rather, the hostname is used to look up an IP address,
-    which is then used for the connection. The `Socket_Address` object supports
-    a `Hostname` property for instances where the actual IP address is not
-    significant to what is being expressed. For example, in dynamic malware
-    sandboxes, DNS responses are frequently modified to return a different IP
-    address (often a private IP address). In these cases, the actual IP address
-    used for the connection is not important, and representing the hostname
-    that the malware uses for C2 as a direct property of the network connection
-    is desirable; it avoids the use of `Related Object`s and the need to
-    include IP addresses that aren't informative.
+     **NOTE**: In reality, TCP/IP network connections are not actual made based
+     on the hostname; rather, the hostname is used to look up an IP address,
+     which is then used for the connection. The `Socket_Address` object supports
+     a `Hostname` property for instances where the actual IP address is not
+     significant to what is being expressed. For example, in dynamic malware
+     sandboxes, DNS responses are frequently modified to return a different IP
+     address (often a private IP address). In these cases, the actual IP address
+     used for the connection is not important, and representing the hostname
+     that the malware uses for C2 as a direct property of the network connection
+     is desirable; it avoids the use of `Related Object`s and the need to
+     include IP addresses that aren't informative.
 
-1. In the [`DNS Record` object](https://stixproject.github.io/data-model/1.1.1/DNSRecordObj/DNSRecordObjectType/),
-   the `Domain Name` field uses the [`URI` object](https://stixproject.github.io/data-model/1.1.1/URIObj/URIObjectType/).
-   This is because the `DNS Record` object predates the `Domain Name` object.
-   This may be corrected in a future major release of CybOX, but for now, use a
-   `URI` object with `type="Domain Name"` (as this is the only schema-valid
-   type for this field).
+ 1. In the [`DNS Record` object](https://stixproject.github.io/data-model/1.1.1/DNSRecordObj/DNSRecordObjectType/),
+    the `Domain Name` field uses the [`URI` object](https://stixproject.github.io/data-model/1.1.1/URIObj/URIObjectType/).
+    This is because the `DNS Record` object predates the `Domain Name` object.
+    This may be corrected in a future major release of CybOX, but for now, use a
+    `URI` object with `type="Domain Name"` (as this is the only schema-valid
+    type for this field).
 
     ```xml
     <DNSRecordObj:DNS_Record>
@@ -418,10 +418,10 @@ host to be involved (load balancer, etc.).
     </DNSRecordObj:DNS_Record>
     ```
 
-1. If you don't want to capture the entire DNS record, you can also use a
-   `Domain Name` object, along with one or more related [`Address`
-   objects](https://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/),
-   using the `Resolved_To` relationship.
+ 1. If you don't want to capture the entire DNS record, you can also use a
+    `Domain Name` object, along with one or more related [`Address`
+    objects](https://stixproject.github.io/data-model/1.1.1/AddressObj/AddressObjectType/),
+    using the `Resolved_To` relationship.
 
     ```xml
     <cybox:Object>
@@ -452,17 +452,17 @@ host to be involved (load balancer, etc.).
     </cybox:Object>
     ```
 
-1. The `is_domain_name` attribute on the `Hostname` object can be used when it
-   is important to indicate whether or not the provided hostname is query-able
-   via DNS. However, if you aren't sure whether a name actually corresponds to
-   a host, don't use the `Hostname` object with this attribute set to `true`.
+ 1. The `is_domain_name` attribute on the `Hostname` object can be used when it
+    is important to indicate whether or not the provided hostname is query-able
+    via DNS. However, if you aren't sure whether a name actually corresponds to
+    a host, don't use the `Hostname` object with this attribute set to `true`.
 
-1. When capturing domain names as part of a "malicious domain watchlist" or
-   other list of domains, the `Domain Name` object should be used. 
+ 1. When capturing domain names as part of a "malicious domain watchlist" or
+    other list of domains, the `Domain Name` object should be used. 
 
 The CybOX team is investigating ways to make the use of these objects even more
 clear in a future release. Suggestions and/or proposed changes are always
-welcome by subscribing and submitting comments to the [CTI Users List](http://cyboxproject.github.io/community/#cti-users-list) or the [CTI TC Public Comment List](http://cyboxproject.github.io/community/#public-comment-list)!
+welcome by subscribing and submitting comments to the [CTI Users List](/community/#cti-users-list) or the [CTI TC Public Comment List](/community/#public-comment-list)!
 
 ## File Object
 
