@@ -26,12 +26,16 @@ no_in_page_title: true
       <a class="btn btn-primary btn-lg" role="button" href="/samples/">See CybOX Examples »</a>
     </div>
   </div>
+  <div class="row announcement">
+    <p><span class="label label-success">New!</span> Help with the <a href="http://stixproject.github.io/stix2.0/#cybox3.0">CybOX 3.0</a> drafts!</p>
+  </div>
 </div>
 
 <div class="row">
   <div class="col-md-4 text-center">
     <h2>Get Involved</h2>
-    <p><a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti">Join the OASIS TC</a> to help build this growing, open-source industry effort. 
+    <p><a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti">Join the OASIS TC</a> to help build this growing, open-source industry effort.</p>
+    <p>Follow the <a href="http://stixproject.github.io/stix2.0/#cybox3.0">CybOX 3.0</a> discussion!</p>
   </div>
   <div class="col-md-4 text-center">
     <h2>Learn More</h2>
