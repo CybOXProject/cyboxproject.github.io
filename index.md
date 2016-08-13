@@ -26,6 +26,7 @@ no_in_page_title: true
       <a class="btn btn-primary btn-lg" role="button" href="/samples/">See CybOX Examples »</a>
     </div>
 <p></p>
+  <div class="row announcement">
   <div class="col-md-4 text-center">
     <p><span class="label label-success">New!</span> Help with the <a href="http://stixproject.github.io/stix2.0/#cybox3.0">CybOX 3.0</a> drafts!</p>
   </div>
