@@ -257,3 +257,14 @@ h5:hover .header-link,
 h6:hover .header-link {
   opacity: 1;
 }
+
+.announcement p {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+
+.announcement .label {
+  position: relative;
+  top: -2px;
+}
