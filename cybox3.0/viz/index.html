@@ -62,9 +62,10 @@ d3.json("cybox_hierarchy.json", function(error, root) {
   var circle = svg.selectAll("circle")
       .data(nodes)
     .enter().append("circle")
-      .attr("class", function(d) {  if (d.is_new || d.likely_update || d.likely_deprecate) {
+      .attr("title", function(d) { return d.name; })
+      .attr("class", function(d) {  if (d.url) {
                                        return "node";
-                                    } else if (d.name == "CybOX 3.0") {
+                                    } else if (d.name == "STIX 2.0 Cyber Observable Objects") {
                                        return "node node--root";
                                     } else if (d.children) {
                                        return "node";  
@@ -85,7 +86,7 @@ d3.json("cybox_hierarchy.json", function(error, root) {
 				      return null;
 				}})
             .on("click", function (d) {
-               if (d.is_new || d.likely_update || d.likely_deprecate) {
+               if (d.url) {
                    var win = window.open(d.url, '_blank');
                }
             if (focus !== d) zoom(d), d3.event.stopPropagation();
@@ -108,7 +109,7 @@ d3.json("cybox_hierarchy.json", function(error, root) {
   zoomTo([root.x, root.y, root.r * 2 + margin]);
 
   function zoom(d) {
-    if (!(d.is_new || d.likely_update || d.likely_deprecate)) {
+    if (!d.url) {
     var focus0 = focus; focus = d;
 
     var transition = d3.transition()
