@@ -1,179 +1,187 @@
 {
- "name": "CybOX 3.0",
- "children": [
-  {"name":"Core Components",
-   "children": [{"name":"CybOX Core", "size": 5234,
-                 "children":[{"name":"Events", "size":1200, "likely_update":true,
-                              "url":"https://github.com/CybOXProject/schemas/issues/395"},
-                             {"name":"Actions", "size":1800},
-                             {"name":"Pools", "size":1800, "likely_deprecate":true,
-                              "url":"https://github.com/CybOXProject/schemas/issues/418"},
-                             {"name":"Observables", "size":2500,
-                              "children":[{"name":"Observable Instance", "size":1800, "likely_update":true,
-                                           "url":"https://github.com/CybOXProject/schemas/issues/381"},
-                                          {"name":"Observable Pattern", "size":1800, "likely_update":true,
-                                           "url":"https://github.com/CybOXProject/schemas/issues/381"}]}]},
-                {"name":"CybOX Common", "size":3434,
-                 "children":[{"name":"Hashes", "size":1200, "is_new":true,
-                              "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-HashType-Refactoring"},
-                              {"name":"Base Datatypes", "size":1800, "likely_deprecate":true,
-                               "url":"https://github.com/CybOXProject/schemas/issues/416"},
-                              {"name":"Object-specific Types", "size":1200, "likely_update":true,
-                               "url":"https://github.com/CybOXProject/schemas/issues/394"},
-                              {"name":"Extracted Features", "size":1200, "likely_update":true,
-                               "url":"https://github.com/CybOXProject/schemas/issues/415"}]},
-                {"name":"CybOX Vocabularies", "size":2343,
-                 "children":[{"name":"Action Vocabularies", "size":900},
-                             {"name":"Event Vocabularies", "size":900},
-                             {"name":"Object Relationship Vocabulary", "size":900, "likely_update":true,
-                              "url":"https://github.com/CybOXProject/schemas/issues/396"},
-                             {"name":"Hash Name Vocabulary", "size":900, "likely_update":true,
-                              "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-HashType-Refactoring#refactoring"},
-                             {"name":"Tool Type Vocabulary", "size":900}]}]
-  },
-  {
-   "name": "Objects",
-   "children":[{"name":"Network Objects", 
-                "size": 12000,
-                "children":[{"name":"AS", "size":200},
-                            {"name":"Address", "size":4200,
-                             "children":[{"name":"IPv4 Address", "size":200, "is_new":true,
-                                          "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-Address-Object-Refactoring#refactoring---new-objects"},
-                                         {"name":"IPv6 Address", "size":200, "is_new":true,
-                                         "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-Address-Object-Refactoring#refactoring---new-objects"},
-                                         {"name":"MAC Address", "size":200, "is_new":true,
-                                         "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-Address-Object-Refactoring#refactoring---new-objects"},
-                                         {"name":"Email Address", "size":200, "is_new":true,
-                                         "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-Address-Object-Refactoring#refactoring---new-objects"}]},
-                            {"name":"DNS", "size":200,
-                            "children":[{"name":"DNS Cache", "size":200, "not_included":true},
-                                        {"name":"DNS Query", "size":200, "likely_update":true,
-                                         "url":"https://github.com/CybOXProject/schemas/issues/332"},
-                                        {"name":"DNS Record", "size":200}]},
-                            {"name":"Email Message", "size":4200},
-                            {"name":"Domain Name", "size":4200},
-                            {"name":"Network Route", "size":200, "not_included":true},
-                            {"name":"Network Connection", "size":1200, "likely_update":true,
-                             "url":"https://github.com/CybOXProject/schemas/issues/402"},
-                            {"name":"Network Flow", "size":200, "not_included":true},
-                            {"name":"Network Packet", "size":200, "not_included":true},
-                            {"name":"Network Subnet", "size":200, "not_included":true},
-                            {"name":"Socket Address", "size":200, "likely_update":true, 
-                             "url":"https://github.com/CybOXProject/schemas/issues/319"},
-                            {"name":"HTTP Session", "size":1200, "likely_update":true,
-                             "url":"https://github.com/CybOXProject/schemas/issues/332"},
-                            {"name":"Port", "size":4200},
-                            {"name":"URI", "size":4200},
-                            {"name":"WHOIS", "size":1200, "likely_update":true,
-                             "url":"https://github.com/CybOXProject/schemas/issues/401"}
-                ]},
-               {"name":"Host-related Objects", "size": 20000,
-                "children":[{"name":"File-related", "size":2000,
-                             "children":[{"name":"File", "size":4200,
-                                          "children":[{"name":"File Metadata Extension", "size":200, "is_new":true,
-                                                       "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-File-Object-Refactoring#filemetadataextension"},
-                                                      {"name":"EXT3 File Extension", "size":200, "is_new":true, 
-                                                       "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-File-Object-Refactoring#ext3fileextension"},
-                                                      {"name":"NTFS File Extension", "size":200, "is_new":true,
-                                                       "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-File-Object-Refactoring#ntfsfileextension"},
-                                                      {"name":"Image File Extension", "size":200, "is_new":true,
-                                                       "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-File-Object-Refactoring#imagefileextension"},
-                                                      {"name":"PDF File Extension", "size":1200, "is_new":true,
-                                                       "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-File-Object-Refactoring#pdffileextension"},
-                                                      {"name":"PE File Extension", "size":1200, "is_new":true,
-                                                       "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-File-Object-Refactoring#pebinaryfileextension"},
-                                                      {"name":"Archive File Extension", "size":200, "is_new":true,
-                                                       "url":"https://github.com/CybOXProject/schemas/wiki/CybOX-3.0:-File-Object-Refactoring#archivefileextension"}]},
-                                         {"name":"Pipe", "size":200},
-                                         {"name":"UNIX Pipe", "size":200, "not_included":true},
-                                         {"name":"Windows Pipe", "size":200},
-                                         {"name":"Windows Filemapping", "size":200, "not_included":true},
-                                         {"name":"Library", "size":200, "likely_update":true,
-                                          "url":"https://github.com/CybOXProject/schemas/issues/397"}]},
-                             {"name":"Disk-related", "size":4000,
-                             "children":[{"name":"Disk", "size":200, "likely_update":true,
-                                          "url":"https://github.com/CybOXProject/schemas/issues/398"},
-                                         {"name":"Disk Partition", "size":200},
-                                         {"name":"Volume", "size":200},
-                                         {"name":"UNIX Volume", "size":200, "not_included":true},
-                                         {"name":"Windows Volume", "size":200, "not_included":true}]},                                    
-                            {"name":"OS Metadata", "size":12000,
-                             "children":[{"name":"Windows-specific", "size":200,
-                                          "children":[{"name":"Windows Computer Account", "size":200, "not_included":true},
-                                                      {"name":"Windows User Account", "size":200, "not_included":true},
-                                                      {"name":"Windows Task", "size":200, "not_included":true},
-                                                      {"name":"Windows Kernel", "size":200},
-                                                      {"name":"Windows Driver", "size":200},
-                                                      {"name":"Windows Registry Key", "size":4200},
-                                                      {"name":"Windows Prefetch", "size":200, "not_included":true},
-                                                      {"name":"Windows System Restore", "size":200, "not_included":true},
-                                                      {"name":"Windows Event", "size":200, "not_included":true},
-                                                      {"name":"Windows Event Log", "size":200, "not_included":true}]},
-                                         {"name":"Unix/Linux-specific", "size":200,
-                                          "children":[{"name":"Unix User Account", "size":200, "not_included":true},
-                                                      {"name":"Linux Package", "size":200, "not_included":true}]},
-                                         {"name":"Account", "size":200, "not_included":true},
-                                         {"name":"GUI", "size":200,
-                                          "children":[{"name":"GUI Dialog Box", "size":200, "not_included":true},
-                                                      {"name":"GUI Window", "size":200},
-                                                      {"name":"GUI", "size":200}]},
-                                         {"name":"User Account", "size":200}]},
-                            {"name":"Device/System", "size":3000,
-                             "children":[{"name":"Device", "size":200, "likely_update":true,
-                                          "url":"https://github.com/CybOXProject/schemas/issues/399"},
-                                         {"name":"System", "size":200, "likely_update":true,
-                                          "url":"https://github.com/CybOXProject/schemas/issues/399"},
-                                         {"name":"Windows System", "size":200, "likely_update":true,
-                                          "url":"https://github.com/CybOXProject/schemas/issues/399"}]},
-                            {"name":"SMS Message", "size":200},
-                            {"name":"Network-Related", "size":10000,
-                             "children":[{"name":"ARP Cache", "size":200, "not_included":true},
-                                         {"name":"Network Route Entry", "size":200, "not_included":true},
-                                         {"name":"Unix Network Route Entry", "size":200, "not_included":true},
-                                         {"name":"Hostname", "size":1200},
-                                         {"name":"Windows Network Route Entry", "size":200, "not_included":true},
-                                         {"name":"Windows Network Share", "size":200},
-                                         {"name":"Network Socket", "size":200},
-                                         {"name":"Socket Address", "size":200},
-                                         {"name":"URL History", "size":200, "not_included":true}]},
-                            {"name":"Memory-Related", "size":10000,
-                             "children":[{"name":"Memory", "size":1200},
-                                         {"name":"Mutex", "size":4200},
-                                         {"name":"Windows Mutex", "size":200},
-                                         {"name":"Sempahore", "size":200},
-                                         {"name":"Windows Sempahore", "size":200},
-                                         {"name":"Windows Waitable Timer", "size":200, "not_included":true},
-                                         {"name":"Windows Hook", "size":200, "not_included":true},
-                                         {"name":"Windows Kernel Hook", "size":200},
-                                         {"name":"Windows Memory Page Region", "size":200, "not_included":true},
-                                         {"name":"Windows Handle", "size":200},
-                                         {"name":"Windows Mailslot", "size":200, "not_included":true},
-                                         {"name":"Windows Critical Section", "size":200, "not_included":true}
-                             ]},
-                             {"name":"Process-Related", "size":4000,
-                             "children":[{"name":"Process", "size":200, "likely_update":true,
-                                          "url":"https://github.com/CybOXProject/schemas/issues/375"},
-                                         {"name":"Unix Process", "size":200, "likely_update":true,
-                                          "url":"https://github.com/CybOXProject/schemas/issues/375"},
-                                         {"name":"Windows Process", "size":200, "likely_update":true,
-                                          "url":"https://github.com/CybOXProject/schemas/issues/375"},
-                                         {"name":"Windows Thread", "size":200, "likely_update":true,
-                                          "url":"https://github.com/CybOXProject/schemas/issues/403"},
-                                         {"name":"Windows Service", "size":200, "likely_update":true,
-                                          "url":"https://github.com/CybOXProject/schemas/issues/404"}
-                             ]}]},
-                             {"name":"Misc. Objects", "size":4000,
-                             "children":[{"name":"Code-related", "size":200,
-                                          "children":[{"name":"Code", "size":200},
-                                                      {"name":"API", "size":200}]},
-                                         {"name":"Artifact", "size":1200},
-                                         {"name":"Custom", "size":200},
-                                         {"name":"Link", "size":1200},
-                                         {"name":"User Session", "size":200, "not_included":true},
-                                         {"name":"X509 Certificate", "size":200},
-                                         {"name":"Product", "size":200, "likely_update":true,
-                                          "url":"https://github.com/CybOXProject/schemas/issues/400"}]}]
-   
-     }
- ]
+    "name": "STIX 2.0 Cyber Observable Objects",
+    "children": [
+        {
+            "name": "Network Objects",
+            "size": 20000,
+            "children": [
+                {
+                    "name": "AS",
+                    "size": 1000,
+                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.27gux0aol9e3"
+                },
+                {
+                    "name": "Email Message",
+                    "size": 1000,
+                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.grboc7sq5514"
+                },
+                {
+                    "name": "Domain Name",
+                    "size": 1000,
+                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.prhhksbxbg87"
+                },
+                {
+                    "name": "IPv4 Address",
+                    "size": 1000,
+                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.ki1ufj1ku8s0"
+                },
+                {
+                    "name": "IPv6 Address",
+                    "size": 1000,
+                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.oeggeryskriq"
+                },
+                {
+                    "name": "Email Address",
+                    "size": 1000,
+                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.wmenahkvqmgj"
+                },
+                {
+                    "name": "MAC Address",
+                    "size": 1000,
+                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.f92nr9plf58y"
+                },
+                {
+                    "name": "Network Traffic",
+                    "size": 2400,
+                    "children": [
+                        {
+                            "name": "HTTP Request Extension",
+                            "size": 300,
+                            "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.b0e376hgtml8"
+                        },
+                        {
+                            "name": "ICMP Extension",
+                            "size": 300,
+                            "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.ozypx0lmkebv"
+                        },
+                        {
+                            "name": "Network Socket Extension",
+                            "size": 300,
+                            "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.8jamupj9ubdv"
+                        },
+                        {
+                            "name": "TCP Extension",
+                            "size": 300,
+                            "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.k2njqio7f142"
+                        }
+                    ]
+                },
+                {
+                    "name": "URL",
+                    "size": 1000,
+                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.ah3hict2dez0"
+                }
+            ]
+        },
+        {
+            "name": "Host-based Objects",
+            "size": 10000,
+            "children": [
+                {
+                    "name": "File-related",
+                    "size": 2000,
+                    "children": [
+                        {
+                            "name": "File",
+                            "size": 1000,
+                            "children": [
+                                {
+                                    "name": "NTFS File Extension",
+                                    "size": 200,
+                                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.o6cweepfrsci"
+                                },
+                                {
+                                    "name": "Image File Extension",
+                                    "size": 200,
+                                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.u5z7i2ox8w4x"
+                                },
+                                {
+                                    "name": "PDF File Extension",
+                                    "size": 200,
+                                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.8xmpb2ghp9km"
+                                },
+                                {
+                                    "name": "PE Binary File Extension",
+                                    "size": 200,
+                                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.gg5zibddf9bs"
+                                },
+                                {
+                                    "name": "Archive File Extension",
+                                    "size": 200,
+                                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.xi3g7dwaigs6"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Directory",
+                            "size": 1000,
+                            "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.lyvpga5hlw52"
+                        }
+                    ]
+                },
+                {
+                    "name": "Process-Related",
+                    "size": 2000,
+                    "children": [
+                        {
+                            "name": "Process",
+                            "size": 2000,
+                            "children": [
+                                {
+                                    "name": "Windows Process Extension",
+                                    "size": 1000,
+                                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.oyegq07gjf5t"
+                                },
+                                {
+                                    "name": "Windows Service Extension",
+                                    "size": 1000,
+                                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.lbcvc2ahx1s0"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Mutex",
+                            "size": 1000,
+                            "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.84hwlkdmev1w"
+                        }
+                    ]
+                },
+                {
+                    "name": "Windows Registry Key",
+                    "size": 1000,
+                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.luvw8wjlfo3y"
+                }
+            ]
+        },
+        {
+            "name": "Misc. Objects",
+            "size": 5000,
+            "children": [
+                {
+                    "name": "Artifact",
+                    "size": 1000,
+                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.4jegwl6ojbes"
+                },
+                {
+                    "name": "X509 Certificate",
+                    "size": 1000,
+                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.8abcy1o5x9w1"
+                },
+                {
+                    "name": "Software",
+                    "size": 1000,
+                    "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.7rkyhtkdthok"
+                },
+                {
+                    "name": "User Account",
+                    "size": 2000,
+                    "children": [{
+                        "name": "Unix Account Extension",
+                        "size": 1000,
+                        "url": "https://docs.google.com/document/d/1DdS-NrVTjGJ3wvCJ7dbSlhYeiaWS6G6dOXu2F3POpUs/edit#heading=h.hodiamlggpw5"
+                    }]
+                }
+            ]
+        }
+    ]
 }
