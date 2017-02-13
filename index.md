@@ -6,11 +6,7 @@ no_in_page_title: true
 ---
 
 <div class="alert alert-warning" role="alert">
-  <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti" class="alert-link">
-  CybOX transitioned to OASIS </a>
-  - an open standards organization.
-  <a href="https://stixproject.github.io/oasis-faq.pdf" class="alert-link">
-  Read the FAQ to learn more.</a>
+  STIX 2.0 documentation is available <a href="https://oasis-open.github.io/cti-documentation/" class="alert-link">here</a>. This site contains archived CybOX documentation. STIX is maintained by the <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti" class="alert-link"> OASIS CTI TC</a>.
 </div>
 
 <div class="jumbotron">
