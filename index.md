@@ -5,10 +5,6 @@ tagline: A structured language for cyber observables
 no_in_page_title: true
 ---
 
-<div class="alert alert-warning" role="alert">
-  STIX 2.0 documentation is available <a href="https://oasis-open.github.io/cti-documentation/" class="alert-link">here</a>. This site contains archived CybOX documentation. STIX is maintained by the <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti" class="alert-link"> OASIS CTI TC</a>.
-</div>
-
 <div class="jumbotron">
   <h1>Cyber Observable eXpression (CybOX™)</h1>
   <p>A structured language for cyber observables.</p>

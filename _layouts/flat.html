@@ -6,6 +6,10 @@
     {% include nav.html %}
 
     <div class="container">
+    <div class="alert alert-danger" role="alert">
+      <span class="glyphicon glyphicon-exclamation-sign"></span> This site contains archived CybOX documentation. CybOX has been merged into STIX 2.0, which is maintained by the <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti" class="alert-link"> OASIS CTI TC</a>. STIX 2.0 documentation is available <a href="https://oasis-open.github.io/cti-documentation/" class="alert-link">here</a>.
+    </div>
+
       <div class="row">
         <div class="col-xs-12">
           {% unless page.no_in_page_title %}<h1>{{ page.title }}</h1>{% endunless %}
