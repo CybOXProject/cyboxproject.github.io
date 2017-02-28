@@ -3,8 +3,6 @@ layout: flat
 title: CybOX 2.1
 ---
 
-This is the current release of CybOX.
-
 **Note:** all files linked to below are hosted on the [CybOX Legacy Site](https://cybox.mitre.org), and will redirect there.
 
 #### Release Notes

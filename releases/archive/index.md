@@ -3,10 +3,15 @@ layout: flat
 title: CybOX Release Archive
 ---
 
-**Note:** all releases linked to below are hosted on the [CybOX Legacy Site](https://cybox.mitre.org), and will redirect there.
+<div class="alert alert-danger bs-alert-old-docs">
+  <strong>Heads up!</strong> These downloads are for previous versions of CybOX. <a href="https://oasis-open.github.io/cti-documentation/">Get the latest</a> (now part of STIX)!
+</div>
+
+**Note:** all but the most recent release linked to below are hosted on the [CybOX Legacy Site](https://cybox.mitre.org), and will redirect there.
 
 |Release|Release Date|
 |-------|------------|
+|[CybOX 2.1](/releases/2.1/)|January 23, 2014|
 |[CybOX 2.0.1](http://cybox.mitre.org/language/version2.0.1/)|September 20, 2013|
 |[CybOX 2.0](http://cybox.mitre.org/language/version2.0/)|April 8, 2013|
 |[CybOX 1.0](http://cybox.mitre.org/language/version1.0/)|November 9, 2012|
