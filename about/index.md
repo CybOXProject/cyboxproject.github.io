@@ -1,13 +1,15 @@
 ---
 layout: flat
-title: About CybOX
+title: About CybOX (Archive)
 ---
+
+CybOX has been integrated into [Version 2.0 of Structured Threat Information eXpression (STIX™)](https://oasis-open.github.io/cti-documentation/).
 
 ## The Challenge
 The concept of observable events or properties in the operational cyber realm is a central underlying element of many of the different activities involved in cybersecurity. Before CybOX, there was no uniform standard mechanism for specifying, capturing, characterizing, or communicating these cyber observables. Each activity area, each use case, and often each supporting tool vendor would use its own unique approach. This inhibited consistency, efficiency, interoperability, and overall situational awareness. CybOX solves these problems.
 
 ## What Is CybOX?
-[Cyber Observable eXpression (CybOX™)](/releases/2.1/) is a standardized language for encoding and communicating high-fidelity information about cyber observables. 
+Cyber Observable eXpression (CybOX™) is a standardized language for encoding and communicating high-fidelity information about cyber observables. 
 
 CybOX is not targeted at a single cyber security use case, but rather is intended to be flexible enough to offer a common solution for all cybersecurity use cases requiring the ability to deal with cyber observables. It is also intended to be flexible enough to allow both the high-fidelity description of instances of cyber observables that have been measured in an operational context, as well as more abstract patterns for potential observables that may be targets for observation and analysis apriori. 
 
