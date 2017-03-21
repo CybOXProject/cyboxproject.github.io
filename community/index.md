@@ -1,7 +1,9 @@
 ---
 layout: flat
-title: CybOX Community
+title: CybOX Community (Archive)
 ---
+
+**IMPORTANT NOTICE:** The CybOX Language has been [integrated](https://oasis-open.github.io/cti-documentation/stix/compare#one-standard) into [Version 2.0 of Structured Threat Information eXpression (STIX™)](https://oasis-open.github.io/cti-documentation/).
 
 
 ## OASIS Transition
