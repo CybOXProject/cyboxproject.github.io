@@ -11,7 +11,7 @@ An observable is a set of properties or characteristics that describe an entity 
 
 ### Which objects currently have representations defined in CybOX?
 
-See the list of available Objects in [CybOX Version 2.1 (Archive)](/releases/2.1).
+See the list of available Objects in the [CybOX Version 2.1 (Archive)](/releases/2.1).
 
 **IMPORTANT NOTICE:** The CybOX Language has been [integrated](https://oasis-open.github.io/cti-documentation/stix/compare#one-standard) into [Version 2.0 of Structured Threat Information eXpression (STIX™)](https://oasis-open.github.io/cti-documentation/).
 
@@ -144,9 +144,9 @@ A CybOX release includes the new version of the CybOX Core schemas, the latest v
 
 ### Where can I find examples of CybOX data? Are there any CybOX repositories?
 
-See [CybOX Samples](/samples/).
+See [CybOX Samples](/samples/). At present, there are no repositories of CybOX data, nor are there any CybOX Community plans to establish one.
 
-At present, there are no repositories of CybOX data, nor are there any CybOX Community plans to establish one. Community members interested in hosting a CybOX data repository are strongly encouraged to do so.
+**IMPORTANT NOTICE:** The CybOX Language has been [integrated](https://oasis-open.github.io/cti-documentation/stix/compare#one-standard) into [Version 2.0 of Structured Threat Information eXpression (STIX™)](https://oasis-open.github.io/cti-documentation/).
 
 ### How do I represent an IP Address in CybOX? What about different kinds of IP addresses (IPv4, IPv6, CIDR, etc.)?
 
