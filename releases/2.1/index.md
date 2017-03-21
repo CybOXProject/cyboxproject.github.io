@@ -1,11 +1,13 @@
 ---
 layout: flat
-title: CybOX 2.1
+title: CybOX 2.1 (Archive)
 ---
 
-**Note:** all files linked to below are hosted on the [CybOX Legacy Site](https://cybox.mitre.org), and will redirect there.
+**Important Notice:** CybOX has been [integrated](https://oasis-open.github.io/cti-documentation/stix/compare#one-standard) into [Version 2.0 of Structured Threat Information eXpression (STIX™)](https://oasis-open.github.io/cti-documentation/). 
 
 #### Release Notes
+
+Note: All files linked to below are hosted on the [CybOX Legacy Site](https://cybox.mitre.org), and will redirect there.
 
 The major highlights of Version 2.1 are listed below:
 
