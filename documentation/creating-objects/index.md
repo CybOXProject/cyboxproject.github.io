@@ -501,10 +501,9 @@ Language? Simply subscribe to the open [CTI Users List](http://cyboxproject.gith
 
 ## Further Reading
 
-* [CybOX Language Current Release](http://cyboxproject.github.io/releases/2.1)
 * [Getting Started With CybOX](https://github.com/CybOXProject/schemas/wiki/Getting-Started)
 * [CybOX Authoring Suggested Practices](https://github.com/CybOXProject/schemas/wiki/Suggested-Practices)
-* [STIX Documentation Website](http://stixproject.github.io)
+* [STIX Documentation Website](https://oasis-open.github.io/cti-documentation/)
 * [Principles of XML Design: When to Use Elements vs. Attributes](http://www.ibm.com/developerworks/library/x-eleatt/)
 * [Principles of XML Design: Considering Container Elements](http://www.ibm.com/developerworks/xml/library/x-contain/index.html)
 
