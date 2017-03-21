@@ -3,7 +3,7 @@ layout: flat
 title: About CybOX (Archive)
 ---
 
-**Important Notice:** The CybOX Language has been integrated into [Version 2.0 of Structured Threat Information eXpression (STIX™)](https://oasis-open.github.io/cti-documentation/).
+**Important Notice:** The CybOX Language has been [integrated](https://oasis-open.github.io/cti-documentation/stix/compare#one-standard) into [Version 2.0 of Structured Threat Information eXpression (STIX™)](https://oasis-open.github.io/cti-documentation/).
 
 ## The Challenge
 The concept of observable events or properties in the operational cyber realm is a central underlying element of many of the different activities involved in cybersecurity. Before CybOX, there was no uniform standard mechanism for specifying, capturing, characterizing, or communicating these cyber observables. Each activity area, each use case, and often each supporting tool vendor would use its own unique approach. This inhibited consistency, efficiency, interoperability, and overall situational awareness. CybOX solves these problems.
