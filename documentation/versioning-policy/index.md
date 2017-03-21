@@ -1,7 +1,10 @@
 ---
 layout: flat
-title: Versioning Policy
+title: Versioning Policy (Archive)
 ---
+
+**IMPORTANT NOTICE:** The CybOX Language has been [integrated](https://oasis-open.github.io/cti-documentation/stix/compare#one-standard) into [Version 2.0 of Structured Threat Information eXpression (STIX™)](https://oasis-open.github.io/cti-documentation/).
+
 This document details the current methodology for determining whether a new revision will require a major version change, minor version change, or a version update, and how version information is represented and conveyed in the CybOX Language.
 
 Versioning for the four broad categories of the CybOX Language schemas:
