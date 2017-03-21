@@ -7,7 +7,7 @@ title: CybOX Object Listing
 
 ### Version 2.1 Objects Archive
 
-This page lists the objects currently defined in CybOX, along with some information about each.
+This page lists the objects currently defined in this archived verion of CybOX, along with some information about each.
 
 ***
 
