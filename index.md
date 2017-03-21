@@ -6,7 +6,7 @@ no_in_page_title: true
 ---
 
 <div class="jumbotron">
-  <h2>Cyber Observable eXpression (CybOX™) Archive Website</h2>
+  <h1>Cyber Observable eXpression (CybOX™) Archive Website</h1>
   <p>A structured language for cyber observables.</p>  
     <p></p>
   <p>**IMPORTANT NOTICE:** The CybOX Language has been <a href="https://oasis-open.github.io/cti-documentation/stix/compare#one-standard">integrated</a> into <a href="https://oasis-open.github.io/cti-documentation/stix/about">Version 2.0 of Structured Threat Information eXpression (STIX™)</a>. Go to the <a href="https://oasis-open.github.io/cti-documentation">STIX 2.0 documentation website</a>.</p>
