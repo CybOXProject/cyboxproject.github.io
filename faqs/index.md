@@ -3,7 +3,7 @@ layout: flat
 title: CybOX Language Frequently Asked Questions (FAQs)
 ---
 
-Answers to commonly asked questions about the [CybOX Language](/releases/2.1/) are included below. See the [About CybOX](/about/) page for answers to [general questions](/about/#frequently-asked-questions) about CybOX. 
+Answers to commonly asked questions about the CybOX Language are included below. See the [About CybOX](/about/) page for answers to [general questions](/about/#frequently-asked-questions) about CybOX. 
 
 ### What is an observable by itself (in the simplest case)?
 
@@ -11,7 +11,9 @@ An observable is a set of properties or characteristics that describe an entity 
 
 ### Which objects currently have representations defined in CybOX?
 
-See the list of available Objects in the [latest CybOX release](/releases/2.1).
+See the list of available Objects in [CybOX Version 2.1 (Archive)](/releases/2.1).
+
+**IMPORTANT NOTICE:** The CybOX Language has been [integrated](https://oasis-open.github.io/cti-documentation/stix/compare#one-standard) into [Version 2.0 of Structured Threat Information eXpression (STIX™)](https://oasis-open.github.io/cti-documentation/).
 
 ### How do you use CybOX objects? Do they all need to be used? Can they be represented in multiple ways?
 
@@ -124,7 +126,7 @@ See the [CybOX Language Versioning Policy](/documentation/versioning-policy/).
 
 ### Are there plans to support other forms of data interchange for CybOX (e.g., JSON, YAML, etc.)?
 
-Yes. The next major release of CybOX is under development within OASIS and will include an implementation-independent specification for the language that will enable the specification of multiple serialization bindings if the community desires. The default serialization for the upcoming release will be JSON as specified in a Mandatory To Implement (MIT) serialization binding specification.
+**IMPORTANT NOTICE:** The CybOX Language has been [integrated](https://oasis-open.github.io/cti-documentation/stix/compare#one-standard) into [Version 2.0 of Structured Threat Information eXpression (STIX™)](https://oasis-open.github.io/cti-documentation/).
 
 ## Using CybOX
 
@@ -138,7 +140,7 @@ Currently available tools/utilities are hosted in the [CybOXProject GitHub Repos
 
 A CybOX release includes the new version of the CybOX Core schemas, the latest versions of the independently-versioned CybOX Object schemas, the latest versions of the independently-versioned CybOX vocabulary schemas, and references to the relevant version CybOX extension schemas.
 
-See [Releases](/releases/2.1/) for additional information and the latest release.
+**IMPORTANT NOTICE:** The CybOX Language has been [integrated](https://oasis-open.github.io/cti-documentation/stix/compare#one-standard) into [Version 2.0 of Structured Threat Information eXpression (STIX™)](https://oasis-open.github.io/cti-documentation/).
 
 ### Where can I find examples of CybOX data? Are there any CybOX repositories?
 
