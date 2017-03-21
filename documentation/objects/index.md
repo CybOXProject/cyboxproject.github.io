@@ -1,10 +1,13 @@
 ---
 layout: flat
-title: CybOX Object Listing
+title: CybOX Object Listing (Archive)
 ---
 
-This page lists the objects currently defined in CybOX, along with some
-information about each.
+## CybOX Version 2.1 Objects Archive
+
+**IMPORTANT NOTICE:** The CybOX Language has been integrated into [Version 2.0 of Structured Threat Information eXpression (STIX™)](https://oasis-open.github.io/cti-documentation/).
+
+This page lists the objects currently defined in CybOX, along with some information about each.
 
 ***
 
